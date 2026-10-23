@@ -1,0 +1,30 @@
+{
+  "source_url": "https://wapda.gov.pk/wp-content/uploads/2024/12/GRAPH-DG-16-for-MAIL-2.xls",
+  "source_file": "raw/marala/discharge/wapda/GRAPH-DG-16-for-MAIL-2.xls",
+  "source_sha256": "5b163cbd4166f39edf878eb165098637d71975169b0d65ead0298a33160c8faa",
+  "sheet": "GHRAPH",
+  "date_column": "A",
+  "marala_inflow_column": "I",
+  "first_date": "2016-03-01",
+  "last_date": "2024-12-19",
+  "observation_count": 3216,
+  "internal_missing_dates": 0,
+  "blank_trailing_marala_rows_ignored": 102,
+  "zero_values_for_review": [
+    "2021-01-23"
+  ],
+  "year_counts": {
+    "2016": 306,
+    "2017": 365,
+    "2018": 365,
+    "2019": 365,
+    "2020": 366,
+    "2021": 365,
+    "2022": 365,
+    "2023": 365,
+    "2024": 354
+  },
+  "units": "1000 cusecs in workbook; cusecs derived by multiplying by 1000",
+  "time_basis": "WAPDA's companion 19 Dec 2024 Press sheet labels Marala as 'At 0600 hrs' and matches the historical value (5.8 thousand cusecs = 5800 cusecs). Likely 06:00 Pakistan time reporting convention; historical sheet itself lists dates only, so the convention is not individually proven for every row.",
+  "quality_note": "Values copied without imputation or correction. Blank quality_flag means no specific anomaly was identified; it does not certify the measurement. Zero flagged for review."
+}

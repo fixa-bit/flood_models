@@ -1,0 +1,31 @@
+{
+  "source_url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=PRECTOTCORR&community=AG&longitude=76.25&latitude=34&start=20160301&end=20261022&format=JSON&time-standard=UTC",
+  "downloaded_utc": "2026-10-23T08:54:18.665056+00:00",
+  "downloaded_pakistan": "2026-10-23T13:54:18.665056+05:00",
+  "sha256": "0170842c43450b09517718d52b84fc7ec532c076023deaf45f5e249720b40a52",
+  "bytes": 62697,
+  "raw_file": "raw/marala/rainfall/nasa_power/cells/lat_34_lon_76.25.json",
+  "cell_id": "lat_34_lon_76.25",
+  "header": {
+    "title": "NASA/POWER Source Native Resolution Daily Data",
+    "api": {
+      "version": "v2.10.1",
+      "name": "POWER Daily API"
+    },
+    "sources": [
+      "MERRA2",
+      "GEOSIT"
+    ],
+    "fill_value": -999.0,
+    "time_standard": "UTC",
+    "start": "20160301",
+    "end": "20261022"
+  },
+  "parameters": {
+    "PRECTOTCORR": {
+      "units": "mm/day",
+      "longname": "Precipitation Corrected"
+    }
+  },
+  "last_checked_utc": "2026-10-23T08:55:13.413463+00:00"
+}

@@ -1,0 +1,10 @@
+{
+  "downloaded_cells": 21,
+  "intersecting_cells": 21,
+  "covered_area_km2": 28780.645645367713,
+  "uncovered_area_km2": 0.0,
+  "covered_fraction": 1.0,
+  "full_coverage": true,
+  "method": "Intersect native cell footprints, not grid centers or the requested rectangle, with the catchment. WGS84 geodesic areas.",
+  "action": "Full catchment is covered; no spatial grid extension is required."
+}

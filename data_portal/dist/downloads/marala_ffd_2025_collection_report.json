@@ -1,0 +1,47 @@
+{
+  "provider": "Pakistan Meteorological Department, Flood Forecasting Division",
+  "archive_url": "https://ffd.pmd.gov.pk/bulletins/archive",
+  "collected_utc": "2026-10-23T07:17:30.459156+00:00",
+  "bulletins_listed": 121,
+  "marala_records_extracted": 119,
+  "first_date": "2025-06-15",
+  "last_date": "2025-10-15",
+  "duplicate_observation_dates": {
+    "2025-07-01": 2,
+    "2025-10-05": 2
+  },
+  "missing_dates_within_record_span": [
+    "2025-06-30",
+    "2025-08-06",
+    "2025-09-01",
+    "2025-09-02",
+    "2025-10-04",
+    "2025-10-12"
+  ],
+  "archive_date_mismatches": [
+    {
+      "archive_id": 248,
+      "printed_date": "2025-07-01",
+      "archive_listed_date": "2025-06-30"
+    },
+    {
+      "archive_id": 148,
+      "printed_date": "2025-10-05",
+      "archive_listed_date": "2025-10-04"
+    }
+  ],
+  "records_without_explicit_0600_pst_header": [],
+  "failures": [
+    {
+      "date": "2025-09-01",
+      "archive_id": 135,
+      "error": "Could not identify Marala inflow and outflow in PDF text"
+    },
+    {
+      "date": "2025-09-02",
+      "archive_id": 139,
+      "error": "Could not identify Marala inflow and outflow in PDF text"
+    }
+  ],
+  "notes": "Observations extracted from flood-season PDF bulletins. Not a year-round gauge archive. No missing values filled. Verify unusually high peaks and any extraction failures against the raw PDFs."
+}

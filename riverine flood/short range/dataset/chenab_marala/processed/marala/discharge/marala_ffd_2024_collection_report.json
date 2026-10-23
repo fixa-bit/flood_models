@@ -1,0 +1,128 @@
+{
+  "provider": "Pakistan Meteorological Department, Flood Forecasting Division",
+  "archive_url": "https://ffd.pmd.gov.pk/bulletins/archive",
+  "collected_utc": "2026-10-23T07:17:25.788201+00:00",
+  "bulletins_listed": 132,
+  "marala_records_extracted": 122,
+  "first_date": "2024-06-16",
+  "last_date": "2024-10-15",
+  "duplicate_observation_dates": {
+    "2024-09-19": 2,
+    "2024-10-13": 2
+  },
+  "missing_dates_within_record_span": [
+    "2024-09-02",
+    "2024-10-03"
+  ],
+  "archive_date_mismatches": [
+    {
+      "archive_id": 66,
+      "printed_date": "2024-06-16",
+      "archive_listed_date": "2024-10-16"
+    },
+    {
+      "archive_id": 71,
+      "printed_date": "2024-06-17",
+      "archive_listed_date": "2024-10-17"
+    },
+    {
+      "archive_id": 76,
+      "printed_date": "2024-06-18",
+      "archive_listed_date": "2024-10-18"
+    },
+    {
+      "archive_id": 81,
+      "printed_date": "2024-06-19",
+      "archive_listed_date": "2024-10-19"
+    },
+    {
+      "archive_id": 86,
+      "printed_date": "2024-06-20",
+      "archive_listed_date": "2024-10-20"
+    },
+    {
+      "archive_id": 91,
+      "printed_date": "2024-06-21",
+      "archive_listed_date": "2024-10-21"
+    },
+    {
+      "archive_id": 96,
+      "printed_date": "2024-06-22",
+      "archive_listed_date": "2024-10-22"
+    },
+    {
+      "archive_id": 101,
+      "printed_date": "2024-06-23",
+      "archive_listed_date": "2024-10-23"
+    },
+    {
+      "archive_id": 106,
+      "printed_date": "2024-06-24",
+      "archive_listed_date": "2024-10-24"
+    },
+    {
+      "archive_id": 7,
+      "printed_date": "2024-09-19",
+      "archive_listed_date": "2024-09-02"
+    },
+    {
+      "archive_id": 12,
+      "printed_date": "2024-10-13",
+      "archive_listed_date": "2024-10-03"
+    }
+  ],
+  "records_without_explicit_0600_pst_header": [],
+  "failures": [
+    {
+      "date": "2024-06-15",
+      "archive_id": 57,
+      "error": "Could not identify Marala inflow and outflow in PDF text"
+    },
+    {
+      "date": "2024-06-16",
+      "archive_id": 62,
+      "error": "Could not identify Marala inflow and outflow in PDF text"
+    },
+    {
+      "date": "2024-06-17",
+      "archive_id": 67,
+      "error": "Could not identify Marala inflow and outflow in PDF text"
+    },
+    {
+      "date": "2024-06-18",
+      "archive_id": 72,
+      "error": "Could not identify Marala inflow and outflow in PDF text"
+    },
+    {
+      "date": "2024-06-19",
+      "archive_id": 77,
+      "error": "Could not identify Marala inflow and outflow in PDF text"
+    },
+    {
+      "date": "2024-06-20",
+      "archive_id": 82,
+      "error": "Could not identify Marala inflow and outflow in PDF text"
+    },
+    {
+      "date": "2024-06-21",
+      "archive_id": 87,
+      "error": "Could not identify Marala inflow and outflow in PDF text"
+    },
+    {
+      "date": "2024-06-22",
+      "archive_id": 92,
+      "error": "Could not identify Marala inflow and outflow in PDF text"
+    },
+    {
+      "date": "2024-06-23",
+      "archive_id": 97,
+      "error": "Could not identify Marala inflow and outflow in PDF text"
+    },
+    {
+      "date": "2024-06-24",
+      "archive_id": 102,
+      "error": "Could not identify Marala inflow and outflow in PDF text"
+    }
+  ],
+  "notes": "Observations extracted from flood-season PDF bulletins. Not a year-round gauge archive. No missing values filled. Verify unusually high peaks and any extraction failures against the raw PDFs."
+}

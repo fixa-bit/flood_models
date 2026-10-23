@@ -1,0 +1,63 @@
+{
+  "provider": "Pakistan Meteorological Department, Flood Forecasting Division",
+  "index_url": "https://ffd.pmd.gov.pk/bulletin/",
+  "collected_utc": "2026-10-23T07:31:41.580185+00:00",
+  "bulletin_ids_checked": 136,
+  "marala_records": 122,
+  "first_date": "2026-06-16",
+  "last_date": "2026-10-15",
+  "duplicate_observation_dates": {},
+  "records_without_explicit_0600_pst_header": [],
+  "bulletin_ids_without_marala_table": [
+    1,
+    4,
+    48
+  ],
+  "fetch_or_parse_failures": [
+    {
+      "bulletin_id": 3,
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "bulletin_id": 7,
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "bulletin_id": 8,
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "bulletin_id": 11,
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "bulletin_id": 12,
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "bulletin_id": 13,
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "bulletin_id": 44,
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "bulletin_id": 46,
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "bulletin_id": 57,
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "bulletin_id": 63,
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "bulletin_id": 130,
+      "error": "HTTP Error 404: Not Found"
+    }
+  ],
+  "notes": "Bulletin observations, not a complete year-round daily gauge archive. Preserve inflow and outflow separately. No missing dates were filled."
+}

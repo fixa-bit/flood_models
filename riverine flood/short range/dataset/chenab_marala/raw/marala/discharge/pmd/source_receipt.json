@@ -1,0 +1,12 @@
+{
+  "provider": "Pakistan Meteorological Department, Pakistan Journal of Meteorology",
+  "source_url": "https://www.pmd.gov.pk/rnd/rndweb/rnd_new/journal/vol13_issue26_files/5_Flood_Forecasting_of_an_Ungauged_Trans-boundary_Chenab_River_Basin_Using_Distributed_Hydrological_Model_Integrated_Flood_Analysis_System_%28IFAS%29.pdf",
+  "downloaded_or_checked_utc": "2026-10-23T07:04:06.994907+00:00",
+  "raw_file": "raw/marala/discharge/pmd/marala_historical_flood_peaks_pmd_journal.pdf",
+  "source_sha256": "c5b14dfa3d63b1fdcc03f89b40fa439b906d293a1ba95b1d506b3ddc59b0f070",
+  "pdf_page": 2,
+  "peak_count": 30,
+  "first_peak_date": "1970-07-02",
+  "last_peak_date": "2016-08-07",
+  "warning": "Selected historical flood peaks only. These are event maxima, not daily 06:00 observations; do not merge as daily training rows."
+}

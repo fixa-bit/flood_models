@@ -1,0 +1,102 @@
+{
+  "built_utc": "2026-10-23T07:36:28.467074+00:00",
+  "as_of": "2026-10-23",
+  "baseline": {
+    "rows": 3216,
+    "first_date": "2016-03-01",
+    "last_date": "2024-12-19",
+    "eligible_daily_training_rows": 3209,
+    "withheld_dates": [
+      "2021-01-23",
+      "2024-07-16",
+      "2024-08-02",
+      "2024-09-19",
+      "2024-10-02",
+      "2024-10-13",
+      "2024-10-15"
+    ],
+    "confirmed_time_rows": 1,
+    "unknown_time_rows": 3215,
+    "ffd_comparisons": 122,
+    "exact_ffd_value_matches": 116
+  },
+  "policy": "WAPDA is the baseline source. Keep all daily dates and source values. Blank modeling values and exclude all unresolved zeros or disagreements. Never average sources, impute gaps, or transfer FFD times onto WAPDA dates. Eligibility is for date-level research only, not an assertion of certified hydrological accuracy or operational availability.",
+  "training_window_rule": "Require consecutive calendar dates and eligible observations throughout each input window and all 15 target days; do not drop missing dates and join across gaps. Chronological split selection remains to be implemented before training.",
+  "recent_coverage": {
+    "2025": {
+      "calendar_days_through_as_of": 365,
+      "ffd_status_counts": {
+        "missing": 248,
+        "available_unique_0600": 115,
+        "date_or_duplicate_conflict": 2
+      },
+      "missing_point_reading_spans": [
+        {
+          "start": "2025-01-01",
+          "end": "2025-06-14",
+          "days": 165
+        },
+        {
+          "start": "2025-06-30",
+          "end": "2025-06-30",
+          "days": 1
+        },
+        {
+          "start": "2025-08-06",
+          "end": "2025-08-06",
+          "days": 1
+        },
+        {
+          "start": "2025-09-01",
+          "end": "2025-09-02",
+          "days": 2
+        },
+        {
+          "start": "2025-10-04",
+          "end": "2025-10-04",
+          "days": 1
+        },
+        {
+          "start": "2025-10-12",
+          "end": "2025-10-12",
+          "days": 1
+        },
+        {
+          "start": "2025-10-16",
+          "end": "2025-12-31",
+          "days": 77
+        }
+      ],
+      "dates_with_only_separate_irsa_means": []
+    },
+    "2026": {
+      "calendar_days_through_as_of": 296,
+      "ffd_status_counts": {
+        "missing": 174,
+        "available_unique_0600": 122
+      },
+      "missing_point_reading_spans": [
+        {
+          "start": "2026-01-01",
+          "end": "2026-06-15",
+          "days": 166
+        },
+        {
+          "start": "2026-10-16",
+          "end": "2026-10-23",
+          "days": 8
+        }
+      ],
+      "dates_with_only_separate_irsa_means": [
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-18",
+        "2026-10-19",
+        "2026-10-20",
+        "2026-10-21",
+        "2026-10-22",
+        "2026-10-23"
+      ]
+    }
+  }
+}

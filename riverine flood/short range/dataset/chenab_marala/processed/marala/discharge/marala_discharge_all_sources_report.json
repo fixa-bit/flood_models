@@ -1,0 +1,45 @@
+{
+  "built_utc": "2026-10-23T07:36:11.328631+00:00",
+  "row_count": 3988,
+  "rows_with_record_time": 727,
+  "rows_without_individually_confirmed_time": 3261,
+  "counts": [
+    {
+      "source": "FFD/PMD",
+      "record_kind": "dated_discharge_observation",
+      "measurement": "inflow",
+      "rows": 363
+    },
+    {
+      "source": "FFD/PMD",
+      "record_kind": "dated_discharge_observation",
+      "measurement": "outflow",
+      "rows": 363
+    },
+    {
+      "source": "IRSA",
+      "record_kind": "daily_mean_discharge",
+      "measurement": "mean_inflow",
+      "rows": 8
+    },
+    {
+      "source": "IRSA",
+      "record_kind": "daily_mean_discharge",
+      "measurement": "mean_outflow",
+      "rows": 8
+    },
+    {
+      "source": "PMD journal",
+      "record_kind": "selected_historical_event_peak",
+      "measurement": "peak_discharge",
+      "rows": 30
+    },
+    {
+      "source": "WAPDA",
+      "record_kind": "dated_discharge_observation",
+      "measurement": "inflow",
+      "rows": 3216
+    }
+  ],
+  "note": "Event peaks, daily means, and dated observations are distinct record kinds. Empty time is intentional; no time was invented. Gaps and overlapping sources are not filled or merged."
+}

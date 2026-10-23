@@ -1,0 +1,2 @@
+# Preserve exact bytes across platforms so saved SHA-256 receipts remain valid.
+* -text

@@ -1,0 +1,6 @@
+xlrd
+beautifulsoup4
+pymupdf
+shapely>=2.1
+pyproj
+matplotlib

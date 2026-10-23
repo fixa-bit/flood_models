@@ -1,0 +1,8 @@
+{
+  "source_url": "https://mghydro.com/app/watershed_api?lat=32.67&lng=74.46&precision=low&simplify=false&beautify=false",
+  "raw_file": "raw/marala/catchment/global_watersheds/marala_32.67_74.46_low.geojson",
+  "sha256": "4af4fa41248dc7e338a9b196ab40d61aaecdf803f6620afb3b0c2af3e7207d66",
+  "bytes": 70750,
+  "downloaded_or_checked_utc": "2026-10-23T08:38:30.425530+00:00",
+  "last_checked_utc": "2026-10-23T08:57:15.293209+00:00"
+}

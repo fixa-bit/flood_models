@@ -1,0 +1,21 @@
+{
+  "checked_utc": "2026-10-23T08:58:19.316410+00:00",
+  "checks": {
+    "source_hashes": true,
+    "boundary_hash": true,
+    "positive_weights_sum_to_one": true,
+    "full_spatial_coverage": true,
+    "all_daily_means_recomputed_from_raw_sources": true,
+    "consecutive_calendar_dates": true,
+    "missing_values_not_imputed": true,
+    "period_boundaries_in_pakistan_time": true,
+    "previous_regional_files_removed": true,
+    "local_documentation_links": true
+  },
+  "daily_rows_checked": 3888,
+  "source_cells_checked": 21,
+  "missing_dates": [
+    "2026-10-22"
+  ],
+  "algorithm_unit_tests_passed": 4
+}

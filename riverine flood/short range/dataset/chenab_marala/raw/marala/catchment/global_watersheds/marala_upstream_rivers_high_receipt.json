@@ -1,0 +1,8 @@
+{
+  "source_url": "https://mghydro.com/app/upstream_rivers_api?lat=32.67&lng=74.46&precision=high&simplify=false&beautify=false",
+  "raw_file": "raw/marala/catchment/global_watersheds/marala_upstream_rivers_high.geojson",
+  "sha256": "74e02c707c156ade40662e120a032d7ab876470f859c6b7bc23ef202f8ab0fd3",
+  "bytes": 521777,
+  "downloaded_utc": "2026-10-23T08:37:04.710680+00:00",
+  "last_checked_utc": "2026-10-23T08:57:15.302361+00:00"
+}

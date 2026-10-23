@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Explore flood model data sources, local integrity checks, quality review, catchment precipitation and discharge history.">
+  <meta name="theme-color" content="#070b0a"><title>Flood Data Observatory</title>
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/night.css">
+  <script src="assets/plotly.min.js" defer></script><script src="assets/app.js" defer></script>
+</head>
+<body>
+<a href="#main" class="skip">Skip to content</a>
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="#overview"><img src="assets/logo.svg" alt="" width="38" height="38"><span>Flood<span class="brand-secondary">Observatory</span></span></a>
+  <div class="workspace-label">MODEL WORKSPACE</div>
+  <div id="case-nav" class="case-nav" aria-label="Flood cases"></div>
+  <div class="workspace-label section-label">EXPLORE</div>
+  <nav class="section-nav" aria-label="Portal sections">
+    <a href="#overview" data-view="overview" class="active"><span aria-hidden="true">◫</span> Overview</a>
+    <a href="#sources" data-view="sources"><span aria-hidden="true">⌁</span> Sources & provenance</a>
+    <a href="#quality" data-view="quality"><span aria-hidden="true">✓</span> Integrity & quality</a>
+    <a href="#catchment" data-view="catchment"><span aria-hidden="true">◇</span> Catchment explorer</a>
+    <a href="#library" data-view="library"><span aria-hidden="true">▤</span> Data library</a>
+  </nav>
+  <div class="sidebar-bottom"><span class="live-dot"></span> Research data workspace<p>Receipts checked locally.<br>Uncertainty stays visible.</p><a href="data/build_report.json" target="_blank" rel="noopener">Snapshot manifest ↗</a></div>
+</aside>
+<div class="page">
+  <header class="topbar"><div><button id="menu-toggle" class="icon-button" aria-label="Toggle menu" aria-expanded="false">☰</button><span class="breadcrumb">WORKSPACE <span>/</span> <strong id="case-breadcrumb">Riverine flood</strong></span></div><div class="topbar-right"><span class="private-label">PROJECT DATA</span><button class="button secondary small" id="reload">↻ Reload snapshot</button></div></header>
+  <main id="main" tabindex="-1">
+    <div class="heading-row"><div><div class="eyebrow" id="eyebrow">YOUR DATA, IN VIEW</div><h1 id="page-title">Flood data observatory</h1><p class="subtitle" id="page-subtitle">Trace the sources. Inspect the gaps. Explore the records.</p></div><div class="snapshot"><span class="live-dot"></span><span>Snapshot checked<br><strong id="snapshot-time">Loading…</strong></span></div></div>
+    <div id="load-error" role="alert" class="notice error" hidden></div>
+    <div class="filters" id="filters">
+      <label>Station<select id="station"><option value="marala">Chenab · Marala</option><option value="jassar">Ravi · Jassar</option></select></label>
+      <label>Forecast range<select id="horizon"><option value="short">Short range · 15-day target</option><option value="long">Long range</option></select></label>
+      <label>Year<select id="year"><option value="2024">2024</option></select></label>
+      <label>From<input id="from-date" type="date" value="2024-01-01"></label>
+      <label>To<input id="to-date" type="date" value="2024-12-31"></label>
+      <button id="reset-dates" class="button secondary">All history</button>
+    </div>
+    <div id="empty-state" hidden></div>
+    <div id="populated">
+      <section id="overview-view" class="view">
+        <div class="metrics" id="overview-metrics"></div>
+        <div class="notice" id="research-note"><span class="notice-icon">i</span><div><strong>A research dataset, with its limits visible.</strong><p>WAPDA historical reading times are mostly unconfirmed. Flagged days are withheld. Flood-season bulletins, daily means and event peaks keep their own identities.</p></div><a href="#quality">Review quality ↗</a></div>
+        <div class="card main-chart"><div class="card-heading"><div><div class="eyebrow">RIVER RESPONSE</div><h2>Marala discharge history</h2><p>Daily labels · cusecs · drag to zoom, hover for values</p></div><label class="inline-toggle"><input id="show-ffd" type="checkbox" checked> Show FFD observations</label></div><div id="discharge-chart" class="plot large" aria-label="Interactive Marala discharge time series"></div><div class="chart-footer"><span><i class="legend-dot teal"></i> Eligible WAPDA inflow</span><span><i class="legend-dot amber"></i> Withheld source values</span><span>FFD readings are at 06:00 Pakistan time. WAPDA dates do not imply a confirmed observation hour.</span></div></div>
+        <div class="two-column"><div class="card"><div class="card-heading"><div><div class="eyebrow">UPSTREAM INPUT</div><h2>Catchment precipitation</h2><p>Area-weighted mean · mm/day · UTC accumulation</p></div><span class="pill amber">High values need review</span></div><div id="rain-chart" class="plot" aria-label="Daily catchment precipitation plot"></div><div class="card-note">Orange points flag ≥100 mm/day for review, not automatic rejection. A complete UTC day ends at 05:00 Pakistan the next day; source availability must also precede a forecast issue.</div></div><div class="card"><div class="card-heading"><div><div class="eyebrow">DATA AVAILABILITY</div><h2>Coverage by month</h2><p>Usable days / days within each source's recorded span</p></div></div><div id="coverage-chart" class="plot" aria-label="Monthly coverage heatmap"></div><div class="card-note">Grey months are outside the collected span. Withheld or missing dates reduce coverage; none are filled.</div></div></div>
+        <div class="two-column"><div class="card"><div class="card-heading"><div><div class="eyebrow">EXPLORE HIGH FLOWS</div><h2>Event window</h2><p>Annual daily maximum with 14 days on either side</p></div><select id="event" aria-label="Choose a high flow window"></select></div><div id="event-chart" class="plot"></div><div class="card-note">Exploratory windows around eligible daily maxima. These are not officially classified flood events or proof that the true flood peak was sampled.</div></div><div class="card"><div class="card-heading"><div><div class="eyebrow">VALUE DISTRIBUTION</div><h2>Daily flow distribution</h2><p>Eligible WAPDA values in the selected period</p></div></div><div id="distribution-chart" class="plot"></div></div></div>
+        <div class="two-column"><div class="card"><div class="card-heading"><div><div class="eyebrow">SEPARATE MEASUREMENT BASIS</div><h2>IRSA daily means</h2><p>Full available record · 16–23 October 2026</p></div><span class="pill">8 days</span></div><div id="irsa-chart" class="plot small-plot"></div><div class="card-note">Mean upstream and downstream discharge; averaging-period bounds are not stated. Kept separate from point readings.</div></div><div class="card"><div class="card-heading"><div><div class="eyebrow">HISTORICAL EVIDENCE</div><h2>Selected flood peaks</h2><p>PMD journal · full published selection, 1970–2016</p></div><span class="pill">30 peaks</span></div><div id="peaks-chart" class="plot small-plot"></div><div class="card-note">Event maxima, not a continuous daily series. Times are unspecified.</div></div></div>
+      </section>
+      <section id="sources-view" class="view" hidden>
+        <div class="section-heading"><div><h2>Every source, with its evidence</h2><p>Original providers, saved source links and independently recomputed local checksums.</p></div><label class="search-label"><span aria-hidden="true">⌕</span><input type="search" id="source-search" placeholder="Find a provider or dataset" aria-label="Find a source"></label></div>
+        <div id="source-cards" class="source-grid"></div>
+        <div class="notice"><span class="notice-icon">i</span><div><strong>Source publication does not establish complete historical coverage.</strong><p>WAPDA's collected workbook ends in December 2024. FFD records are seasonal. A complete year-round 2025–2026 archive remains unverified.</p></div></div>
+      </section>
+      <section id="quality-view" class="view" hidden>
+        <div class="metrics" id="quality-metrics"></div>
+        <div class="two-column"><div class="card"><div class="card-heading"><div><div class="eyebrow">RECOMPUTED THIS SNAPSHOT</div><h2>File integrity</h2><p>Local SHA-256 values compared with saved receipts</p></div></div><div id="integrity-chart" class="plot small-plot"></div><p class="card-note">A checksum match detects changes relative to the saved receipt. It does not certify source authenticity or hydrological measurement accuracy.</p></div><div class="card"><div class="card-heading"><div><div class="eyebrow">WHAT IS ESTABLISHED</div><h2>Verification layers</h2></div></div><div id="verification-layers" class="verification-list"></div></div></div>
+        <div class="card"><div class="card-heading"><div><div class="eyebrow">REVIEW QUEUE</div><h2>Withheld Marala observations</h2><p>All seven unresolved days remain visible below, irrespective of the date filter.</p></div><a class="button secondary small" href="downloads/marala_inflow_quality_review.csv" download>Download review CSV ↓</a></div><div class="table-scroll"><table><thead><tr><th>Date</th><th>Issue</th><th>WAPDA cusecs</th><th>FFD cusecs</th><th>Review / source</th></tr></thead><tbody id="review-rows"></tbody></table></div></div>
+        <div class="two-column"><div class="card"><div class="card-heading"><div><h2>Observation-time certainty</h2><p>All-source catalog · includes separate measurement kinds</p></div></div><div id="time-chart" class="plot small-plot"></div></div><div class="card"><div class="card-heading"><div><h2>Recent coverage gaps</h2><p>Full 2025 and 2026 through 23 October · FFD point readings</p></div></div><div id="recent-coverage"></div></div></div>
+        <div class="card"><div class="card-heading"><div><h2>Checksum ledger</h2><p>Search by filename or provider. Expand a row to inspect its expected and actual hashes.</p></div><input id="integrity-search" class="text-input" type="search" placeholder="Search checked files" aria-label="Search checked files"></div><div id="integrity-ledger" class="ledger"></div><div class="pagination" id="ledger-pages"></div></div>
+      </section>
+      <section id="catchment-view" class="view" hidden>
+        <div class="metrics" id="catchment-metrics"></div>
+        <div class="card"><div class="card-heading"><div><div class="eyebrow">SPATIAL CONTEXT</div><h2>The upstream area contributing to Marala</h2><p>Interactive WGS84 view · no political boundaries</p></div><label class="inline-toggle"><input id="show-grid" type="checkbox" checked> Precipitation grid</label></div><div id="map-chart" class="plot map-plot"></div><div class="chart-footer"><span><i class="legend-dot teal"></i> Catchment boundary</span><span><i class="legend-dot navy"></i> Upstream network</span><span><i class="legend-dot amber"></i> Catchment-clipped precipitation cells</span></div></div>
+        <div class="two-column"><div class="card"><div class="card-heading"><div><h2>Boundary checks</h2><p>Consistency and sensitivity checks, not field certification</p></div></div><div id="catchment-checks" class="verification-list"></div></div><div class="card"><div class="card-heading"><div><h2>How precipitation is weighted</h2><p>Each cell contributes only its area inside the catchment</p></div></div><div id="weights-chart" class="plot"></div><p class="card-note">Weights sum to one. Cells can contribute even when their centers lie outside the boundary. Any missing required value leaves that day's catchment mean blank.</p></div></div>
+        <div class="notice"><span class="notice-icon">i</span><div><strong>Research delineation; not an agency-certified boundary.</strong><p>Derived using Global Watersheds / MERIT hydrography, with station-location and area consistency checks against JICA/PMD evidence. It does not encode changing reservoir operations or canal diversions.</p></div><a href="downloads/marala_upstream_catchment.geojson" download>Download GeoJSON ↓</a></div>
+      </section>
+      <section id="library-view" class="view" hidden><div class="section-heading"><div><h2>Data library</h2><p>Processed datasets, review reports and geospatial evidence. Files retain their source definitions.</p></div><input type="search" id="file-search" class="text-input" placeholder="Search files" aria-label="Search files"></div><div id="library-categories" class="segmented"></div><div class="card"><div class="table-scroll"><table><thead><tr><th>File</th><th>Dataset</th><th>Size</th><th>Open / download</th></tr></thead><tbody id="file-rows"></tbody></table></div></div></section>
+    </div>
+    <footer><span>Flood Data Observatory <span class="footer-separator">/</span> Source evidence stays with the data.</span><span>Snapshot, not a live flood-warning service.</span></footer>
+  </main>
+</div>
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+</body></html>

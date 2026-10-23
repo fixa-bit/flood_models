@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MERIT Hydro</title>
+  <meta name="description" content="Our studies mainly focus on the dynamics of land waters on the global scale, using modelling, remote sensing, and data integration approach.
+">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="/MERIT_Hydro/">
+  <link rel="shortcut icon" type ="image/x-icon" href="/images/favicon.ico">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RLFF21W9HG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RLFF21W9HG');
+</script>
+
+</head>
+
+
+  <body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+	<div class="navbar-header">
+	  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+		<span class="sr-only">Toggle navigation</span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+	  </button>
+    <a class="navbar-brand" href="/"><b>Global Hydrodynamics Lab</b><br>Yamazaki Lab / 山崎研究室<br>@ IIS U-Tokyo / 東京大学</a>
+	</div>
+	<div class="collapse navbar-collapse" id="navbar-collapse-1">
+	  <ul class="nav navbar-nav navbar-right">
+		<li><a href="/">Home</a></li>
+		<li><a href="/team">Team</a></li>
+		<li><a href="/joinus">Join Us</a></li>
+		<li><a href="/publications">Publications</a></li>
+		<li><a href="/research">Research</a></li>
+		<li><a href="/promotion">Promo</a></li>
+	  </ul>
+	</div>
+  </div>
+</div>
+
+
+    <div class="container-fluid">
+      <div class="content-wrap">
+<div class="row">
+<div id="gridid" class="col-sm-12">
+  <h1 id="merit-hydro">MERIT Hydro</h1>
+<p><strong>MERIT Hydro: A high-resolution global hydrography map based on MERIT DEM</strong></p>
+
+<p>MERIT Hydro is a global-scale hydrography dataset developed based on the <strong>MERIT DEM</strong>.
+It provides globally consistent hydrography layers such as flow direction, river width,
+upstream area, upstream gradient, and height above nearest drainage (HAND), designed
+for large-scale hydrodynamic and flood simulations.</p>
+
+<p><strong>Key features</strong></p>
+
+<ul>
+  <li>Global hydrography dataset at <strong>3 arc-second (~90 m)</strong> resolution</li>
+  <li>Consistent river networks derived from <strong>MERIT DEM</strong> and many water mask products.</li>
+  <li>Designed for <strong>global to regional hydrodynamic and flood simulations</strong></li>
+</ul>
+
+<div class="img_cap">
+  <p><img src="/assets/merit_hydro/hydro_fig.png" width="80%" /></p>
+</div>
+
+<p>MERIT Hydro river network for Tigris-Euphrates, Ob, Amazon, and Pearl Rivers. High resolution image can be downloaded from “Quick Look Figure” below.</p>
+
+<hr />
+
+<h2 id="about-merit-hydro">About MERIT Hydro</h2>
+
+<p>High-resolution raster hydrography maps are a fundamental data source for many geoscience applications. Here, we introduce MERIT Hydro, a new global flow direction map at 3 arc-second resolution (~90 m at the equator), derived from the latest elevation data (MERIT DEM) and water body datasets (G1WBM, GSWO, and OpenStreetMap). We developed a new algorithm to extract river networks in a near-automatic manner by separating actual inland basins from dummy depressions caused by errors in the input elevation data.</p>
+
+<p>After a minimal amount of hand editing, the constructed hydrography map shows good agreement with existing quality-controlled river network datasets in terms of flow accumulation area and river basin shape. The locations of river streamlines are realistically aligned with existing satellite-based global river channel datasets. The relative error in drainage area is smaller than 0.05 for 90% of GRDC gauges, confirming the accuracy of the delineated global river networks. Discrepancies in flow accumulation area are found mostly in arid river basins containing depressions that are occasionally connected at high water levels, resulting in uncertain watershed boundaries.</p>
+
+<p>MERIT Hydro improves upon existing global hydrography datasets in terms of spatial coverage (from 90°N to 60°S) and representation of small streams, mainly due to the increased availability of high-quality baseline geospatial datasets. The new flow direction and flow accumulation maps, along with accompanying supplementary layers such as hydrologically adjusted elevation and channel width, will advance geoscience studies related to river hydrology at both global and local scales.</p>
+
+<h3 id="interactive-map">Interactive map</h3>
+
+<p>An interactive web-based map is available to explore MERIT Hydro and related hydrography layers online via<br />
+<a href="https://meritdataset.users.earthengine.app/view/merit-hydro-visualization-and-interactive-map"><strong>MERIT Hydro Visualization WebApp (Google Earth Engine)</strong></a>.</p>
+
+<hr />
+
+<h2 id="download-merit-hydro">Download MERIT Hydro</h2>
+
+<p><strong>How to obtain the data</strong></p>
+
+<ol>
+  <li>Register via the Google Form (license agreement)</li>
+  <li>Receive the password by email</li>
+  <li>Access the download page.</li>
+</ol>
+
+<h3 id="registration-for-download">Registration for Download</h3>
+
+<p>Please complete the<br />
+<a href="https://goo.gl/forms/6VwfnasNjkYm0Wqu2"><strong>Google Form for registration and license agreement</strong></a>.<br />
+The password for downloading the data will be sent to you by email after registration.</p>
+
+<p>Alternatively, you may contact the developer directly to request access:</p>
+
+<ul>
+  <li><strong>Dai Yamazaki</strong> yamadai [at] iis.u-tokyo.ac.jp</li>
+</ul>
+
+<h3 id="download-datasets">Download Datasets</h3>
+
+<p>The current version is <strong>v1.0.1</strong> (10 June 2019).</p>
+
+<p>The password for downloading the data is issued after registration via the Google Form (see above).<br />
+The data can be downloaded from:<br />
+<a href="https://www.dropbox.com/scl/fo/fw8qrf73zhzmo6p92gbxv/AIlVRfnQVEWOyXEimsK2qKk?rlkey=a0be5opyb2kpkf0ssbvau8y9q&amp;st=t8rtowe9&amp;dl=0" target="_blank" rel="noopener noreferrer">
+<strong>MERIT Hydro download page (DropBox)</strong>
+</a></p>
+
+<p><strong>Note:</strong><br />
+<em>When prompted for access, please enter <strong>only the password</strong> provided in the registration email; the username is not required.</em></p>
+
+<hr />
+
+<h2 id="data-description">Data Description</h2>
+
+<h3 id="data-format">Data format</h3>
+
+<p>The flow direction dataset is referenced to the <strong>WGS84 coordinate system</strong> and the <strong>EGM96 geoid</strong>.<br />
+The data are prepared as <strong>5° × 5° tiles</strong> (6000 × 6000 pixels).</p>
+
+<p>The filename represents the center of the lower-left pixel of the data domain.<br />
+For example, the file <code class="language-plaintext highlighter-rouge">n30w120_dir.tif</code> corresponds to the flow direction data for the domain<br />
+<strong>30°N–35°N, 120°W–115°W</strong><br />
+(more precisely, 29.99958333°N–34.99958333°N and 120.0004167°W–115.0004167°W).</p>
+
+<p>The 5° tiles are bundled into <strong>30° (latitude) × 30° (longitude)</strong> packages.<br />
+The package name represents the lower-left corner of the package domain.<br />
+For example, the package <code class="language-plaintext highlighter-rouge">dir_n30w120.tar</code> contains all tiles within the domain<br />
+<strong>30°N–60°N, 120°W–90°W</strong>.</p>
+
+<p>The data format is <strong>GeoTIFF</strong>.</p>
+
+<figure class="figure">
+  <p><img src="/assets/merit_hydro/MERIT_tile.png" alt="MERIT Hydro tiling scheme" width="80%" /></p>
+</figure>
+
+<h3 id="data-layers-and-variables">Data layers and variables</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Variable</th>
+      <th>Description</th>
+      <th>Unit</th>
+      <th>Data type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>dir</td>
+      <td>Flow direction</td>
+      <td>–</td>
+      <td>int8</td>
+    </tr>
+    <tr>
+      <td>elv</td>
+      <td>Hydrologically adjusted elevation</td>
+      <td>m</td>
+      <td>float32</td>
+    </tr>
+    <tr>
+      <td>upa</td>
+      <td>Upstream drainage area</td>
+      <td>km²</td>
+      <td>float32</td>
+    </tr>
+    <tr>
+      <td>upg</td>
+      <td>Upstream gradient</td>
+      <td>–</td>
+      <td>float32</td>
+    </tr>
+    <tr>
+      <td>wth</td>
+      <td>River channel width</td>
+      <td>m</td>
+      <td>float32</td>
+    </tr>
+    <tr>
+      <td>hnd</td>
+      <td>Height Above Nearest Drainage</td>
+      <td>m</td>
+      <td>float32</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="flow-direction-local-drainage-direction">Flow Direction (Local Drainage Direction)</h4>
+
+<p>Flow direction is provided as a <strong>1-byte signed integer</strong> (<code class="language-plaintext highlighter-rouge">int8</code>).<br />
+The flow direction codes are defined as follows:</p>
+
+<ul>
+  <li><strong>1</strong>: east</li>
+  <li><strong>2</strong>: southeast</li>
+  <li><strong>4</strong>: south</li>
+  <li><strong>8</strong>: southwest</li>
+  <li><strong>16</strong>: west</li>
+  <li><strong>32</strong>: northwest</li>
+  <li><strong>64</strong>: north</li>
+  <li><strong>128</strong>: northeast</li>
+</ul>
+
+<p>Special values:</p>
+
+<ul>
+  <li><strong>0</strong>: river mouth</li>
+  <li><strong>-1</strong>: inland depression</li>
+  <li><strong>-9</strong>: undefined (ocean)</li>
+</ul>
+
+<p><strong>Note:</strong><br />
+If a flow direction file is interpreted as an <strong>unsigned integer</strong>, undefined pixels correspond to <strong>247</strong>, and inland depressions to <strong>255</strong>.</p>
+
+<h4 id="hydrologically-adjusted-elevation">Hydrologically Adjusted Elevation</h4>
+
+<p>Hydrologically adjusted elevation is provided as a <strong>4-byte floating-point value</strong> (<code class="language-plaintext highlighter-rouge">float32</code>).<br />
+Elevations are modified to satisfy the condition that downstream elevation is not higher than upstream elevation, while minimizing deviations from the original DEM.</p>
+
+<p>Elevation values are referenced to the <strong>EGM96 geoid</strong> and expressed in <strong>meters</strong>, with a vertical increment of <strong>0.1 m</strong>.<br />
+Undefined pixels (oceans) are assigned a value of <strong>-9999</strong>.</p>
+
+<p>For details of the adjustment method, see <em>Yamazaki et al.</em> (2012, <em>Water Resources Research</em>).</p>
+
+<h4 id="upstream-drainage-area-flow-accumulation-area">Upstream Drainage Area (Flow Accumulation Area)</h4>
+
+<p>Upstream drainage area is provided as a <strong>4-byte floating-point value</strong> (<code class="language-plaintext highlighter-rouge">float32</code>) and expressed in <strong>km²</strong>.<br />
+Undefined pixels (oceans) are assigned a value of <strong>-9999</strong>.</p>
+
+<h3 id="number-of-upstream-drainage-pixels-flow-accumulation-grid">Number of Upstream Drainage Pixels (Flow Accumulation Grid)</h3>
+
+<p>The number of upstream drainage pixels is provided as a <strong>4-byte integer</strong> (<code class="language-plaintext highlighter-rouge">int32</code>).<br />
+Undefined pixels (oceans) are assigned a value of <strong>-9999</strong>.</p>
+
+<h4 id="river-channel-width">River Channel Width</h4>
+
+<p>River channel width is provided as a <strong>4-byte floating-point value</strong> (<code class="language-plaintext highlighter-rouge">float32</code>) in <strong>meters</strong>.<br />
+Values greater than <strong>0</strong> represent river width at channel centerlines.<br />
+A value of <strong>-1</strong> indicates non-centerline water pixels, and <strong>0</strong> represents non-water pixels.<br />
+Undefined pixels (oceans) are assigned a value of <strong>-9999</strong>.</p>
+
+<p>River channel width is estimated using the method described in <em>Yamazaki et al.</em> (2012, <em>Water Resources Research</em>), with subsequent improvements to the original algorithm.</p>
+
+<h4 id="hand-height-above-nearest-drainage">HAND: Height Above Nearest Drainage</h4>
+
+<p>HAND is provided as a <strong>4-byte floating-point value</strong> (<code class="language-plaintext highlighter-rouge">float32</code>) in <strong>meters</strong>.<br />
+Values represent the height above the nearest drainage pixel (<em>Nobre et al.</em>, 2011, <em>Journal of Hydrology</em>).<br />
+Here, drainage pixels are defined as those with an upstream area greater than <strong>0.5 km²</strong>.</p>
+
+<p>Undefined pixels (oceans) are assigned a value of <strong>-9999</strong>.</p>
+
+<figure class="figure">
+  <p><img src="/assets/merit_hydro/supp_data.png" alt="Supplementary data layers" width="80%" /></p>
+</figure>
+<p>Supplementary data layers (left: river width, right: HAND).</p>
+
+<hr />
+
+<h2 id="data-policy">Data Policy</h2>
+
+<h3 id="license-agreement">License Agreement</h3>
+<p>MERIT Hydro is licensed under either of the following licenses:</p>
+
+<ul>
+  <li><strong>Creative Commons Attribution–NonCommercial 4.0 International (CC BY-NC 4.0)</strong></li>
+  <li><strong>Open Data Commons Open Database License (ODbL 1.0)</strong></li>
+</ul>
+
+<p>(i.e., a dual-license scheme; users may choose the license most appropriate for their use.)</p>
+
+<p>To view a copy of these licenses, please visit:</p>
+
+<ul>
+  <li>
+    <p><a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0 license</a><br />
+<em>Non-commercial use with fewer restrictions.</em></p>
+  </li>
+  <li>
+    <p><a href="https://opendatacommons.org/licenses/odbl/summary/">ODbL 1.0 license</a><br />
+<em>Commercial use is permitted; however, derived data based on MERIT Hydro must be made publicly available under the same ODbL license.</em></p>
+  </li>
+</ul>
+
+<p><strong>For example, if you create a flood hazard map using MERIT Hydro and provide a commercial service based on it, the resulting hazard map must be made publicly available under the ODbL license.</strong></p>
+
+<p>Please note that the above license terms apply to <strong>derived data</strong> created based on MERIT Hydro.<br />
+They do <strong>not</strong> apply to <strong>produced works or artworks</strong> (e.g., figures in journal papers) created using MERIT Hydro.<br />
+Users may hold the copyright of such artworks and assign any license, provided the produced work is not considered a “derived data product.”</p>
+
+<p>By downloading and using the data, users agree to the terms and conditions of the selected license.<br />
+Notwithstanding these free licenses, users are requested to refrain from redistributing the data <em>in whole and in its original format</em> on other websites without explicit written permission from the authors.</p>
+
+<p>MERIT Hydro is available at:<br />
+/MERIT_Hydro/</p>
+
+<p>The copyright of MERIT Hydro is held by the developers (2019). All rights reserved.</p>
+
+<hr />
+
+<h3 id="data-sharing-policy">Data sharing policy</h3>
+
+<p>Citation of the paper below is sufficient when MERIT Hydro is used as a data source.<br />
+However, if substantial assistance is provided for additional handling or editing of the dataset, or if the research outcome critically depends on MERIT Hydro, co-authorship may be requested.</p>
+
+<p><strong>Citation</strong></p>
+
+<p>Yamazaki, D., Ikeshima, D., Sosa, J., Bates, P. D., Allen, G. H., &amp; Pavelsky, T. M. (2019).<br />
+<em>MERIT Hydro: A high-resolution global hydrography map based on latest topography datasets.</em><br />
+<strong>Water Resources Research</strong>, 55, 5053–5073.<br />
+https://doi.org/10.1029/2019WR024873</p>
+
+<hr />
+
+<h2 id="notes">Notes</h2>
+
+<h3 id="update-notes">Update notes</h3>
+
+<ul>
+  <li>
+    <p><strong>v1.0.1</strong> (10 June 2019)<br />
+Added several tiles that were missing in v1.0 due to a GDAL bug<br />
+(<code class="language-plaintext highlighter-rouge">n50w085_upa.tif</code>, <code class="language-plaintext highlighter-rouge">n40e075_upg.tif</code>, <code class="language-plaintext highlighter-rouge">n60w130_upg.tif</code>, <code class="language-plaintext highlighter-rouge">n10w010_upg.tif</code>).</p>
+  </li>
+  <li>
+    <p><strong>v1.0</strong> (17 May 2019)<br />
+Official release of MERIT Hydro.<br />
+River width around coastal areas was modified due to uncertainty in water masks in coastal zones.</p>
+  </li>
+  <li>
+    <p><strong>v0.7</strong> (25 January 2019)<br />
+Pre-release version.</p>
+  </li>
+</ul>
+
+<h3 id="known-problems">Known Problems</h3>
+
+<h4 id="river-width">River Width</h4>
+
+<p><strong>[Update from GWD-LR v1]</strong><br />
+The river width algorithm has been updated to account for sub-pixel water fraction.  A 30 m water map is now used for river width estimation at 90 m resolution. Currently, river width is calculated separately for each channel in braided or anabranching sections. Merged river width should be estimated for such river reaches.</p>
+
+<h4 id="water-body-map">Water Body Map</h4>
+
+<p>There are some inconsistencies between the DEM land–sea mask and water body datasets,  such as newly formed islands along coastlines. In addition, the quality of the OpenStreetMap water body layer is not uniform across regions.</p>
+
+<h4 id="channel-bifurcations">Channel Bifurcations</h4>
+
+<p>Channel bifurcations are not well represented in the current version. Each pixel is assumed to have only a single downstream direction. Secondary or multiple downstream directions should be considered to better represent complex river networks, such as those in delta regions, floodplains, and braided rivers.</p>
+
+<h4 id="underground-rivers-and-tunnels">Underground Rivers and Tunnels</h4>
+
+<p>Major underground rivers and tunnels are not explicitly represented. Their inclusion would improve large-scale water balance simulations.</p>
+
+<h4 id="river-and-lake-separation">River and Lake Separation</h4>
+
+<p>Rivers and lakes should be treated as separate features for certain applications.</p>
+
+<h4 id="below-sea-level-areas">Below Sea-Level Areas</h4>
+
+<p>Areas below sea level in coastal regions are not well represented in the hydrologically adjusted elevation data.</p>
+
+<h4 id="flow-direction-over-glaciers">Flow Direction over Glaciers</h4>
+
+<p>Flow direction over glaciers is not well represented, because glacier centerlines often have higher elevations than glacier margins.</p>
+
+<h4 id="supplementary-data">Supplementary Data</h4>
+
+<p>Additional supplementary layers would be beneficial, including the locations of:</p>
+
+<ul>
+  <li>GRDC gauging stations</li>
+  <li>Waterfalls</li>
+  <li>Reservoirs</li>
+  <li>Other relevant hydrological features</li>
+</ul>
+
+
+</div>
+</div>
+</div>
+
+    </div>
+
+    <div id="footer" class="panel">
+  <div class="panel-footer">
+	<div class="container-fluid">
+	  <div class="row">
+		<div class="col-sm-4">			
+		  <p>&copy 2026 Yamazaki Lab.</p>
+      <p>We are part of the <a href="https://hydro.iis.u-tokyo.ac.jp">Global Hydrology Group</a> in <a href="https://www.iis.u-tokyo.ac.jp/">IIS (Institute of Industrial Science)</a>, <a href="https://www.u-tokyo.ac.jp/">The University of Tokyo</a></p>
+		  <p>Site made with <a href="https://jekyllrb.com">Jekyll</a>. The design based on the code by <a href="http://www.allanlab.org/aboutwebsite.html">Allan Lab</a>
+		</div>
+
+		<div class="col-sm-4">
+		  <p><b>Links:</b></p>
+          <a href="https://github.com/global-hydrodynamics"><svg class="social-icon"><use xlink:href="/assets/social-icons.svg#github"></use></svg>Yamazaki Lab GitHub</a><br/>
+          <a href="https://twitter.com/g_hydrodynamics"><svg class="social-icon"><use xlink:href="/assets/social-icons.svg#twitter"></use></svg>Yamazaki Lab Twitter</a><br/>
+          <a href="https://www.facebook.com/people/Yamazaki-Lab-Global-Hydrolodynamics/61577996767548/"><svg class="social-icon"><use xlink:href="/assets/social-icons.svg#facebook"></use></svg>Yamazaki Lab Facebook</a><br/>
+          <a href="https://www.linkedin.com/company/global-hydrodynamics/"><svg class="social-icon"><use xlink:href="/assets/social-icons.svg#linkedin"></use></svg>Yamazaki Lab LinkedIn</a><br/>
+          <a href="https://www.instagram.com/g_hydrodynamics/"><svg class="social-icon"><use xlink:href="/assets/social-icons.svg#instagram"></use></svg>Yamazaki Lab Instagram</a><br/>
+          <br/>
+		</div>
+
+
+
+		<div class="col-sm-4">
+		  <p><b>Contact:</b><br/>
+          Yamazaki Lab (IIS Be607)<br/>
+          4-6-1 Komaba, Meguro-Ku<br/>
+          Tokyo, 153-8505, Japan<br/>
+          (<a href="https://goo.gl/maps/SNCw9DrqL6Rzs4XM9">Maps</a>, <a href="https://www.iis.u-tokyo.ac.jp/en/access/">Directions</a>)</p>
+
+          <p>PI: Dai Yamazaki<br/>
+          yamadai [at] iis.u-tokyo.ac.jp</p>
+		</div>
+
+	  </div>
+	</div>
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+
+
+  </body>
+
+</html>

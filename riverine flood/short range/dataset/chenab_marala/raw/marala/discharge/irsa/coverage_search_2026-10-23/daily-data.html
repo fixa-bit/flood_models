@@ -1,0 +1,383 @@
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head><link rel="SHORTCUT ICON" href="images/logo.ico" /><link href="Styles/style.css" rel="stylesheet" type="text/css" /><link href="Styles/dropdown.css" rel="stylesheet" type="text/css" /><link href="Styles/styles.css" rel="stylesheet" type="text/css" />
+	<script src="Scripts/dropdown-compressed.js" type="text/javascript"></script>
+	<script src="Scripts/mootools-for-dropdown.js" type="text/javascript"></script>
+	<script src="Scripts/mootools-plugins.js" type="text/javascript"></script>
+	<script src="Scripts/mootools.js" type="text/javascript"></script>
+	<script src="Scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
+	<script src="Scripts/jquery.msgBox.js" type="text/javascript"></script>
+	<link href="Styles/msgBoxLight.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="http://localhost:13272/Scripts/jquery.blockUI.js"></script>
+   
+    
+	
+    <title>Daily Data</title>
+    <style type="text/css">
+        #bodylinks
+        {
+            width: 636px;
+            height: auto;
+        }
+    </style>
+<title>
+
+</title></head>
+<body>
+	<form method="post" action="DailyData.aspx" id="ctl01">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJOTM4ODA0NTk5D2QWAmYPZBYCAgMPZBYEAggPFgIeBWNsYXNzBQdkZWZhdWx0ZAILD2QWAgIBD2QWAgIBD2QWAgIBDxYCHgtfIUl0ZW1Db3VudAIPFh5mD2QWAmYPFQMSMTN0aCBPY3RvYmVyLCAyMDI2tgE8aHRtbD48Ym9keT48YSBocmVmPURvYy9BZHZlcnRpc2VtZW50X1Bvc2l0aW9uX1ZhY2FudDEzMTAyMDI2LnBkZiAgdGFyZ2V0PV9ibGFuaz5BZHZlcnRpc2VtZW50IGZvciBWYWNhbnQgUG9zaXRpb25zIChMYXN0IGRhdGUgZm9yIHN1Ym1pc3Npb24gb2YgYXBwbGljYXRpb24gaXMgMjYtMTAtMjAyNik8L2E+PC9ib2R5PmY8aHRtbD48Ym9keT4uLi4uLi48YSBocmVmPURvYy9BZHZlcnRpc2VtZW50X1Bvc2l0aW9uX1ZhY2FudDEzMTAyMDI2LnBkZiAgdGFyZ2V0PV9ibGFuaz5Nb3JlPC9hPjwvYm9keT5kAgEPZBYCZg8VAxIxM3RoIE9jdG9iZXIsIDIwMjZdPGh0bWw+PGJvZHk+PGEgaHJlZj1Eb2MvSm9iX0Rlc2NyaXB0aW9uMTMxMDIwMjYucGRmICB0YXJnZXQ9X2JsYW5rPkpvYl9EZXNjcmlwdGlvbjwvYT48L2JvZHk+WDxodG1sPjxib2R5Pi4uLi4uLjxhIGhyZWY9RG9jL0pvYl9EZXNjcmlwdGlvbjEzMTAyMDI2LnBkZiAgdGFyZ2V0PV9ibGFuaz5Nb3JlPC9hPjwvYm9keT5kAgIPZBYCZg8VAxE2dGggT2N0b2JlciwgMjAyNoIBPGh0bWw+PGJvZHk+PGEgaHJlZj1Eb2MvSVJTQV9QcmVzc19SZWxlYXNlX0Fkdmlzb3J5X1JhYmkyMDI2LTI3LnBkZiAgdGFyZ2V0PV9ibGFuaz5JUlNBIFByZXNzIFJlbGVhc2UgNnRoIE9jdG9iZXIsIDIwMjY8L2E+PC9ib2R5Pmg8aHRtbD48Ym9keT4uLi4uLi48YSBocmVmPURvYy9JUlNBX1ByZXNzX1JlbGVhc2VfQWR2aXNvcnlfUmFiaTIwMjYtMjcucGRmICB0YXJnZXQ9X2JsYW5rPk1vcmU8L2E+PC9ib2R5PmQCAw9kFgJmDxUDDDJuZCBNYXkgMjAyNmw8aHRtbD48Ym9keT48YSBocmVmPURvYy9JUlNBX0FubnVhbF9SZXBvcnRfMjAyNF8yNS5wZGYgIHRhcmdldD1fYmxhbms+SVJTQSBBbm51YWwgUmVwb3J0LCAyMDI0LTI1PC9hPjwvYm9keT5bPGh0bWw+PGJvZHk+Li4uLi4uPGEgaHJlZj1Eb2MvSVJTQV9Bbm51YWxfUmVwb3J0XzIwMjRfMjUucGRmICB0YXJnZXQ9X2JsYW5rPk1vcmU8L2E+PC9ib2R5PmQCBA9kFgJmDxUDDzd0aCBBcHJpbCwgMjAyNng8aHRtbD48Ym9keT48YSBocmVmPURvYy9JUlNBX0Fkdmlzb3J5X0toYXJpZl8yMDI2X0FwcmlsLnBkZiAgdGFyZ2V0PV9ibGFuaz5JUlNBIFByZXNzIFJlbGVhc2UgN3RoIEFwcmlsLCAyMDI2PC9hPjwvYm9keT5gPGh0bWw+PGJvZHk+Li4uLi4uPGEgaHJlZj1Eb2MvSVJTQV9BZHZpc29yeV9LaGFyaWZfMjAyNl9BcHJpbC5wZGYgIHRhcmdldD1fYmxhbms+TW9yZTwvYT48L2JvZHk+ZAIFD2QWAmYPFQMSMXN0IEZlYnJ1YXJ5LCAyMDI2YTxodG1sPjxib2R5PjxhIGhyZWY9RG9jL1RlbGVtZXRyeV9sb2NhdGlvbi5qcGcgIHRhcmdldD1fYmxhbms+VGVsZW10cnkgU2l0ZXMgTG9jYXRpb25zPC9hPjwvYm9keT5TPGh0bWw+PGJvZHk+Li4uLi4uPGEgaHJlZj1Eb2MvVGVsZW1ldHJ5X2xvY2F0aW9uLmpwZyAgdGFyZ2V0PV9ibGFuaz5Nb3JlPC9hPjwvYm9keT5kAgYPZBYCZg8VAxI0dGggTm92ZW1iZXIsIDIwMjVsPGh0bWw+PGJvZHk+PGEgaHJlZj1Eb2MvSVJTQV9QcmVzc19DU0lSTy5wZGYgIHRhcmdldD1fYmxhbms+SVJTQSBQcmVzcyBSZWxlYXNlIDR0aCBOb3ZlbWJlciwgMjAyNTwvYT48L2JvZHk+UTxodG1sPjxib2R5Pi4uLi4uLjxhIGhyZWY9RG9jL0lSU0FfUHJlc3NfQ1NJUk8ucGRmICB0YXJnZXQ9X2JsYW5rPk1vcmU8L2E+PC9ib2R5PmQCBw9kFgJmDxUDDTV0aCBNYXksIDIwMjV0PGh0bWw+PGJvZHk+PGEgaHJlZj1Eb2MvSVJTQV9BZHZpc29yeV9LaGFyaWZfMjAyNV9NYXkucGRmICB0YXJnZXQ9X2JsYW5rPklSU0EgUHJlc3MgUmVsZWFzZSA1dGggTWF5LCAyMDI1PC9hPjwvYm9keT5ePGh0bWw+PGJvZHk+Li4uLi4uPGEgaHJlZj1Eb2MvSVJTQV9BZHZpc29yeV9LaGFyaWZfMjAyNV9NYXkucGRmICB0YXJnZXQ9X2JsYW5rPk1vcmU8L2E+PC9ib2R5PmQCCA9kFgJmDxUDEDI2dGggTWFyY2gsIDIwMjVzPGh0bWw+PGJvZHk+PGEgaHJlZj1Eb2MvSVJTQV9BZHZpc29yeV9LaGFyaWZfMjAyNS5wZGYgIHRhcmdldD1fYmxhbms+SVJTQSBQcmVzcyBSZWxlYXNlIDI2dGggTWFyY2gsIDIwMjU8L2E+PC9ib2R5Plo8aHRtbD48Ym9keT4uLi4uLi48YSBocmVmPURvYy9JUlNBX0Fkdmlzb3J5X0toYXJpZl8yMDI1LnBkZiAgdGFyZ2V0PV9ibGFuaz5Nb3JlPC9hPjwvYm9keT5kAgkPZBYCZg8VAxIxMXRoIE9jdG9iZXIsIDIwMjR3PGh0bWw+PGJvZHk+PGEgaHJlZj1Eb2MvSVJTQV9QcmVzc19SZWxlYXNlXzExMTAyMDI0LnBkZiAgdGFyZ2V0PV9ibGFuaz5JUlNBIFByZXNzIFJlbGVhc2UgMTF0aCBPY3RvYmVyLCAyMDI0PC9hPjwvYm9keT5cPGh0bWw+PGJvZHk+Li4uLi4uPGEgaHJlZj1Eb2MvSVJTQV9QcmVzc19SZWxlYXNlXzExMTAyMDI0LnBkZiAgdGFyZ2V0PV9ibGFuaz5Nb3JlPC9hPjwvYm9keT5kAgoPZBYCZg8VAxEybmQgT2N0b2JlciwgMjAyNIIBPGh0bWw+PGJvZHk+PGEgaHJlZj1Eb2MvSVJTQV9QcmVzc19SZWxlYXNlX0Fkdmlzb3J5X1JhYmkyMDI0LTI1LnBkZiAgdGFyZ2V0PV9ibGFuaz5JUlNBIFByZXNzIFJlbGVhc2UgMm5kIE9jdG9iZXIsIDIwMjQ8L2E+PC9ib2R5Pmg8aHRtbD48Ym9keT4uLi4uLi48YSBocmVmPURvYy9JUlNBX1ByZXNzX1JlbGVhc2VfQWR2aXNvcnlfUmFiaTIwMjQtMjUucGRmICB0YXJnZXQ9X2JsYW5rPk1vcmU8L2E+PC9ib2R5PmQCCw9kFgJmDxUDEzNyZCBTZXB0ZW1iZXIsIDIwMjR+PGh0bWw+PGJvZHk+PGEgaHJlZj1Eb2MvSVJTQV9QcmVzc19SZWxlYXNlX1NlcHRlbWJlcl8yMDI0LnBkZiAgdGFyZ2V0PV9ibGFuaz5JUlNBIFByZXNzIFJlbGVhc2UgM3JkIFNlcHRlbWJlciwgMjAyNDwvYT48L2JvZHk+YjxodG1sPjxib2R5Pi4uLi4uLjxhIGhyZWY9RG9jL0lSU0FfUHJlc3NfUmVsZWFzZV9TZXB0ZW1iZXJfMjAyNC5wZGYgIHRhcmdldD1fYmxhbms+TW9yZTwvYT48L2JvZHk+ZAIMD2QWAmYPFQMQMTB0aCBBcHJpbCwgMjAyM5UBPGh0bWw+PGJvZHk+PGEgaHJlZj1Eb2MvT2JzZXJ2YW5jZV9JbXBsZW1lbnRhdGlvbi5wZGYgIHRhcmdldD1fYmxhbms+T2JzZXJ2YW5jZSBhbmQgSW1wbGVtZW50YXRpb24gb2YgMiUgZGlzYWJpbGl0eSBxdW90YSAxMHRoIEFwcmlsLCAyMDIzPC9hPjwvYm9keT5aPGh0bWw+PGJvZHk+Li4uLi4uPGEgaHJlZj1Eb2MvT2JzZXJ2YW5jZV9JbXBsZW1lbnRhdGlvbi5wZGYgIHRhcmdldD1fYmxhbms+TW9yZTwvYT48L2JvZHk+ZAIND2QWAmYPFQMUMTJ0aCBTZXB0ZW1iZXIsIDIwMjJ5PGh0bWw+PGJvZHk+PGEgaHJlZj1Ub29sSGFuZG92ZXIuYXNweCAgdGFyZ2V0PV9ibGFuaz5XQUEgVG9vbCBIYW5kb3ZlciBNZWV0aW5nIChQaWN0dXJlcykgMTJ0aCBTZXB0ZW1iZXIsIDIwMjI8L2E+PC9ib2R5Pko8aHRtbD48Ym9keT4uLi4uLi48YSBocmVmPVRvb2xIYW5kb3Zlci5hc3B4ICB0YXJnZXQ9X2JsYW5rPk1vcmU8L2E+PC9ib2R5PmQCDg9kFgJmDxUDEjA5IFNlcHRlbWJlciwgMjAxOD9FU1RBQkxJU0hNRU5UIE9GIFBNIC0gQ0ogRlVORCBGT1IgRElBTUVSIEJBU0hBIEFORCBNT0hNQU5EIERBTS4AZGSf+R4nRk9yDLVgIm+Nw18IjKpEQGsIUhHVciww4WHUcg==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['ctl01'];
+if (!theForm) {
+    theForm = document.ctl01;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=S57VOT2DkzV1QlDiLLR5u8bHnefqaWPqqaz2Ci4YylylQCBCuxz-pp-hkn28eMEJ4LH4z_3DDvmxUd_vhAXbbw-C7U39YP-zJzFkEXavEZM1&amp;t=635522340465168716" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=FNERjkeTiolTj9k7a3csr9xs2R65ww3XUif_OCdxWA4XKWuLJ4fKbVaJI9AjT451cvYBr4hUqS0KRDIe3B72nALijj0OVdwgWOdPEMa2DVgETETR1p6zyxlDOCvzhChVdSMu3zsCwNx4Q2gGRKBJIpMlvZMJELu8VhcPCyYUwPPR-JIdBYWUURZErW3uvDmE0&amp;t=348b0da" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="/ScriptResource.axd?d=y085qAgyC5tn8l2-xHRwsYLgVs2Bl6pzJGfhPj6Jf7YcuOWsJ_1qVCHgKCj9lfhL_ckvnQhBzyq59G0P4jbtpwL-XPGjSVHDPSGaFVfqLeeZg_A46hgLpqpbPgi-j1EHy5fMOmExbseBFzt07X7UNWgoA74npDlTQSXSvlqFX5M2fORno0uCMmz_PHpRGJxp0&amp;t=348b0da" type="text/javascript"></script>
+	<script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'ctl01', [], [], [], 90, 'ctl00');
+//]]>
+</script>
+
+	 <div id="main"  >
+		
+		  <div id="header" style="height:470px;">
+			  <div >
+				  <div id="headerImg"><img src="images/Header_IRsa-logo.png"/></div>
+			  
+				<div id="dropdown-holder">
+						<ul id="nav" class="dropdown">
+                           
+							<li id="menuHome"> <a href="Home.aspx">Home</a></li>
+							<li id="menuAuthority"><a href="IRSAAuthority.aspx">IRSA Authority</a></li>
+							<li id="menuLegalProc"><a href="LegalProceedings.aspx">Legal Proceedings</a>
+
+                                <ul class="dropdown">
+									<li id="Li1"><a href="LegalProceedings.aspx">IRSA Act No. XXII of 1992</a></li>
+									<li id="Li2"><a href="WAA.aspx">Water Apportionment Accord 1991</a></li>
+									
+								</ul>
+
+							</li>
+							<li id="menuProjects"><a href="Projects.aspx">Projects</a></li>
+							<li id="menuDailyData"><a href="DailyData.aspx">Daily Data</a></li>
+							
+                            <li id="menuIrrigation"><a>Irrigation System</a>
+								<ul>
+									
+									<li><a href="Punjab.aspx">Punjab Irrigation system</a></li>
+									<li><a href="Sindh.aspx">Sindh Irrigation system</a></li>
+									<li><a href="KPK.aspx">KPK Irrigation system</a></li>
+									<li><a href="Balochistan.aspx">Balochistan Irrigation system</a></li>
+								</ul>
+							</li>
+                            <li id="menuOrgStruct"><a href="OrganizationStructure.aspx">Organization Structure</a></li>
+							
+                            <li id="menuAbout" class="default"><a>Latest Updates</a>
+
+                                <ul>
+									<li id="Li3"><a href="PressRelease.aspx">Press Release</a></li>
+									<li id="Li4"><a href="Vacancies.aspx">Vacancies</a></li>
+                                    <li id="Li6"><a href="TenderNotice.aspx">Tender Notice</a></li>
+								</ul>
+
+							</li>
+                            <li id="mnuContacts"><a href="About.aspx">Contacts</a></li>
+                          
+						</ul>
+                        <div>
+                            <a href="http://pakirsa.gov.pk/Irsa/Security/Home" id="Lnk_login" style="background:none;color:White;text-decoration:none;font-size:12px;direction:rtl;float:right;margin-top:8px;margin-right:25px;">Login</a>
+                        </div>
+						<div class="clear"> </div>
+					</div>
+		
+			</div>
+			
+			   <!-- banner -->
+			<div id="damImg"><img src="images/Banner.JPG" /></div>
+		  
+		  </div>
+		 
+		 
+    <div style="height:auto;color:#5e5e5e;">
+        <div id="welcomeMsg">
+            <marquee class="msg">Daily Water Situation</marquee>
+        </div>
+        <div id="PBody" style="height:370px;">
+            <div style="margin: -20px; width: 200px; height: 300px; margin-left: 1px; margin-top: 20px;">
+                
+
+
+<div id="updates">
+              <h5>Latest Updates</h5>
+              
+
+              <marquee behavior="scroll" direction="up"  scrolldelay="180" onmouseover="this.stop();" onmouseout="this.start();" class="marquee" >
+              <div id="MainContent_UpdatePanel_NewsDiv" style="width:auto;" class="wrapword5">
+              
+                
+                <div class="FooterLink"><div style="padding-bottom: 3px;">13th October, 2026</div><html><body><a href=Doc/Advertisement_Position_Vacant13102026.pdf  target=_blank>Advertisement for Vacant Positions (Last date for submission of application is 26-10-2026)</a></body><html><body>......<a href=Doc/Advertisement_Position_Vacant13102026.pdf  target=_blank>More</a></body></><hr style="border: 0;border-top: 1px solid #ccc;" /></div>
+
+              
+                
+                <div class="FooterLink"><div style="padding-bottom: 3px;">13th October, 2026</div><html><body><a href=Doc/Job_Description13102026.pdf  target=_blank>Job_Description</a></body><html><body>......<a href=Doc/Job_Description13102026.pdf  target=_blank>More</a></body></><hr style="border: 0;border-top: 1px solid #ccc;" /></div>
+
+              
+                
+                <div class="FooterLink"><div style="padding-bottom: 3px;">6th October, 2026</div><html><body><a href=Doc/IRSA_Press_Release_Advisory_Rabi2026-27.pdf  target=_blank>IRSA Press Release 6th October, 2026</a></body><html><body>......<a href=Doc/IRSA_Press_Release_Advisory_Rabi2026-27.pdf  target=_blank>More</a></body></><hr style="border: 0;border-top: 1px solid #ccc;" /></div>
+
+              
+                
+                <div class="FooterLink"><div style="padding-bottom: 3px;">2nd May 2026</div><html><body><a href=Doc/IRSA_Annual_Report_2024_25.pdf  target=_blank>IRSA Annual Report, 2024-25</a></body><html><body>......<a href=Doc/IRSA_Annual_Report_2024_25.pdf  target=_blank>More</a></body></><hr style="border: 0;border-top: 1px solid #ccc;" /></div>
+
+              
+                
+                <div class="FooterLink"><div style="padding-bottom: 3px;">7th April, 2026</div><html><body><a href=Doc/IRSA_Advisory_Kharif_2026_April.pdf  target=_blank>IRSA Press Release 7th April, 2026</a></body><html><body>......<a href=Doc/IRSA_Advisory_Kharif_2026_April.pdf  target=_blank>More</a></body></><hr style="border: 0;border-top: 1px solid #ccc;" /></div>
+
+              
+                
+                <div class="FooterLink"><div style="padding-bottom: 3px;">1st February, 2026</div><html><body><a href=Doc/Telemetry_location.jpg  target=_blank>Telemtry Sites Locations</a></body><html><body>......<a href=Doc/Telemetry_location.jpg  target=_blank>More</a></body></><hr style="border: 0;border-top: 1px solid #ccc;" /></div>
+
+              
+                
+                <div class="FooterLink"><div style="padding-bottom: 3px;">4th November, 2025</div><html><body><a href=Doc/IRSA_Press_CSIRO.pdf  target=_blank>IRSA Press Release 4th November, 2025</a></body><html><body>......<a href=Doc/IRSA_Press_CSIRO.pdf  target=_blank>More</a></body></><hr style="border: 0;border-top: 1px solid #ccc;" /></div>
+
+              
+                
+                <div class="FooterLink"><div style="padding-bottom: 3px;">5th May, 2025</div><html><body><a href=Doc/IRSA_Advisory_Kharif_2025_May.pdf  target=_blank>IRSA Press Release 5th May, 2025</a></body><html><body>......<a href=Doc/IRSA_Advisory_Kharif_2025_May.pdf  target=_blank>More</a></body></><hr style="border: 0;border-top: 1px solid #ccc;" /></div>
+
+              
+                
+                <div class="FooterLink"><div style="padding-bottom: 3px;">26th March, 2025</div><html><body><a href=Doc/IRSA_Advisory_Kharif_2025.pdf  target=_blank>IRSA Press Release 26th March, 2025</a></body><html><body>......<a href=Doc/IRSA_Advisory_Kharif_2025.pdf  target=_blank>More</a></body></><hr style="border: 0;border-top: 1px solid #ccc;" /></div>
+
+              
+                
+                <div class="FooterLink"><div style="padding-bottom: 3px;">11th October, 2024</div><html><body><a href=Doc/IRSA_Press_Release_11102024.pdf  target=_blank>IRSA Press Release 11th October, 2024</a></body><html><body>......<a href=Doc/IRSA_Press_Release_11102024.pdf  target=_blank>More</a></body></><hr style="border: 0;border-top: 1px solid #ccc;" /></div>
+
+              
+                
+                <div class="FooterLink"><div style="padding-bottom: 3px;">2nd October, 2024</div><html><body><a href=Doc/IRSA_Press_Release_Advisory_Rabi2024-25.pdf  target=_blank>IRSA Press Release 2nd October, 2024</a></body><html><body>......<a href=Doc/IRSA_Press_Release_Advisory_Rabi2024-25.pdf  target=_blank>More</a></body></><hr style="border: 0;border-top: 1px solid #ccc;" /></div>
+
+              
+                
+                <div class="FooterLink"><div style="padding-bottom: 3px;">3rd September, 2024</div><html><body><a href=Doc/IRSA_Press_Release_September_2024.pdf  target=_blank>IRSA Press Release 3rd September, 2024</a></body><html><body>......<a href=Doc/IRSA_Press_Release_September_2024.pdf  target=_blank>More</a></body></><hr style="border: 0;border-top: 1px solid #ccc;" /></div>
+
+              
+                
+                <div class="FooterLink"><div style="padding-bottom: 3px;">10th April, 2023</div><html><body><a href=Doc/Observance_Implementation.pdf  target=_blank>Observance and Implementation of 2% disability quota 10th April, 2023</a></body><html><body>......<a href=Doc/Observance_Implementation.pdf  target=_blank>More</a></body></><hr style="border: 0;border-top: 1px solid #ccc;" /></div>
+
+              
+                
+                <div class="FooterLink"><div style="padding-bottom: 3px;">12th September, 2022</div><html><body><a href=ToolHandover.aspx  target=_blank>WAA Tool Handover Meeting (Pictures) 12th September, 2022</a></body><html><body>......<a href=ToolHandover.aspx  target=_blank>More</a></body></><hr style="border: 0;border-top: 1px solid #ccc;" /></div>
+
+              
+                
+                <div class="FooterLink"><div style="padding-bottom: 3px;">09 September, 2018</div>ESTABLISHMENT OF PM - CJ FUND FOR DIAMER BASHA AND MOHMAND DAM.</><hr style="border: 0;border-top: 1px solid #ccc;" /></div>
+
+              
+           
+            </div></marquee>
+            
+            
+              <div>
+              	<a href="News.aspx" style="margin-left:132px;color:#937017;font-size:12px;">See All</a>
+                </div>
+            </div>
+  
+            </div>
+
+            
+
+<div style="float: right; margin-right: 20px; margin-top: -270px;">
+           		 
+
+<div id="links" >
+    <h5>
+        Links With Ministries</h5>
+
+	
+    
+
+    
+
+    <div class="wrapword3" style="margin-top: -5px;">
+        <div class="legalPro">
+            <a href="https://mowr.gov.pk/" target="_blank">
+                <img src="images/link_arrow.png" />&nbsp;Ministry of Water Resources</a></div>
+    </div>
+
+
+
+
+
+ <div class="wrapword3" style="padding-top:3px;">
+        <div class="legalPro">
+            <a href="https://www.sifc.gov.pk/" target="_blank">
+                <img src="images/link_arrow.png" />&nbsp;Special Investment Facilitation</a></div>
+		<label style="margin-left:15px; ">Council (SIFC)</label>
+    </div>
+
+
+
+
+    <div class="wrapword3" style="padding-top:3px;">
+        <div class="legalPro">
+            <a href="http://www.mowp.gov.pk/" target="_blank">
+                <img src="images/link_arrow.png" />&nbsp;Ministry of Energy Power Division</a></div>
+    </div>
+
+
+
+
+    <div class="wrapword3" style="padding-top:3px;">
+        <div class="legalPro">
+            <a href="http://www.ffc.gov.pk/" target="_blank">
+                <img src="images/link_arrow.png" />&nbsp;Federal Flood Commission</a></div>
+    </div>
+    <div class="wrapword3" style="padding-top:3px;">
+        <div class="legalPro">
+            <a href="http://www.pc.gov.pk/" target="_blank">
+                <img src="images/link_arrow.png" />&nbsp;Ministry of Planning Development </a></div>
+		<label style="margin-left:15px; ">& Special Initiatives</label>
+    </div>
+    
+    <div class="wrapword3" style="padding-top:3px;">
+        <div class="legalPro">
+            <a href="http://www.pmd.gov.pk/" target="_blank">
+                <img src="images/link_arrow.png" />&nbsp;Pakistan Meteorological</a></div>
+                <label style="margin-left:15px; ">Department</label>
+    </div>
+    <div class="wrapword3" style="padding-top:3px; ">
+        <div class="legalPro">
+            <a href="http://www.ndma.gov.pk/" target="_blank">
+                <img src="images/link_arrow.png" />&nbsp;National Disaster Management <br/> </a></div>
+                <label style="margin-left:15px; ">Authority</label>
+    </div>
+    <div class="wrapword3" style="padding-top:3px;">
+        <div class="legalPro">
+            <a href="https://irrigation.punjab.gov.pk/" target="_blank">
+                <img src="images/link_arrow.png" />&nbsp;Punjab Irrigation Department</a></div>
+    </div>
+    <div class="wrapword3" style="padding-top:3px;">
+        <div class="legalPro">
+            <a href="http://sida.org.pk/" target="_blank">
+                <img src="images/link_arrow.png" />&nbsp;Sindh Irrigation Department</a></div>
+    </div>
+    <div class="wrapword3" style="padding-top:3px;">
+        <div class="legalPro">
+            <a href="http://irrigation.gkp.pk/Departments/Irrigation/" target="_blank">
+                <img src="images/link_arrow.png" />&nbsp;Khyber Pakhtunkhwa Irrigation <br/> </a></div>
+                <label style="margin-left:15px; ">Department</label>
+    </div>
+    <div class="wrapword3" style="padding-top:3px;">
+        <div class="legalPro">
+            <a href="http://www.balochistan.gov.pk" target="_blank">
+                <img src="images/link_arrow.png" />&nbsp;Balochistan Irrigation <br/>  </a></div>
+                <label style="margin-left:15px; ">Department</label>
+    </div>
+</div>
+
+                  	 </div>
+
+
+
+
+
+
+            <div style="margin-left: 10px; margin-top: -310px;">
+                <div id="bodylinks" class="PRli" style="font-weight:bold;">
+                    <ul>
+                        <br />
+
+
+
+
+<li><a href="Doc/Data23-10-2026.pdf" class="PRli">Daily Data 23/10/2026 </a></li><br />
+<li><a href="Doc/Data22-10-2026.pdf" class="PRli">Daily Data 22/10/2026 </a></li><br />
+<li><a href="Doc/Data21-10-2026.pdf" class="PRli">Daily Data 21/10/2026 </a></li><br />
+<li><a href="Doc/Data20-10-2026.pdf" class="PRli">Daily Data 20/10/2026 </a></li><br />
+<li><a href="Doc/Data19-10-2026.pdf" class="PRli">Daily Data 19/10/2026 </a></li><br />
+<li><a href="Doc/Data18-10-2026.pdf" class="PRli">Daily Data 18/10/2026 </a></li><br />
+<li><a href="Doc/Data17-10-2026.pdf" class="PRli">Daily Data 17/10/2026 </a></li><br />
+<li><a href="Doc/Data16-10-2026.pdf" class="PRli">Daily Data 16/10/2026 </a></li><br />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        
+
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+		  
+		 
+	</div>
+
+     <div id="footer">
+		   <div id="footerLink" class="FooterLink">
+			<a href="Home.aspx">Home</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="IRSAAuthority.aspx">IRSA
+				Authority</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="LegalProceedings.aspx">Legal Proceedings</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
+					href="Projects.aspx">Projects</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="DailyData.aspx">Daily
+						Data</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="About.aspx">Contacts&nbsp;&nbsp;</a><br />
+			<font style="font-size:9px; font-weight: lighter;margin-left:11px;">Copyright &copy;2011 IRSA -
+				All Rights Reserved. Design & Developed by : NESPAK Software Engineering </font>
+		</div>
+		  </div>
+	</form>
+</body>
+</html>

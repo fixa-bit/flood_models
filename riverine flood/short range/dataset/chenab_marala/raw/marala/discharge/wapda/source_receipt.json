@@ -1,0 +1,13 @@
+{
+  "provider": "Water and Power Development Authority (WAPDA)",
+  "source_url": "https://wapda.gov.pk/wp-content/uploads/2024/12/GRAPH-DG-16-for-MAIL-2.xls",
+  "downloaded_utc": "2026-10-23T06:43:48.971228+00:00",
+  "filename": "GRAPH-DG-16-for-MAIL-2.xls",
+  "bytes": 1924096,
+  "sha256": "5b163cbd4166f39edf878eb165098637d71975169b0d65ead0298a33160c8faa",
+  "relevant_sheet": "GHRAPH",
+  "relevant_variable": "CHENAB INFLOW AT MARALA",
+  "units_as_labeled": "1000 x cusecs",
+  "verified_numeric_coverage": "2016-03-01 through 2024-12-19, 3216 daily values",
+  "notes": "Original source workbook; contains other stations. One zero Marala reading needs investigation. Do not infer hourly resolution."
+}

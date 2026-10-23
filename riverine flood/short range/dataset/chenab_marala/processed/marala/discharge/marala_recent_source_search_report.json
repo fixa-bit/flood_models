@@ -1,0 +1,321 @@
+{
+  "checked_utc": "2026-10-23T07:33:28.122917+00:00",
+  "as_of": "2026-10-23",
+  "complete_year_round_2025_2026_archive_confirmed": false,
+  "irsa_records_saved": 8,
+  "checks": [
+    {
+      "url": "https://wapda.gov.pk/river-flow/",
+      "checked_utc": "2026-10-23T07:33:20.338427+00:00",
+      "status": 200,
+      "final_url": "https://wapda.gov.pk/river-flow/",
+      "raw_file": "raw/marala/discharge/wapda/coverage_search_2026-10-23/river-flow.html",
+      "sha256": "5918fdeba5f5248164199e5032e43a5b0ec2e7325db0e0666bff484721448be3",
+      "bytes": 289361,
+      "download_links": [
+        "https://wapda.gov.pk/wp-content/uploads/2024/12/GRAPH-DG-16-for-MAIL-2.xls"
+      ]
+    },
+    {
+      "url": "https://wapda.gov.pk/water-situation/",
+      "checked_utc": "2026-10-23T07:33:20.339349+00:00",
+      "status": 200,
+      "final_url": "https://wapda.gov.pk/water-situation/",
+      "raw_file": "raw/marala/discharge/wapda/coverage_search_2026-10-23/water-situation.html",
+      "sha256": "e8ac77e5268b8fc3f24be0cadb64a7ca1594530e59ed1516cc3506ecd8608921",
+      "bytes": 289395,
+      "download_links": [
+        "https://wapda.gov.pk/wp-content/uploads/2024/12/Daily-DataPress-Release-19-12-2024.xls"
+      ]
+    },
+    {
+      "url": "https://wapda.gov.pk/category/river-data/",
+      "checked_utc": "2026-10-23T07:33:20.339349+00:00",
+      "status": 200,
+      "final_url": "https://wapda.gov.pk/category/river-data/",
+      "raw_file": "raw/marala/discharge/wapda/coverage_search_2026-10-23/river-data-index.html",
+      "sha256": "946372ff204c4dfe415ec35a815b64fb6328123a729860f1703af1d62174870c",
+      "bytes": 284236,
+      "download_links": []
+    },
+    {
+      "url": "https://wapda.gov.pk/wp-json/wp/v2/media?search=Daily-Data&per_page=100",
+      "checked_utc": "2026-10-23T07:33:24.048942+00:00",
+      "status": 200,
+      "final_url": "https://wapda.gov.pk/wp-json/wp/v2/media?search=Daily-Data&per_page=100",
+      "raw_file": "raw/marala/discharge/wapda/coverage_search_2026-10-23/daily-media.json",
+      "sha256": "0aa0b291afd92d95c880648d69e9405cd5f14c172391854d7bedccade3acfdb0",
+      "bytes": 4565,
+      "entries": [
+        {
+          "date": "2024-12-20T16:11:52",
+          "url": null,
+          "source_url": "https://wapda.gov.pk/wp-content/uploads/2024/12/Daily-DataPress-Release-19-12-2024.xls",
+          "title": {
+            "rendered": "Daily Data+Press Release 19-12-2024"
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://wapda.gov.pk/wp-json/wp/v2/media?search=GRAPH-DG&per_page=100",
+      "checked_utc": "2026-10-23T07:33:25.244877+00:00",
+      "status": 200,
+      "final_url": "https://wapda.gov.pk/wp-json/wp/v2/media?search=GRAPH-DG&per_page=100",
+      "raw_file": "raw/marala/discharge/wapda/coverage_search_2026-10-23/graph-media.json",
+      "sha256": "cadad70e24291d920f893df97a1c8d53e7ba397bd13ed660324ee0750e3d78f4",
+      "bytes": 4468,
+      "entries": [
+        {
+          "date": "2024-12-20T16:09:50",
+          "url": null,
+          "source_url": "https://wapda.gov.pk/wp-content/uploads/2024/12/GRAPH-DG-16-for-MAIL-2.xls",
+          "title": {
+            "rendered": "GRAPH-DG-16 for MAIL (2)"
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://wapda.gov.pk/wp-json/wp/v2/search?search=river%20flow&per_page=100",
+      "checked_utc": "2026-10-23T07:33:26.409213+00:00",
+      "status": 200,
+      "final_url": "https://wapda.gov.pk/wp-json/wp/v2/search?search=river%20flow&per_page=100",
+      "raw_file": "raw/marala/discharge/wapda/coverage_search_2026-10-23/river-search.json",
+      "sha256": "55da3db0589c691e4eeb80431275b49d518e7811f0f4151424cb559635a4e98b",
+      "bytes": 3674,
+      "entries": [
+        {
+          "date": null,
+          "url": "https://wapda.gov.pk/river-flow-data/",
+          "source_url": null,
+          "title": "River Flow Data"
+        },
+        {
+          "date": null,
+          "url": "https://wapda.gov.pk/river-flow/",
+          "source_url": null,
+          "title": "River Flow"
+        },
+        {
+          "date": null,
+          "url": "https://wapda.gov.pk/home-old/",
+          "source_url": null,
+          "title": "HOME-old"
+        },
+        {
+          "date": null,
+          "url": "https://wapda.gov.pk/chashma-right-bank-canal-project-lift-cum-gravity/",
+          "source_url": null,
+          "title": "Chashma Right Bank Canal Project (LIFT-CUM-GRAVITY)"
+        },
+        {
+          "date": null,
+          "url": "https://wapda.gov.pk/rainee-canal-project/",
+          "source_url": null,
+          "title": "Rainee Canal Project"
+        },
+        {
+          "date": null,
+          "url": "https://wapda.gov.pk/hub-dam/",
+          "source_url": null,
+          "title": "Hub Dam"
+        },
+        {
+          "date": null,
+          "url": "https://wapda.gov.pk/ghazi-barotha-hydropower/",
+          "source_url": null,
+          "title": "Ghazi Barotha HydroPower"
+        },
+        {
+          "date": null,
+          "url": "https://wapda.gov.pk/tarbela-dam/",
+          "source_url": null,
+          "title": "Tarbela Dam"
+        },
+        {
+          "date": null,
+          "url": "https://wapda.gov.pk/diamer-basha-dam-project/",
+          "source_url": null,
+          "title": "Diamer Basha Dam Project"
+        }
+      ]
+    },
+    {
+      "url": "http://pakirsa.gov.pk/DailyData.aspx",
+      "checked_utc": "2026-10-23T07:33:27.648951+00:00",
+      "status": 200,
+      "final_url": "http://pakirsa.gov.pk/DailyData.aspx",
+      "raw_file": "raw/marala/discharge/irsa/coverage_search_2026-10-23/daily-data.html",
+      "sha256": "1c71790b705a049686d03a1ab357e31a0285d44cc7466440fd88440d5245e505",
+      "bytes": 22839
+    },
+    {
+      "url": "http://pakirsa.gov.pk/Doc/Data01-01-2025.pdf",
+      "checked_utc": "2026-10-23T07:33:27.758504+00:00",
+      "status": 404,
+      "error": "HTTP Error 404: Not Found",
+      "discovery": "historical_retention_probe"
+    },
+    {
+      "url": "http://pakirsa.gov.pk/Doc/Data01-04-2025.pdf",
+      "checked_utc": "2026-10-23T07:33:27.759504+00:00",
+      "status": 404,
+      "error": "HTTP Error 404: Not Found",
+      "discovery": "historical_retention_probe"
+    },
+    {
+      "url": "http://pakirsa.gov.pk/Doc/Data01-07-2025.pdf",
+      "checked_utc": "2026-10-23T07:33:27.759504+00:00",
+      "status": 404,
+      "error": "HTTP Error 404: Not Found",
+      "discovery": "historical_retention_probe"
+    },
+    {
+      "url": "http://pakirsa.gov.pk/Doc/Data01-10-2025.pdf",
+      "checked_utc": "2026-10-23T07:33:27.792728+00:00",
+      "status": 404,
+      "error": "HTTP Error 404: Not Found",
+      "discovery": "historical_retention_probe"
+    },
+    {
+      "url": "http://pakirsa.gov.pk/Doc/Data31-12-2025.pdf",
+      "checked_utc": "2026-10-23T07:33:27.807457+00:00",
+      "status": 404,
+      "error": "HTTP Error 404: Not Found",
+      "discovery": "historical_retention_probe"
+    },
+    {
+      "url": "http://pakirsa.gov.pk/Doc/Data01-01-2026.pdf",
+      "checked_utc": "2026-10-23T07:33:27.807457+00:00",
+      "status": 404,
+      "error": "HTTP Error 404: Not Found",
+      "discovery": "historical_retention_probe"
+    },
+    {
+      "url": "http://pakirsa.gov.pk/Doc/Data14-02-2026.pdf",
+      "checked_utc": "2026-10-23T07:33:27.831984+00:00",
+      "status": 404,
+      "error": "HTTP Error 404: Not Found",
+      "discovery": "historical_retention_probe"
+    },
+    {
+      "url": "http://pakirsa.gov.pk/Doc/Data01-04-2026.pdf",
+      "checked_utc": "2026-10-23T07:33:27.833977+00:00",
+      "status": 404,
+      "error": "HTTP Error 404: Not Found",
+      "discovery": "historical_retention_probe"
+    },
+    {
+      "url": "http://pakirsa.gov.pk/Doc/Data01-07-2026.pdf",
+      "checked_utc": "2026-10-23T07:33:27.835046+00:00",
+      "status": 404,
+      "error": "HTTP Error 404: Not Found",
+      "discovery": "historical_retention_probe"
+    },
+    {
+      "url": "http://pakirsa.gov.pk/Doc/Data01-09-2026.pdf",
+      "checked_utc": "2026-10-23T07:33:27.855901+00:00",
+      "status": 404,
+      "error": "HTTP Error 404: Not Found",
+      "discovery": "historical_retention_probe"
+    },
+    {
+      "url": "http://pakirsa.gov.pk/Doc/Data01-10-2026.pdf",
+      "checked_utc": "2026-10-23T07:33:27.858302+00:00",
+      "status": 404,
+      "error": "HTTP Error 404: Not Found",
+      "discovery": "historical_retention_probe"
+    },
+    {
+      "url": "http://pakirsa.gov.pk/Doc/Data15-10-2026.pdf",
+      "checked_utc": "2026-10-23T07:33:27.866411+00:00",
+      "status": 404,
+      "error": "HTTP Error 404: Not Found",
+      "discovery": "historical_retention_probe"
+    },
+    {
+      "url": "http://pakirsa.gov.pk/Doc/Data16-10-2026.pdf",
+      "checked_utc": "2026-10-23T07:33:27.889417+00:00",
+      "status": 200,
+      "final_url": "http://pakirsa.gov.pk/Doc/Data16-10-2026.pdf",
+      "raw_file": "raw/marala/discharge/irsa/daily_reports/Data16-10-2026.pdf",
+      "sha256": "a08be96d30e75a8e40ffe281aaa12e77dc2182b5553bd3d33d5366f0d87a9f0c",
+      "bytes": 30374,
+      "discovery": "linked_from_daily_data_page"
+    },
+    {
+      "url": "http://pakirsa.gov.pk/Doc/Data17-10-2026.pdf",
+      "checked_utc": "2026-10-23T07:33:27.889417+00:00",
+      "status": 200,
+      "final_url": "http://pakirsa.gov.pk/Doc/Data17-10-2026.pdf",
+      "raw_file": "raw/marala/discharge/irsa/daily_reports/Data17-10-2026.pdf",
+      "sha256": "e8c385db1e0c533391a67e8bb94ba6b5229921dd569622cf251a5abdbb99d105",
+      "bytes": 30372,
+      "discovery": "linked_from_daily_data_page"
+    },
+    {
+      "url": "http://pakirsa.gov.pk/Doc/Data18-10-2026.pdf",
+      "checked_utc": "2026-10-23T07:33:27.889417+00:00",
+      "status": 200,
+      "final_url": "http://pakirsa.gov.pk/Doc/Data18-10-2026.pdf",
+      "raw_file": "raw/marala/discharge/irsa/daily_reports/Data18-10-2026.pdf",
+      "sha256": "1b6d0c5422b4e48b9020968a8b28402a0518d1a41e3e003e00325da971746378",
+      "bytes": 30483,
+      "discovery": "linked_from_daily_data_page"
+    },
+    {
+      "url": "http://pakirsa.gov.pk/Doc/Data19-10-2026.pdf",
+      "checked_utc": "2026-10-23T07:33:27.975710+00:00",
+      "status": 200,
+      "final_url": "http://pakirsa.gov.pk/Doc/Data19-10-2026.pdf",
+      "raw_file": "raw/marala/discharge/irsa/daily_reports/Data19-10-2026.pdf",
+      "sha256": "08682070a68d7a9f8f1cedb47cbb6bdc9b13c4013c93dcc11b8cc2819399a17c",
+      "bytes": 30373,
+      "discovery": "linked_from_daily_data_page"
+    },
+    {
+      "url": "http://pakirsa.gov.pk/Doc/Data20-10-2026.pdf",
+      "checked_utc": "2026-10-23T07:33:27.975710+00:00",
+      "status": 200,
+      "final_url": "http://pakirsa.gov.pk/Doc/Data20-10-2026.pdf",
+      "raw_file": "raw/marala/discharge/irsa/daily_reports/Data20-10-2026.pdf",
+      "sha256": "7e830517b098748f9371a94eb13291fdd10de142de6021df0ea6dcc1ff09bf6a",
+      "bytes": 30355,
+      "discovery": "linked_from_daily_data_page"
+    },
+    {
+      "url": "http://pakirsa.gov.pk/Doc/Data21-10-2026.pdf",
+      "checked_utc": "2026-10-23T07:33:27.976669+00:00",
+      "status": 200,
+      "final_url": "http://pakirsa.gov.pk/Doc/Data21-10-2026.pdf",
+      "raw_file": "raw/marala/discharge/irsa/daily_reports/Data21-10-2026.pdf",
+      "sha256": "77d8dbc29bea00cca76639db9ba5893079d9457ba87a831a75f064f5289cb3c2",
+      "bytes": 30471,
+      "discovery": "linked_from_daily_data_page"
+    },
+    {
+      "url": "http://pakirsa.gov.pk/Doc/Data22-10-2026.pdf",
+      "checked_utc": "2026-10-23T07:33:28.055574+00:00",
+      "status": 200,
+      "final_url": "http://pakirsa.gov.pk/Doc/Data22-10-2026.pdf",
+      "raw_file": "raw/marala/discharge/irsa/daily_reports/Data22-10-2026.pdf",
+      "sha256": "6f09f0bdc08675c8557e9195f53dae9b23dde1ad050334a0431656aedef6c575",
+      "bytes": 30373,
+      "discovery": "linked_from_daily_data_page"
+    },
+    {
+      "url": "http://pakirsa.gov.pk/Doc/Data23-10-2026.pdf",
+      "checked_utc": "2026-10-23T07:33:28.056648+00:00",
+      "status": 200,
+      "final_url": "http://pakirsa.gov.pk/Doc/Data23-10-2026.pdf",
+      "raw_file": "raw/marala/discharge/irsa/daily_reports/Data23-10-2026.pdf",
+      "sha256": "4862716d50de3169272ec78530d2adc388891604abd01a8eed46b0827b6f1377",
+      "bytes": 30484,
+      "discovery": "linked_from_daily_data_page"
+    }
+  ],
+  "scope": "WAPDA public pages and search/media endpoints, IRSA linked daily PDFs, and 12 distributed historical IRSA URL probes. Search is not proof that no archive exists.",
+  "measurement_warning": "IRSA labels Marala mean U/S discharge. Do not append daily means to WAPDA/FFD dated point readings. Averaging-period bounds are not stated.",
+  "next_access_route": "Request machine-readable daily Marala inflow, observation definition, timestamps, QC and corrections from WAPDA H&WM/WRMD and/or IRSA. No request has been sent."
+}

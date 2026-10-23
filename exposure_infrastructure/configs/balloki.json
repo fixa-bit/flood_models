@@ -1,0 +1,8 @@
+{
+  "storage": {"local_root": "..", "colab_drive_root": "/content/drive/MyDrive/flood_project/exposure_infrastructure"},
+  "area": {"name": "balloki", "mode": "bbox", "bbox": [73.75, 31.05, 74.05, 31.35], "verified": false, "note": "Provisional Balloki vicinity, NOT a verified catchment or flood boundary. Replace with the pilot polygon before operational analysis."},
+  "worldpop_item": "pak_pop_2025_CN_100m_R2025A_v1",
+  "existing_boundaries": {},
+  "flood_extents": [],
+  "osm_location_index": "disk"
+}

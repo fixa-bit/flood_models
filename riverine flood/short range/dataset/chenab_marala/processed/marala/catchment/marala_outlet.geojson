@@ -1,0 +1,1 @@
+{"type":"FeatureCollection","features":[{"type":"Feature","properties":{"station":"Marala","role":"published_station_coordinate_not_surveyed_pour_point","source_url":"https://openjicareport.jica.go.jp/pdf/12395935.pdf","source_pdf_page":36},"geometry":{"type":"Point","coordinates":[74.46,32.67]}}]}

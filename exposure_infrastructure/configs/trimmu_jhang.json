@@ -1,0 +1,15 @@
+{
+  "storage": {"local_root": "..", "colab_drive_root": "/content/drive/MyDrive/flood_project/exposure_infrastructure"},
+  "area": {
+    "name": "trimmu_jhang", "mode": "admin", "level": "ADM2", "field": "shapeName", "value": "Jhang",
+    "verified": true,
+    "note": "Explicit district-based exposure pilot: OCHA COD-AB Jhang district. This is an administrative study area, not a station upstream watershed.",
+    "station": {"name": "Trimmu", "coordinates": [72.146, 31.1448], "coordinate_source": "Existing disaster_management/app/gis/river_stations.py", "district_source": "https://jhang.punjab.gov.pk/important-places"}
+  },
+  "boundary_provider": "hdx_cod",
+  "worldpop_item": "pak_pop_2025_CN_100m_R2025A_v1",
+  "existing_boundaries": {},
+  "flood_extents": [],
+  "flood_reference_extents": [],
+  "osm_location_index": "disk"
+}

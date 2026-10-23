@@ -1,0 +1,10 @@
+{
+  "provider": "WAPDA",
+  "source_url": "https://wapda.gov.pk/wp-content/uploads/2024/12/Daily-DataPress-Release-19-12-2024.xls",
+  "downloaded_utc": "2026-10-23T06:48:56.418335+00:00",
+  "filename": "Daily-DataPress-Release-19-12-2024.xls",
+  "bytes": 473600,
+  "sha256": "5e32aef944b2832877c7de17b71e653981c582bb661f7033b63d1257a9385d7b",
+  "sheet": "Press",
+  "evidence": "Row 10 (Excel row) says Chenab at Marala, inflow 5800 cusecs, outflow 2000 cusecs, At 0600 hrs on 19 December 2024. Historical GRAPH workbook has 5.8 thousand cusecs on that date."
+}

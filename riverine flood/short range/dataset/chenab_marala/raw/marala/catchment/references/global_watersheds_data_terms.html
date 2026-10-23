@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Download data for delineator: Global Watershed Delineation with Python</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<style>
+	  
+		table tr td:nth-child(2), td:nth-child(4), td:nth-child(6), td:nth-child(8) {
+			width: 3em;
+			text-align: right;
+		}
+	   
+	    table tr th:nth-child(1), td:nth-child(3), td:nth-child(5), td:nth-child(7) {
+			width: 8em;
+			text-align: center;
+		}
+
+		table tr td:nth-child(1), td:nth-child(3), td:nth-child(5), td:nth-child(7) {
+			width: 8em;
+			text-align: center;
+		}
+	
+		.code {
+			font-family: monospace;
+			background-color: #e5e7eb;
+			padding: 0.1em 0.35em;
+			border-radius: 3px;
+		}
+
+		pre{
+			width: 25em;
+			background-color: #e5e7eb;
+			padding: 1em;
+			border-radius: 3px;
+		}
+	</style>
+</head>
+
+<body>
+
+<h1>Data files for use with the Python package delieantor</h1>
+
+<p>This page contains links to data files for watershed delineation with the 
+<a href="https://github.com/mheberger/delineator">delineator</a> Python package.</p>
+
+<p>📌 <b>Please note!</b> The vector data files (*.db) were updated to <b>v3</b> on July 12, 2026, 
+ These are designed to work with delineator version 2.2.4+ You should delete old versions of the <span class="code">.db</span> files
+and install the latest version of delineator with: <span class="code">pip install --upgrade delineator</span>
+</p>
+
+<p>The 2-digit number in the file name is the megabasin number, or Pfafstetter Level 2 basin code. 
+You can download files for your region of interest, 
+or all of them if you are working globally. (Right click to view full size.) </p>
+
+<p><img src="merit_level2_basins.jpg" width=800 height=362 alt="Map of the Pfafstetter Level 2 basin codes"/> </p>
+
+<p>The vector data <span class="code">.db</span> files are spatialite-enabled sqlite databases. 
+You can view these data in QGIS or in Python with GeoPandas. </p>
+
+<p>Raster data <span class="code">.tif</span> files are GeoTiffs, and can also be viewed in any GIS software.</p>
+
+<p>To use these with the delineator Python package, put these files into your data folder. See the pacakge
+docs for how to find or set your data directory. On Windows, it should look like this:</p>
+
+<pre>
+📁 C:\Users\USERNAME\AppData\Local\delineator\
+└─ 📁 v3\
+	├─ 🗺️ accum11.tif
+	├─ 🗺️ accum12.tif
+	├─ 📦️ basins11.db
+	├─ 📦️ basins12.db
+	├─ 🗺️ flowdir11.tif
+	├─ 🗺️ flowdir12.tif
+	├─ 📦️ rivers11.db
+	└─ 📦️ rivers12.db
+</pre>
+
+
+<h2>License</h2>
+
+<p>
+These data are derived from <a href="http://hydro.iis.u-tokyo.ac.jp/~yamadai/MERIT_Hydro/">MERIT-Hydro</a>
+ and <a href="https://www.reachhydro.org/home/params/merit-basins">MERIT-Basins</a> and 
+are released with the same terms: <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC-BY-NC-SA 4.0 license</a>.
+</p>
+
+
+<h2>Hashes</h2>
+
+<p>To verify the integrity of your download, compare the SHA-256 hash of the file you downloaded 
+against the value in this file: <a href="checksums.sha256">checksums.sha256</a>.
+For example:
+</p> 
+
+<ul>
+	<li>On Linux/macOS: <span class="code">sha256sum basins11.db</span></li>
+	<li>On Windows: <span class="code">certutil -hashfile basins11.db SHA256</span></li>
+</ul>
+
+
+<h2>Files</h2>
+
+<table>
+	<tr>
+		<th>Basins (or catchments)</th>
+		<th>Size (GB)</th>
+		<th>Rivers</th>
+		<th>Size (GB)</th>
+		<th>Flow Accumulation</th>
+		<th>Size (GB)</th>
+		<th>Flow Direction</th>
+		<th>Size (GB)</th>
+	</tr>
+		
+<tr><td><a href="basins11.db" download>basins11.db</a></td><td> 0.65 </td><td><a href="rivers11.db" download>rivers11.db</a></td><td> 0.13 </td> <td><a href="accum11.tif" download>accum11.tif</a></td><td> 0.60 </td><td>  <a href="flowdir11.tif" download>flowdir11.tif</a></td><td>0.22 </td> </tr>
+<tr><td><a href="basins12.db" download>basins12.db</a></td><td> 0.95 </td><td><a href="rivers12.db" download>rivers12.db</a></td><td> 0.19 </td> <td><a href="accum12.tif" download>accum12.tif</a></td><td> 0.62 </td><td>  <a href="flowdir12.tif" download>flowdir12.tif</a></td><td>0.23 </td> </tr>
+<tr><td><a href="basins13.db" download>basins13.db</a></td><td> 0.91 </td><td><a href="rivers13.db" download>rivers13.db</a></td><td> 0.18 </td> <td><a href="accum13.tif" download>accum13.tif</a></td><td> 0.72 </td><td>  <a href="flowdir13.tif" download>flowdir13.tif</a></td><td>0.28 </td> </tr>
+<tr><td><a href="basins14.db" download>basins14.db</a></td><td> 0.76 </td><td><a href="rivers14.db" download>rivers14.db</a></td><td> 0.15 </td> <td><a href="accum14.tif" download>accum14.tif</a></td><td> 0.59 </td><td>  <a href="flowdir14.tif" download>flowdir14.tif</a></td><td>0.24 </td> </tr>
+<tr><td><a href="basins15.db" download>basins15.db</a></td><td> 1.44 </td><td><a href="rivers15.db" download>rivers15.db</a></td><td> 0.31 </td> <td><a href="accum15.tif" download>accum15.tif</a></td><td> 1.04 </td><td>  <a href="flowdir15.tif" download>flowdir15.tif</a></td><td>0.43 </td> </tr>
+<tr><td><a href="basins16.db" download>basins16.db</a></td><td> 0.51 </td><td><a href="rivers16.db" download>rivers16.db</a></td><td> 0.12 </td> <td><a href="accum16.tif" download>accum16.tif</a></td><td> 0.47 </td><td>  <a href="flowdir16.tif" download>flowdir16.tif</a></td><td>0.20 </td> </tr>
+<tr><td><a href="basins17.db" download>basins17.db</a></td><td> 0.63 </td><td><a href="rivers17.db" download>rivers17.db</a></td><td> 0.13 </td> <td><a href="accum17.tif" download>accum17.tif</a></td><td> 0.61 </td><td>  <a href="flowdir17.tif" download>flowdir17.tif</a></td><td>0.26 </td> </tr>
+<tr><td><a href="basins18.db" download>basins18.db</a></td><td> 0.11 </td><td><a href="rivers18.db" download>rivers18.db</a></td><td> 0.03 </td> <td><a href="accum18.tif" download>accum18.tif</a></td><td> 0.06 </td><td>  <a href="flowdir18.tif" download>flowdir18.tif</a></td><td>0.03 </td> </tr>
+<tr><td><a href="basins21.db" download>basins21.db</a></td><td> 0.25 </td><td><a href="rivers21.db" download>rivers21.db</a></td><td> 0.05 </td> <td><a href="accum21.tif" download>accum21.tif</a></td><td> 0.46 </td><td>  <a href="flowdir21.tif" download>flowdir21.tif</a></td><td>0.17 </td> </tr>
+<tr><td><a href="basins22.db" download>basins22.db</a></td><td> 0.55 </td><td><a href="rivers22.db" download>rivers22.db</a></td><td> 0.12 </td> <td><a href="accum22.tif" download>accum22.tif</a></td><td> 0.70 </td><td>  <a href="flowdir22.tif" download>flowdir22.tif</a></td><td>0.26 </td> </tr>
+<tr><td><a href="basins23.db" download>basins23.db</a></td><td> 0.34 </td><td><a href="rivers23.db" download>rivers23.db</a></td><td> 0.07 </td> <td><a href="accum23.tif" download>accum23.tif</a></td><td> 0.34 </td><td>  <a href="flowdir23.tif" download>flowdir23.tif</a></td><td>0.13 </td> </tr>
+<tr><td><a href="basins24.db" download>basins24.db</a></td><td> 0.47 </td><td><a href="rivers24.db" download>rivers24.db</a></td><td> 0.10 </td> <td><a href="accum24.tif" download>accum24.tif</a></td><td> 0.62 </td><td>  <a href="flowdir24.tif" download>flowdir24.tif</a></td><td>0.23 </td> </tr>
+<tr><td><a href="basins25.db" download>basins25.db</a></td><td> 0.16 </td><td><a href="rivers25.db" download>rivers25.db</a></td><td> 0.04 </td> <td><a href="accum25.tif" download>accum25.tif</a></td><td> 0.34 </td><td>  <a href="flowdir25.tif" download>flowdir25.tif</a></td><td>0.11 </td> </tr>
+<tr><td><a href="basins26.db" download>basins26.db</a></td><td> 0.30 </td><td><a href="rivers26.db" download>rivers26.db</a></td><td> 0.07 </td> <td><a href="accum26.tif" download>accum26.tif</a></td><td> 0.46 </td><td>  <a href="flowdir26.tif" download>flowdir26.tif</a></td><td>0.16 </td> </tr>
+<tr><td><a href="basins27.db" download>basins27.db</a></td><td> 0.03 </td><td><a href="rivers27.db" download>rivers27.db</a></td><td> 0.01 </td> <td><a href="accum27.tif" download>accum27.tif</a></td><td> 0.03 </td><td>  <a href="flowdir27.tif" download>flowdir27.tif</a></td><td>0.01 </td> </tr>
+<tr><td><a href="basins28.db" download>basins28.db</a></td><td> 0.90 </td><td><a href="rivers28.db" download>rivers28.db</a></td><td> 0.18 </td> <td><a href="accum28.tif" download>accum28.tif</a></td><td> 1.08 </td><td>  <a href="flowdir28.tif" download>flowdir28.tif</a></td><td>0.39 </td> </tr>
+<tr><td><a href="basins29.db" download>basins29.db</a></td><td> 1.24 </td><td><a href="rivers29.db" download>rivers29.db</a></td><td> 0.26 </td> <td><a href="accum29.tif" download>accum29.tif</a></td><td> 0.84 </td><td>  <a href="flowdir29.tif" download>flowdir29.tif</a></td><td>0.31 </td> </tr>
+<tr><td><a href="basins31.db" download>basins31.db</a></td><td> 0.95 </td><td><a href="rivers31.db" download>rivers31.db</a></td><td> 0.21 </td> <td><a href="accum31.tif" download>accum31.tif</a></td><td> 1.00 </td><td>  <a href="flowdir31.tif" download>flowdir31.tif</a></td><td>0.37 </td> </tr>
+<tr><td><a href="basins32.db" download>basins32.db</a></td><td> 0.64 </td><td><a href="rivers32.db" download>rivers32.db</a></td><td> 0.14 </td> <td><a href="accum32.tif" download>accum32.tif</a></td><td> 0.87 </td><td>  <a href="flowdir32.tif" download>flowdir32.tif</a></td><td>0.27 </td> </tr>
+<tr><td><a href="basins33.db" download>basins33.db</a></td><td> 0.36 </td><td><a href="rivers33.db" download>rivers33.db</a></td><td> 0.09 </td> <td><a href="accum33.tif" download>accum33.tif</a></td><td> 0.55 </td><td>  <a href="flowdir33.tif" download>flowdir33.tif</a></td><td>0.16 </td> </tr>
+<tr><td><a href="basins34.db" download>basins34.db</a></td><td> 0.63 </td><td><a href="rivers34.db" download>rivers34.db</a></td><td> 0.13 </td> <td><a href="accum34.tif" download>accum34.tif</a></td><td> 0.85 </td><td>  <a href="flowdir34.tif" download>flowdir34.tif</a></td><td>0.23 </td> </tr>
+<tr><td><a href="basins35.db" download>basins35.db</a></td><td> 0.76 </td><td><a href="rivers35.db" download>rivers35.db</a></td><td> 0.17 </td> <td><a href="accum35.tif" download>accum35.tif</a></td><td> 0.68 </td><td>  <a href="flowdir35.tif" download>flowdir35.tif</a></td><td>0.20 </td> </tr>
+<tr><td><a href="basins36.db" download>basins36.db</a></td><td> 0.08 </td><td><a href="rivers36.db" download>rivers36.db</a></td><td> 0.02 </td> <td><a href="accum36.tif" download>accum36.tif</a></td><td> 0.17 </td><td>  <a href="flowdir36.tif" download>flowdir36.tif</a></td><td>0.05 </td> </tr>
+<tr><td><a href="basins41.db" download>basins41.db</a></td><td> 0.08 </td><td><a href="rivers41.db" download>rivers41.db</a></td><td> 0.02 </td> <td><a href="accum41.tif" download>accum41.tif</a></td><td> 0.08 </td><td>  <a href="flowdir41.tif" download>flowdir41.tif</a></td><td>0.03 </td> </tr>
+<tr><td><a href="basins42.db" download>basins42.db</a></td><td> 0.66 </td><td><a href="rivers42.db" download>rivers42.db</a></td><td> 0.14 </td> <td><a href="accum42.tif" download>accum42.tif</a></td><td> 0.63 </td><td>  <a href="flowdir42.tif" download>flowdir42.tif</a></td><td>0.21 </td> </tr>
+<tr><td><a href="basins43.db" download>basins43.db</a></td><td> 0.87 </td><td><a href="rivers43.db" download>rivers43.db</a></td><td> 0.18 </td> <td><a href="accum43.tif" download>accum43.tif</a></td><td> 0.68 </td><td>  <a href="flowdir43.tif" download>flowdir43.tif</a></td><td>0.25 </td> </tr>
+<tr><td><a href="basins44.db" download>basins44.db</a></td><td> 0.42 </td><td><a href="rivers44.db" download>rivers44.db</a></td><td> 0.09 </td> <td><a href="accum44.tif" download>accum44.tif</a></td><td> 0.38 </td><td>  <a href="flowdir44.tif" download>flowdir44.tif</a></td><td>0.14 </td> </tr>
+<tr><td><a href="basins45.db" download>basins45.db</a></td><td> 0.93 </td><td><a href="rivers45.db" download>rivers45.db</a></td><td> 0.19 </td> <td><a href="accum45.tif" download>accum45.tif</a></td><td> 0.70 </td><td>  <a href="flowdir45.tif" download>flowdir45.tif</a></td><td>0.26 </td> </tr>
+<tr><td><a href="basins46.db" download>basins46.db</a></td><td> 0.53 </td><td><a href="rivers46.db" download>rivers46.db</a></td><td> 0.11 </td> <td><a href="accum46.tif" download>accum46.tif</a></td><td> 0.57 </td><td>  <a href="flowdir46.tif" download>flowdir46.tif</a></td><td>0.21 </td> </tr>
+<tr><td><a href="basins47.db" download>basins47.db</a></td><td> 0.37 </td><td><a href="rivers47.db" download>rivers47.db</a></td><td> 0.07 </td> <td><a href="accum47.tif" download>accum47.tif</a></td><td> 0.55 </td><td>  <a href="flowdir47.tif" download>flowdir47.tif</a></td><td>0.18 </td> </tr>
+<tr><td><a href="basins48.db" download>basins48.db</a></td><td> 0.39 </td><td><a href="rivers48.db" download>rivers48.db</a></td><td> 0.08 </td> <td><a href="accum48.tif" download>accum48.tif</a></td><td> 0.43 </td><td>  <a href="flowdir48.tif" download>flowdir48.tif</a></td><td>0.14 </td> </tr>
+<tr><td><a href="basins49.db" download>basins49.db</a></td><td> 0.13 </td><td><a href="rivers49.db" download>rivers49.db</a></td><td> 0.03 </td> <td><a href="accum49.tif" download>accum49.tif</a></td><td> 0.25 </td><td>  <a href="flowdir49.tif" download>flowdir49.tif</a></td><td>0.09 </td> </tr>
+<tr><td><a href="basins51.db" download>basins51.db</a></td><td> 0.12 </td><td><a href="rivers51.db" download>rivers51.db</a></td><td> 0.03 </td> <td><a href="accum51.tif" download>accum51.tif</a></td><td> 0.09 </td><td>  <a href="flowdir51.tif" download>flowdir51.tif</a></td><td>0.04 </td> </tr>
+<tr><td><a href="basins52.db" download>basins52.db</a></td><td> 0.20 </td><td><a href="rivers52.db" download>rivers52.db</a></td><td> 0.05 </td> <td><a href="accum52.tif" download>accum52.tif</a></td><td> 0.15 </td><td>  <a href="flowdir52.tif" download>flowdir52.tif</a></td><td>0.06 </td> </tr>
+<tr><td><a href="basins53.db" download>basins53.db</a></td><td> 0.16 </td><td><a href="rivers53.db" download>rivers53.db</a></td><td> 0.04 </td> <td><a href="accum53.tif" download>accum53.tif</a></td><td> 0.10 </td><td>  <a href="flowdir53.tif" download>flowdir53.tif</a></td><td>0.04 </td> </tr>
+<tr><td><a href="basins54.db" download>basins54.db</a></td><td> 0.01 </td><td><a href="rivers54.db" download>rivers54.db</a></td><td> 0.01 </td> <td><a href="accum54.tif" download>accum54.tif</a></td><td> 0.01 </td><td>  <a href="flowdir54.tif" download>flowdir54.tif</a></td><td>0.00 </td> </tr>
+<tr><td><a href="basins55.db" download>basins55.db</a></td><td> 0.01 </td><td><a href="rivers55.db" download>rivers55.db</a></td><td> 0.01 </td> <td><a href="accum55.tif" download>accum55.tif</a></td><td> 0.01 </td><td>  <a href="flowdir55.tif" download>flowdir55.tif</a></td><td>0.00 </td> </tr>
+<tr><td><a href="basins56.db" download>basins56.db</a></td><td> 1.55 </td><td><a href="rivers56.db" download>rivers56.db</a></td><td> 0.33 </td> <td><a href="accum56.tif" download>accum56.tif</a></td><td> 0.82 </td><td>  <a href="flowdir56.tif" download>flowdir56.tif</a></td><td>0.33 </td> </tr>
+<tr><td><a href="basins57.db" download>basins57.db</a></td><td> 0.06 </td><td><a href="rivers57.db" download>rivers57.db</a></td><td> 0.02 </td> <td><a href="accum57.tif" download>accum57.tif</a></td><td> 0.04 </td><td>  <a href="flowdir57.tif" download>flowdir57.tif</a></td><td>0.01 </td> </tr>
+<tr><td><a href="basins61.db" download>basins61.db</a></td><td> 0.39 </td><td><a href="rivers61.db" download>rivers61.db</a></td><td> 0.09 </td> <td><a href="accum61.tif" download>accum61.tif</a></td><td> 0.27 </td><td>  <a href="flowdir61.tif" download>flowdir61.tif</a></td><td>0.11 </td> </tr>
+<tr><td><a href="basins62.db" download>basins62.db</a></td><td> 1.29 </td><td><a href="rivers62.db" download>rivers62.db</a></td><td> 0.26 </td> <td><a href="accum62.tif" download>accum62.tif</a></td><td> 0.90 </td><td>  <a href="flowdir62.tif" download>flowdir62.tif</a></td><td>0.37 </td> </tr>
+<tr><td><a href="basins63.db" download>basins63.db</a></td><td> 0.39 </td><td><a href="rivers63.db" download>rivers63.db</a></td><td> 0.08 </td> <td><a href="accum63.tif" download>accum63.tif</a></td><td> 0.29 </td><td>  <a href="flowdir63.tif" download>flowdir63.tif</a></td><td>0.11 </td> </tr>
+<tr><td><a href="basins64.db" download>basins64.db</a></td><td> 0.72 </td><td><a href="rivers64.db" download>rivers64.db</a></td><td> 0.16 </td> <td><a href="accum64.tif" download>accum64.tif</a></td><td> 0.58 </td><td>  <a href="flowdir64.tif" download>flowdir64.tif</a></td><td>0.22 </td> </tr>
+<tr><td><a href="basins65.db" download>basins65.db</a></td><td> 0.35 </td><td><a href="rivers65.db" download>rivers65.db</a></td><td> 0.07 </td> <td><a href="accum65.tif" download>accum65.tif</a></td><td> 0.34 </td><td>  <a href="flowdir65.tif" download>flowdir65.tif</a></td><td>0.12 </td> </tr>
+<tr><td><a href="basins66.db" download>basins66.db</a></td><td> 0.21 </td><td><a href="rivers66.db" download>rivers66.db</a></td><td> 0.04 </td> <td><a href="accum66.tif" download>accum66.tif</a></td><td> 0.31 </td><td>  <a href="flowdir66.tif" download>flowdir66.tif</a></td><td>0.11 </td> </tr>
+<tr><td><a href="basins67.db" download>basins67.db</a></td><td> 0.10 </td><td><a href="rivers67.db" download>rivers67.db</a></td><td> 0.02 </td> <td><a href="accum67.tif" download>accum67.tif</a></td><td> 0.18 </td><td>  <a href="flowdir67.tif" download>flowdir67.tif</a></td><td>0.07 </td> </tr>
+<tr><td><a href="basins71.db" download>basins71.db</a></td><td> 0.58 </td><td><a href="rivers71.db" download>rivers71.db</a></td><td> 0.12 </td> <td><a href="accum71.tif" download>accum71.tif</a></td><td> 0.60 </td><td>  <a href="flowdir71.tif" download>flowdir71.tif</a></td><td>0.23 </td> </tr>
+<tr><td><a href="basins72.db" download>basins72.db</a></td><td> 0.71 </td><td><a href="rivers72.db" download>rivers72.db</a></td><td> 0.14 </td> <td><a href="accum72.tif" download>accum72.tif</a></td><td> 0.59 </td><td>  <a href="flowdir72.tif" download>flowdir72.tif</a></td><td>0.22 </td> </tr>
+<tr><td><a href="basins73.db" download>basins73.db</a></td><td> 0.22 </td><td><a href="rivers73.db" download>rivers73.db</a></td><td> 0.05 </td> <td><a href="accum73.tif" download>accum73.tif</a></td><td> 0.23 </td><td>  <a href="flowdir73.tif" download>flowdir73.tif</a></td><td>0.09 </td> </tr>
+<tr><td><a href="basins74.db" download>basins74.db</a></td><td> 0.70 </td><td><a href="rivers74.db" download>rivers74.db</a></td><td> 0.15 </td> <td><a href="accum74.tif" download>accum74.tif</a></td><td> 0.74 </td><td>  <a href="flowdir74.tif" download>flowdir74.tif</a></td><td>0.28 </td> </tr>
+<tr><td><a href="basins75.db" download>basins75.db</a></td><td> 0.46 </td><td><a href="rivers75.db" download>rivers75.db</a></td><td> 0.09 </td> <td><a href="accum75.tif" download>accum75.tif</a></td><td> 0.41 </td><td>  <a href="flowdir75.tif" download>flowdir75.tif</a></td><td>0.16 </td> </tr>
+<tr><td><a href="basins76.db" download>basins76.db</a></td><td> 0.04 </td><td><a href="rivers76.db" download>rivers76.db</a></td><td> 0.01 </td> <td><a href="accum76.tif" download>accum76.tif</a></td><td> 0.03 </td><td>  <a href="flowdir76.tif" download>flowdir76.tif</a></td><td>0.01 </td> </tr>
+<tr><td><a href="basins77.db" download>basins77.db</a></td><td> 0.53 </td><td><a href="rivers77.db" download>rivers77.db</a></td><td> 0.10 </td> <td><a href="accum77.tif" download>accum77.tif</a></td><td> 0.49 </td><td>  <a href="flowdir77.tif" download>flowdir77.tif</a></td><td>0.17 </td> </tr>
+<tr><td><a href="basins78.db" download>basins78.db</a></td><td> 0.30 </td><td><a href="rivers78.db" download>rivers78.db</a></td><td> 0.06 </td> <td><a href="accum78.tif" download>accum78.tif</a></td><td> 0.38 </td><td>  <a href="flowdir78.tif" download>flowdir78.tif</a></td><td>0.12 </td> </tr>
+<tr><td><a href="basins81.db" download>basins81.db</a></td><td> 0.46 </td><td><a href="rivers81.db" download>rivers81.db</a></td><td> 0.11 </td> <td><a href="accum81.tif" download>accum81.tif</a></td><td> 0.45 </td><td>  <a href="flowdir81.tif" download>flowdir81.tif</a></td><td>0.13 </td> </tr>
+<tr><td><a href="basins82.db" download>basins82.db</a></td><td> 0.54 </td><td><a href="rivers82.db" download>rivers82.db</a></td><td> 0.11 </td> <td><a href="accum82.tif" download>accum82.tif</a></td><td> 0.69 </td><td>  <a href="flowdir82.tif" download>flowdir82.tif</a></td><td>0.22 </td> </tr>
+<tr><td><a href="basins83.db" download>basins83.db</a></td><td> 0.31 </td><td><a href="rivers83.db" download>rivers83.db</a></td><td> 0.07 </td> <td><a href="accum83.tif" download>accum83.tif</a></td><td> 0.45 </td><td>  <a href="flowdir83.tif" download>flowdir83.tif</a></td><td>0.16 </td> </tr>
+<tr><td><a href="basins84.db" download>basins84.db</a></td><td> 0.11 </td><td><a href="rivers84.db" download>rivers84.db</a></td><td> 0.03 </td> <td><a href="accum84.tif" download>accum84.tif</a></td><td> 0.21 </td><td>  <a href="flowdir84.tif" download>flowdir84.tif</a></td><td>0.07 </td> </tr>
+<tr><td><a href="basins85.db" download>basins85.db</a></td><td> 0.14 </td><td><a href="rivers85.db" download>rivers85.db</a></td><td> 0.04 </td> <td><a href="accum85.tif" download>accum85.tif</a></td><td> 0.21 </td><td>  <a href="flowdir85.tif" download>flowdir85.tif</a></td><td>0.07 </td> </tr>
+<tr><td><a href="basins86.db" download>basins86.db</a></td><td> 0.12 </td><td><a href="rivers86.db" download>rivers86.db</a></td><td> 0.04 </td> <td><a href="accum86.tif" download>accum86.tif</a></td><td> 1.70 </td><td>  <a href="flowdir86.tif" download>flowdir86.tif</a></td><td>0.10 </td> </tr>
+
+</table>
+
+<p>*Note that I've removed the data for Basin 91, covering Greenland. These files are over 5 GB and since Greenland is mostly covered in ice,
+the results of the watershed delineation algorithms are nonensical.</p>
+
+
+</body>
+</html>
