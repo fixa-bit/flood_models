@@ -1,0 +1,17 @@
+{
+  "source_url": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/daily/prelim/sat/2026/chirps-v3.0.prelim.2026.10.01.tif",
+  "retrieved_utc": "2026-10-26T10:30:30.026388+00:00",
+  "sha256": "ccf21bf20eeb85dbc7c1b6818db7b803e92ee914ee3fa5f3c0b19590c3816aa5",
+  "bytes": 13504,
+  "raw_file": "raw/marala/rainfall/chirps_v3/sat/preliminary_2026/official_clips/2026-10-01.npy",
+  "representation": "Exact float32 CHC raster window, not full original GeoTIFF",
+  "global_window_row_col": [
+    515,
+    5081
+  ],
+  "source_headers": {
+    "content_length": "14547642",
+    "last_modified": "Wed, 07 Oct 2026 15:59:14 GMT",
+    "etag": "\"6ac66c52-ddfaba\""
+  }
+}

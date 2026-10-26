@@ -1,0 +1,167 @@
+{
+  "inventory_date_pakistan": "2026-10-26",
+  "scope": "Existing saved Marala files only; no new source downloads or corrections",
+  "source_snapshot_note": "Latest saved source collections and scientific audit are dated 2026-10-23",
+  "features": [
+    {
+      "feature": "Inflow discharge",
+      "source": "WAPDA",
+      "records": 3216,
+      "values": 3216,
+      "unique_dates": 3216,
+      "start": "2016-03-01",
+      "end": "2024-12-19",
+      "spatial_footprint": "Marala river cross-section; upstream drainage approx. 28,781 km2",
+      "record_interval": "One dated record per day; continuous within saved span",
+      "time_represented_by_one_value": "Historical measurement/averaging duration unconfirmed; 06:00 PKT confirmed only on 2024-12-19",
+      "value_type": "Dated discharge reading; neither instantaneous nor daily mean confirmed for full archive",
+      "units": "cusecs (ft3/s), with derived m3/s",
+      "quality": "3,209 pass current date-level checks; 7 withheld; 3,215 times unconfirmed",
+      "local_files": [
+        "discharge/marala_daily_inflow_clean.csv"
+      ]
+    },
+    {
+      "feature": "Inflow and outflow discharge",
+      "source": "FFD / PMD",
+      "records": 363,
+      "values": 726,
+      "unique_dates": 359,
+      "start": "2024-06-16",
+      "end": "2026-10-15",
+      "spatial_footprint": "Marala river cross-section; upstream drainage approx. 28,781 km2",
+      "record_interval": "Usually one bulletin per day during flood seasons; gaps and duplicate dates retained",
+      "time_represented_by_one_value": "At 06:00 Pakistan time; instrument integration duration not stated",
+      "value_type": "Reported point-in-time snapshot; not a daily average",
+      "units": "1000 cusecs in source tables; cusecs in combined catalog",
+      "quality": "Flood-season coverage only; archive/printed-date conflicts and duplicates require review",
+      "local_files": [
+        "discharge/marala_ffd_2024_bulletin_discharge.csv",
+        "discharge/marala_ffd_2025_bulletin_discharge.csv",
+        "discharge/marala_ffd_2026_bulletin_discharge.csv"
+      ]
+    },
+    {
+      "feature": "Mean inflow and mean outflow",
+      "source": "IRSA",
+      "records": 8,
+      "values": 16,
+      "unique_dates": 8,
+      "start": "2026-10-16",
+      "end": "2026-10-23",
+      "spatial_footprint": "Marala river cross-section; upstream drainage approx. 28,781 km2",
+      "record_interval": "One report per day for the eight saved dates",
+      "time_represented_by_one_value": "Daily averaging period; exact start/end clock times not published in saved reports",
+      "value_type": "Daily mean (average), kept separate from FFD snapshots",
+      "units": "cusecs (ft3/s)",
+      "quality": "Only eight days collected; not a complete annual series",
+      "local_files": [
+        "discharge/marala_irsa_daily_mean_discharge.csv"
+      ]
+    },
+    {
+      "feature": "Selected flood peak discharge",
+      "source": "PMD journal",
+      "records": 30,
+      "values": 30,
+      "unique_dates": 30,
+      "start": "1970-07-02",
+      "end": "2016-08-07",
+      "spatial_footprint": "Marala river cross-section; upstream drainage approx. 28,781 km2",
+      "record_interval": "Selected flood events; no regular sampling interval",
+      "time_represented_by_one_value": "Maximum within each selected event; event window and clock time unspecified",
+      "value_type": "Event maximum; not a daily average or continuous daily series",
+      "units": "1000 cusecs in source table",
+      "quality": "Selected events only; do not join to daily observations as interchangeable values",
+      "local_files": [
+        "discharge/marala_pmd_historical_flood_peaks.csv"
+      ]
+    },
+    {
+      "feature": "Catchment precipitation",
+      "source": "NASA POWER",
+      "records": 3887,
+      "values": 3887,
+      "unique_dates": 3887,
+      "start": "2016-03-01",
+      "end": "2026-10-21",
+      "spatial_footprint": "Full saved catchment: 28,780.646 km2; 21 intersecting 0.5 x 0.625 degree native cells",
+      "record_interval": "One catchment value per day",
+      "time_represented_by_one_value": "24 hours: 00:00 to next 00:00 UTC = 05:00 to next 05:00 Pakistan time",
+      "value_type": "24-hour precipitation amount; spatial area-weighted mean across catchment; not instantaneous",
+      "units": "mm/day",
+      "quality": "HOLD: unresolved request-period-dependent source discrepancy; 2026-10-22 requested but missing",
+      "local_files": [
+        "rainfall/marala_catchment_daily_precipitation.csv"
+      ]
+    },
+    {
+      "feature": "Upstream catchment boundary",
+      "source": "Global Watersheds / MERIT",
+      "records": 1,
+      "values": 1,
+      "unique_dates": 0,
+      "start": "",
+      "end": "",
+      "spatial_footprint": "28,780.646 km2 upstream of Marala; 74.05041-77.80625 E, 32.08875-34.21208 N",
+      "record_interval": "Static geometry; not a time series",
+      "time_represented_by_one_value": "Not applicable; no daily observation period",
+      "value_type": "Static research delineation; nominal source raster about 90 m at equator",
+      "units": "WGS84 geometry / km2",
+      "quality": "Nine source/geometry checks passed; not agency-certified or field-surveyed",
+      "local_files": [
+        "catchment/marala_upstream_catchment.geojson"
+      ]
+    }
+  ],
+  "combined_discharge_measurement_rows": 3988,
+  "eligible_discharge_dates": 3209,
+  "wapda_confirmed_time_dates": 1,
+  "rainfall_calendar_rows": 3888,
+  "rainfall_nonmissing_days": 3887,
+  "rainfall_missing_dates": [
+    "2026-10-22"
+  ],
+  "rainfall_source_cell_rows": 81648,
+  "rainfall_nonmissing_source_cell_values": 81627,
+  "rainfall_grid_cells": 21,
+  "catchment_area_km2": 28780.646,
+  "ffd_by_year": {
+    "2024": {
+      "records": 122,
+      "unique_dates": 120,
+      "start": "2024-06-16",
+      "end": "2024-10-15"
+    },
+    "2025": {
+      "records": 119,
+      "unique_dates": 117,
+      "start": "2025-06-15",
+      "end": "2025-10-15"
+    },
+    "2026": {
+      "records": 122,
+      "unique_dates": 122,
+      "start": "2026-06-16",
+      "end": "2026-10-15"
+    }
+  },
+  "date_overlap": {
+    "start": "2016-03-01",
+    "end": "2024-12-19",
+    "all_wapda_dates_have_nonmissing_precipitation": true,
+    "eligible_date_pairs": 3209,
+    "does_not_prove_matching_observation_intervals_or_issue_time_availability": true
+  },
+  "rainfall_training_hold": true,
+  "rainfall_audit_file": "metadata/marala_feature_coverage_audit.json",
+  "not_collected": {
+    "temperature": "not collected",
+    "snow_conditions": "not collected",
+    "soil_moisture": "not collected",
+    "soil_properties": "not collected; mostly static",
+    "archived_15_day_weather_forecasts": "not collected",
+    "reservoir_operations": "not collected"
+  },
+  "counting_note": "Sources overlap; inflow/outflow are different variables. Do not sum source rows as unique daily training examples. Source-cell rainfall and catchment rainfall are two representations of the same precipitation feature."
+}

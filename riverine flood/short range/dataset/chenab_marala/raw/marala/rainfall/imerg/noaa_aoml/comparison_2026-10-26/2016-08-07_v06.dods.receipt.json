@@ -1,0 +1,7 @@
+{
+  "source_url": "https://erddap.aoml.noaa.gov/hdb/erddap/griddap/precipitation_2016.dods?precipitationCal[(2016-08-07T00:00:00Z):1:(2016-08-07T23:30:00Z)][(31.95):1:(34.35)][(73.95):1:(77.95)]",
+  "retrieved_utc": "2026-10-26T10:11:39.283214+00:00",
+  "sha256": "f13180cd0d4313684125b0d683107731402cd1690719512f9d71d28672c82034",
+  "bytes": 197756,
+  "raw_file": "raw/marala/rainfall/imerg/noaa_aoml/comparison_2026-10-26/2016-08-07_v06.dods"
+}

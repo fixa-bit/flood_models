@@ -1,0 +1,7 @@
+{
+  "source_url": "https://erddap.aoml.noaa.gov/hdb/erddap/griddap/precipitation_2024_v07.das",
+  "retrieved_utc": "2026-10-26T10:10:54.341679+00:00",
+  "sha256": "310c23e74dde3104e0cb8d26e5d78c3174f76d158e35577d260c0ca0deb0d36a",
+  "bytes": 4710,
+  "raw_file": "raw/marala/rainfall/imerg/noaa_aoml/comparison_2026-10-26/metadata/precipitation_2024_v07.das"
+}

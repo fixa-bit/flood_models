@@ -3,4 +3,7 @@ beautifulsoup4
 pymupdf
 shapely>=2.1
 pyproj
+rasterio>=1.4
+numpy>=2
+zstandard>=0.25
 matplotlib

@@ -1,0 +1,8 @@
+{
+  "source_url": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/daily/final/rnl/2026/",
+  "retrieved_utc": "2026-10-26T10:27:05.315483+00:00",
+  "sha256": "de0722f1bda88fb12d62d21e4f55cd34b6bdcf1dc9436a877dc9eb48ccfbff22",
+  "bytes": 60240,
+  "raw_file": "raw/marala/rainfall/chirps_v3/source_indexes_2026-10-26/final_rnl_2026.html",
+  "representation": "Original downloaded Zarr metadata or compressed chunk"
+}

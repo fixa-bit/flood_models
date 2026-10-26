@@ -20,6 +20,8 @@ dataset/
 
 The tree below is the planned layout, not a list of downloaded files. Collect data for the target river reach **and its upstream contributing catchment**, including cross-border upstream areas where relevant.
 
+Rain fall:
+ The river model is primarily catchment-based, while the flash-flood model uses a fixed grid of 20 km × 20 km.
 ## Planned dataset tree
 
 ```text

@@ -1,0 +1,485 @@
+{
+  "attributes": {
+    "Conventions": "CF-1.10",
+    "title": "CHIRPS v3.0 global daily precipitation (RNL, ERA5-disaggregated)",
+    "institution": "Climate Hazards Center, University of California, Santa Barbara",
+    "source": "CHIRPS v3.0 daily final RNL (ERA5-disaggregated pentads), 0.05 deg",
+    "references": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/daily/readme.txt",
+    "spatial_resolution_deg": 0.05,
+    "geospatial_lat_min": -60.0,
+    "geospatial_lat_max": 60.0,
+    "geospatial_lon_min": -180.0,
+    "geospatial_lon_max": 180.0,
+    "zarr_geometry": {
+      "time_chunk": 128,
+      "lat_chunk": 300,
+      "lon_chunk": 300,
+      "time_shard": 128,
+      "lat_shard": 600,
+      "lon_shard": 600,
+      "sharded": false
+    },
+    "time_coverage_start": "1981-01-01",
+    "time_coverage_end": "2026-08-31",
+    "last_updated": "2026-10-13T09:49:45",
+    "cdh_metadata": {
+      "cdh_schema_version": "v0.4.1",
+      "extensions": [
+        "https://cgiar-climate-data-hub.github.io/cdh-metadata-standard/v0.4.1/extensions/cdh/schema.json"
+      ],
+      "id": "chirps-v3-daily-rnl",
+      "title": "CHIRPS v3.0 global daily precipitation (ERA5-disaggregated)",
+      "version": "v3.0",
+      "series": {
+        "name": "Climate Hazards Center InfraRed Precipitation with Station data (CHIRPS)",
+        "url": "https://www.chc.ucsb.edu/data/chirps"
+      },
+      "description": "CHIRPS v3.0 daily precipitation on a global 0.05-degree grid spanning 60 S to 60 N, redistributed as a chunked, compressed Zarr v3 datacube for bounding-box and time-range queries. CHIRPS blends thermal-infrared cold-cloud-duration estimates with a monthly precipitation climatology and in-situ station observations. It is fundamentally a pentad product: these daily values are the pentad totals disaggregated using ECMWF ERA5 reanalysis precipitation (the 'rnl' flavour). ERA5 covers the whole CHIRPS period, so this flavour reaches back to 1981. Values are daily precipitation totals in millimetres; ocean and out-of-domain cells are nodata. This redistribution changes only the storage layout and numerical precision, never the underlying estimates.",
+      "license": "CC-BY-4.0",
+      "resource_type": "dataset",
+      "keywords": [
+        "precipitation",
+        "rainfall",
+        "daily",
+        "gridded",
+        "satellite",
+        "CHIRPS",
+        "drought monitoring",
+        "climate monitoring",
+        "analysis-ready data"
+      ],
+      "note": "This is the 'rnl' daily flavour. CHIRPS v3 also publishes 'sat', the same pentad totals disaggregated with NASA IMERG Late V07 satellite precipitation and starting in 1998. The two are different products whose daily values differ by millimetres; do not concatenate or compare them as if they were one record. Values are stored as int16 in units of 0.1 mm (scale_factor 0.1), so every reported value is a multiple of 0.1 mm and differs from the source GeoTIFF by at most 0.05 mm, below the 0.1 mm reporting resolution of the gauges CHIRPS is calibrated against. Chunking is time-contiguous, making long time series over a region fast and whole-globe single-day slices slow; use a per-day raster product for global daily maps.",
+      "contact": [
+        {
+          "organization": "Climate Hazards Center, University of California, Santa Barbara",
+          "roles": [
+            "licensor",
+            "producer"
+          ],
+          "url": "https://www.chc.ucsb.edu/"
+        },
+        {
+          "organization": "Alliance of Bioversity International and CIAT",
+          "roles": [
+            "processor",
+            "maintainer"
+          ],
+          "url": "https://alliancebioversityciat.org/"
+        }
+      ],
+      "citation": {
+        "title": "CHIRPS: Climate Hazards Center InfraRed Precipitation with Station data, version 3.0",
+        "authors": [
+          {
+            "organization": "Climate Hazards Center, University of California, Santa Barbara"
+          }
+        ],
+        "date": "2025",
+        "publisher": "Climate Hazards Center, UC Santa Barbara",
+        "url": "https://www.chc.ucsb.edu/data/chirps"
+      },
+      "related_publications": [
+        {
+          "doi": "10.1038/sdata.2015.66"
+        }
+      ],
+      "created": "2026-10-08",
+      "updated": "2026-10-08",
+      "spatial": {
+        "bbox": [
+          -180.0,
+          -60.0,
+          180.0,
+          60.0
+        ],
+        "geography": [
+          "world"
+        ],
+        "crs": "EPSG:4326"
+      },
+      "temporal": {
+        "start_date": "1981-01-01",
+        "end_date": "2026-08-31",
+        "update_frequency": "monthly"
+      },
+      "structures": [
+        {
+          "name": "zarr",
+          "dimensions": [
+            {
+              "name": "time",
+              "type": "temporal",
+              "description": "Daily time axis; days absent from the source archive are present on the axis and filled with nodata.",
+              "step": "P1D"
+            },
+            {
+              "name": "cell",
+              "type": "xy",
+              "description": "Regular 0.05 degree grid (~5.5 km at the equator), both axes equally spaced.",
+              "step": 0.05,
+              "unit": "degree"
+            }
+          ],
+          "variables": [
+            {
+              "name": "precip",
+              "description": "Daily accumulated precipitation. Stored as int16 in tenths of a millimetre and decoded with scale_factor 0.1. Quantised to 0.1 mm; maximum deviation from the source GeoTIFF is 0.05 mm.",
+              "data_type": "int16",
+              "unit": "mm",
+              "nodata": -9999
+            }
+          ]
+        }
+      ],
+      "cdh": {
+        "domain": [
+          "climate"
+        ],
+        "usage": {
+          "intended_uses": [
+            "seasonal rainfall monitoring and anomaly analysis",
+            "drought and dry-spell indices over data-sparse regions",
+            "climate inputs for crop and hydrological models",
+            "bounding-box time-series extraction via an API"
+          ],
+          "not_recommended_for": [
+            {
+              "use": "station-level precipitation measurement",
+              "reason": "values are satellite-based estimates blended with a station climatology, not gauge observations; local totals can differ substantially from any individual station",
+              "use_instead": "national meteorological service gauge records"
+            },
+            {
+              "use": "sub-daily or hourly rainfall analysis",
+              "reason": "the product is a daily total and carries no diurnal information"
+            },
+            {
+              "use": "trend analysis across the full record without care",
+              "reason": "the density of contributing stations varies through time and between countries, so apparent trends can reflect changes in input data rather than climate"
+            }
+          ]
+        }
+      },
+      "processing": [
+        {
+          "id": "source",
+          "description": "Original CHIRPS v3.0 daily GeoTIFF release by the Climate Hazards Center.",
+          "derived_from": [
+            {
+              "url": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/daily/final/rnl/",
+              "title": "CHIRPS v3.0 daily GeoTIFFs"
+            }
+          ]
+        },
+        {
+          "id": "cloud-optimize",
+          "description": "Converted to a Zarr v3 datacube: float32 quantised to int16 at 0.1 mm, Zstandard level 5, chunks (128, 300, 300) (time-contiguous).",
+          "date": "2026-10-08",
+          "code": {
+            "url": "https://github.com/CGIAR-Climate-Data-Hub/cdh-data-pipeline"
+          }
+        }
+      ],
+      "data": [
+        {
+          "name": "zarr",
+          "locations": [
+            {
+              "url": "https://huggingface.co/datasets/aaguilar90/chirps-v3-daily-rnl/resolve/main/chirps-v3-daily-rnl.zarr",
+              "title": "HTTPS"
+            }
+          ],
+          "processing_steps": [
+            "cloud-optimize"
+          ],
+          "description": "Zarr v3 store of CHIRPS v3.0 daily precipitation, chunked for bounding-box and time-range access.",
+          "media_type": "application/vnd.zarr; version=3",
+          "file_size": "33.94 GB"
+        }
+      ],
+      "additional_links": [
+        {
+          "title": "CHIRPS product page",
+          "rel": "related",
+          "url": "https://www.chc.ucsb.edu/data/chirps"
+        },
+        {
+          "title": "CHIRPS v3.0 daily GeoTIFF archive (rnl)",
+          "rel": "related",
+          "url": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/daily/final/rnl/"
+        },
+        {
+          "title": "CHIRPS v3.0 daily flavour documentation",
+          "rel": "describedby",
+          "url": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/daily/readme.txt"
+        }
+      ]
+    },
+    "id": "chirps-v3-daily-rnl",
+    "license": "CC-BY-4.0",
+    "build_complete": true,
+    "source_history": [
+      {
+        "period": "1981-01-01/2020-12-31, 2025-01-01/2026-08-31",
+        "source": "local GeoTIFF mirror at CHIRPS_V3/CHIRPS_V3_ERA5_Daily; verified identical to products/CHIRPS/v3.0/daily/final/rnl on sampled wet days"
+      },
+      {
+        "period": "2021-01-01/2024-12-31",
+        "source": "ftp.chc.ucsb.edu/pub/org/chc/products/CHIRPS/v3.0/daily/final/rnl/netcdf/byYear (chirps-v3.0.rnl.<year>.days_p05.nc)",
+        "retrieved": "2026-10-13",
+        "reason": "the local mirror predated CHC's June 2025 promotion of the experimental tree to products, which reprocessed the daily disaggregation; affected days carried the pentad total divided evenly across its days"
+      }
+    ]
+  },
+  "zarr_format": 3,
+  "consolidated_metadata": {
+    "kind": "inline",
+    "must_understand": false,
+    "metadata": {
+      "lat": {
+        "shape": [
+          2400
+        ],
+        "data_type": "float64",
+        "chunk_grid": {
+          "name": "regular",
+          "configuration": {
+            "chunk_shape": [
+              2400
+            ]
+          }
+        },
+        "chunk_key_encoding": {
+          "name": "default",
+          "configuration": {
+            "separator": "/"
+          }
+        },
+        "fill_value": 0.0,
+        "codecs": [
+          {
+            "name": "bytes",
+            "configuration": {
+              "endian": "little"
+            }
+          },
+          {
+            "name": "zstd",
+            "configuration": {
+              "level": 0,
+              "checksum": false
+            }
+          }
+        ],
+        "attributes": {
+          "units": "degrees_north",
+          "standard_name": "latitude",
+          "long_name": "latitude",
+          "axis": "Y"
+        },
+        "dimension_names": [
+          "lat"
+        ],
+        "zarr_format": 3,
+        "node_type": "array",
+        "storage_transformers": []
+      },
+      "lon": {
+        "shape": [
+          7200
+        ],
+        "data_type": "float64",
+        "chunk_grid": {
+          "name": "regular",
+          "configuration": {
+            "chunk_shape": [
+              7200
+            ]
+          }
+        },
+        "chunk_key_encoding": {
+          "name": "default",
+          "configuration": {
+            "separator": "/"
+          }
+        },
+        "fill_value": 0.0,
+        "codecs": [
+          {
+            "name": "bytes",
+            "configuration": {
+              "endian": "little"
+            }
+          },
+          {
+            "name": "zstd",
+            "configuration": {
+              "level": 0,
+              "checksum": false
+            }
+          }
+        ],
+        "attributes": {
+          "units": "degrees_east",
+          "standard_name": "longitude",
+          "long_name": "longitude",
+          "axis": "X"
+        },
+        "dimension_names": [
+          "lon"
+        ],
+        "zarr_format": 3,
+        "node_type": "array",
+        "storage_transformers": []
+      },
+      "precip": {
+        "shape": [
+          16679,
+          2400,
+          7200
+        ],
+        "data_type": "int16",
+        "chunk_grid": {
+          "name": "regular",
+          "configuration": {
+            "chunk_shape": [
+              128,
+              300,
+              300
+            ]
+          }
+        },
+        "chunk_key_encoding": {
+          "name": "default",
+          "configuration": {
+            "separator": "/"
+          }
+        },
+        "fill_value": -9999,
+        "codecs": [
+          {
+            "name": "bytes",
+            "configuration": {
+              "endian": "little"
+            }
+          },
+          {
+            "name": "zstd",
+            "configuration": {
+              "level": 5,
+              "checksum": false
+            }
+          }
+        ],
+        "attributes": {
+          "long_name": "CHIRPS v3.0 daily precipitation",
+          "standard_name": "precipitation_amount",
+          "units": "mm",
+          "scale_factor": 0.1,
+          "add_offset": 0.0,
+          "_FillValue": -9999,
+          "grid_mapping": "spatial_ref",
+          "coordinates": "time lat lon"
+        },
+        "dimension_names": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "zarr_format": 3,
+        "node_type": "array",
+        "storage_transformers": []
+      },
+      "spatial_ref": {
+        "shape": [],
+        "data_type": "int32",
+        "chunk_grid": {
+          "name": "regular",
+          "configuration": {
+            "chunk_shape": []
+          }
+        },
+        "chunk_key_encoding": {
+          "name": "default",
+          "configuration": {
+            "separator": "/"
+          }
+        },
+        "fill_value": 0,
+        "codecs": [
+          {
+            "name": "bytes",
+            "configuration": {
+              "endian": "little"
+            }
+          },
+          {
+            "name": "zstd",
+            "configuration": {
+              "level": 0,
+              "checksum": false
+            }
+          }
+        ],
+        "attributes": {
+          "grid_mapping_name": "latitude_longitude",
+          "spatial_ref": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433]]",
+          "crs_wkt": "EPSG:4326",
+          "semi_major_axis": 6378137.0,
+          "inverse_flattening": 298.257223563
+        },
+        "zarr_format": 3,
+        "node_type": "array",
+        "storage_transformers": []
+      },
+      "time": {
+        "shape": [
+          16679
+        ],
+        "data_type": "int32",
+        "chunk_grid": {
+          "name": "regular",
+          "configuration": {
+            "chunk_shape": [
+              16648
+            ]
+          }
+        },
+        "chunk_key_encoding": {
+          "name": "default",
+          "configuration": {
+            "separator": "/"
+          }
+        },
+        "fill_value": 0,
+        "codecs": [
+          {
+            "name": "bytes",
+            "configuration": {
+              "endian": "little"
+            }
+          },
+          {
+            "name": "zstd",
+            "configuration": {
+              "level": 0,
+              "checksum": false
+            }
+          }
+        ],
+        "attributes": {
+          "units": "days since 1980-01-01",
+          "calendar": "proleptic_gregorian",
+          "standard_name": "time",
+          "axis": "T"
+        },
+        "dimension_names": [
+          "time"
+        ],
+        "zarr_format": 3,
+        "node_type": "array",
+        "storage_transformers": []
+      }
+    }
+  },
+  "node_type": "group"
+}

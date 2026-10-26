@@ -54,6 +54,39 @@ class IntegrityTests(unittest.TestCase):
         self.assertEqual(dashboard.collect_integrity()['counts'], {'match': 1})
 
 
+class AssetRefreshTests(unittest.TestCase):
+    def test_changed_script_gets_new_url_without_reusing_cached_script(self):
+        with tempfile.TemporaryDirectory() as folder:
+            dist = Path(folder)
+            (dist / 'assets').mkdir()
+            script = dist / 'assets/app.js'
+            script.write_text('old overview-only application', encoding='utf-8')
+            index = dist / 'index.html'
+            index.write_text('<script src="assets/app.js"></script>', encoding='utf-8')
+            with patch.object(dashboard, 'DIST', dist):
+                old = dashboard.version_assets()
+                script.write_text('application with summary route', encoding='utf-8')
+                new = dashboard.version_assets()
+            self.assertNotEqual(old['assets/app.js'], new['assets/app.js'])
+            self.assertIn('assets/app.js?v=' + new['assets/app.js'], index.read_text())
+            self.assertNotIn(old['assets/app.js'], index.read_text())
+
+    def test_unchanged_assets_keep_urls_and_do_not_accumulate_queries(self):
+        with tempfile.TemporaryDirectory() as folder:
+            dist = Path(folder)
+            (dist / 'assets').mkdir()
+            (dist / 'assets/summary.js').write_text('summary', encoding='utf-8')
+            index = dist / 'index.html'
+            index.write_text('<script src="assets/summary.js?v=old"></script>', encoding='utf-8')
+            with patch.object(dashboard, 'DIST', dist):
+                first = dashboard.version_assets()
+                content = index.read_bytes()
+                second = dashboard.version_assets()
+            self.assertEqual(first, second)
+            self.assertEqual(content, index.read_bytes())
+            self.assertEqual(content.count(b'?v='), 1)
+
+
 class CoverageTests(unittest.TestCase):
     def test_missing_and_withheld_days_reduce_coverage(self):
         rows = [{'date': '2024-02-27', 'valid': True}, {'date': '2024-02-29', 'valid': False}]

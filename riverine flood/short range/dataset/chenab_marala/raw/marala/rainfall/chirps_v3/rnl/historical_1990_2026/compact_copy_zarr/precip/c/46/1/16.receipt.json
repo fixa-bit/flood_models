@@ -1,0 +1,8 @@
+{
+  "source_url": "https://huggingface.co/datasets/aaguilar90/chirps-v3-daily-rnl/resolve/main/chirps-v3-daily-rnl.zarr/precip/c/46/1/16",
+  "retrieved_utc": "2026-10-26T10:27:54.882260+00:00",
+  "sha256": "4e26b99bf9861c620df5dc1b1eb8aa737b9fd18a65aeb7e2869801a65d5d9b8e",
+  "bytes": 2746690,
+  "raw_file": "raw/marala/rainfall/chirps_v3/rnl/historical_1990_2026/compact_copy_zarr/precip/c/46/1/16",
+  "representation": "Original downloaded Zarr metadata or compressed chunk"
+}

@@ -1,0 +1,11 @@
+date,case,nasa_power_saved_mm,nasa_power_fresh_single_day_mm,imerg_mm,imerg_positive_only_lower_bound_mm,imerg_quality_flag,chirps_v3_rnl_mm,imerg_missing_cells,chirps_missing_cells,training_status
+2014-09-04,2014_flood,,,98.0235251842265,,sample_complete,118.44869928055918,0,0,HOLD; source comparison only
+2014-09-05,2014_flood,,,93.54528209741679,,sample_complete,111.11669202518819,0,0,HOLD; source comparison only
+2014-09-06,2014_flood,,,26.19726340066601,,sample_complete,26.154518791556974,0,0,HOLD; source comparison only
+2016-03-01,ordinary,0.021379,,0.09346800694230514,,sample_complete,2.025873051624836e-05,0,0,HOLD; source comparison only
+2016-07-15,ordinary,290.449175,13.408744488638485,6.0048609250834035,,sample_complete,12.177450379860518,0,0,HOLD; source comparison only
+2016-08-05,2016_flood,45.467963,,13.66353814277923,,sample_complete,3.554296638707184,0,0,HOLD; source comparison only
+2016-08-06,2016_flood,358.386082,16.836646000934433,29.397885298428573,,sample_complete,22.852934410040557,0,0,HOLD; source comparison only
+2016-08-07,2016_flood,344.869356,,31.161028404364274,,sample_complete,24.29470416148054,0,0,HOLD; source comparison only
+2024-03-02,power_disagreement,1223.925092,60.18775747580335,13.416330881117537,,sample_complete,39.72037540749065,0,0,HOLD; source comparison only
+2024-08-08,power_disagreement,70.725238,3.1316780271991504,,0.38398643566550705,v07_zero_equals_fill_value,3.3592091242762843,0,0,HOLD; source comparison only

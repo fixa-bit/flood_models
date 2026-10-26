@@ -1,0 +1,58 @@
+{
+  "shape": [
+    16679,
+    2400,
+    7200
+  ],
+  "data_type": "int16",
+  "chunk_grid": {
+    "name": "regular",
+    "configuration": {
+      "chunk_shape": [
+        128,
+        300,
+        300
+      ]
+    }
+  },
+  "chunk_key_encoding": {
+    "name": "default",
+    "configuration": {
+      "separator": "/"
+    }
+  },
+  "fill_value": -9999,
+  "codecs": [
+    {
+      "name": "bytes",
+      "configuration": {
+        "endian": "little"
+      }
+    },
+    {
+      "name": "zstd",
+      "configuration": {
+        "level": 5,
+        "checksum": false
+      }
+    }
+  ],
+  "attributes": {
+    "long_name": "CHIRPS v3.0 daily precipitation",
+    "standard_name": "precipitation_amount",
+    "units": "mm",
+    "scale_factor": 0.1,
+    "add_offset": 0.0,
+    "_FillValue": -9999,
+    "grid_mapping": "spatial_ref",
+    "coordinates": "time lat lon"
+  },
+  "dimension_names": [
+    "time",
+    "lat",
+    "lon"
+  ],
+  "zarr_format": 3,
+  "node_type": "array",
+  "storage_transformers": []
+}

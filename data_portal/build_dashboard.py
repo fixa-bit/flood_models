@@ -9,6 +9,7 @@ import calendar
 import csv
 import hashlib
 import json
+import re
 import shutil
 from collections import Counter, defaultdict
 from datetime import date, datetime, timedelta, timezone
@@ -31,6 +32,8 @@ PROVIDERS = {
     "irsa": ("IRSA", "Daily mean discharge", "http://pakirsa.gov.pk/DailyData.aspx", "Daily means remain separate from point readings; averaging bounds are unstated."),
     "pmd": ("PMD journal", "Selected historical flood peaks", "https://www.pmd.gov.pk/rnd/rndweb/rnd_new/journal/vol13_issue26_files/5_Flood_Forecasting_of_an_Ungauged_Trans-boundary_Chenab_River_Basin_Using_Distributed_Hydrological_Model_Integrated_Flood_Analysis_System_%28IFAS%29.pdf", "Selected event maxima, not a daily training series."),
     "nasa_power": ("NASA POWER", "Catchment precipitation", "https://power.larc.nasa.gov/docs/services/api/temporal/daily/", "MERRA2 / GEOSIT grid estimates, area-weighted over the catchment; UTC days."),
+    "imerg": ("NASA IMERG via NOAA", "Daily catchment rainfall comparison", "https://gpm.nasa.gov/data/imerg", "Ten event and ordinary-day samples only; comparison data are held out of training. One v07 day has ambiguous missing values."),
+    "chirps_v3": ("CHIRPS v3", "Daily catchment rainfall comparison", "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/daily/readme.txt", "Ten daily rnl samples only; ERA5 distributes pentad totals among days. Comparison data are held out of training."),
     "global_watersheds": ("Global Watersheds", "MERIT-derived catchment and rivers", "https://mghydro.com/watersheds/help.html", "Research delineation checked against sources and geometry; not agency-certified."),
     "jica": ("JICA · PMD inventory", "Station-location evidence", "https://openjicareport.jica.go.jp/pdf/12395935.pdf", "Marala coordinates in the station inventory; PDF page 36."),
     "references": ("Methodology references", "Data definitions and source documentation", "https://power.larc.nasa.gov/docs/methodology/data/sources/", "Saved methodology pages and search snapshots; availability evidence is not a complete archive."),
@@ -55,7 +58,7 @@ def number(value):
 
 def provider_for(path):
     name = path.as_posix().lower()
-    for key in ("nasa_power", "wapda", "ffd", "irsa", "global_watersheds"):
+    for key in ("nasa_power", "imerg", "chirps_v3", "wapda", "ffd", "irsa", "global_watersheds"):
         if f"/{key}/" in name:
             return key
     if "/discharge/pmd/" in name:
@@ -71,6 +74,28 @@ def hash_file(path):
         for chunk in iter(lambda: handle.read(1024 * 1024), b""):
             digest.update(chunk)
     return digest.hexdigest()
+
+
+def version_assets():
+    """Refresh local script/style URLs when their bytes change.
+
+    An existing browser tab can otherwise combine new navigation HTML with an
+    older cached app.js that does not recognize the Summary route.
+    """
+    index = DIST / "index.html"
+    html = index.read_bytes().decode("utf-8")
+    versions = {}
+
+    def replace(match):
+        relative = match.group("path")
+        version = hash_file(DIST / relative)[:12]
+        versions[relative] = version
+        return f'{match.group("attribute")}="{relative}?v={version}"'
+
+    updated = re.sub(r'(?P<attribute>src|href)="(?P<path>assets/[\w.-]+\.(?:js|css))(?:\?[^"<>]*)?"', replace, html)
+    if updated != html:
+        index.write_bytes(updated.encode("utf-8"))
+    return versions
 
 
 def collect_integrity():
@@ -90,7 +115,9 @@ def collect_integrity():
         if isinstance(value, dict):
             expected = value.get("sha256") or value.get("source_sha256")
             relative = value.get("raw_file") or value.get("source_file")
-            if expected and isinstance(relative, str):
+            if document.name.endswith(".receipt.json") and expected and value.get("source_url") and not relative:
+                claim(document.with_name(document.name.removesuffix(".receipt.json")), expected, value["source_url"])
+            elif expected and isinstance(relative, str):
                 candidate = MODEL / relative
                 if not candidate.exists() and (document.parent / relative).exists():
                     candidate = document.parent / relative
@@ -153,6 +180,7 @@ def interval_series(rows, value_key):
 
 
 def build():
+    asset_versions = version_assets()
     for directory in (DIST / "data", DIST / "downloads"):
         directory.mkdir(parents=True, exist_ok=True)
     integrity = collect_integrity()
@@ -163,6 +191,8 @@ def build():
     quality = read_json(PROCESSED / "discharge/marala_daily_inflow_quality_report.json", {})
     rain_report = read_json(PROCESSED / "rainfall/marala_rainfall_collection_report.json", {})
     rain_validation = read_json(PROCESSED / "rainfall/marala_rainfall_validation_report.json", {})
+    rain_comparison_dir = PROCESSED / "rainfall/source_comparison_2026-10-26"
+    rain_comparison = read_json(rain_comparison_dir / "source_comparison_report.json", {})
     catchment_report = read_json(PROCESSED / "catchment/marala_catchment_verification.json", {})
     feature_audit = read_json(PROCESSED / "metadata/marala_feature_coverage_audit.json", {})
     precipitation = [{"date": r["date"], "value": number(r["precipitation_mm_day"]), "coverage": number(r["valid_area_fraction"]),
@@ -186,7 +216,9 @@ def build():
         evidence = [e for e in integrity["files"] if e["provider"] == key]
         if not evidence:
             continue
-        if key == "nasa_power" and feature_audit.get("rainfall_quality_blocked"):
+        if key == "nasa_power" and rain_comparison:
+            note = "Training hold: full 2016–2024 check found request-range-dependent daily values; original and fresh candidate remain separate. " + note
+        elif key == "nasa_power" and feature_audit.get("rainfall_quality_blocked"):
             note = "Training hold: saved long-range responses disagree with independent short-period daily/hourly checks. " + note
         urls = sorted({u for e in evidence for u in e["source_urls"]})
         sources.append({"id": key, "name": name, "purpose": purpose, "url": url, "note": note,
@@ -194,6 +226,15 @@ def build():
                         "links": urls, "bytes": sum(e["bytes"] or 0 for e in evidence)})
     downloads = []
     downloadable = []
+    for path in sorted(rain_comparison_dir.glob("*")):
+        if path.name not in ("README.md", "source_comparison_report.json", "marala_precipitation_source_comparison.csv"):
+            continue
+        download_name = "marala_precipitation_source_comparison_README.md" if path.name == "README.md" else path.name
+        shutil.copy2(path, DIST / "downloads" / download_name)
+        downloadable.append(path)
+        downloads.append({"name": path.name, "category": "rainfall investigation", "bytes": path.stat().st_size,
+                          "path": path.relative_to(WORKSPACE).as_posix(), "url": f"downloads/{download_name}",
+                          "sha256": hash_file(path)})
     for folder in ("discharge", "rainfall", "catchment", "metadata"):
         if not (PROCESSED / folder).exists():
             continue
@@ -236,6 +277,10 @@ def build():
                          "reviews": reviews, "events": events, "monthly": monthly,
                          "quality": quality, "rainfall_report": {k: v for k, v in rain_report.items() if k != "receipts"},
                          "rainfall_validation": rain_validation, "catchment": {k: v for k, v in catchment_report.items() if k != "source_receipts"},
+                         "rainfall_source_comparison": {"status": rain_comparison.get("status"),
+                                                        "power_historical_profile": rain_comparison.get("power_historical_profile", {}),
+                                                        "imerg_full_days": rain_comparison.get("imerg_full_days"),
+                                                        "chirps_full_days": rain_comparison.get("chirps_full_days")},
                          "rainfall_screening": {"threshold_mm_day": 100, "rule": "Advisory review screen for catchment means >=100 mm/day; not an official flood or invalid-data threshold. Source values are unchanged.",
                                                 "count": len(high_precipitation), "maximum": max(high_precipitation, key=lambda r: r["value"]) if high_precipitation else None,
                                                 "dates": [r["date"] for r in high_precipitation]},
@@ -247,7 +292,8 @@ def build():
     path = DIST / "data/portal.json"
     path.write_text(json.dumps(result, separators=(",", ":"), allow_nan=False), encoding="utf-8")
     manifest = {"snapshot_built_utc": result["built_utc"], "snapshot_sha256": hash_file(path),
-                "integrity_counts": integrity["counts"], "source_groups": len(sources), "download_count": len(downloadable)}
+                "integrity_counts": integrity["counts"], "source_groups": len(sources), "download_count": len(downloadable),
+                "asset_versions": asset_versions}
     (DIST / "data/build_report.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(manifest))
     return result

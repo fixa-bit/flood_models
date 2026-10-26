@@ -6,6 +6,20 @@ Keep each model/module and its data in a separate subfolder.
 
 - `exposure_infrastructure/`: population, OSM roads/buildings/facilities/settlements, administrative boundaries, preparation scripts and GIS audits.
 
+## Start the local data portal
+
+From the project root, run:
+
+```powershell
+python data_portal/serve.py
+```
+
+Open **http://127.0.0.1:8787** in your browser. Keep the terminal open while using the portal; press **Ctrl+C** to stop it. No login is required.
+
+On Windows, you can also double-click [data_portal/start_portal.cmd](data_portal/start_portal.cmd).
+
+## Exposure module and repository contents
+
 The active exposure pilot is **Trimmu / Jhang**, configured in `exposure_infrastructure/configs/trimmu_jhang.json`. It uses the official Jhang district polygon and published UNOSAT historical water extents. Balloki's earlier provisional run is retained separately. Run the downloader, preprocessor, source verification and audit from the exposure module; Google Colab writes to Drive using the same configuration.
 
 The workspace was empty on initial inspection. Future segmentation and river forecasting modules should have their own directories and environments. Link their georeferenced flood outputs through the exposure configuration rather than mixing raw datasets.

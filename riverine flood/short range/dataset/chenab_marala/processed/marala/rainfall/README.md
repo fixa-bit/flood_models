@@ -1,5 +1,7 @@
 # Marala catchment precipitation
 
+**October 2026 quality update:** A [separate source investigation](source_comparison_2026-10-26/README.md) confirmed that the original long-range NASA POWER request gives request-dependent historical values. Across 67,788 overlapping 2016–2024 cell-days, 34,355 positive original values were 24 times fresh historical requests while 5,681 positive values already matched. The original series is preserved and remains **on hold for training**. The investigation also saves a fresh 2016–2024 POWER candidate and limited catchment comparisons with IMERG and CHIRPS; none is a validated replacement training input yet.
+
 The previous regional rainfall download was deleted at the user's request and replaced with fresh NASA POWER downloads selected using the saved Marala upstream catchment. The main model input is [marala_catchment_daily_precipitation.csv](marala_catchment_daily_precipitation.csv): one area-weighted precipitation value per UTC day for the full catchment.
 
 | Property | Current dataset |

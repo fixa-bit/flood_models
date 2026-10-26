@@ -1,0 +1,226 @@
+{
+  "built_utc": "2026-10-26T10:31:01.816047+00:00",
+  "start": "1990-01-01",
+  "final_end": "2026-09-30",
+  "preliminary_end": "2026-10-20",
+  "boundary_sha256": "49efd115f5d3ce2d1241fb35adaaf48bf6c8d0705768ac93dc88fbd4f11ab651",
+  "catchment_cells": 1266,
+  "area_weight_sum": 0.9999999999991109,
+  "final_daily_rows": 13422,
+  "final_complete_days": 13422,
+  "preliminary_daily_rows": 20,
+  "preliminary_complete_days": 20,
+  "compact_copy_until": "2026-08-31",
+  "compact_copy_quantization_mm": 0.1,
+  "original_chc_samples_checked": 10,
+  "maximum_sample_absolute_difference_mm": 0.001444,
+  "yearly": {
+    "1990": {
+      "dates": 365,
+      "complete_values": 365,
+      "missing_values": 0
+    },
+    "1991": {
+      "dates": 365,
+      "complete_values": 365,
+      "missing_values": 0
+    },
+    "1992": {
+      "dates": 366,
+      "complete_values": 366,
+      "missing_values": 0
+    },
+    "1993": {
+      "dates": 365,
+      "complete_values": 365,
+      "missing_values": 0
+    },
+    "1994": {
+      "dates": 365,
+      "complete_values": 365,
+      "missing_values": 0
+    },
+    "1995": {
+      "dates": 365,
+      "complete_values": 365,
+      "missing_values": 0
+    },
+    "1996": {
+      "dates": 366,
+      "complete_values": 366,
+      "missing_values": 0
+    },
+    "1997": {
+      "dates": 365,
+      "complete_values": 365,
+      "missing_values": 0
+    },
+    "1998": {
+      "dates": 365,
+      "complete_values": 365,
+      "missing_values": 0
+    },
+    "1999": {
+      "dates": 365,
+      "complete_values": 365,
+      "missing_values": 0
+    },
+    "2000": {
+      "dates": 366,
+      "complete_values": 366,
+      "missing_values": 0
+    },
+    "2001": {
+      "dates": 365,
+      "complete_values": 365,
+      "missing_values": 0
+    },
+    "2002": {
+      "dates": 365,
+      "complete_values": 365,
+      "missing_values": 0
+    },
+    "2003": {
+      "dates": 365,
+      "complete_values": 365,
+      "missing_values": 0
+    },
+    "2004": {
+      "dates": 366,
+      "complete_values": 366,
+      "missing_values": 0
+    },
+    "2005": {
+      "dates": 365,
+      "complete_values": 365,
+      "missing_values": 0
+    },
+    "2006": {
+      "dates": 365,
+      "complete_values": 365,
+      "missing_values": 0
+    },
+    "2007": {
+      "dates": 365,
+      "complete_values": 365,
+      "missing_values": 0
+    },
+    "2008": {
+      "dates": 366,
+      "complete_values": 366,
+      "missing_values": 0
+    },
+    "2009": {
+      "dates": 365,
+      "complete_values": 365,
+      "missing_values": 0
+    },
+    "2010": {
+      "dates": 365,
+      "complete_values": 365,
+      "missing_values": 0
+    },
+    "2011": {
+      "dates": 365,
+      "complete_values": 365,
+      "missing_values": 0
+    },
+    "2012": {
+      "dates": 366,
+      "complete_values": 366,
+      "missing_values": 0
+    },
+    "2013": {
+      "dates": 365,
+      "complete_values": 365,
+      "missing_values": 0
+    },
+    "2014": {
+      "dates": 365,
+      "complete_values": 365,
+      "missing_values": 0
+    },
+    "2015": {
+      "dates": 365,
+      "complete_values": 365,
+      "missing_values": 0
+    },
+    "2016": {
+      "dates": 366,
+      "complete_values": 366,
+      "missing_values": 0
+    },
+    "2017": {
+      "dates": 365,
+      "complete_values": 365,
+      "missing_values": 0
+    },
+    "2018": {
+      "dates": 365,
+      "complete_values": 365,
+      "missing_values": 0
+    },
+    "2019": {
+      "dates": 365,
+      "complete_values": 365,
+      "missing_values": 0
+    },
+    "2020": {
+      "dates": 366,
+      "complete_values": 366,
+      "missing_values": 0
+    },
+    "2021": {
+      "dates": 365,
+      "complete_values": 365,
+      "missing_values": 0
+    },
+    "2022": {
+      "dates": 365,
+      "complete_values": 365,
+      "missing_values": 0
+    },
+    "2023": {
+      "dates": 365,
+      "complete_values": 365,
+      "missing_values": 0
+    },
+    "2024": {
+      "dates": 366,
+      "complete_values": 366,
+      "missing_values": 0
+    },
+    "2025": {
+      "dates": 365,
+      "complete_values": 365,
+      "missing_values": 0
+    },
+    "2026": {
+      "dates": 273,
+      "complete_values": 273,
+      "missing_values": 0
+    }
+  },
+  "provider_final_index": {
+    "source_url": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/daily/final/rnl/2026/",
+    "retrieved_utc": "2026-10-26T10:27:05.315483+00:00",
+    "sha256": "de0722f1bda88fb12d62d21e4f55cd34b6bdcf1dc9436a877dc9eb48ccfbff22",
+    "bytes": 60240,
+    "raw_file": "raw/marala/rainfall/chirps_v3/source_indexes_2026-10-26/final_rnl_2026.html",
+    "representation": "Original downloaded Zarr metadata or compressed chunk"
+  },
+  "provider_preliminary_index": {
+    "source_url": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/daily/prelim/sat/2026/",
+    "retrieved_utc": "2026-10-26T10:27:06.858344+00:00",
+    "sha256": "687fcd80f3dc372fb9168e64d3317549390223595cc4a5e2744f492f899668e6",
+    "bytes": 67195,
+    "raw_file": "raw/marala/rainfall/chirps_v3/source_indexes_2026-10-26/prelim_sat_2026.html",
+    "representation": "Original downloaded Zarr metadata or compressed chunk"
+  },
+  "source_notes": [
+    "Historical source is a third-party Zarr conversion of official CHIRPS v3 Final RNL; original CHC GeoTIFF samples check its 0.1-mm quantization.",
+    "Final RNL daily allocation uses ERA5. Preliminary SAT daily allocation uses IMERG and is stored separately.",
+    "UTC day labels do not prove uniform observation windows for contributing station records.",
+    "Daily rainfall histories are observations/reanalysis estimates, not future rainfall forecasts."
+  ]
+}

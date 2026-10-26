@@ -1,0 +1,235 @@
+{
+  "created_utc": "2026-10-26T10:20:13.244989+00:00",
+  "catchment_boundary_sha256": "49efd115f5d3ce2d1241fb35adaaf48bf6c8d0705768ac93dc88fbd4f11ab651",
+  "saved_nasa_power_source_files_unchanged": true,
+  "saved_nasa_power_originals_checked": 42,
+  "power_range_test": {
+    "hourly_cross_checks": {
+      "2016-07-15": {
+        "hourly_sum_mm": 42.77,
+        "hour_count": 24,
+        "units": "mm/hour",
+        "source_products": [
+          "MERRA2"
+        ],
+        "source_url": "https://power.larc.nasa.gov/api/temporal/hourly/point?parameters=PRECTOTCORR&community=AG&longitude=74.375&latitude=32.5&start=20160715&end=20160715&format=JSON&time-standard=UTC"
+      },
+      "2016-08-06": {
+        "hourly_sum_mm": 16.02,
+        "hour_count": 24,
+        "units": "mm/hour",
+        "source_products": [
+          "MERRA2"
+        ],
+        "source_url": "https://power.larc.nasa.gov/api/temporal/hourly/point?parameters=PRECTOTCORR&community=AG&longitude=74.375&latitude=32.5&start=20160806&end=20160806&format=JSON&time-standard=UTC"
+      },
+      "2024-03-02": {
+        "hourly_sum_mm": 35.47,
+        "hour_count": 24,
+        "units": "mm/hour",
+        "source_products": [
+          "MERRA2"
+        ],
+        "source_url": "https://power.larc.nasa.gov/api/temporal/hourly/point?parameters=PRECTOTCORR&community=AG&longitude=74.375&latitude=32.5&start=20240302&end=20240302&format=JSON&time-standard=UTC"
+      },
+      "2024-08-08": {
+        "hourly_sum_mm": 9.45,
+        "hour_count": 24,
+        "units": "mm/hour",
+        "source_products": [
+          "MERRA2"
+        ],
+        "source_url": "https://power.larc.nasa.gov/api/temporal/hourly/point?parameters=PRECTOTCORR&community=AG&longitude=74.375&latitude=32.5&start=20240808&end=20240808&format=JSON&time-standard=UTC"
+      }
+    },
+    "same_point_and_parameter": true,
+    "same_units": true,
+    "march_single_mm": 35.47,
+    "march_long_mm": 851.28,
+    "march_year_mm": 35.47,
+    "aug_single_mm": 9.47,
+    "aug_long_mm": 227.28,
+    "request_sources": {
+      "one_day_2016_july": [
+        "MERRA2"
+      ],
+      "one_day_2016_flood": [
+        "MERRA2"
+      ],
+      "one_day_march": [
+        "MERRA2"
+      ],
+      "week_march": [
+        "MERRA2"
+      ],
+      "month_march": [
+        "MERRA2"
+      ],
+      "one_day_august": [
+        "MERRA2"
+      ],
+      "week_august": [
+        "MERRA2"
+      ],
+      "year_2024": [
+        "MERRA2"
+      ],
+      "2016_to_2024": [
+        "MERRA2"
+      ],
+      "mixed_long_range": [
+        "MERRA2",
+        "GEOSIT"
+      ]
+    }
+  },
+  "case_dates": {
+    "ordinary": [
+      "2016-03-01",
+      "2016-07-15"
+    ],
+    "2014_flood": [
+      "2014-09-04",
+      "2014-09-05",
+      "2014-09-06"
+    ],
+    "2016_flood": [
+      "2016-08-05",
+      "2016-08-06",
+      "2016-08-07"
+    ],
+    "power_disagreement": [
+      "2024-03-02",
+      "2024-08-08"
+    ]
+  },
+  "comparison_rows": 10,
+  "power_fresh_single_day_basin_means_mm": {
+    "2016-07-15": 13.408744488638485,
+    "2016-08-06": 16.836646000934433,
+    "2024-03-02": 60.18775747580335,
+    "2024-08-08": 3.1316780271991504
+  },
+  "power_historical_profile": {
+    "equal": 5681,
+    "near_24_times": 34355,
+    "other": 0,
+    "both_zero": 27752,
+    "missing": 0,
+    "years": {
+      "2016": {
+        "equal": 527,
+        "near_24_times": 3130,
+        "other": 0,
+        "both_zero": 2769,
+        "missing": 0
+      },
+      "2017": {
+        "equal": 648,
+        "near_24_times": 3887,
+        "other": 0,
+        "both_zero": 3130,
+        "missing": 0
+      },
+      "2018": {
+        "equal": 571,
+        "near_24_times": 3513,
+        "other": 0,
+        "both_zero": 3581,
+        "missing": 0
+      },
+      "2019": {
+        "equal": 716,
+        "near_24_times": 4379,
+        "other": 0,
+        "both_zero": 2570,
+        "missing": 0
+      },
+      "2020": {
+        "equal": 681,
+        "near_24_times": 4067,
+        "other": 0,
+        "both_zero": 2938,
+        "missing": 0
+      },
+      "2021": {
+        "equal": 644,
+        "near_24_times": 3920,
+        "other": 0,
+        "both_zero": 3101,
+        "missing": 0
+      },
+      "2022": {
+        "equal": 623,
+        "near_24_times": 3813,
+        "other": 0,
+        "both_zero": 3229,
+        "missing": 0
+      },
+      "2023": {
+        "equal": 691,
+        "near_24_times": 4126,
+        "other": 0,
+        "both_zero": 2848,
+        "missing": 0
+      },
+      "2024": {
+        "equal": 580,
+        "near_24_times": 3520,
+        "other": 0,
+        "both_zero": 3586,
+        "missing": 0
+      }
+    },
+    "daily_candidate_rows": 3228,
+    "full_cell_days": 3228
+  },
+  "imerg_metadata": {
+    "precipitation_2014": {
+      "version": "v06",
+      "variable": "precipitationCal",
+      "source_url": "https://erddap.aoml.noaa.gov/hdb/erddap/griddap/precipitation_2014.das",
+      "sha256": "2c91faa2f5f57e842c4466a88791562c5940e296d14d6c86c915cc4bfe7cd96f",
+      "fill_value": "-9999.9",
+      "missing_value": "0.0",
+      "source_archive": "GPM_3IMERGHH.06"
+    },
+    "precipitation_2016": {
+      "version": "v06",
+      "variable": "precipitationCal",
+      "source_url": "https://erddap.aoml.noaa.gov/hdb/erddap/griddap/precipitation_2016.das",
+      "sha256": "fde4bcefc88ee29c82f32aaf77b61c1ebe11a066de9119ac8f6e5c4144b0d4f5",
+      "fill_value": "-9999.9",
+      "missing_value": "0.0",
+      "source_archive": "GPM_3IMERGHH.06"
+    },
+    "precipitation_2024": {
+      "version": "v06",
+      "variable": "precipitationCal",
+      "source_url": "https://erddap.aoml.noaa.gov/hdb/erddap/griddap/precipitation_2024.das",
+      "sha256": "18f599a5faab33054607a362349ab37ed95e4b7e9de670d1512e9366829430c6",
+      "fill_value": "-9999.9",
+      "missing_value": "0.0",
+      "source_archive": "GPM_3IMERGHHE.06"
+    },
+    "precipitation_2024_v07": {
+      "version": "v07",
+      "variable": "precipitation",
+      "source_url": "https://erddap.aoml.noaa.gov/hdb/erddap/griddap/precipitation_2024_v07.das",
+      "sha256": "310c23e74dde3104e0cb8d26e5d78c3174f76d158e35577d260c0ca0deb0d36a",
+      "fill_value": "0.0",
+      "missing_value": "0.0",
+      "source_archive": "GPM_3IMERGHH.07"
+    }
+  },
+  "imerg_full_days": 9,
+  "chirps_full_days": 10,
+  "status": "investigation_only_do_not_train",
+  "notes": [
+    "Source disagreement is not resolved by selecting whichever rainfall value is closer to IMERG or CHIRPS.",
+    "CHIRPS v3 rnl uses ERA5 to distribute pentad totals across UTC dates; daily station observation windows are not uniform.",
+    "IMERG half-hourly rates (mm/hour) are integrated as rate x 0.5 hours for each of 48 intervals.",
+    "NOAA's v07 mirror encodes 0 as missing and fill as well as a valid dry value. For 2024-08-08 only a lower bound is saved; its catchment average is withheld.",
+    "IMERG and CHIRPS sample days are not complete historical training series."
+  ]
+}

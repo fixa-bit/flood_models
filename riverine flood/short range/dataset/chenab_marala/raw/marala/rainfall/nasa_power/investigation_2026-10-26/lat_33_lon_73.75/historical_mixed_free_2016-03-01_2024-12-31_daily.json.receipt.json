@@ -1,0 +1,7 @@
+{
+  "source_url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=PRECTOTCORR&community=AG&longitude=73.75&latitude=33&start=20160301&end=20241231&format=JSON&time-standard=UTC",
+  "retrieved_utc": "2026-10-26T10:14:54.396228+00:00",
+  "sha256": "8b0dfc16eef21fcdd1fcd6d01acba1ecf395b25f50320bb2faa1f9ad3889b95c",
+  "bytes": 50941,
+  "raw_file": "raw/marala/rainfall/nasa_power/investigation_2026-10-26/lat_33_lon_73.75/historical_mixed_free_2016-03-01_2024-12-31_daily.json"
+}

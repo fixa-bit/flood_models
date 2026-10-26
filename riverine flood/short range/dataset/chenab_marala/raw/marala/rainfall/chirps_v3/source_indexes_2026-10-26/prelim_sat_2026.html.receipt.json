@@ -1,0 +1,8 @@
+{
+  "source_url": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/daily/prelim/sat/2026/",
+  "retrieved_utc": "2026-10-26T10:27:06.858344+00:00",
+  "sha256": "687fcd80f3dc372fb9168e64d3317549390223595cc4a5e2744f492f899668e6",
+  "bytes": 67195,
+  "raw_file": "raw/marala/rainfall/chirps_v3/source_indexes_2026-10-26/prelim_sat_2026.html",
+  "representation": "Original downloaded Zarr metadata or compressed chunk"
+}

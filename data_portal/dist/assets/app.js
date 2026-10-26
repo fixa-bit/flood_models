@@ -45,15 +45,18 @@ function renderCases(){const icons={riverine:'≋',flash:'ϟ',seasonal:'◷',urb
 async function render(){
   if(!state.data)return;
   const c=state.data.cases.find(c=>c.id===state.case);$('#case-breadcrumb').textContent=c.label;
-  const view=location.hash.slice(1)||'overview';state.view=['overview','sources','quality','catchment','library'].includes(view)?view:'overview';
+  const view=location.hash.slice(1)||'overview';state.view=['overview','summary','sources','quality','catchment','library'].includes(view)?view:'overview';
   $$('[data-view]').forEach(a=>a.classList.toggle('active',a.dataset.view===state.view));
   const titles={overview:['Flood data observatory','Trace the sources. Inspect the gaps. Explore the records.'],sources:['Sources & provenance','Every collected source, its purpose and its saved evidence.'],quality:['Integrity & quality','See what passed, what is uncertain, and what needs review.'],catchment:['Catchment explorer','The upstream area behind Marala’s precipitation and inflow.'],library:['Data library','Explore and download the records behind the charts.']};
+  titles.summary=['Summary','Explore feature values and data availability with independent year selectors.'];
   $('#page-title').textContent=titles[state.view][0];$('#page-subtitle').textContent=titles[state.view][1];
+  $('#filters').hidden=state.view==='summary';
   $('#station').disabled=state.case!=='riverine';const populated=state.case==='riverine'&&$('#station').value==='marala'&&$('#horizon').value==='short';
   $('#populated').hidden=!populated;$('#empty-state').hidden=populated;
   if(!populated){renderEmpty(c);return;}
   $$('.view').forEach(v=>v.hidden=v.id!==`${state.view}-view`);
   if(state.view==='overview')await renderOverview();
+  if(state.view==='summary')await window.FloodSummary.render(state.data.marala);
   if(state.view==='sources')renderSources();
   if(state.view==='quality')await renderQuality();
   if(state.view==='catchment')await renderCatchment();
@@ -102,7 +105,8 @@ async function renderQuality(){
   const fail=(ic.mismatch||0)+(ic.missing||0)+(ic.conflicting_claims||0);
   $('#quality-metrics').innerHTML=metric('Checksum exceptions',fmt(fail),`${fmt(ic.match)} files match saved receipts`,fail?'!':'✓')+metric('Withheld WAPDA dates',fmt(b.withheld_dates.length),'One zero and six source disagreements','!')+metric('Unconfirmed reading time',fmt(b.unknown_time_rows),'WAPDA dates · 1 companion-confirmed time','◷')+metric('Catchment checks',`${Object.values(m.catchment.checks).filter(Boolean).length} / ${Object.keys(m.catchment.checks).length}`,'Source and geometry checks · research boundary','◇');
   const layers=[['File integrity',`${fmt(ic.match)} local files match their saved checksum claims.`,true],['Rainfall preparation',`${fmt(m.rainfall_report.valid_daily_rows)} complete days; full catchment area. A missing cell leaves the day blank.`,true],['Precipitation plausibility',`${fmt(m.rainfall_screening.count)} days exceed the advisory 100 mm/day screen; maximum ${fmt(m.rainfall_screening.maximum?.value)} mm/day. Review units and source plausibility. This is not an official invalid-data threshold.`,false],['Discharge consistency',`${b.exact_ffd_value_matches}/${b.ffd_comparisons} overlapping FFD values match WAPDA. Seven WAPDA days remain withheld.`,false],['Observation times',`${fmt(b.unknown_time_rows)} WAPDA dates lack an individually confirmed reading hour.`,false],['Boundary verification','Station location, area and geometry checks passed; no agency or field certification.',false]];
-  if(m.feature_coverage_audit?.rainfall_quality_blocked)layers.unshift(['Rainfall source consistency','Training blocked: independent short-period daily and hourly checks disagree with saved long-range responses. Temporal coverage is complete, but rainfall values need to be revalidated.',false]);
+  if(m.rainfall_source_comparison?.status){const p=m.rainfall_source_comparison.power_historical_profile;layers.unshift(['Rainfall source comparison',`Training hold: ${fmt(p.near_24_times)} historical NASA POWER cell-days differ by a factor of 24 across request ranges. Fresh POWER, IMERG and CHIRPS comparisons are saved separately; only 10 event and ordinary days were sampled from the latter two. Read the investigation in the Data library.`,false]);}
+  else if(m.feature_coverage_audit?.rainfall_quality_blocked)layers.unshift(['Rainfall source consistency','Training blocked: independent short-period daily and hourly checks disagree with saved long-range responses. Temporal coverage is complete, but rainfall values need to be revalidated.',false]);
   $('#verification-layers').innerHTML=layers.map(([title,note,ok])=>`<div class="verification-item"><span class="check-icon ${ok?'':'warn'}">${ok?'✓':'!'}</span><div><strong>${esc(title)}</strong>${esc(note)}</div></div>`).join('');
   $('#review-rows').innerHTML=m.reviews.map(r=>`<tr><td class="quality-date"><strong>${esc(r.date)}</strong><div class="cell-note">Withheld</div></td><td>${pill(r.issue==='zero_needs_review'?'Zero needs review':'Source disagreement','amber')}</td><td>${fmt(r.wapda_inflow_cusecs)}</td><td>${r.ffd_inflow_cusecs?fmt(r.ffd_inflow_cusecs):'—'}</td><td><strong>${esc(r.review_id)}</strong><div class="cell-note">${esc(r.review_notes)}</div><a href="${esc(r.wapda_url)}" target="_blank" rel="noopener">WAPDA ↗</a>${r.ffd_url?`<a href="${esc(r.ffd_url)}" target="_blank" rel="noopener">FFD original ↗</a>`:''}</td></tr>`).join('');
   $('#recent-coverage').innerHTML=Object.entries(m.quality.recent_coverage).map(([year,r])=>{const c=r.ffd_status_counts,valid=c.available_unique_0600||0,conflict=c.date_or_duplicate_conflict||0,missing=c.missing||0,n=r.calendar_days_through_as_of;return `<div class="coverage-year"><h3>${esc(year)} · ${n} calendar days checked</h3><div class="coverage-bar"><span style="width:${100*valid/n}%;background:#79a679"></span><span style="width:${100*conflict/n}%;background:#d6b569"></span><span style="width:${100*missing/n}%;background:#e8eadd"></span></div><div class="coverage-caption"><span>${valid} unique 06:00 readings</span><span>${conflict} conflicts</span><span>${missing} missing</span></div></div>`;}).join('');
@@ -140,5 +144,5 @@ for(const id of ['#from-date','#to-date'])$(id).onchange=()=>{if($('#from-date')
 $('#reset-dates').onclick=()=>{$('#year').value='all';applyYear();};$('#show-ffd').onchange=()=>renderOverview().catch(showRenderError);$('#event').onchange=()=>renderEvent().catch(showRenderError);
 $('#source-search').oninput=renderSources;$('#integrity-search').oninput=()=>{state.ledgerPage=0;renderLedger();};$('#file-search').oninput=renderLibrary;$('#show-grid').onchange=()=>renderCatchment().catch(showRenderError);
 $('#menu-toggle').onclick=()=>{const open=$('#sidebar').classList.toggle('open');$('#menu-toggle').setAttribute('aria-expanded',String(open));};
-$$('[data-view]').forEach(a=>a.addEventListener('click',()=>{$('#sidebar').classList.remove('open');$('#menu-toggle').setAttribute('aria-expanded','false');}));
+$$('[data-view]').forEach(a=>a.addEventListener('click',()=>{$('#sidebar').classList.remove('open');$('#menu-toggle').setAttribute('aria-expanded','false');if(location.hash===a.getAttribute('href'))render().catch(showRenderError);}));
 loadData();
