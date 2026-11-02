@@ -1,0 +1,20 @@
+{
+  "original_reference_files_unchanged": 160,
+  "source_table_byte_identical": true,
+  "observed_targets_exactly_preserved": true,
+  "all_configuration_choices_frozen_before_test": true,
+  "validation_only_blending_and_offsets_reproduced": true,
+  "all_future_weather_sequences_match_previous_best": true,
+  "all_inherited_donor_and_marala_training_years_retained": true,
+  "all_thirty_lead_scores_reproduced": true,
+  "original_climatology_benchmark_unchanged": true,
+  "noncrossing_intervals": true,
+  "correctness_tests_passed": 9,
+  "new_seed_models": 3,
+  "later_model_families_not_trained": true,
+  "parent_checkpoint_horizon": 15,
+  "new_checkpoint_horizon": 30,
+  "parent_first_fifteen_quantiles_preserved_before_finetuning_test_passed": true,
+  "source_sha256": "fa537d4af974a686ca7afec1e2728b8fd63380ae290af373dd6c832ad57c7ded",
+  "operational_skill_verified": false
+}

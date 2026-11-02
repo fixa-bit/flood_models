@@ -21,7 +21,9 @@ window.FloodAvailability = (() => {
 
   function setSpan(data) {
     state.data=data;
-    const recorded=['inflow','ffd','precipitation','irsa','peaks'].flatMap(key=>data[key].map(row=>row.date)).sort();
+    const recorded=['inflow','ffd','precipitation','irsa','peaks'].flatMap(key=>data[key].map(row=>row.date));
+    recorded.push(...(data.rainfall_sources||[]).flatMap(source=>source.rows.map(row=>row.date)));
+    recorded.sort();
     const firstYear=Number(recorded[0].slice(0,4)),lastYear=Number(recorded.at(-1).slice(0,4));
     if(state.year!=='all'&&(Number(state.year)<firstYear||Number(state.year)>lastYear)) state.year='all';
     state.first=state.year==='all'?recorded[0]:`${state.year}-01-01`;
@@ -52,10 +54,14 @@ window.FloodAvailability = (() => {
   }
 
   function calendar(data) {
-    const wapda=byDate(data.inflow),ffd=byDate(data.ffd),rain=byDate(data.precipitation);
+    const wapda=byDate(data.inflow),ffd=byDate(data.ffd);
+    const rainNames={chirps_final:'CHIRPS Final',chirps_preliminary:'CHIRPS Preliminary',
+      nasa_fresh:'NASA POWER fresh',chirps_original_samples:'CHIRPS original check'};
+    const rain=byDate((data.rainfall_sources||[]).flatMap(source=>source.rows
+      .filter(row=>valid(row.value)).map(row=>({date:row.date,id:source.id,name:rainNames[source.id]||source.name}))));
     const irsa=byDate(data.irsa),peaks=byDate(data.peaks);
     const cells=definitions.map((definition,index)=>state.dates.map((day,dayIndex)=>{
-      const w=wapda.get(day)?.[0],f=ffd.get(day)||[],r=rain.get(day)?.[0];
+      const w=wapda.get(day)?.[0],f=ffd.get(day)||[],r=rain.get(day)||[];
       const i=irsa.get(day)||[],p=peaks.get(day)||[];
       const sources=[],times=[],issues=[];
       let present=false;
@@ -71,10 +77,11 @@ window.FloodAvailability = (() => {
           if(rows.some(row=>row.flag)) issues.push('An FFD bulletin date disagrees with its archive date.');
           if(rows.length>1) issues.push('Multiple FFD records use this printed date.');
         }
-      } else if(index===2&&r&&valid(r.value)) {
-        present=true;sources.push('NASA POWER');
-        times.push('24-hour period: 05:00 Pakistan time to next 05:00 (00:00 to next 00:00 UTC)');
-        if(data.feature_coverage_audit?.rainfall_quality_blocked) issues.push('Precipitation dataset on hold for training: source downloads disagree.');
+      } else if(index===2&&r.length) {
+        present=true;sources.push(...r.map(row=>row.name));
+        times.push('Daily catchment average, 00:00 to next 00:00 UTC (05:00 to next 05:00 Pakistan time)');
+        if(r.some(row=>row.id==='nasa_fresh')) issues.push('NASA POWER fresh request is a comparison candidate, on hold for training.');
+        if(r.some(row=>row.id==='chirps_preliminary')) issues.push('CHIRPS Preliminary is provisional.');
       } else if(index===3||index===4) {
         present=i.some(row=>valid(row[index===3?'inflow':'outflow']));
         if(present) {sources.push('IRSA');times.push('Daily average; exact start and end hours not stated');}

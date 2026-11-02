@@ -9,6 +9,16 @@ window.FloodSummary = (() => {
   let END = START + DAYS * DAY;
   const PANEL_GAP=.065;
   const palette = {inflow:'#75d0ac', ffd:'#8db9df', rain:'#efb35e', conflict:'#ed9f83', muted:'#9eafa2'};
+  const rainInfo={
+    gee_era5land:{name:'ERA5-Land',color:'#f4c76b'},
+    gee_chirps:{name:'CHIRPS v2 Daily',color:'#f598bd'},
+    gee_persiann:{name:'PERSIANN-CDR',color:'#b0b9ff'},
+    gee_imerg:{name:'IMERG V07 Final',color:'#f28f6d'},
+    chirps_final:{name:'CHIRPS Final',color:'#75d0ac'},
+    chirps_preliminary:{name:'CHIRPS Preliminary',color:'#c7a7e7'},
+    nasa_fresh:{name:'NASA POWER fresh',color:'#8db9df',hold:true},
+    chirps_original_samples:{name:'CHIRPS original check',color:'#82d4d0',check:true},
+  };
   const current = {year:2024,mode:'scroll', bound:false,locked:false};
   const select = id => document.getElementById(id);
   const inYear = rows => rows.filter(row => row.date.startsWith(current.year+'-'));
@@ -23,6 +33,7 @@ window.FloodSummary = (() => {
   function configureYear(data) {
     current.data=data;
     const years=['inflow','ffd','precipitation','irsa','peaks'].flatMap(key=>data[key].map(row=>Number(row.date.slice(0,4))));
+    years.push(...(data.rainfall_sources||[]).flatMap(source=>source.rows.map(row=>Number(row.date.slice(0,4)))));
     const first=Math.min(...years),last=Math.max(...years);
     if(current.year<first||current.year>last) current.year=last;
     const field=select('summary-year');
@@ -56,9 +67,9 @@ window.FloodSummary = (() => {
 
   function selectedReadings(day,index) {
     const data=current.hoverData,readings=[];
-    const add=(source,value,color,flagged=false,unit='cusecs')=>{
+    const add=(source,value,color,flagged=false,unit='cusecs',axis='y')=>{
       if(value!==null&&value!==undefined&&Number.isFinite(Number(value)))
-        readings.push({source,value:Number(value),color,flagged,unit});
+        readings.push({source,value:Number(value),color,flagged,unit,axis});
     };
     if(index===0) {
       for(const row of data.wapda.get(day)||[]) add('WAPDA',row.source_value,row.eligible?palette.inflow:palette.rain,!row.eligible);
@@ -66,7 +77,7 @@ window.FloodSummary = (() => {
     } else if(index===1) {
       for(const row of data.ffd.get(day)||[]) add('FFD',row.outflow,row.flag?palette.conflict:palette.ffd,row.flag);
     } else if(index===2) {
-      for(const row of data.rain.get(day)||[]) add('NASA POWER',row.value,palette.rain,true,'mm/day');
+      for(const row of data.rainSources.get(day)||[]) add(row.name,row.value,row.color,row.hold,'mm/day',row.axis||'y3');
     } else if(index===3||index===4) {
       for(const row of data.irsa.get(day)||[]) add('IRSA',row[index===3?'inflow':'outflow'],index===3?palette.inflow:palette.ffd);
     } else {
@@ -75,7 +86,7 @@ window.FloodSummary = (() => {
     // Matching source readings share one point at their actual y-value.
     const grouped=new Map();
     for(const reading of readings) {
-      const key=reading.value+'|'+reading.unit;
+      const key=reading.value+'|'+reading.unit+'|'+reading.axis;
       if(!grouped.has(key)) grouped.set(key,{...reading,sources:[]});
       const group=grouped.get(key);
       if(!group.sources.includes(reading.source)) group.sources.push(reading.source);
@@ -136,6 +147,7 @@ window.FloodSummary = (() => {
         const point=document.createElement('span');
         point.className='summary-reading-point';
         point.dataset.date=day;point.dataset.value=reading.value;
+        point.dataset.axis=reading.axis;
         point.dataset.sources=reading.sources.join(' / ');
         point.dataset.flagged=String(reading.flagged);
         point.style.top=y+'px';point.style.setProperty('--reading-color',reading.color);
@@ -236,12 +248,19 @@ window.FloodSummary = (() => {
       }
     } else if(axis==='y3') {
       title='Precipitation over the upstream area';
-      const rain=saved.rain.get(day)?.[0];
-      if(rain&&rain.value!==null) values=reading('NASA POWER',rain.value,'mm/day');
-      warning=true;
-      status='Needs checking — excluded from training';
-      explanation='Different source downloads gave different results. These saved precipitation values need checking before training.';
-      unit='One value covers 05:00 to the next 05:00 Pakistan time, averaged over the upstream catchment.';
+      const rain=saved.rainSources.get(day)||[];
+      for(const row of rain) values+=reading(row.name,row.value,'mm/day');
+      if(rain.some(row=>row.id==='nasa_fresh')) {
+        warning=true;
+        status='NASA POWER fresh: comparison candidate — on hold for training';
+      } else if(rain.some(row=>row.id==='chirps_preliminary')) {
+        status='CHIRPS Preliminary is provisional; replace it with Final when available.';
+      } else {
+        status='CHIRPS is the preferred historical candidate; training checks are still pending.';
+      }
+      if(rain.some(row=>row.id==='chirps_original_samples'))
+        explanation+=(explanation?' ':'')+'The CHIRPS original-file check repeats a Final date; it is a verification sample.';
+      unit='Each value is a daily average over the upstream catchment, labelled by UTC date (05:00 to the next 05:00 Pakistan time).';
     } else if(axis==='y4'||axis==='y5') {
       const incoming=axis==='y4',row=saved.irsa.get(day)?.[0];
       title=incoming?'Average water entering Marala':'Average water leaving Marala';
@@ -313,14 +332,18 @@ window.FloodSummary = (() => {
     const ffd = inYear(data.ffd);
     const irsa = inYear(data.irsa);
     const peaks = inYear(data.peaks);
-    const rain = inYear(data.precipitation);
+    const rainSources=(data.rainfall_sources||[]).map(source=>({
+      id:source.id,info:rainInfo[source.id],rows:inYear(source.rows)
+    })).filter(source=>source.info);
+    const rain=rainSources.flatMap(source=>source.rows.filter(row=>row.value!==null&&Number.isFinite(Number(row.value))).map(row=>({date:row.date,value:Number(row.value),id:source.id,
+      name:source.info.name,color:source.info.color,hold:Boolean(source.info.hold),axis:source.info.axis||'y3'})));
     const flagged = inflow.filter(row => !row.eligible);
     const ffdNormal = ffd.filter(row => !row.flag);
     const ffdFlagged = ffd.filter(row => row.flag);
     const rows = [
       {title:'Inflow discharge', detail:'WAPDA + FFD · Marala station', unit:'Inflow (cusecs)', count:inflow.length+ffd.length,empty:`No inflow readings saved for ${current.year}.`},
       {title:'Outflow discharge', detail:'FFD · 06:00 Pakistan snapshot', unit:'Outflow (cusecs)', count:ffd.length,empty:`No outflow readings saved for ${current.year}.`},
-      {title:'Catchment precipitation', detail:'24-hour amount · area average · HOLD', unit:'Precip. (mm/day)', count:rain.filter(row=>row.value!==null).length,empty:`No precipitation readings saved for ${current.year}.`},
+      {title:'Catchment precipitation', detail:data.gee_precipitation?.state==='ready'?'Earth Engine + retained comparisons · mm/day':'Retained comparisons · Earth Engine not loaded', unit:'Rainfall (mm/day)', count:rain.length,empty:`No precipitation readings saved for ${current.year}.`},
       {title:'Daily mean inflow', detail:'IRSA · separate measurement basis', unit:'Mean inflow (cusecs)', count:irsa.length, empty:`No ${current.year} records. Saved IRSA means cover 16–23 Oct 2026.`},
       {title:'Daily mean outflow', detail:'IRSA · separate measurement basis', unit:'Mean outflow (cusecs)', count:irsa.length, empty:`No ${current.year} records. Saved IRSA means cover 16–23 Oct 2026.`},
       {title:'Selected event peak discharge', detail:'PMD journal · event maxima', unit:'Peak (cusecs)', count:peaks.length, empty:`No ${current.year} records. Saved selected events cover 1970–2016.`},
@@ -333,8 +356,13 @@ window.FloodSummary = (() => {
       ffdConflict(ffdFlagged,'inflow',0),
       flowTrace(ffdNormal,'outflow','FFD 06:00 outflow',palette.ffd,1),
       ffdConflict(ffdFlagged,'outflow',1),
-      {type:'bar',name:'Saved catchment precipitation · HOLD',x:rain.map(row=>row.date),y:rain.map(row=>row.value),xaxis:'x3',yaxis:'y3',
-       marker:{color:palette.rain,opacity:.8}},
+      ...rainSources.map(source=>({
+        type:'scatter',mode:source.info.check?'markers':'lines',name:source.info.name,
+        x:source.rows.map(row=>row.date),y:source.rows.map(row=>row.value),xaxis:'x3',yaxis:'y3',
+        connectgaps:false,line:{color:source.info.color,width:source.id==='chirps_final'?1.8:1.3,
+          dash:source.id==='nasa_fresh'?'dot':'solid'},
+        marker:{color:source.info.color,size:source.info.check?7:3,symbol:source.info.check?'circle-open':'circle'},
+      })),
       flowTrace(irsa,'inflow','IRSA daily mean inflow',palette.inflow,3),
       flowTrace(irsa,'outflow','IRSA daily mean outflow',palette.ffd,4),
       {type:'scatter',mode:'markers',name:'Selected PMD event maximum',x:peaks.map(row=>row.date),y:peaks.map(row=>row.value),xaxis:'x6',yaxis:'y6',
@@ -548,16 +576,22 @@ window.FloodSummary = (() => {
 
   async function render(data,{refreshAvailability=true}={}) {
     configureYear(data);
+    const gee=data.gee_precipitation;
+    const geeStatus=select('summary-gee-status');
+    if(geeStatus) {
+      geeStatus.dataset.state=gee?.state||'not_collected';
+      geeStatus.textContent=(gee?.message||'Earth Engine precipitation has not been collected.')+' '+(gee?.method||'');
+    }
     select('summary-year').disabled=true;
     const {rows,traces,inflow,ffd,rain}=tracks(data);
     hideTooltip();
-    current.hoverData={wapda:groupByDate(inflow),ffd:groupByDate(ffd),rain:groupByDate(rain),
+    current.hoverData={wapda:groupByDate(inflow),ffd:groupByDate(ffd),rainSources:groupByDate(rain),
       irsa:groupByDate(inYear(data.irsa)),peaks:groupByDate(inYear(data.peaks))};
     const number=value=>value.toLocaleString('en-US');
     const metrics=[
       ['WAPDA inflow',number(inflow.length),`${number(inflow.filter(row=>row.eligible).length)} eligible · ${inflow.filter(row=>!row.eligible).length} withheld`],
       ['FFD bulletins',number(ffd.length),`${new Set(ffd.map(row=>row.date)).size} printed dates · inflow + outflow`],
-      ['Catchment precipitation',number(rain.filter(row=>row.value!==null).length),'Daily area averages · source values on hold'],
+      ['Rainfall source values',number(rain.length),data.gee_precipitation?.state==='ready'?'Earth Engine + retained comparisons':'Retained comparisons · Earth Engine pending'],
       ['Feature year',String(current.year),'01 January–31 December · saved readings only'],
     ];
     select('summary-metrics').innerHTML=metrics.map(([label,value,note])=>`<div class="metric"><div class="metric-label">${label}</div><div class="metric-value">${value}</div><div class="metric-foot">${note}</div></div>`).join('');

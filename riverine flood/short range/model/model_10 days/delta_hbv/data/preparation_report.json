@@ -1,0 +1,10 @@
+{
+  "source": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\evaluation comparison\\common\\data\\marala_daily.csv",
+  "source_sha256": "d21788d62afc9e54d8e2aa6e1f27dcc244ef3b6a1a734249650abd84ccdbe11f",
+  "copy_sha256": "d21788d62afc9e54d8e2aa6e1f27dcc244ef3b6a1a734249650abd84ccdbe11f",
+  "byte_identical": true,
+  "no_discharge_filling": true,
+  "original_loader_sha256": "310c459c41ea7b6eb86dc216d8adb09b41e1cff49ca25b93cfb0b67debe89207",
+  "bundled_loader_sha256": "fafddb2ffa7152f4d324339c9df9a6df754e970eb001bf070223b0d874823898",
+  "loader_change": "Removed workspace sys.path bootstrap only"
+}

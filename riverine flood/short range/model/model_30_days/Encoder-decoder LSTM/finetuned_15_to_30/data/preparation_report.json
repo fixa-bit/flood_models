@@ -1,0 +1,47 @@
+{
+  "source": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\model_15 days\\encoder_decoder_lstm_finetuned\\data\\marala_daily.csv",
+  "source_sha256": "fa537d4af974a686ca7afec1e2728b8fd63380ae290af373dd6c832ad57c7ded",
+  "local_sha256": "fa537d4af974a686ca7afec1e2728b8fd63380ae290af373dd6c832ad57c7ded",
+  "byte_identical_copy": true,
+  "canonical_source": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\evaluation comparison\\common\\data\\marala_daily.csv",
+  "canonical_sha256": "d21788d62afc9e54d8e2aa6e1f27dcc244ef3b6a1a734249650abd84ccdbe11f",
+  "observed_values_and_missing_positions_preserved": true,
+  "rows": 3653,
+  "observed_targets": 3215,
+  "missing_targets": 438,
+  "first_date": "2015-01-01",
+  "last_date": "2024-12-31",
+  "parent_checkpoint_sha256": "cddaece6ff92365c62a2f1589acd4d4077627973316e9a08e18cedc8aea284ad",
+  "parent_pretraining_basins": [
+    "06043500",
+    "06191500",
+    "11528700",
+    "12189500",
+    "12358500",
+    "12414500",
+    "13235000",
+    "13340000"
+  ],
+  "parent_training_years": [
+    1985,
+    1986,
+    1987,
+    1988,
+    1989,
+    1990,
+    1991,
+    1992,
+    1993,
+    1994,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
+  ],
+  "parent_selection_years": [
+    1995,
+    1996,
+    2021
+  ]
+}

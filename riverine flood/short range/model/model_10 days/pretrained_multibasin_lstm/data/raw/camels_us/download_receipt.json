@@ -1,0 +1,191 @@
+{
+  "downloaded_at_utc": "2026-10-30T07:25:28.502036+00:00",
+  "record_url": "https://zenodo.org/api/records/15529996",
+  "doi": "10.5065/D6MW2F4D",
+  "license": {
+    "id": "cc-by-4.0"
+  },
+  "archive_url": "https://zenodo.org/api/records/15529996/files/basin_timeseries_v1p2_metForcing_obsFlow.zip/content",
+  "files": [
+    {
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\pretrained_multibasin_lstm\\data\\raw\\camels_us\\readme.txt",
+      "url": "https://zenodo.org/api/records/15529996/files/readme.txt/content",
+      "sha256": "fcdd3169b6b7c026358d605aee7acff419c332038fe41969afb93e4edac7370f"
+    },
+    {
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\pretrained_multibasin_lstm\\data\\raw\\camels_us\\camels_name.txt",
+      "url": "https://zenodo.org/api/records/15529996/files/camels_name.txt/content",
+      "sha256": "f3a85272cd934c6e12386db5f21979675fc891844250a335135786ad9a2de445"
+    },
+    {
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\pretrained_multibasin_lstm\\data\\raw\\camels_us\\camels_clim.txt",
+      "url": "https://zenodo.org/api/records/15529996/files/camels_clim.txt/content",
+      "sha256": "6a3a80256afbaea13f59f279c174d3c010156b826ffb53a4cfb5508814404f5f"
+    },
+    {
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\pretrained_multibasin_lstm\\data\\raw\\camels_us\\camels_topo.txt",
+      "url": "https://zenodo.org/api/records/15529996/files/camels_topo.txt/content",
+      "sha256": "b64ca9923bcaccf21dde33137903797919e8d6732edd7849f8534e0ddcbec8e8"
+    },
+    {
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\pretrained_multibasin_lstm\\data\\raw\\camels_us\\13340000\\13340000_lump_nldas_forcing_leap.txt",
+      "archive_member": "basin_dataset_public_v1p2/basin_mean_forcing/nldas/17/13340000_lump_nldas_forcing_leap.txt",
+      "sha256": "c89993db94b9b6540fb1b14e8fc6419874d6b4f727bfe0f124ca0acc7925255b",
+      "method": 8,
+      "crc32": 3368087768,
+      "compressed_size": 221674,
+      "size": 746762,
+      "offset": 3111620995
+    },
+    {
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\pretrained_multibasin_lstm\\data\\raw\\camels_us\\13340000\\13340000_streamflow_qc.txt",
+      "archive_member": "basin_dataset_public_v1p2/usgs_streamflow/17/13340000_streamflow_qc.txt",
+      "sha256": "1909cac0c0247157c78482672f26b7c5c213419f107f913a4bac9c5efe8d5a33",
+      "method": 8,
+      "crc32": 871591935,
+      "compressed_size": 63261,
+      "size": 397006,
+      "offset": 31258709
+    },
+    {
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\pretrained_multibasin_lstm\\data\\raw\\camels_us\\06191500\\06191500_lump_nldas_forcing_leap.txt",
+      "archive_member": "basin_dataset_public_v1p2/basin_mean_forcing/nldas/10/06191500_lump_nldas_forcing_leap.txt",
+      "sha256": "ca630146d2eef70894a1db232340cb87d11ee0a33bd700d8cb0e41e14ab9aa80",
+      "method": 8,
+      "crc32": 1464454591,
+      "compressed_size": 222136,
+      "size": 750821,
+      "offset": 3023303111
+    },
+    {
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\pretrained_multibasin_lstm\\data\\raw\\camels_us\\06191500\\06191500_streamflow_qc.txt",
+      "archive_member": "basin_dataset_public_v1p2/usgs_streamflow/10/06191500_streamflow_qc.txt",
+      "sha256": "69f9cef5af9e5884cd26ae12c9322346b95310aaa2cf7bd0e588cef94d1c995a",
+      "method": 8,
+      "crc32": 136276357,
+      "compressed_size": 61904,
+      "size": 397402,
+      "offset": 6945767
+    },
+    {
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\pretrained_multibasin_lstm\\data\\raw\\camels_us\\12358500\\12358500_lump_nldas_forcing_leap.txt",
+      "archive_member": "basin_dataset_public_v1p2/basin_mean_forcing/nldas/17/12358500_lump_nldas_forcing_leap.txt",
+      "sha256": "89e9dcf29c8b1275f9b78e457da26ab504cb71b128d64e92f3dafe01a2ab6eaf",
+      "method": 8,
+      "crc32": 3082407372,
+      "compressed_size": 222814,
+      "size": 748598,
+      "offset": 3109905469
+    },
+    {
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\pretrained_multibasin_lstm\\data\\raw\\camels_us\\12358500\\12358500_streamflow_qc.txt",
+      "archive_member": "basin_dataset_public_v1p2/usgs_streamflow/17/12358500_streamflow_qc.txt",
+      "sha256": "2d2a8a54139feea80348915454c19e2bd73cce5444ace96686e654cda3397b5a",
+      "method": 8,
+      "crc32": 3432492548,
+      "compressed_size": 64403,
+      "size": 396646,
+      "offset": 29234879
+    },
+    {
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\pretrained_multibasin_lstm\\data\\raw\\camels_us\\12414500\\12414500_lump_nldas_forcing_leap.txt",
+      "archive_member": "basin_dataset_public_v1p2/basin_mean_forcing/nldas/17/12414500_lump_nldas_forcing_leap.txt",
+      "sha256": "3aea50dfdfb0b3995c523b4868fa839a6af474bb6cfa3e14fde87a559d592d63",
+      "method": 8,
+      "crc32": 2464918067,
+      "compressed_size": 218723,
+      "size": 747436,
+      "offset": 3111842817
+    },
+    {
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\pretrained_multibasin_lstm\\data\\raw\\camels_us\\12414500\\12414500_streamflow_qc.txt",
+      "archive_member": "basin_dataset_public_v1p2/usgs_streamflow/17/12414500_streamflow_qc.txt",
+      "sha256": "fd20af220f339cacbf16e5a75521a2c811b903fa9aa81719e85368e2ca373671",
+      "method": 8,
+      "crc32": 2933526446,
+      "compressed_size": 64969,
+      "size": 399012,
+      "offset": 30146995
+    },
+    {
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\pretrained_multibasin_lstm\\data\\raw\\camels_us\\06043500\\06043500_lump_nldas_forcing_leap.txt",
+      "archive_member": "basin_dataset_public_v1p2/basin_mean_forcing/nldas/10/06043500_lump_nldas_forcing_leap.txt",
+      "sha256": "b95e324fd3b6d88de3908a111b06be70aa9901582560723077696842c3ce36e5",
+      "method": 8,
+      "crc32": 3703124344,
+      "compressed_size": 220814,
+      "size": 750170,
+      "offset": 3030104734
+    },
+    {
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\pretrained_multibasin_lstm\\data\\raw\\camels_us\\06043500\\06043500_streamflow_qc.txt",
+      "archive_member": "basin_dataset_public_v1p2/usgs_streamflow/10/06043500_streamflow_qc.txt",
+      "sha256": "358cf4fd065724c545d0b804a0a20c2cdd8a1f9865d18e916307051a55f61624",
+      "method": 8,
+      "crc32": 530774310,
+      "compressed_size": 59972,
+      "size": 397052,
+      "offset": 7106449
+    },
+    {
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\pretrained_multibasin_lstm\\data\\raw\\camels_us\\11528700\\11528700_lump_nldas_forcing_leap.txt",
+      "archive_member": "basin_dataset_public_v1p2/basin_mean_forcing/nldas/18/11528700_lump_nldas_forcing_leap.txt",
+      "sha256": "b6d3c2f6a766daf9ce2c85953483d329bd9061318c2ddc6d65eefc4dc454928f",
+      "method": 8,
+      "crc32": 477549868,
+      "compressed_size": 209140,
+      "size": 744842,
+      "offset": 3134680430
+    },
+    {
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\pretrained_multibasin_lstm\\data\\raw\\camels_us\\11528700\\11528700_streamflow_qc.txt",
+      "archive_member": "basin_dataset_public_v1p2/usgs_streamflow/18/11528700_streamflow_qc.txt",
+      "sha256": "9881aacb866f4886c768588bf512d0ee9f73932895a945c0e0003e52ab898096",
+      "method": 8,
+      "crc32": 1589121451,
+      "compressed_size": 63298,
+      "size": 396808,
+      "offset": 37834237
+    },
+    {
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\pretrained_multibasin_lstm\\data\\raw\\camels_us\\12189500\\12189500_lump_nldas_forcing_leap.txt",
+      "archive_member": "basin_dataset_public_v1p2/basin_mean_forcing/nldas/17/12189500_lump_nldas_forcing_leap.txt",
+      "sha256": "0052d84e7a22c19284bc0444c2d2681f15c2d64bb58d95a6b52f1ac3cb86353d",
+      "method": 8,
+      "crc32": 2352077267,
+      "compressed_size": 219078,
+      "size": 745626,
+      "offset": 3106300361
+    },
+    {
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\pretrained_multibasin_lstm\\data\\raw\\camels_us\\12189500\\12189500_streamflow_qc.txt",
+      "archive_member": "basin_dataset_public_v1p2/usgs_streamflow/17/12189500_streamflow_qc.txt",
+      "sha256": "db09efd77b2b54623b456c78f2912d2f83597f26ddca0a437fcf19e8ab96fba2",
+      "method": 8,
+      "crc32": 330957420,
+      "compressed_size": 63191,
+      "size": 396726,
+      "offset": 31824970
+    },
+    {
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\pretrained_multibasin_lstm\\data\\raw\\camels_us\\13235000\\13235000_lump_nldas_forcing_leap.txt",
+      "archive_member": "basin_dataset_public_v1p2/basin_mean_forcing/nldas/17/13235000_lump_nldas_forcing_leap.txt",
+      "sha256": "8018e32202111e43d9f53a82adf4f85a1554f81ca758445b14e683b2d0677fad",
+      "method": 8,
+      "crc32": 123903083,
+      "compressed_size": 213920,
+      "size": 747508,
+      "offset": 3116945612
+    },
+    {
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\pretrained_multibasin_lstm\\data\\raw\\camels_us\\13235000\\13235000_streamflow_qc.txt",
+      "archive_member": "basin_dataset_public_v1p2/usgs_streamflow/17/13235000_streamflow_qc.txt",
+      "sha256": "f2609df117125e7b3901cbab64a86881756894d700eadf7f210f92ae1c0d9d3a",
+      "method": 8,
+      "crc32": 84055128,
+      "compressed_size": 61771,
+      "size": 399138,
+      "offset": 31031197
+    }
+  ]
+}

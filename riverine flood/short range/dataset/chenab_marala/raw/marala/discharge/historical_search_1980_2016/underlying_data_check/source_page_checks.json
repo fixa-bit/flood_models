@@ -1,0 +1,147 @@
+[
+  {
+    "url": "https://pure.iiasa.ac.at/id/eprint/11829/",
+    "file": "iiasa_landing.html",
+    "checked_utc": "2026-10-30T06:14:48.644314+00:00",
+    "status": 200,
+    "final_url": "https://pure.iiasa.ac.at/id/eprint/11829/",
+    "bytes": 50761,
+    "sha256": "3f030c4b86e766da418681ca2d079c64d75f179b65a651e7ceb3f72df673bd84",
+    "candidate_links": [
+      {
+        "text": "Models and data",
+        "href": "https://iiasa.ac.at/models-and-data"
+      },
+      {
+        "text": "",
+        "href": "https://www.addtoany.com/add_to/facebook?linkurl=https://pure.iiasa.ac.at/id/eprint/11829&linkname=An appraisal of precipitation distribution in the high-altitude catchments of the Indus basin"
+      },
+      {
+        "text": "Download (3MB)",
+        "href": "https://pure.iiasa.ac.at/id/eprint/11829/1/An%20appraisal%20of%20precipitation%20distribution%20in%20the%20high-altitude%20catchments%20of%20the%20Indus%20basin.pdf"
+      }
+    ]
+  },
+  {
+    "url": "https://irrigation.sindh.gov.pk/",
+    "file": "sindh_landing.html",
+    "checked_utc": "2026-10-30T06:14:48.644314+00:00",
+    "status": 200,
+    "final_url": "https://irrigation.sindh.gov.pk/Public",
+    "bytes": 258763,
+    "sha256": "9f245cc2785f6c9cb1a1fcbce29d98d9a2cf9913e586bffd5ffd80fe87d610bb",
+    "candidate_links": [
+      {
+        "text": "Irrigation GIS",
+        "href": "/gis"
+      },
+      {
+        "text": "GIS Portal",
+        "href": "/gis/gismaps"
+      },
+      {
+        "text": "Apps",
+        "href": "/gis/#apps"
+      },
+      {
+        "text": "E-Books",
+        "href": "/Library/books"
+      },
+      {
+        "text": "",
+        "href": "https://finance.gos.pk/Home/Download?path=Budget%2FBudgetBooks%2FFY-23-24%2FVOLUME_V%2FVOL-V.pdf "
+      },
+      {
+        "text": "",
+        "href": "https://finance.gos.pk/Budget/BudgetBooks"
+      },
+      {
+        "text": "",
+        "href": "https://finance.gos.pk/Home/Download?path=Budget%5CBudgetBooks%5CFY-23-24%5CVOLUME_III_Detail%5C24.SC21127%20IRRIGATION.pdf"
+      },
+      {
+        "text": "Water accord 1991",
+        "href": "/files/books/water_apportionment_accord_1991.pdf"
+      },
+      {
+        "text": "Channel operation & maintenance manual Vol1",
+        "href": "/files/books/OM-Vol-I.doc"
+      },
+      {
+        "text": "Channel operation & maintenance manual CH 1-4",
+        "href": "/files/books/OM-Vol-II-Ch-1-4.docx"
+      },
+      {
+        "text": "Channel operation & maintenance manual CH 5",
+        "href": "/files/books/OM-Vol-II-Ch-5-Onward-1.docx"
+      },
+      {
+        "text": "National Water Policy",
+        "href": "/files/books/National-Water-Policy.pdf"
+      },
+      {
+        "text": "Irrigation Department Sindh",
+        "href": "https://www.facebook.com/IrrigationDepartmentSindh"
+      },
+      {
+        "text": "",
+        "href": "/gis"
+      },
+      {
+        "text": "Irrigation GIS Portal",
+        "href": "/gis"
+      },
+      {
+        "text": "",
+        "href": "https://www.facebook.com/IrrigationDepartmentSindh"
+      }
+    ]
+  },
+  {
+    "url": "https://pakirsa.gov.pk/",
+    "file": "irsa_landing.html",
+    "checked_utc": "2026-10-30T06:14:48.644314+00:00",
+    "status": "failed",
+    "error": "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>"
+  },
+  {
+    "url": "https://pakirsa.gov.pk/DailyData.aspx",
+    "file": "irsa_daily.html",
+    "checked_utc": "2026-10-30T06:14:48.644314+00:00",
+    "status": "failed",
+    "error": "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>"
+  },
+  {
+    "url": "https://zenodo.org/api/records?q=Marala%20AND%20discharge&size=20",
+    "file": "zenodo_search.json",
+    "checked_utc": "2026-10-30T06:14:49.607405+00:00",
+    "status": 200,
+    "final_url": "https://zenodo.org/api/records?q=Marala%20AND%20discharge&size=20",
+    "bytes": 446,
+    "sha256": "e937d4477df558fecf5e97cde176c2ad06b4e6c3285b6e7891f78f448bfbd316",
+    "hits": 0
+  },
+  {
+    "url": "https://api.crossref.org/works/10.1016%2Fj.scitotenv.2016.01.001",
+    "file": "article_metadata.json",
+    "checked_utc": "2026-10-30T06:14:50.132942+00:00",
+    "status": 200,
+    "final_url": "https://api.crossref.org/works/10.1016%2Fj.scitotenv.2016.01.001",
+    "bytes": 42510,
+    "sha256": "42208c888b9170a9502547829f585de9d38220b5a7c9685aa0bedda18395c21f",
+    "article_links": [
+      {
+        "URL": "https://api.elsevier.com/content/article/PII:S0048969716300018?httpAccept=text/xml",
+        "content-type": "text/xml",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://api.elsevier.com/content/article/PII:S0048969716300018?httpAccept=text/plain",
+        "content-type": "text/plain",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      }
+    ]
+  }
+]

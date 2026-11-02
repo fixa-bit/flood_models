@@ -9,6 +9,7 @@ import calendar
 import csv
 import hashlib
 import json
+import math
 import re
 import shutil
 from collections import Counter, defaultdict
@@ -20,6 +21,13 @@ WORKSPACE = PORTAL.parent
 DIST = PORTAL / "dist"
 MODEL = WORKSPACE / "riverine flood/short range/dataset/chenab_marala"
 PROCESSED = MODEL / "processed/marala"
+GEE_RAINFALL = MODEL / "raw/marala/rainfall/google_earth_engine"
+GEE_PRODUCTS = {
+    "era5land_mm": ("ERA5-Land", "1980-01-01"),
+    "chirps_mm": ("CHIRPS v2 Daily", "1981-01-01"),
+    "persiann_mm": ("PERSIANN-CDR", "1983-01-01"),
+    "imerg_mm": ("IMERG V07 Final", "2000-06-01"),
+}
 CASE_FOLDERS = [
     ("riverine", "Riverine flood", "riverine flood", "River discharge and catchment precipitation"),
     ("flash", "Flash flood", "flash flood", "Rapid rainfall and runoff response"),
@@ -32,8 +40,7 @@ PROVIDERS = {
     "irsa": ("IRSA", "Daily mean discharge", "http://pakirsa.gov.pk/DailyData.aspx", "Daily means remain separate from point readings; averaging bounds are unstated."),
     "pmd": ("PMD journal", "Selected historical flood peaks", "https://www.pmd.gov.pk/rnd/rndweb/rnd_new/journal/vol13_issue26_files/5_Flood_Forecasting_of_an_Ungauged_Trans-boundary_Chenab_River_Basin_Using_Distributed_Hydrological_Model_Integrated_Flood_Analysis_System_%28IFAS%29.pdf", "Selected event maxima, not a daily training series."),
     "nasa_power": ("NASA POWER", "Catchment precipitation", "https://power.larc.nasa.gov/docs/services/api/temporal/daily/", "MERRA2 / GEOSIT grid estimates, area-weighted over the catchment; UTC days."),
-    "imerg": ("NASA IMERG via NOAA", "Daily catchment rainfall comparison", "https://gpm.nasa.gov/data/imerg", "Ten event and ordinary-day samples only; comparison data are held out of training. One v07 day has ambiguous missing values."),
-    "chirps_v3": ("CHIRPS v3", "Daily catchment rainfall comparison", "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/daily/readme.txt", "Ten daily rnl samples only; ERA5 distributes pentad totals among days. Comparison data are held out of training."),
+    "chirps_v3": ("CHIRPS v3", "Preferred historical Marala catchment rainfall", "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/daily/readme.txt", "Final RNL historical series and separate Preliminary SAT dates; a compact third-party copy supplies most historical cells and is checked against original CHC GeoTIFF samples."),
     "global_watersheds": ("Global Watersheds", "MERIT-derived catchment and rivers", "https://mghydro.com/watersheds/help.html", "Research delineation checked against sources and geometry; not agency-certified."),
     "jica": ("JICA · PMD inventory", "Station-location evidence", "https://openjicareport.jica.go.jp/pdf/12395935.pdf", "Marala coordinates in the station inventory; PDF page 36."),
     "references": ("Methodology references", "Data definitions and source documentation", "https://power.larc.nasa.gov/docs/methodology/data/sources/", "Saved methodology pages and search snapshots; availability evidence is not a complete archive."),
@@ -56,9 +63,63 @@ def number(value):
     return float(value) if value not in ("", None) else None
 
 
+def load_gee_rainfall(folder=None):
+    """Only chart complete, QA-passed exports whose CSV checksum matches QA."""
+    folder = folder or GEE_RAINFALL
+    csv_path = folder / "marala_daily_precipitation_1980_2024.csv"
+    status = {"state": "not_collected", "message": "ERA5-Land, CHIRPS v2, PERSIANN-CDR and IMERG: not collected yet. No Earth Engine values are plotted.",
+              "method": "Native-grid pixel area × fraction inside the existing Marala catchment; UTC days (05:00–05:00 Pakistan time).",
+              "products": [name for name, _ in GEE_PRODUCTS.values()]}
+    if not csv_path.exists():
+        chunks = list((folder / "chunks").glob("*/*.csv"))
+        if chunks:
+            status.update(state="in_progress", message=f"Earth Engine collection has started: {len(chunks)} monthly or smaller chunks saved at snapshot time. The four series will appear after extraction and QA finish.")
+        return [], status
+    try:
+        qa = read_json(folder / "quality_report.json", {})
+        if qa.get("qa_passed") is not True:
+            raise ValueError("Extraction quality checks have not passed")
+        if qa.get("merged_csv_sha256") != hash_file(csv_path):
+            raise ValueError("CSV does not match the extraction quality report checksum")
+        with csv_path.open(newline="", encoding="utf-8-sig") as stream:
+            reader = csv.DictReader(stream)
+            if reader.fieldnames != ["date", *GEE_PRODUCTS]:
+                raise ValueError("Unexpected precipitation columns")
+            records = list(reader)
+        expected = [str(date(1980, 1, 1) + timedelta(days=i)) for i in range((date(2025, 1, 1) - date(1980, 1, 1)).days)]
+        if [row["date"] for row in records] != expected:
+            raise ValueError("CSV must have every unique date from 1980 through 2024 in order")
+        sources = []
+        for key, (name, available) in GEE_PRODUCTS.items():
+            if qa.get("products", {}).get(key, {}).get("units") != "mm/day":
+                raise ValueError(f"Unconfirmed precipitation units for {name}")
+            rows = []
+            for record in records:
+                text = record[key].strip()
+                value = None if text.lower() in ("", "nan") else float(text)
+                if value is not None and (not math.isfinite(value) or value < 0):
+                    raise ValueError(f"Invalid precipitation for {name} on {record['date']}")
+                if record["date"] < available and value is not None:
+                    raise ValueError(f"Value before requested availability for {name}")
+                if record["date"] >= available and value is None:
+                    raise ValueError(f"Missing precipitation for {name} on {record['date']}")
+                rows.append({"date": record["date"], "value": value,
+                             "flag": "expected_unavailable" if value is None else "extraction_qa_passed",
+                             "representation": "native-grid area-weighted catchment mean; UTC day"})
+            sources.append({"id": "gee_" + key.removesuffix("_mm"), "name": name, "group": "Earth Engine",
+                            "status": "extraction QA passed; historical research series",
+                            "method": status["method"], "download": "gee_" + csv_path.name, "rows": rows})
+        status.update(state="ready", message="ERA5-Land, CHIRPS v2, PERSIANN-CDR and IMERG are loaded from the checked 1980–2024 extraction.",
+                      csv_sha256=qa["merged_csv_sha256"])
+        return sources, status
+    except (ValueError, KeyError, TypeError, OSError) as error:
+        status.update(state="withheld", message=f"Earth Engine precipitation is withheld: {error}. Existing comparison series remain visible.")
+        return [], status
+
+
 def provider_for(path):
     name = path.as_posix().lower()
-    for key in ("nasa_power", "imerg", "chirps_v3", "wapda", "ffd", "irsa", "global_watersheds"):
+    for key in ("nasa_power", "chirps_v3", "wapda", "ffd", "irsa", "global_watersheds"):
         if f"/{key}/" in name:
             return key
     if "/discharge/pmd/" in name:
@@ -132,7 +193,7 @@ def collect_integrity():
                 walk(child, document)
 
     for document in sorted(MODEL.rglob("*.json")):
-        if "__pycache__" not in document.parts:
+        if not {"__pycache__", ".venv"}.intersection(document.parts):
             walk(read_json(document), document)
     for year in (2024, 2025, 2026):
         for row in read_csv(f"discharge/marala_ffd_{year}_bulletin_discharge.csv"):
@@ -145,7 +206,7 @@ def collect_integrity():
                          "bytes": path.stat().st_size if path.is_file() else None,
                          "expected_sha256": sorted(entry["hashes"]), "actual_sha256": actual,
                          "status": status, "source_urls": sorted(entry["urls"])})
-    raw_files = [p for p in (MODEL / "raw").rglob("*") if p.is_file() and p.suffix.lower() not in (".md", ".pyc")]
+    raw_files = [p for p in (MODEL / "raw").rglob("*") if p.is_file() and ".venv" not in p.parts and p.suffix.lower() not in (".md", ".pyc")]
     untracked = [p.relative_to(WORKSPACE).as_posix() for p in raw_files if p.resolve() not in claims and not p.name.endswith(("receipt.json", "_receipt.json"))]
     return {"checked_utc": datetime.now(timezone.utc).isoformat(), "counts": dict(Counter(e["status"] for e in evidence)),
             "files": evidence, "untracked_files": untracked,
@@ -185,7 +246,6 @@ def build():
         directory.mkdir(parents=True, exist_ok=True)
     integrity = collect_integrity()
     clean_raw = read_csv("discharge/marala_daily_inflow_clean.csv")
-    rain_raw = read_csv("rainfall/marala_catchment_daily_precipitation.csv")
     catalog = read_csv("discharge/marala_discharge_all_sources.csv")
     reviews = read_csv("discharge/marala_inflow_quality_review.csv")
     quality = read_json(PROCESSED / "discharge/marala_daily_inflow_quality_report.json", {})
@@ -193,10 +253,49 @@ def build():
     rain_validation = read_json(PROCESSED / "rainfall/marala_rainfall_validation_report.json", {})
     rain_comparison_dir = PROCESSED / "rainfall/source_comparison_2026-10-26"
     rain_comparison = read_json(rain_comparison_dir / "source_comparison_report.json", {})
+    chirps_dir = PROCESSED / "rainfall/chirps_v3_primary"
+    chirps_collection = read_json(chirps_dir / "collection_report.json", {})
+    chirps_final = read_csv("rainfall/chirps_v3_primary/marala_chirps_v3_final_rnl_daily_1990_2026.csv")
+    chirps_preliminary = read_csv("rainfall/chirps_v3_primary/marala_chirps_v3_preliminary_sat_2026.csv")
+    nasa_fresh = read_csv("rainfall/source_comparison_2026-10-26/nasa_power_fresh_historical_basin_candidate.csv")
+    chirps_original_samples = read_csv("rainfall/source_comparison_2026-10-26/chirps_v3_daily_catchment_sample.csv")
     catchment_report = read_json(PROCESSED / "catchment/marala_catchment_verification.json", {})
     feature_audit = read_json(PROCESSED / "metadata/marala_feature_coverage_audit.json", {})
-    precipitation = [{"date": r["date"], "value": number(r["precipitation_mm_day"]), "coverage": number(r["valid_area_fraction"]),
-                      "flag": r["quality_flag"]} for r in rain_raw]
+    # The saved NASA POWER long-request values have a verified request-range
+    # inconsistency. Keep their raw files downloadable for audit, but make the
+    # displayed precipitation series the separate CHIRPS Final candidate.
+    precipitation = [{"date": r["date"], "value": number(r["precipitation_mm"]),
+                      "coverage": number(r["valid_area_fraction"]), "flag": r["quality_flag"]} for r in chirps_final]
+    rainfall_sources = [
+        {"id": "chirps_final", "name": "CHIRPS v3 Final RNL", "group": "CHIRPS", "status": "preferred historical candidate",
+         "method": "Daily pentad allocation uses ERA5; compact historical copy is rounded to 0.1 mm per cell.",
+         "download": "marala_chirps_v3_final_rnl_daily_1990_2026.csv",
+         "rows": [{"date": r["date"], "value": number(r["precipitation_mm"]), "flag": r["quality_flag"],
+                   "coverage": number(r["valid_area_fraction"]), "representation": r["source_representation"]} for r in chirps_final]},
+        {"id": "chirps_preliminary", "name": "CHIRPS v3 Preliminary SAT", "group": "CHIRPS", "status": "provisional; separate from Final RNL",
+         "method": "Daily pentad allocation uses IMERG Late V07; replace with Final when published.",
+         "download": "marala_chirps_v3_preliminary_sat_2026.csv",
+         "rows": [{"date": r["date"], "value": number(r["precipitation_mm"]), "flag": r["quality_flag"],
+                   "coverage": number(r["valid_area_fraction"]), "representation": r["source_representation"],
+                   "source_url": r["source_url"]} for r in chirps_preliminary]},
+        {"id": "nasa_fresh", "name": "NASA POWER fresh historical request", "group": "NASA POWER", "status": "hold: alternate request, comparison candidate",
+         "method": "Separately requested 2016–2024 catchment means; not a correction to the saved series.",
+         "download": "nasa_power_fresh_historical_basin_candidate.csv",
+         "rows": [{"date": r["date"], "value": number(r["fresh_basin_mean_mm_day"]), "flag": r["training_status"],
+                   "coverage": int(r["valid_cells"]) / int(r["required_cells"])} for r in nasa_fresh]},
+        {"id": "chirps_original_samples", "name": "CHIRPS original GeoTIFF checks", "group": "CHIRPS", "status": "ten original-file check days; overlaps Final RNL",
+         "method": "Full original CHC GeoTIFFs provide a precision check of the compact historical copy.",
+         "download": "chirps_v3_daily_catchment_sample.csv",
+         "rows": [{"date": r["date"], "value": number(r["precipitation_mm_day"]), "flag": "sample_check",
+                   "coverage": 0 if int(r["missing_cells"]) else 1, "source_url": r["source_url"]} for r in chirps_original_samples]},
+    ]
+    gee_sources, gee_status = load_gee_rainfall()
+    rainfall_sources.extend(gee_sources)
+    for source in rainfall_sources:
+        source["records"] = len(source["rows"])
+        source["values"] = sum(row["value"] is not None for row in source["rows"])
+        source["first_date"] = min((row["date"] for row in source["rows"]), default=None)
+        source["last_date"] = max((row["date"] for row in source["rows"]), default=None)
     high_precipitation = [r for r in precipitation if r["value"] is not None and r["value"] >= 100]
     inflow = [{"date": r["date"], "value": number(r["inflow_cusecs"]), "source_value": number(r["source_inflow_cusecs"]),
                "eligible": r["eligible_daily_training"] == "1", "flag": r["quality_flag"], "time": r["time_pakistan"]} for r in clean_raw]
@@ -226,8 +325,28 @@ def build():
                         "links": urls, "bytes": sum(e["bytes"] or 0 for e in evidence)})
     downloads = []
     downloadable = []
+    for name in ("extract_precipitation.py", "run_precipitation.ps1", "requirements.txt", "README.md", "marala_daily_precipitation_1980_2024.csv",
+                 "annual_totals.csv", "quality_report.json", "catchment_metadata.json", "run_manifest.json"):
+        path = GEE_RAINFALL / name
+        if not path.is_file():
+            continue
+        download_name = "gee_" + name
+        shutil.copy2(path, DIST / "downloads" / download_name)
+        downloadable.append(path)
+        downloads.append({"name": download_name, "category": "Earth Engine catchment precipitation",
+                          "bytes": path.stat().st_size, "path": path.relative_to(WORKSPACE).as_posix(),
+                          "url": f"downloads/{download_name}", "sha256": hash_file(path)})
+    for path in sorted(chirps_dir.glob("*")):
+        if not path.is_file() or path.suffix not in (".csv", ".json", ".md"):
+            continue
+        download_name = "marala_chirps_v3_README.md" if path.name == "README.md" else path.name
+        shutil.copy2(path, DIST / "downloads" / download_name)
+        downloadable.append(path)
+        downloads.append({"name": path.name, "category": "preferred CHIRPS rainfall", "bytes": path.stat().st_size,
+                          "path": path.relative_to(WORKSPACE).as_posix(), "url": f"downloads/{download_name}",
+                          "sha256": hash_file(path)})
     for path in sorted(rain_comparison_dir.glob("*")):
-        if path.name not in ("README.md", "source_comparison_report.json", "marala_precipitation_source_comparison.csv"):
+        if not path.is_file() or path.suffix not in (".csv", ".json", ".md"):
             continue
         download_name = "marala_precipitation_source_comparison_README.md" if path.name == "README.md" else path.name
         shutil.copy2(path, DIST / "downloads" / download_name)
@@ -241,9 +360,7 @@ def build():
         for path in (PROCESSED / folder).iterdir():
             if not path.is_file() or path.suffix not in (".csv", ".json", ".geojson", ".png", ".md"):
                 continue
-            # Large source-cell tables are available locally; the portal packages
-            # the principal series, reviews, manifests and geospatial evidence.
-            include = path.name != "marala_catchment_grid_daily_precipitation.csv"
+            include = True
             if include:
                 shutil.copy2(path, DIST / "downloads" / path.name)
                 downloadable.append(path)
@@ -251,7 +368,7 @@ def build():
                               "path": path.relative_to(WORKSPACE).as_posix(), "url": f"downloads/{path.name}" if include else None,
                               "sha256": hash_file(path)})
     monthly = {"inflow": month_coverage(clean_raw, lambda r: r["eligible_daily_training"] == "1"),
-               "precipitation": month_coverage(rain_raw, lambda r: r["precipitation_mm_day"] != "")}
+               "precipitation": month_coverage(chirps_final, lambda r: r["precipitation_mm"] != "")}
     events = []
     for year in sorted({r["date"][:4] for r in inflow}):
         candidates = [r for r in inflow if r["date"].startswith(year) and r["eligible"] and r["value"] is not None]
@@ -264,7 +381,7 @@ def build():
     cases = []
     for key, label, folder, detail in CASE_FOLDERS:
         root = WORKSPACE / folder
-        files = [f for f in root.rglob("*") if f.is_file() and f.suffix.lower() in (".csv", ".json", ".geojson", ".xls", ".xlsx", ".pdf", ".tif", ".nc", ".grib")]
+        files = [f for f in root.rglob("*") if f.is_file() and ".venv" not in f.parts and f.suffix.lower() in (".csv", ".json", ".geojson", ".xls", ".xlsx", ".pdf", ".tif", ".nc", ".grib")]
         case = {"id": key, "label": label, "detail": detail, "files": len(files), "status": "collected" if files else "not_collected",
                 "ranges": ["short", "long"], "stations": [{"id": "marala", "name": "Chenab · Marala", "status": "collected"},
                     {"id": "jassar", "name": "Ravi · Jassar", "status": "not_collected"}] if key == "riverine" else []}
@@ -272,15 +389,20 @@ def build():
     result = {"schema_version": 1, "built_utc": datetime.now(timezone.utc).isoformat(), "cases": cases,
               "scope": "The four flood-model folders. Exposure/infrastructure data is a separate module and is not mixed into these model datasets.",
               "sources": sources, "integrity": integrity, "downloads": downloads,
-              "marala": {"inflow": inflow, "precipitation": precipitation, "ffd": ffd, "irsa": irsa, "peaks": peaks,
+              "marala": {"inflow": inflow, "precipitation": precipitation, "rainfall_sources": rainfall_sources,
+                         "ffd": ffd, "irsa": irsa, "peaks": peaks, "gee_precipitation": gee_status,
                          "feature_coverage_audit": feature_audit,
                          "reviews": reviews, "events": events, "monthly": monthly,
                          "quality": quality, "rainfall_report": {k: v for k, v in rain_report.items() if k != "receipts"},
                          "rainfall_validation": rain_validation, "catchment": {k: v for k, v in catchment_report.items() if k != "source_receipts"},
                          "rainfall_source_comparison": {"status": rain_comparison.get("status"),
                                                         "power_historical_profile": rain_comparison.get("power_historical_profile", {}),
-                                                        "imerg_full_days": rain_comparison.get("imerg_full_days"),
                                                         "chirps_full_days": rain_comparison.get("chirps_full_days")},
+                         "chirps_collection": {key: chirps_collection.get(key) for key in
+                                               ("start", "final_end", "final_daily_rows", "final_complete_days",
+                                                "preliminary_end", "preliminary_daily_rows", "preliminary_complete_days",
+                                                "catchment_cells", "original_chc_samples_checked",
+                                                "maximum_sample_absolute_difference_mm")},
                          "rainfall_screening": {"threshold_mm_day": 100, "rule": "Advisory review screen for catchment means >=100 mm/day; not an official flood or invalid-data threshold. Source values are unchanged.",
                                                 "count": len(high_precipitation), "maximum": max(high_precipitation, key=lambda r: r["value"]) if high_precipitation else None,
                                                 "dates": [r["date"] for r in high_precipitation]},

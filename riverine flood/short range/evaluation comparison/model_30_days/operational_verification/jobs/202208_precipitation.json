@@ -1,0 +1,95 @@
+{
+  "id": "202208_precipitation",
+  "request": {
+    "origin": "ecmwf",
+    "year": "2022",
+    "month": "08",
+    "day": [
+      "01",
+      "04",
+      "08",
+      "11",
+      "15",
+      "18",
+      "22",
+      "25",
+      "29"
+    ],
+    "time": "00:00",
+    "level_type": "single_level",
+    "variable": [
+      "total_precipitation"
+    ],
+    "forecast_type": "control_forecast",
+    "leadtime_hour": [
+      "48",
+      "72",
+      "96",
+      "120",
+      "144",
+      "168",
+      "192",
+      "216",
+      "240",
+      "264",
+      "288",
+      "312",
+      "336",
+      "360",
+      "384",
+      "408",
+      "432",
+      "456",
+      "480",
+      "504",
+      "528",
+      "552",
+      "576",
+      "600",
+      "624",
+      "648",
+      "672",
+      "696",
+      "720",
+      "744",
+      "768"
+    ],
+    "data_format": "grib",
+    "area": [
+      35,
+      73.5,
+      31.5,
+      78
+    ]
+  },
+  "origins": 9,
+  "variable": "precipitation",
+  "target": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\dataset\\chenab_marala\\raw\\marala\\weather_forecasts\\operational_verification\\ecmwf_s2s\\202208_precipitation.grib",
+  "http_status": 201,
+  "response": {
+    "processID": "s2s-forecasts",
+    "type": "process",
+    "jobID": "d674c2d5-3e92-4538-9e03-2b5a728f2e41",
+    "status": "accepted",
+    "created": "2026-11-02T11:26:36.953669",
+    "updated": "2026-11-02T11:26:36.953669",
+    "links": [
+      {
+        "href": "https://ecds.ecmwf.int/api/retrieve/v1/processes/s2s-forecasts/execution",
+        "rel": "self"
+      },
+      {
+        "href": "https://ecds.ecmwf.int/api/retrieve/v1/jobs/d674c2d5-3e92-4538-9e03-2b5a728f2e41",
+        "rel": "monitor",
+        "type": "application/json",
+        "title": "job status info"
+      }
+    ],
+    "metadata": {
+      "datasetMetadata": {
+        "messages": []
+      },
+      "origin": "api"
+    }
+  }
+}

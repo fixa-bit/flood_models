@@ -84,7 +84,7 @@ def saved_get(url: str, path: Path) -> tuple[bytes, dict]:
 
 def source_index(subpath: str) -> tuple[list[date], dict]:
     url = f"{CHC_BASE}/{subpath}/"
-    body, receipt = saved_get(url, RAW / "source_indexes_2026-10-26" / f"{subpath.replace('/', '_')}.html")
+    body, receipt = saved_get(url, RAW / f"source_indexes_{date.today()}" / f"{subpath.replace('/', '_')}.html")
     prefix = "chirps-v3.0.rnl." if subpath.startswith("final") else "chirps-v3.0.prelim."
     dates = []
     for match in re.finditer(re.escape(prefix) + r"(\d{4})\.(\d{2})\.(\d{2})\.tif", body.decode("utf-8")):
@@ -177,6 +177,8 @@ def historical_rows(weights, metadata):
     def process(chunk_id):
         part_means = []
         part_missing = []
+        part_covered = []
+        part_missing_counts = []
         receipts = []
         # Stored chunks are always full-sized, including the padded last one.
         count = 128
@@ -190,18 +192,24 @@ def historical_rows(weights, metadata):
             arr = arr.reshape(count, 300, 300)
             cells = groups[col_chunk]
             vals = arr[:, [r for r, _, _ in cells], [c for _, c, _ in cells]]
-            bad = (vals < 0).any(axis=1)
+            invalid = vals < 0
+            bad = invalid.any(axis=1)
             part_missing.append(bad)
-            part_means.append(vals.astype(np.float64) @ np.array([w for _, _, w in cells]) * .1)
+            cell_weights = np.array([w for _, _, w in cells])
+            part_covered.append((~invalid).astype(np.float64) @ cell_weights)
+            part_missing_counts.append(invalid.sum(axis=1))
+            part_means.append(np.where(invalid, 0, vals).astype(np.float64) @ cell_weights * .1)
             receipts.append(receipt)
         means = part_means[0] + part_means[1]
         missing = part_missing[0] | part_missing[1]
+        covered = part_covered[0] + part_covered[1]
+        missing_counts = part_missing_counts[0] + part_missing_counts[1]
         result = []
         for offset in range(count):
             day = ZARR_ORIGIN + timedelta(days=chunk_id * 128 + offset)
             if START <= day <= ZARR_END:
                 result.append(one_row(day, None if missing[offset] else float(means[offset]),
-                                      0 if missing[offset] else 1, int(missing[offset]), "final_rnl",
+                                      float(covered[offset]), int(missing_counts[offset]), "final_rnl",
                                       ZARR_URL + "/precip/c/", True))
         return chunk_id, result, receipts
 

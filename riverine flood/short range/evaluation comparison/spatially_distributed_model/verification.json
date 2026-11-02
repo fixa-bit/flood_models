@@ -1,0 +1,21 @@
+{
+  "shared_code_tests_passed": 15,
+  "hybrid_code_tests_passed": 5,
+  "spatial_code_tests_passed": 6,
+  "observed_discharge_and_nan_positions_exactly_preserved": true,
+  "original_source_hashes_unchanged": true,
+  "verified_raw_weather_years": 10,
+  "all_band_weather_values_finite": true,
+  "native_band_coverage_check_passed": true,
+  "paired_forecast_errors_check_passed": true,
+  "finite_noncrossing_quantiles": true,
+  "observed_target_pairs": 10795,
+  "observed_test_years": [
+    2022,
+    2023,
+    2024
+  ],
+  "overall_score_rows": 70,
+  "seasonal_score_rows": 210,
+  "no_test_driven_retraining": true
+}

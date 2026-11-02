@@ -1,0 +1,67 @@
+{
+  "files": [
+    {
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\spatially_distributed_model\\data\\raw\\era5land_elevation_bands\\2015.csv",
+      "year": 2015,
+      "days": 365,
+      "sha256": "cb5b3c7fe4d0752c32e76dbcb4e26a91bef6eeb57f590821ec58756e41561abc"
+    },
+    {
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\spatially_distributed_model\\data\\raw\\era5land_elevation_bands\\2016.csv",
+      "year": 2016,
+      "days": 366,
+      "sha256": "d1afdf242263f5ef3189b2f58e23b246214158ce04d380ffe74ed8a5b9ff285b"
+    },
+    {
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\spatially_distributed_model\\data\\raw\\era5land_elevation_bands\\2017.csv",
+      "year": 2017,
+      "days": 365,
+      "sha256": "d76727e3901104c415a43517e89a2084070696d18db790b57252fda5ced0d2ab"
+    },
+    {
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\spatially_distributed_model\\data\\raw\\era5land_elevation_bands\\2018.csv",
+      "year": 2018,
+      "days": 365,
+      "sha256": "c05301665788e97bab57c6e4d9fee0a2c7074ffee39b37bca56d5b4af3d3c90e"
+    },
+    {
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\spatially_distributed_model\\data\\raw\\era5land_elevation_bands\\2019.csv",
+      "year": 2019,
+      "days": 365,
+      "sha256": "142629d6d59c4bc0ed80eb5392d94398a0ef771c7fc8caac2132fd2790baad52"
+    },
+    {
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\spatially_distributed_model\\data\\raw\\era5land_elevation_bands\\2020.csv",
+      "year": 2020,
+      "days": 366,
+      "sha256": "5da7f3f7ef8bcb75ea50b5c03a006f24f8c5cb0728b783479ebbe34673fa04bf"
+    },
+    {
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\spatially_distributed_model\\data\\raw\\era5land_elevation_bands\\2021.csv",
+      "year": 2021,
+      "days": 365,
+      "sha256": "ce869c6c40e32007d1fa69fc978e36412ec2101863269d969b7b50a70fc01fe0"
+    },
+    {
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\spatially_distributed_model\\data\\raw\\era5land_elevation_bands\\2022.csv",
+      "year": 2022,
+      "days": 365,
+      "sha256": "09c0d509f6ed7edf5e8619d8a23eb9fef20b00eec3a6c57f829ec4bda8a0583e"
+    },
+    {
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\spatially_distributed_model\\data\\raw\\era5land_elevation_bands\\2023.csv",
+      "year": 2023,
+      "days": 365,
+      "sha256": "0e28b0e9950426cbf0e0090ed87d27e17bbc87dd1679d0cabeda360d2abf3eed"
+    },
+    {
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\spatially_distributed_model\\data\\raw\\era5land_elevation_bands\\2024.csv",
+      "year": 2024,
+      "days": 366,
+      "sha256": "2303a526d6ab63ff0114278e070ffc1149dd632cddda00af366338c704b0856f"
+    }
+  ],
+  "collection": "ECMWF/ERA5_LAND/DAILY_AGGR",
+  "metadata_sha256": "63fc8d929f249a898575a58b059ae0c10f699c6eee20219cb9e7b5ee5c8ef0ef",
+  "retrieved_at_utc": "2026-10-30T09:02:24.064303+00:00"
+}

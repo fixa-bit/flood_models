@@ -1,6 +1,6 @@
 # Marala rainfall source investigation, 26 October 2026
 
-**Status: comparison and quality investigation only. None of these rainfall series is approved for model training.** The original POWER cell downloads and the existing processed rainfall table remain unchanged. This folder contains a new, separately labelled NASA POWER candidate plus a ten-day comparison with IMERG and CHIRPS.
+**Status: comparison and quality investigation only. None of these rainfall series is approved for model training.** The original POWER cell downloads and the existing processed rainfall table remain unchanged. This folder contains a new, separately labelled NASA POWER candidate plus a ten-day comparison with CHIRPS.
 
 ## What the NASA POWER check found
 
@@ -21,18 +21,17 @@ Exact query URLs, original bytes, retrieval times and SHA-256 hashes are retaine
 
 ## Comparison over the same upstream catchment
 
+
 All numbers are **daily catchment-average precipitation depth (mm)**, weighted by how much of each source grid cell intersects the saved Marala boundary. They are not a sum of grid-cell depths. The source comparison uses UTC date labels. The four fresh POWER means below are separately calculated from 21 new single-day responses, not obtained by dividing the saved mean.
 
-| UTC date and example | Saved POWER | Fresh POWER | IMERG | CHIRPS v3 rnl |
-|---|---:|---:|---:|---:|
-| 15 July 2016, ordinary wet day | 290.45 | 13.41 | 6.00 | 12.18 |
-| 6 August 2016, flood event | 358.39 | 16.84 | 29.40 | 22.85 |
-| 2 March 2024, disputed day | 1,223.93 | 60.19 | 13.42 | 39.72 |
-| 8 August 2024, disputed day | 70.73 | 3.13 | *withheld* | 3.36 |
+| UTC date and example | Saved POWER | Fresh POWER | CHIRPS v3 rnl |
+|---|---:|---:|---:|
+| 15 July 2016, ordinary wet day | 290.45 | 13.41 | 12.18 |
+| 6 August 2016, flood event | 358.39 | 16.84 | 22.85 |
+| 2 March 2024, disputed day | 1,223.93 | 60.19 | 39.72 |
+| 8 August 2024, disputed day | 70.73 | 3.13 | 3.36 |
 
 The complete [10-day comparison](marala_precipitation_source_comparison.csv) includes additional dry/ordinary days and the 4–6 September 2014 and 5–7 August 2016 flood windows. The 2014 samples have no saved POWER values because the original POWER series starts in March 2016. Different precipitation products can disagree substantially in this mountainous catchment. Agreement with one product does not certify another.
-
-**IMERG:** NASA IMERG half-hourly precipitation rates were read from [NOAA's publicly accessible mirror](https://erddap.aoml.noaa.gov/hdb/erddap/index.html), using the raw numeric DODS response. Each of 48 half-hour rates in `mm/hour` contributes `rate × 0.5 hour` to its UTC day. Gridded values were then area-weighted over the same boundary. Source versions and archive IDs are in the [report](source_comparison_report.json). The 2014 and 2016 downloads are v06 Final; 2 March 2024 is a v06 Early archive; 8 August 2024 is v07 Final. NOAA metadata for v06 marks zero as missing despite NASA's [v06 product specification](https://storm.pps.eosdis.nasa.gov/storm/data/docs/filespec.GPM.V1.3IMERGHH.pdf) using `-9999.9` for missing and allowing zero precipitation. For v07, NOAA marks **zero as both its fill and missing value**. Its zero intervals cannot be distinguished from missing intervals using this mirror, so the 8 August mean is withheld; only a [positive-only lower bound](imerg_daily_catchment_sample.csv) is retained. None of these IMERG samples is a complete historical training series.
 
 **CHIRPS:** [CHIRPS v3 Final `rnl`](https://data.chc.ucsb.edu/products/CHIRPS/v3.0/daily/readme.txt) GeoTIFFs were downloaded for the same ten dates, clipped using the full catchment, and area-weighted. Its pentad rainfall totals blend satellite and station information; **ERA5 distributes each pentad total among UTC dates**. Station reporting windows within a pentad can differ, so a CHIRPS daily label is not proof of one uniform station observation period. This also means that CHIRPS `rnl` daily timing is not fully independent from ERA5. CHIRPS is useful as a cross-check and candidate product, with timing caveats for a daily flood model. CRU TS supplies monthly precipitation and is therefore unsuitable for verifying these specific daily flood events ([CRU documentation](https://crudata.uea.ac.uk/cru/data/hrg/index.htm)).
 

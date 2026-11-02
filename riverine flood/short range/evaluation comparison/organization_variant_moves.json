@@ -1,0 +1,122 @@
+﻿[
+    {
+        "old":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\pretrained_multibasin_lstm\\config.yaml",
+        "new":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\pretrained_multibasin_lstm\\workflow.yaml"
+    },
+    {
+        "old":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\pretrained_multibasin_lstm_finetuned\\config.yaml",
+        "new":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\pretrained_multibasin_lstm_finetuned\\workflow.yaml"
+    },
+    {
+        "old":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\lstm_two_input_scratch\\config.yaml",
+        "new":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\lstm_two_input_scratch\\workflow.yaml"
+    },
+    {
+        "old":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\pretrained_multibasin_lstm\\runs\\pretrained",
+        "new":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\pretrained_multibasin_lstm\\runs\\initial"
+    },
+    {
+        "old":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\pretrained_multibasin_lstm\\runs\\marala_finetuned",
+        "new":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\pretrained_multibasin_lstm_finetuned\\runs\\initial"
+    },
+    {
+        "old":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\pretrained_multibasin_lstm\\runs\\marala_scratch",
+        "new":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\lstm_two_input_scratch\\runs\\initial"
+    },
+    {
+        "old":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\spatially_distributed_model\\runs\\mean_control",
+        "new":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\catchment_mean_lstm\\runs\\initial"
+    },
+    {
+        "old":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\spatially_distributed_model\\runs\\spatial",
+        "new":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\spatially_distributed_model\\runs\\initial"
+    },
+    {
+        "old":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\encoder_decoder_lstm\\runs\\finetuned",
+        "new":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\encoder_decoder_lstm_finetuned\\runs\\initial"
+    },
+    {
+        "old":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\encoder_decoder_lstm\\runs\\scratch",
+        "new":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\encoder_decoder_lstm\\runs\\initial"
+    },
+    {
+        "old":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\N-HiTS\\controls\\lstm\\runs",
+        "new":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\lstm_past_discharge_weather\\runs"
+    },
+    {
+        "old":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\N-HiTS\\controls\\lstm\\reports",
+        "new":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\lstm_past_discharge_weather\\reports"
+    },
+    {
+        "old":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\N-HiTS\\controls\\lstm\\README.md",
+        "new":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\lstm_past_discharge_weather\\README.md"
+    },
+    {
+        "old":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\N-HiTS\\controls\\lstm\\RUN_RESULTS.md",
+        "new":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\lstm_past_discharge_weather\\RUN_RESULTS.md"
+    },
+    {
+        "old":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\N-HiTS\\controls\\lstm\\training.log",
+        "new":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\lstm_past_discharge_weather\\training.log"
+    },
+    {
+        "old":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\N-HiTS\\config_lstm_control.yaml",
+        "new":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\lstm_past_discharge_weather\\config.yaml"
+    },
+    {
+        "old":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\grrr_lstm\\experiment\\nan_gaps.pt",
+        "new":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\grrr_lstm\\runs\\initial\\nan_gaps.pt"
+    },
+    {
+        "old":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\grrr_lstm\\experiment\\selected_model.json",
+        "new":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\grrr_lstm\\runs\\initial\\selected_model.json"
+    },
+    {
+        "old":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\grrr_lstm\\experiment",
+        "new":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\evaluation comparison\\grrr_lstm\\experiment"
+    },
+    {
+        "old":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\grrr_lstm\\comparison",
+        "new":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\evaluation comparison\\grrr_lstm\\source_comparison"
+    },
+    {
+        "old":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\hbv_residual\\runs\\2026-10-30\\folds\\2021\\models\\lstm",
+        "new":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\hbv_lstm\\runs\\2026-10-30\\folds\\2021\\models\\lstm"
+    },
+    {
+        "old":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\hbv_residual\\runs\\2026-10-30\\folds\\2021\\models\\lightgbm",
+        "new":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\hbv_lightgbm\\runs\\2026-10-30\\folds\\2021\\models\\lightgbm"
+    },
+    {
+        "old":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\hbv_residual\\runs\\2026-10-30\\folds\\2022\\models\\lstm",
+        "new":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\hbv_lstm\\runs\\2026-10-30\\folds\\2022\\models\\lstm"
+    },
+    {
+        "old":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\hbv_residual\\runs\\2026-10-30\\folds\\2022\\models\\lightgbm",
+        "new":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\hbv_lightgbm\\runs\\2026-10-30\\folds\\2022\\models\\lightgbm"
+    },
+    {
+        "old":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\hbv_residual\\runs\\2026-10-30\\folds\\2023\\models\\lstm",
+        "new":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\hbv_lstm\\runs\\2026-10-30\\folds\\2023\\models\\lstm"
+    },
+    {
+        "old":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\hbv_residual\\runs\\2026-10-30\\folds\\2023\\models\\lightgbm",
+        "new":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\hbv_lightgbm\\runs\\2026-10-30\\folds\\2023\\models\\lightgbm"
+    },
+    {
+        "old":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\hbv_residual\\runs\\2026-10-30\\folds\\2024\\models\\lstm",
+        "new":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\hbv_lstm\\runs\\2026-10-30\\folds\\2024\\models\\lstm"
+    },
+    {
+        "old":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\hbv_residual\\runs\\2026-10-30\\folds\\2024\\models\\lightgbm",
+        "new":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\hbv_lightgbm\\runs\\2026-10-30\\folds\\2024\\models\\lightgbm"
+    },
+    {
+        "old":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\hbv_residual\\runs\\2026-10-30\\final\\models\\lstm",
+        "new":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\hbv_lstm\\runs\\2026-10-30\\final\\models\\lstm"
+    },
+    {
+        "old":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\hbv_residual\\runs\\2026-10-30\\final\\models\\lightgbm",
+        "new":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\hbv_lightgbm\\runs\\2026-10-30\\final\\models\\lightgbm"
+    }
+]

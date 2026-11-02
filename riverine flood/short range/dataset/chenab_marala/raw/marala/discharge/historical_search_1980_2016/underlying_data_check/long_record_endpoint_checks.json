@@ -1,0 +1,53 @@
+[
+  {
+    "url": "https://api.hicsindh.pk/public/ELib/Reports",
+    "file": "sindh_reports_api.json",
+    "retrieved_utc": "2026-10-30T06:18:04.345176+00:00",
+    "status": 200,
+    "bytes": 21270,
+    "sha256": "ca7d3695c8f623d94a458ded97d95b4155ea7f2a4417e2d60816d205f7f41dde",
+    "relevant_reports": [
+      {
+        "id": 2,
+        "title": "WCAP Vol-I Final Report",
+        "description": "-",
+        "publicationYear": "2015-01-01T00:00:00",
+        "category": "IMPROVEMENT OF WATER RESOURCES",
+        "orgnization": "IRSA-NESPAK",
+        "isHidden": false,
+        "entryDate": "2024-12-18T18:29:48",
+        "modificationDate": "2024-12-18T19:00:13",
+        "hiddenDate": "0001-01-01T00:00:00",
+        "entryID": 0,
+        "modificationID": 25,
+        "hiddenID": 0,
+        "getPictureURL": "/files/Books/reports//2.jpg",
+        "getURL": "/files/Books/reports//2.pdf"
+      },
+      {
+        "id": 25,
+        "title": "Meta Water charging Sindh",
+        "description": "The Sindh Irrigation System is part of the Indus Basin irrigation system, the world\u2019s largest irrigation system. The size of the system is enormous by any standard. The area in the Province irrigated by the fourteen main canals from the three barrages on the Indus River is 5 M ha. To give a measure of the size of the irrigated system in the Province of Sindh: it is one and half times the irrigated area in Mexico and more than the area under irrigation in Egypt.",
+        "publicationYear": "1999-01-01T00:00:00",
+        "category": "Crops",
+        "orgnization": "PARC",
+        "isHidden": false,
+        "entryDate": "2024-12-19T15:40:21",
+        "modificationDate": "0001-01-01T00:00:00",
+        "hiddenDate": "0001-01-01T00:00:00",
+        "entryID": 0,
+        "modificationID": 0,
+        "hiddenID": 0,
+        "getPictureURL": "/files/Books/reports//25.jpg",
+        "getURL": "/files/Books/reports//25.pdf"
+      }
+    ]
+  },
+  {
+    "url": "https://api.hicsindh.pk/public/Flows/Tributry/Month/600",
+    "file": "tributary_50_years.json",
+    "retrieved_utc": "2026-10-30T06:18:04.346175+00:00",
+    "status": "failed",
+    "error": "HTTP Error 401: Unauthorized"
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "station": "Qadirabad",
+  "river": "Chenab",
+  "variable": "inflow",
+  "units": "m3/s",
+  "first_date": "2024-06-16",
+  "last_date": "2026-10-15",
+  "extracted_bulletin_rows": 363,
+  "eligible_unique_observed_days": 350,
+  "calendar_days": 852,
+  "missing_days": 502,
+  "by_year": {
+    "2024": 111,
+    "2025": 117,
+    "2026": 122
+  },
+  "excluded_flag_counts": {
+    "printed_date_differs_from_archive": 13
+  },
+  "policy": "06:00 PKT observed inflow only; exclude archive/printed date conflicts, uncertain times, zero inflow, or conflicting same-day inflows. No interpolation, regression, GloFAS or analysis performed."
+}

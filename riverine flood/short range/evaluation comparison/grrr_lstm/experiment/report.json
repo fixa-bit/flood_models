@@ -1,0 +1,418 @@
+{
+  "protocol": {
+    "frozen_before_model_training": true,
+    "period": "2016-01-01 through 2026-10-30; actual observations through 2026-10-23",
+    "seasons": {
+      "winter": [
+        12,
+        1,
+        2
+      ],
+      "pre_monsoon": [
+        3,
+        4,
+        5
+      ],
+      "monsoon": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "post_monsoon": [
+        10,
+        11
+      ]
+    },
+    "train": "2016-2021",
+    "validation": "2022",
+    "test": "2023-2026",
+    "feature_gate": {
+      "minimum_train_pairs": 365,
+      "minimum_train_pearson": 0.5,
+      "minimum_season_pairs": 60,
+      "minimum_season_pearson": 0.3,
+      "minimum_passing_seasons": 3,
+      "minimum_monthly_anomaly_pearson": 0.2
+    },
+    "grrr_lag_days": 2,
+    "gap_calibration": "Nonnegative seasonal affine least squares, fitted only to training observed discharge and two-day-lagged GRRR; predictions clipped to zero. Never extrapolate past archive coverage, even with a lagged value available.",
+    "filled_target_weight": 0.2,
+    "observed_target_weight": 1.0,
+    "architecture": {
+      "lookback": 30,
+      "horizon": 15,
+      "hidden_size": 16,
+      "epochs": 15,
+      "seed": 42,
+      "optimizer": "Adam",
+      "learning_rate": 0.003,
+      "batch_size": 64
+    },
+    "common_window_policy": "Same origins and observed targets in both arms; latest input observed, >=15 observed input dates in 30 days; full target window inside chronological split. Filling adds no extra scored origins.",
+    "checkpoint_selection": "Observed validation MSE only; filled validation targets never used.",
+    "primary_metric": "RMSE pooled across the same observed origin-target-lead pairs",
+    "clear_win": {
+      "minimum_validation_rmse_improvement_fraction": 0.05,
+      "minimum_test_rmse_improvement_fraction": 0.05,
+      "paired_test_block_bootstrap_improvement_95pct_lower_gt": 0.0,
+      "max_highflow_rmse_degradation_fraction": 0.02,
+      "max_season_rmse_degradation_fraction": 0.02,
+      "max_year_rmse_degradation_fraction": 0.02,
+      "max_lead_rmse_degradation_fraction": 0.02,
+      "max_sampled_peak_mae_degradation_fraction": 0.02
+    },
+    "bootstrap": {
+      "replicates": 2000,
+      "block_days": 30,
+      "seed": 1042,
+      "method": "Paired circular moving blocks over complete target-date calendar, retaining all leads together; no synthetic target rows."
+    },
+    "retention": "Keep the NaN arm unless every clear-win criterion passes. Retain experimental predictions/reports for audit but do not select failed filled checkpoint.",
+    "scope": "Retrospective research; historical publication latency, GRRR pretraining overlap, point-vs-daily-mean measurement equivalence, and operational availability are not established. No operational skill claim."
+  },
+  "protocol_sha256": "1d2b91fd02ba0d1a1d8b49c3f522d0c9f61374f1471a183d4b4d6155d56908e0",
+  "source_hashes": {
+    "marala_observed\\data\\daily_observed_priority.csv": "d1e4196b48320da02a51c105b7de0320fc5677a595d19dcb936d910e22bb2d3c",
+    "marala_grrr\\grrr_marala_reanalysis.csv": "9f7ec7b6048611684ba04147d07e2410386a21bae5dd492d3306decb1bafacc5",
+    "marala_grrr\\source_receipt.json": "48e18fa5103308bbd79878c5e6a7fae5f14cdcc3a62c29ccdd8a7a38e85e6cf7"
+  },
+  "feature_gate": {
+    "use_grrr_feature": true,
+    "lag_days": 2,
+    "training_only": true,
+    "overall": {
+      "n": 2131,
+      "bias_m3_s": -171.60544198586206,
+      "percent_bias": -19.088831679827994,
+      "pearson_r": 0.8943794086513595,
+      "mae_m3_s": 229.39993455236265,
+      "rmse_m3_s": 419.92190201658366,
+      "nse": 0.7201498290946144
+    },
+    "by_season": {
+      "monsoon": {
+        "n": 732,
+        "bias_m3_s": -397.02421829736835,
+        "percent_bias": -22.737252973764548,
+        "pearson_r": 0.72509598305395,
+        "mae_m3_s": 460.4394316121661,
+        "rmse_m3_s": 642.4646809361305,
+        "nse": 0.23103815386244875
+      },
+      "post_monsoon": {
+        "n": 366,
+        "bias_m3_s": 4.74901496943387,
+        "percent_bias": 1.2965889273512554,
+        "pearson_r": 0.6268764119469279,
+        "mae_m3_s": 61.59218551857486,
+        "rmse_m3_s": 162.97133215912626,
+        "nse": 0.3809927672454827
+      },
+      "pre_monsoon": {
+        "n": 552,
+        "bias_m3_s": -124.98759453518262,
+        "percent_bias": -18.847333380435728,
+        "pearson_r": 0.6918367687152902,
+        "mae_m3_s": 172.42732109030143,
+        "rmse_m3_s": 282.89226025522095,
+        "nse": 0.34441255678399907
+      },
+      "winter": {
+        "n": 481,
+        "bias_m3_s": -16.246271046965497,
+        "percent_bias": -5.685660886395068,
+        "pearson_r": 0.5059988545221219,
+        "mae_m3_s": 70.86689282605903,
+        "rmse_m3_s": 202.53771269581412,
+        "nse": 0.2397294870672867
+      }
+    },
+    "monthly_anomaly": {
+      "n": 2131,
+      "bias_m3_s": -1.8778867610515647e-14,
+      "percent_bias": null,
+      "pearson_r": 0.5455556438740456,
+      "mae_m3_s": 172.91681124775093,
+      "rmse_m3_s": 322.5653720562871,
+      "nse": 0.2924585382866238
+    },
+    "passing_seasons": 4,
+    "rule": {
+      "minimum_train_pairs": 365,
+      "minimum_train_pearson": 0.5,
+      "minimum_season_pairs": 60,
+      "minimum_season_pearson": 0.3,
+      "minimum_passing_seasons": 3,
+      "minimum_monthly_anomaly_pearson": 0.2
+    }
+  },
+  "normalization": {
+    "observed_mean": 898.9834729760075,
+    "observed_std": 793.7902105450426,
+    "grrr_mean": 727.1554315853658,
+    "grrr_std": 565.6482314896176
+  },
+  "calibration": {
+    "winter": {
+      "n": 481,
+      "intercept_m3_s": 63.22698167347839,
+      "slope": 0.8256712105632127,
+      "first_date": "2016-12-01",
+      "last_date": "2021-12-31"
+    },
+    "pre_monsoon": {
+      "n": 552,
+      "intercept_m3_s": 55.54757338760678,
+      "slope": 1.1290298083411587,
+      "first_date": "2016-03-01",
+      "last_date": "2021-05-31"
+    },
+    "monsoon": {
+      "n": 732,
+      "intercept_m3_s": 333.3154669148502,
+      "slope": 1.0472226052001703,
+      "first_date": "2016-06-01",
+      "last_date": "2021-09-30"
+    },
+    "post_monsoon": {
+      "n": 366,
+      "intercept_m3_s": 49.35935054837694,
+      "slope": 0.8541627843910004,
+      "first_date": "2016-10-01",
+      "last_date": "2021-11-30"
+    }
+  },
+  "highflow_threshold_m3_s": 2487.6349731072,
+  "highflow_definition": "Observed training 95th percentile; descriptive diagnostic, not an official flood category.",
+  "fill_counts": {
+    "train": {
+      "days": 2132,
+      "observed": 2131,
+      "filled": 1,
+      "remaining_nan": 0
+    },
+    "validation": {
+      "days": 365,
+      "observed": 365,
+      "filled": 0,
+      "remaining_nan": 0
+    },
+    "test": {
+      "days": 1392,
+      "observed": 966,
+      "filled": 259,
+      "remaining_nan": 167
+    }
+  },
+  "origins": {
+    "train": 2087,
+    "validation": 351,
+    "test": 922
+  },
+  "arms": {
+    "nan_gaps": {
+      "selected_epoch": 9,
+      "history": [
+        {
+          "epoch": 1,
+          "observed_validation_mse_standardized": 0.33901700377464294
+        },
+        {
+          "epoch": 2,
+          "observed_validation_mse_standardized": 0.2081565260887146
+        },
+        {
+          "epoch": 3,
+          "observed_validation_mse_standardized": 0.2015962302684784
+        },
+        {
+          "epoch": 4,
+          "observed_validation_mse_standardized": 0.20503833889961243
+        },
+        {
+          "epoch": 5,
+          "observed_validation_mse_standardized": 0.2117791473865509
+        },
+        {
+          "epoch": 6,
+          "observed_validation_mse_standardized": 0.2102823555469513
+        },
+        {
+          "epoch": 7,
+          "observed_validation_mse_standardized": 0.20283128321170807
+        },
+        {
+          "epoch": 8,
+          "observed_validation_mse_standardized": 0.18692252039909363
+        },
+        {
+          "epoch": 9,
+          "observed_validation_mse_standardized": 0.18027348816394806
+        },
+        {
+          "epoch": 10,
+          "observed_validation_mse_standardized": 0.18808341026306152
+        },
+        {
+          "epoch": 11,
+          "observed_validation_mse_standardized": 0.2038683444261551
+        },
+        {
+          "epoch": 12,
+          "observed_validation_mse_standardized": 0.18778835237026215
+        },
+        {
+          "epoch": 13,
+          "observed_validation_mse_standardized": 0.18191955983638763
+        },
+        {
+          "epoch": 14,
+          "observed_validation_mse_standardized": 0.19272774457931519
+        },
+        {
+          "epoch": 15,
+          "observed_validation_mse_standardized": 0.19336073100566864
+        }
+      ],
+      "training_weight_sum": 31290.0,
+      "observed_training_target_pairs": 31290
+    },
+    "weighted_fills": {
+      "selected_epoch": 9,
+      "history": [
+        {
+          "epoch": 1,
+          "observed_validation_mse_standardized": 0.3389073610305786
+        },
+        {
+          "epoch": 2,
+          "observed_validation_mse_standardized": 0.2081480324268341
+        },
+        {
+          "epoch": 3,
+          "observed_validation_mse_standardized": 0.20158801972866058
+        },
+        {
+          "epoch": 4,
+          "observed_validation_mse_standardized": 0.20502516627311707
+        },
+        {
+          "epoch": 5,
+          "observed_validation_mse_standardized": 0.21180003881454468
+        },
+        {
+          "epoch": 6,
+          "observed_validation_mse_standardized": 0.21023915708065033
+        },
+        {
+          "epoch": 7,
+          "observed_validation_mse_standardized": 0.20274153351783752
+        },
+        {
+          "epoch": 8,
+          "observed_validation_mse_standardized": 0.18724408745765686
+        },
+        {
+          "epoch": 9,
+          "observed_validation_mse_standardized": 0.18025065958499908
+        },
+        {
+          "epoch": 10,
+          "observed_validation_mse_standardized": 0.19011250138282776
+        },
+        {
+          "epoch": 11,
+          "observed_validation_mse_standardized": 0.20710094273090363
+        },
+        {
+          "epoch": 12,
+          "observed_validation_mse_standardized": 0.19494248926639557
+        },
+        {
+          "epoch": 13,
+          "observed_validation_mse_standardized": 0.184043750166893
+        },
+        {
+          "epoch": 14,
+          "observed_validation_mse_standardized": 0.18869729340076447
+        },
+        {
+          "epoch": 15,
+          "observed_validation_mse_standardized": 0.19053474068641663
+        }
+      ],
+      "training_weight_sum": 31293.0,
+      "observed_training_target_pairs": 31290
+    }
+  },
+  "uncertainty": {
+    "improvement_fraction_95pct_ci": [
+      -0.000912057635138197,
+      0.0004942740705350549
+    ],
+    "replicates": 2000,
+    "block_days": 30,
+    "independent_sampling_unit": "30-day blocks of target calendar dates; all leads kept together"
+  },
+  "decision": {
+    "selected_arm": "nan_gaps",
+    "filled_version_clearly_wins": false,
+    "checks": {
+      "validation_rmse_improvement": {
+        "passed": false,
+        "value": 6.33079010320392e-05,
+        "minimum": 0.05
+      },
+      "test_rmse_improvement": {
+        "passed": false,
+        "value": 0.00013882556363187248,
+        "minimum": 0.05
+      },
+      "test_bootstrap_lower_positive": {
+        "passed": false,
+        "value": -0.000912057635138197
+      },
+      "season_no_material_degradation": {
+        "passed": true,
+        "worst_degradation_fraction": 0.005691019138420739,
+        "maximum": 0.02
+      },
+      "year_no_material_degradation": {
+        "passed": true,
+        "worst_degradation_fraction": -5.22921243321095e-05,
+        "maximum": 0.02
+      },
+      "lead_no_material_degradation": {
+        "passed": true,
+        "worst_degradation_fraction": 0.0006025668722640098,
+        "maximum": 0.02
+      },
+      "highflow_no_material_degradation": {
+        "passed": true,
+        "worst_degradation_fraction": -0.00041591683969777193,
+        "maximum": 0.02
+      },
+      "sampled_peak_no_material_degradation": {
+        "passed": true,
+        "degradation_fraction": 7.5809307622520805e-06,
+        "mae_m3_s": {
+          "nan_gaps": 2822.2207658021402,
+          "weighted_fills": 2822.2421608623617
+        }
+      }
+    },
+    "policy": "Experimental artifacts retained for audit; selected model uses fills only if every frozen criterion passes."
+  },
+  "numpy_version": "2.4.6",
+  "torch_version": "2.15.0+cpu",
+  "limitations": [
+    "Single seeded architecture comparison; no seed uncertainty or hyperparameter search.",
+    "Overlapping leads and dates are dependent; bootstrap approximates target-date clustering, not independent flood-event uncertainty.",
+    "Daily reanalysis from a previously trained global model; global-model training overlap with local holdouts is unverified.",
+    "Later observations are sparse and measurement bases differ; matched observed-day scores do not validate complete hydrographs.",
+    "2026 lacks GRRR, so 2026 gaps remain unfilled; newer release interval metadata inferred from GRRR family.",
+    "GRRR is complete during training; unavailable-GRRR inputs in 2026 are outside the training feature-availability pattern.",
+    "Both arms use the GRRR feature: the two-arm comparison isolates filling; it does not establish incremental feature skill versus a matched no-GRRR model."
+  ]
+}

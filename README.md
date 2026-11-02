@@ -3,6 +3,7 @@
 Keep each model/module and its data in a separate subfolder.
 
 - [Data portal](data_portal/README.md): source provenance, freshly recomputed local integrity checks, quality review, discharge and precipitation plots, and a catchment explorer for the flood-model datasets. Run `python data_portal/serve.py` for a refreshed local view at `http://127.0.0.1:8787`.
+- [Preferred Marala rainfall](riverine%20flood/short%20range/dataset/chenab_marala/processed/marala/rainfall/chirps_v3_primary/README.md): CHIRPS v3 catchment precipitation from 1990 through the latest available 2026 Final and separate Preliminary dates.
 
 - `exposure_infrastructure/`: population, OSM roads/buildings/facilities/settlements, administrative boundaries, preparation scripts and GIS audits.
 

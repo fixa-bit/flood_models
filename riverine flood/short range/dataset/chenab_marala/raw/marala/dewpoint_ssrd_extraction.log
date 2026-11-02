@@ -1,0 +1,51 @@
+Catchment: D:\projects\flood_model\flood_model\riverine flood\short range\dataset\chenab_marala\processed\marala\catchment\marala_upstream_catchment.geojson
+Saved 1980: 366 daily rows in each variable folder
+Saved 1981: 365 daily rows in each variable folder
+Saved 1982: 365 daily rows in each variable folder
+Saved 1983: 365 daily rows in each variable folder
+Saved 1984: 366 daily rows in each variable folder
+Saved 1985: 365 daily rows in each variable folder
+Saved 1986: 365 daily rows in each variable folder
+Saved 1987: 365 daily rows in each variable folder
+Saved 1988: 366 daily rows in each variable folder
+Saved 1989: 365 daily rows in each variable folder
+Saved 1990: 365 daily rows in each variable folder
+Saved 1991: 365 daily rows in each variable folder
+Saved 1992: 366 daily rows in each variable folder
+Saved 1993: 365 daily rows in each variable folder
+Saved 1994: 365 daily rows in each variable folder
+Saved 1995: 365 daily rows in each variable folder
+Saved 1996: 366 daily rows in each variable folder
+Saved 1997: 365 daily rows in each variable folder
+Saved 1998: 365 daily rows in each variable folder
+Saved 1999: 365 daily rows in each variable folder
+Saved 2000: 366 daily rows in each variable folder
+Saved 2001: 365 daily rows in each variable folder
+Saved 2002: 365 daily rows in each variable folder
+Saved 2003: 365 daily rows in each variable folder
+Saved 2004: 366 daily rows in each variable folder
+Saved 2005: 365 daily rows in each variable folder
+Saved 2006: 365 daily rows in each variable folder
+Saved 2007: 365 daily rows in each variable folder
+Saved 2008: 366 daily rows in each variable folder
+Saved 2009: 365 daily rows in each variable folder
+Saved 2010: 365 daily rows in each variable folder
+Saved 2011: 365 daily rows in each variable folder
+Saved 2012: 366 daily rows in each variable folder
+Saved 2013: 365 daily rows in each variable folder
+Saved 2014: 365 daily rows in each variable folder
+Saved 2015: 365 daily rows in each variable folder
+Saved 2016: 366 daily rows in each variable folder
+Saved 2017: 365 daily rows in each variable folder
+Saved 2018: 365 daily rows in each variable folder
+Saved 2019: 365 daily rows in each variable folder
+Saved 2020: 366 daily rows in each variable folder
+Saved 2021: 365 daily rows in each variable folder
+Saved 2022: 365 daily rows in each variable folder
+Saved 2023: 365 daily rows in each variable folder
+Saved 2024: 366 daily rows in each variable folder
+dewpoint_c: missing days (0): []
+dewpoint_c: min=-28.1431590541494, max=14.449327157423163
+ssrd_wm2: missing days (0): []
+ssrd_wm2: min=36.50447286766429, max=373.0729001975771
+Merged CSV: D:\projects\flood_model\flood_model\riverine flood\short range\dataset\chenab_marala\raw\marala\marala_daily_dewpoint_ssrd_1980_2024.csv

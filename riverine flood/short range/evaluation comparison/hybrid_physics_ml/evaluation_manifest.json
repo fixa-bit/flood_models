@@ -1,0 +1,42 @@
+{
+  "checkpoint_paths": [
+    "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\hybrid_physics_ml\\runs\\initial\\seed_42\\best.pt"
+  ],
+  "control_checkpoint": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\lstm\\runs\\initial\\seed_42\\best.pt",
+  "reused_baseline_predictions": {
+    "gradient_boosting": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\gradient_boosting\\reports\\initial\\model_predictions.csv",
+    "Ensemble": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\ensemble\\reports\\initial\\model_predictions.csv"
+  },
+  "daily_file_sha256": "d21788d62afc9e54d8e2aa6e1f27dcc244ef3b6a1a734249650abd84ccdbe11f",
+  "test_years": [
+    2022,
+    2023,
+    2024
+  ],
+  "unique_observed_test_days": 1084,
+  "observed_target_pairs": 10795,
+  "training_years": [
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
+  ],
+  "validation_years": [
+    2021
+  ],
+  "no_discharge_filled": true,
+  "training_input_hash_unchanged": true,
+  "water_balance_audit": [
+    {
+      "seed": 42,
+      "maximum_water_balance_residual_mm": 0.0003504753112792969,
+      "minimum_state_or_flux_mm": 0.0,
+      "forecast_missing_pct": 0.0,
+      "negative_noisy_precipitation_clipped_in_bucket": 2191
+    }
+  ],
+  "forecast_mode": "reanalysis_with_noise",
+  "peak_threshold_cumecs": 2494.7141847552,
+  "flood_threshold_cumecs": 2494.7141847552
+}

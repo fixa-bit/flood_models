@@ -1,0 +1,14 @@
+{
+  "phase": "retrieval",
+  "completed": 0,
+  "total": 85,
+  "active": [
+    "reforecast_2016_01.grib",
+    "reforecast_2016_02.grib",
+    "reforecast_2016_03.grib"
+  ],
+  "pending": 82,
+  "failures": [],
+  "heartbeat_utc": "2026-10-30T11:10:34.166248+00:00",
+  "training_complete": false
+}

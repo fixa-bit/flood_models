@@ -1,0 +1,1312 @@
+{
+  "pdf": "dahri_2016_precipitation_discharge.pdf",
+  "embedded_files": [],
+  "links": [
+    {
+      "page": 1,
+      "url": "http://crossmark.crossref.org/dialog/?doi=10.1016/j.scitotenv.2016.01.001&domain=pdf"
+    },
+    {
+      "page": 1,
+      "url": "mailto:zakirdahri@yahoo.com"
+    },
+    {
+      "page": 1,
+      "url": "http://dx.doi.org/10.1016/j.scitotenv.2016.01.001"
+    },
+    {
+      "page": 1,
+      "url": "http://creativecommons.org/licenses/by-nc-nd/4.0/"
+    },
+    {
+      "page": 2,
+      "url": "http://creativecommons.org/licenses/by-nc-nd/4.0/"
+    },
+    {
+      "page": 4,
+      "url": "http://www.ncdc.noaa.gov/cdo-eb/datasets"
+    },
+    {
+      "page": 4,
+      "url": "http://www.ncdc.noaa.gov/cdo-eb/datasets"
+    },
+    {
+      "page": 4,
+      "url": "http://data.eol.ucar.edu/codiac/dss/id?76.200"
+    },
+    {
+      "page": 4,
+      "url": "http://data.eol.ucar.edu/codiac/dss/id?76.200"
+    },
+    {
+      "page": 4,
+      "url": "http://apps.ecmwf.int/datasets/data/interimulloda/"
+    },
+    {
+      "page": 4,
+      "url": "http://apps.ecmwf.int/datasets/data/interimulloda/"
+    },
+    {
+      "page": 4,
+      "url": "mailto:forceDATA@ftp.iiasa.ac.at"
+    },
+    {
+      "page": 4,
+      "url": "mailto:forceDATA@ftp.iiasa.ac.at"
+    },
+    {
+      "page": 5,
+      "url": "http://disc.sci.gsfc.nasa.gov/daacin/DataHoldingsPDISC.pl?LOOKUPID_List=43"
+    },
+    {
+      "page": 5,
+      "url": "http://disc.sci.gsfc.nasa.gov/daacin/DataHoldingsPDISC.pl?LOOKUPID_List=43"
+    },
+    {
+      "page": 5,
+      "url": "http://www.chikyu.ac.jp/precip/"
+    },
+    {
+      "page": 5,
+      "url": "http://www.chikyu.ac.jp/precip/"
+    },
+    {
+      "page": 5,
+      "url": "http://hydrosheds.cr.usgs.gov"
+    },
+    {
+      "page": 16,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0005"
+    },
+    {
+      "page": 16,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0005"
+    },
+    {
+      "page": 16,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0005"
+    },
+    {
+      "page": 16,
+      "url": "http://dx.doi.org/10.1016/j.jhydrol.2008.03.015"
+    },
+    {
+      "page": 16,
+      "url": "http://dx.doi.org/10.1175/1520-0450(1986)025<0532:MIOTDO&gt/;2.0.CO;2"
+    },
+    {
+      "page": 16,
+      "url": "http://dx.doi.org/10.1175/1520-0450(1986)025<0532:MIOTDO&gt/;2.0.CO;2"
+    },
+    {
+      "page": 16,
+      "url": "http://dx.doi.org/10.1175/1520-0450(1986)025<0532:MIOTDO&gt/;2.0.CO;2"
+    },
+    {
+      "page": 16,
+      "url": "http://dx.doi.org/10.1175/1520-0450(1986)025<0532:MIOTDO&gt/;2.0.CO;2"
+    },
+    {
+      "page": 16,
+      "url": "http://dx.doi.org/10.1029/2011GC003513"
+    },
+    {
+      "page": 16,
+      "url": "http://dx.doi.org/10.1029/2011GC003513"
+    },
+    {
+      "page": 16,
+      "url": "http://dx.doi.org/10.5194/hess-8-47-2004"
+    },
+    {
+      "page": 16,
+      "url": "http://dx.doi.org/10.1007/s11269-006-8773-4"
+    },
+    {
+      "page": 16,
+      "url": "http://lib.icimod.org/record/9419"
+    },
+    {
+      "page": 16,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0050"
+    },
+    {
+      "page": 16,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0050"
+    },
+    {
+      "page": 16,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0050"
+    },
+    {
+      "page": 16,
+      "url": "http://dx.doi.org/10.5194/tc-7-1385-2013"
+    },
+    {
+      "page": 16,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0060"
+    },
+    {
+      "page": 16,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0060"
+    },
+    {
+      "page": 16,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0065"
+    },
+    {
+      "page": 16,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0065"
+    },
+    {
+      "page": 16,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0070"
+    },
+    {
+      "page": 16,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0070"
+    },
+    {
+      "page": 16,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0075"
+    },
+    {
+      "page": 16,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0075"
+    },
+    {
+      "page": 16,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0075"
+    },
+    {
+      "page": 16,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0080"
+    },
+    {
+      "page": 16,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0080"
+    },
+    {
+      "page": 16,
+      "url": "http://dx.doi.org/10.1029/2006GL026037"
+    },
+    {
+      "page": 16,
+      "url": "http://dx.doi.org/10.1029/2006GL026037"
+    },
+    {
+      "page": 16,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0090"
+    },
+    {
+      "page": 16,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0090"
+    },
+    {
+      "page": 16,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0090"
+    },
+    {
+      "page": 16,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0095"
+    },
+    {
+      "page": 16,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0095"
+    },
+    {
+      "page": 16,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0095"
+    },
+    {
+      "page": 16,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0105"
+    },
+    {
+      "page": 16,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0105"
+    },
+    {
+      "page": 16,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0110"
+    },
+    {
+      "page": 16,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0110"
+    },
+    {
+      "page": 16,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0115"
+    },
+    {
+      "page": 16,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0115"
+    },
+    {
+      "page": 16,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0125"
+    },
+    {
+      "page": 16,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0125"
+    },
+    {
+      "page": 16,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0130"
+    },
+    {
+      "page": 16,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0130"
+    },
+    {
+      "page": 16,
+      "url": "http://dx.doi.org/10.1002/qj.828,2011.4757,4759,4775"
+    },
+    {
+      "page": 16,
+      "url": "http://dx.doi.org/10.1017/CBO9780511897580.020"
+    },
+    {
+      "page": 16,
+      "url": "http://dx.doi.org/10.1017/CBO9780511897580.020"
+    },
+    {
+      "page": 16,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0145"
+    },
+    {
+      "page": 16,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0150"
+    },
+    {
+      "page": 16,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0150"
+    },
+    {
+      "page": 16,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0155"
+    },
+    {
+      "page": 16,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0155"
+    },
+    {
+      "page": 16,
+      "url": "http://dx.doi.org/10.1175/JCLI-D-14-00286.1"
+    },
+    {
+      "page": 16,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0165"
+    },
+    {
+      "page": 16,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0165"
+    },
+    {
+      "page": 16,
+      "url": "http://dx.doi.org/10.1038/NGEO1450"
+    },
+    {
+      "page": 16,
+      "url": "http://dx.doi.org/10.5194/tc-7-1263-2013"
+    },
+    {
+      "page": 16,
+      "url": "http://dx.doi.org/10.1126/science.1226558"
+    },
+    {
+      "page": 16,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0185"
+    },
+    {
+      "page": 16,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0185"
+    },
+    {
+      "page": 16,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0190"
+    },
+    {
+      "page": 16,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0190"
+    },
+    {
+      "page": 16,
+      "url": "http://dx.doi.org/10.1002/joc.3711"
+    },
+    {
+      "page": 16,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0200"
+    },
+    {
+      "page": 16,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0200"
+    },
+    {
+      "page": 16,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0200"
+    },
+    {
+      "page": 16,
+      "url": "http://dx.doi.org/10.5194/hess-18-4077-4100"
+    },
+    {
+      "page": 16,
+      "url": "https://www.itc.nl/library/Papers_2003/misca/hengl_comparison.pdf"
+    },
+    {
+      "page": 16,
+      "url": "https://www.itc.nl/library/Papers_2003/misca/hengl_comparison.pdf"
+    },
+    {
+      "page": 16,
+      "url": "http://dx.doi.org/10.1659/0276-4741(2005)025[0332:TKAGEA]2.0.CO;2"
+    },
+    {
+      "page": 16,
+      "url": "http://dx.doi.org/10.1659/0276-4741(2005)025[0332:TKAGEA]2.0.CO;2"
+    },
+    {
+      "page": 16,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf9100"
+    },
+    {
+      "page": 16,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf9100"
+    },
+    {
+      "page": 16,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf9100"
+    },
+    {
+      "page": 16,
+      "url": "http://dx.doi.org/10.1659/mrd-journal-d-11-00020.1"
+    },
+    {
+      "page": 16,
+      "url": "http://dx.doi.org/10.1659/mrd-journal-d-11-00020.1"
+    },
+    {
+      "page": 17,
+      "url": "http://dx.doi.org/10.1007/978-94-007-6311-1"
+    },
+    {
+      "page": 17,
+      "url": "http://www.ncdc.noaa.gov/cdo-eb/datasets"
+    },
+    {
+      "page": 17,
+      "url": "http://www.ncdc.noaa.gov/cdo-eb/datasets"
+    },
+    {
+      "page": 17,
+      "url": "http://dx.doi.org/10.1175/JHM560.1"
+    },
+    {
+      "page": 17,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0235"
+    },
+    {
+      "page": 17,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0235"
+    },
+    {
+      "page": 17,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0240"
+    },
+    {
+      "page": 17,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0240"
+    },
+    {
+      "page": 17,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0240"
+    },
+    {
+      "page": 17,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0245"
+    },
+    {
+      "page": 17,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0245"
+    },
+    {
+      "page": 17,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0245"
+    },
+    {
+      "page": 17,
+      "url": "http://dx.doi.org/10.1659/MRD-JOURNAL-D-11-00097.1"
+    },
+    {
+      "page": 17,
+      "url": "http://dx.doi.org/10.1002/2013WR014506"
+    },
+    {
+      "page": 17,
+      "url": "http://dx.doi.org/10.5194/hessd-12-4755-2015"
+    },
+    {
+      "page": 17,
+      "url": "http://dx.doi.org/10.5194/hessd-12-4755-2015"
+    },
+    {
+      "page": 17,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0265"
+    },
+    {
+      "page": 17,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0265"
+    },
+    {
+      "page": 17,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0270"
+    },
+    {
+      "page": 17,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0270"
+    },
+    {
+      "page": 17,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0270"
+    },
+    {
+      "page": 17,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0270"
+    },
+    {
+      "page": 17,
+      "url": "http://dx.doi.org/10.5194/tc-9-557-2015"
+    },
+    {
+      "page": 17,
+      "url": "http://dx.doi.org/10.1659/MRD-JOURNAL-D-11-00017.1"
+    },
+    {
+      "page": 17,
+      "url": "http://dx.doi.org/10.1659/MRD-JOURNAL-D-11-00017.1"
+    },
+    {
+      "page": 17,
+      "url": "http://dx.doi.org/10.1016/j.jhydrol.2013.11.028"
+    },
+    {
+      "page": 17,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0290"
+    },
+    {
+      "page": 17,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0290"
+    },
+    {
+      "page": 17,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0290"
+    },
+    {
+      "page": 17,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0300"
+    },
+    {
+      "page": 17,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0300"
+    },
+    {
+      "page": 17,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0305"
+    },
+    {
+      "page": 17,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0305"
+    },
+    {
+      "page": 17,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0305"
+    },
+    {
+      "page": 17,
+      "url": "http://dx.doi.org/10.1016/j.ecoinf.2010.12.003"
+    },
+    {
+      "page": 17,
+      "url": "http://dx.doi.org/10.1175/1520-0442(1996)009<0358:TOAIVO&gt/;2.0.CO;2"
+    },
+    {
+      "page": 17,
+      "url": "http://dx.doi.org/10.1175/1520-0442(1996)009<0358:TOAIVO&gt/;2.0.CO;2"
+    },
+    {
+      "page": 17,
+      "url": "http://dx.doi.org/10.1175/1520-0442(1996)009<0358:TOAIVO&gt/;2.0.CO;2"
+    },
+    {
+      "page": 17,
+      "url": "http://dx.doi.org/10.1007/s00477-013-0745-7"
+    },
+    {
+      "page": 17,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0330"
+    },
+    {
+      "page": 17,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0330"
+    },
+    {
+      "page": 17,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0335"
+    },
+    {
+      "page": 17,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0335"
+    },
+    {
+      "page": 17,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0335"
+    },
+    {
+      "page": 17,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0340"
+    },
+    {
+      "page": 17,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0340"
+    },
+    {
+      "page": 17,
+      "url": "http://dx.doi.org/10.1038/nclimate2237"
+    },
+    {
+      "page": 17,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0350"
+    },
+    {
+      "page": 17,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0350"
+    },
+    {
+      "page": 17,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0350"
+    },
+    {
+      "page": 17,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0350"
+    },
+    {
+      "page": 17,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0360"
+    },
+    {
+      "page": 17,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0360"
+    },
+    {
+      "page": 17,
+      "url": "http://climate.geog.udel.edu/~climate/html_pages/download.html"
+    },
+    {
+      "page": 17,
+      "url": "http://climate.geog.udel.edu/~climate/html_pages/download.html"
+    },
+    {
+      "page": 17,
+      "url": "http://dx.doi.org/10.3189/172756406781812087"
+    },
+    {
+      "page": 17,
+      "url": "http://dx.doi.org/10.1155/2014/215162"
+    },
+    {
+      "page": 17,
+      "url": "http://digitalcommons.library.umaine.edu/ers_facpub/187"
+    },
+    {
+      "page": 17,
+      "url": "http://digitalcommons.library.umaine.edu/ers_facpub/187"
+    },
+    {
+      "page": 17,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0380"
+    },
+    {
+      "page": 17,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0380"
+    },
+    {
+      "page": 17,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0380"
+    },
+    {
+      "page": 17,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0385"
+    },
+    {
+      "page": 17,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0385"
+    },
+    {
+      "page": 17,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0385"
+    },
+    {
+      "page": 17,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0390"
+    },
+    {
+      "page": 17,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0390"
+    },
+    {
+      "page": 17,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0395"
+    },
+    {
+      "page": 17,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0395"
+    },
+    {
+      "page": 17,
+      "url": "http://dx.doi.org/10.5194/tcd-7-2891-2013"
+    },
+    {
+      "page": 17,
+      "url": "http://dx.doi.org/10.1016/j.jhydrol.2011.06.005"
+    },
+    {
+      "page": 17,
+      "url": "http://dx.doi.org/10.1016/j.jhydrol.2011.06.005"
+    },
+    {
+      "page": 17,
+      "url": "http://dx.doi.org/10.1029/2009GL038026"
+    },
+    {
+      "page": 17,
+      "url": "http://dx.doi.org/10.1007/s00382-014-2178-5"
+    },
+    {
+      "page": 17,
+      "url": "http://dx.doi.org/10.1029/2012JD018697"
+    },
+    {
+      "page": 17,
+      "url": "http://dx.doi.org/10.5194/tc-8-289-2014"
+    },
+    {
+      "page": 17,
+      "url": "http://dx.doi.org/10.1659/MRD-JOURNAL-D-11-00092.1"
+    },
+    {
+      "page": 17,
+      "url": "http://dx.doi.org/10.1080/2150704X.2013.783248"
+    },
+    {
+      "page": 17,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0445"
+    },
+    {
+      "page": 17,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0445"
+    },
+    {
+      "page": 17,
+      "url": "http://dx.doi.org/10.1038/454393a"
+    },
+    {
+      "page": 17,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0455"
+    },
+    {
+      "page": 17,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0455"
+    },
+    {
+      "page": 17,
+      "url": "http://dx.doi.org/10.1175/BAMS-D-11-00052.1"
+    },
+    {
+      "page": 17,
+      "url": "http://dx.doi.org/10.1175/BAMS-D-11-00052.1"
+    },
+    {
+      "page": 17,
+      "url": "http://dx.doi.org/10.2166/nh.2014.060"
+    },
+    {
+      "page": 17,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0470"
+    },
+    {
+      "page": 17,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0470"
+    },
+    {
+      "page": 17,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0470"
+    },
+    {
+      "page": 17,
+      "url": "http://dx.doi.org/10.1007/978-3-642-03373-5"
+    },
+    {
+      "page": 17,
+      "url": "http://dx.doi.org/10.5194/tcd-8-3629-2014"
+    },
+    {
+      "page": 17,
+      "url": "http://ams.confex.com/ams/pdfpapers/72159.pdf"
+    },
+    {
+      "page": 17,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0490"
+    },
+    {
+      "page": 17,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0490"
+    },
+    {
+      "page": 17,
+      "url": "http://dx.doi.org/10.5194/hess-9-95-2005"
+    },
+    {
+      "page": 17,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0500"
+    },
+    {
+      "page": 17,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0500"
+    },
+    {
+      "page": 17,
+      "url": "http://dx.doi.org/10.1657/1938-4246-44.1.107"
+    },
+    {
+      "page": 18,
+      "url": "http://dx.doi.org/10.1007/s00704-013-0860-x"
+    },
+    {
+      "page": 18,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0515"
+    },
+    {
+      "page": 18,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0515"
+    },
+    {
+      "page": 18,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0515"
+    },
+    {
+      "page": 18,
+      "url": "http://dx.doi.org/10.1111/j.0435-3676.2000.00108.x"
+    },
+    {
+      "page": 18,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0525"
+    },
+    {
+      "page": 18,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0525"
+    },
+    {
+      "page": 18,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0525"
+    },
+    {
+      "page": 18,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0530"
+    },
+    {
+      "page": 18,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0530"
+    },
+    {
+      "page": 18,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0530"
+    },
+    {
+      "page": 18,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0535"
+    },
+    {
+      "page": 18,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0535"
+    },
+    {
+      "page": 18,
+      "url": "http://dx.doi.org/10.1007/s00704-0050217-1"
+    },
+    {
+      "page": 18,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0550"
+    },
+    {
+      "page": 18,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0550"
+    },
+    {
+      "page": 18,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0550"
+    },
+    {
+      "page": 18,
+      "url": "http://dx.doi.org/10.1016/j.scitotenv.2014.10.065"
+    },
+    {
+      "page": 18,
+      "url": "http://dx.doi.org/10.1016/j.jhydrol.2011.02.010"
+    },
+    {
+      "page": 18,
+      "url": "http://www.nature.com/nature/journal/v440/n7088/suppinfo/nature04743_S1.html"
+    },
+    {
+      "page": 18,
+      "url": "http://www.nature.com/nature/journal/v440/n7088/suppinfo/nature04743_S1.html"
+    },
+    {
+      "page": 18,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0570"
+    },
+    {
+      "page": 18,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0575"
+    },
+    {
+      "page": 18,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0575"
+    },
+    {
+      "page": 18,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0575"
+    },
+    {
+      "page": 18,
+      "url": "http://scholars.wlu.ca/etd/304"
+    },
+    {
+      "page": 18,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0585"
+    },
+    {
+      "page": 18,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0585"
+    },
+    {
+      "page": 18,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0585"
+    },
+    {
+      "page": 18,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0590"
+    },
+    {
+      "page": 18,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0590"
+    },
+    {
+      "page": 18,
+      "url": "http://dx.doi.org/10.1002/2014WR015638"
+    },
+    {
+      "page": 18,
+      "url": "http://dx.doi.org/10.1002/2014WR015638"
+    },
+    {
+      "page": 18,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0600"
+    },
+    {
+      "page": 18,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0600"
+    },
+    {
+      "page": 18,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0600"
+    },
+    {
+      "page": 18,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0605"
+    },
+    {
+      "page": 18,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0605"
+    },
+    {
+      "page": 18,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0605"
+    },
+    {
+      "page": 18,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf201601182012203491"
+    },
+    {
+      "page": 18,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf201601182012203491"
+    },
+    {
+      "page": 18,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf201601182012203491"
+    },
+    {
+      "page": 18,
+      "url": "http://dx.doi.org/10.5194/tc-8-941-2014"
+    },
+    {
+      "page": 18,
+      "url": "http://dx.doi.org/10.5194/tc-8-941-2014"
+    },
+    {
+      "page": 18,
+      "url": "http://www.theryosphere.net/8/941/2014/"
+    },
+    {
+      "page": 18,
+      "url": "http://dx.doi.org/10.1175/1520-0493"
+    },
+    {
+      "page": 18,
+      "url": "http://dx.doi.org/10.1117/12.811943"
+    },
+    {
+      "page": 18,
+      "url": "http://dx.doi.org/10.1117/12.723829"
+    },
+    {
+      "page": 18,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0640"
+    },
+    {
+      "page": 18,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0640"
+    },
+    {
+      "page": 18,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0640"
+    },
+    {
+      "page": 18,
+      "url": "http://dx.doi.org/10.1007/s00703-008-02992"
+    },
+    {
+      "page": 18,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0650"
+    },
+    {
+      "page": 18,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0650"
+    },
+    {
+      "page": 18,
+      "url": "http://refhub.elsevier.com/S0048-9697(16)30001-8/rf0650"
+    }
+  ],
+  "supplement_references": [
+    {
+      "page": 1,
+      "context": "015 Received in revised form 31 December 2015 Accepted 1 January 2016 Available online 21 January 2016 Editor: D. Barcelo Scarcity of in-situ observations coupled with high orographic in\ufb02uences has prevente"
+    },
+    {
+      "page": 1,
+      "context": "ail addresses: zakir.dahri@wur.nl, zakirdahri@yahoo.com (Z.H. Dahri). http://dx.doi.org/10.1016/j.scitotenv.2016.01.001 0048-9697/\u00a9 2016 The Authors. Published by Elsevier B.V. This is an open access article under the CC BY-NC-ND license ("
+    },
+    {
+      "page": 1,
+      "context": "er B.V. This is an open access article under the CC BY-NC-ND license (http://creativecommons.org/licenses/by-nc-nd/4.0/). Contents lists available at ScienceDirect Science of the Total Environment journal homepage: www.elsevier.com/locate/sc"
+    },
+    {
+      "page": 2,
+      "context": "er B.V. This is an open access article under the CC BY-NC-ND license (http://creativecommons.org/licenses/by-nc-nd/4.0/). 1. Introduction The Hindukush Karakoram Himalayan (HKH) mountain region and adjoining ranges of Pamirs and Tibetan Plat"
+    },
+    {
+      "page": 4,
+      "context": "es located in the Indian Territory available from NOAA-NCDC\u2019s website http://www.ncdc.noaa. gov/cdo-web/datasets (NOAA-NCDC) were downloaded in June, 2014. Meteorological data of 2 observatories installed by Ev-"
+    },
+    {
+      "page": 4,
+      "context": "rvatories installed by Ev-K2-CNR in Shigar basin were downloaded from http://data.eol.ucar.edu/codiac/dss/id?76. 200 in June, 2014. The meteorological data collected under the CAK pro- ject in Gilgit and Hunza basins are not publicl"
+    },
+    {
+      "page": 4,
+      "context": "e used monthly means of daily means re-gridded at 0.125\u00b0 available at http://apps.ecmwf.int/ datasets/data/interim-full-moda/, accessed in January, 2015. Berrisford et al. (2011) provides a detailed description o"
+    },
+    {
+      "page": 5,
+      "context": "e algorithms and different processing steps. The dataset available at http://disc.sci.gsfc.nasa.gov/daac-bin/ DataHoldingsPDISC.pl?LOOKUPID_List=3B43 was accessed in Decem- ber, 2014. 3.2.4. APHRODITE Asian Precipitation-highly R"
+    },
+    {
+      "page": 5,
+      "context": "ing from 1951\u2013 2007 (Yatagai et al., 2012). The dataset, available at http://www. chikyu.ac.jp/precip/, was accessed in July, 2014. 3.3. River \ufb02ow data Historical daily discharge data at the sub-basin "
+    },
+    {
+      "page": 5,
+      "context": "SRTM) digital elevation data of 90 m resolution freely available from http://hydrosheds.cr.usgs.gov/are used to delineate the watershed boundaries according to the methodology explained by Khan et al. (2014). However, for c"
+    },
+    {
+      "page": 16,
+      "context": " under different glacier coverage scenarios. J. Hydrol. 355, 148\u2013163. http://dx.doi.org/10.1016/j.jhydrol.2008.03.015. Alpert, P., 1986. Mesoscale indexing of the distribution of orographic precipitation over high mountains. J. Clim. Appl"
+    },
+    {
+      "page": 16,
+      "context": "tation over high mountains. J. Clim. Appl. Meteorol. 25 (4), 532\u2013545. http://dx.doi.org/10.1175/ 1520-0450(1986)025b0532:MIOTDON2.0.CO;2. Andermann, C., Bonnet, S., Gloaguen, R., 2011. Evaluation of precipitation dat"
+    },
+    {
+      "page": 16,
+      "context": "atasets along the Himalayan front. Geochem. Geophys. Geosyst. 12 (7). http://dx.doi.org/10.1029/ 2011GC003513. Archer, D.R. (2001), The Climate and Hydrology of Northern Pakistan With Respect to the Assessment of Flo"
+    },
+    {
+      "page": 16,
+      "context": "and hydrological implications. Hydrol. Earth Syst. Sci. 8 (1), 47\u201361. http://dx.doi.org/10.5194/hess-8-47-2004. Arora, M., Singh, P., Goel, N.K., Singh, R.D., 2006. Spatial distribution and seasonal variabil- ity of rainfall in a m"
+    },
+    {
+      "page": 16,
+      "context": "nous basin in the Himalayan region. Water Resour. Manag. 20, 489\u2013508. http://dx.doi.org/10.1007/s11269-006-8773-4. Bajracharya, S.R., Shrestha, B. (Eds.), 2011. The Status of Glaciers in the Hindu Kush\u2013Hi- malayan region. ICIMOD, Kath"
+    },
+    {
+      "page": 16,
+      "context": " of Glaciers in the Hindu Kush\u2013Hi- malayan region. ICIMOD, Kathmandu (http://lib.icimod.org/record/9419). Berrisford, P., Dee, D., Poli, P., Brugge, R., Fielding, K., Fuentes, M., Kallberg, P., Kobayashi, S., Uppala, S., Simm"
+    },
+    {
+      "page": 16,
+      "context": "the upper Shyok valley, northeast Karakoram. Cryosphere 7, 1385\u20131398. http://dx.doi.org/10.5194/tc-7-1385-2013. Bhutiyani, M.R., 1999. Mass balance studies on Siachen glacier in the Nubra valley, Karakoram Himalaya, India. J. Glaci"
+    },
+    {
+      "page": 16,
+      "context": " vari- ations along the Himalaya. Geophys. Res. Lett. 33 (8), L08405. http://dx.doi.org/10. 1029/2006GL026037. Bookhagen, B., Burbank, D.W., 2010. Toward a complete Himalayan hydrological budget: spatiotemporal "
+    },
+    {
+      "page": 16,
+      "context": "f the data assimilation system. Q. J. R. Meteorol. Soc. 137, 553\u2013597. http://dx.doi.org/10.1002/qj.828,2011.4757,4759,4775. Dhar, O.N., Rakhecha, P.R., 1981. In: Lighthill, J., Pearce, R.P. (Eds.), The Effect of Elevation on Monsoon Rainfall D"
+    },
+    {
+      "page": 16,
+      "context": "n Monsoon Dynamics. Cambridge University Press, New York, pp. 253\u2013260 http://dx.doi.org/10.1017/ CBO9780511897580.020. Diggle, P.J., Ribeiro, P.J., 2007. Model-based Geostatistics. Springer Series in Statistics. Ding"
+    },
+    {
+      "page": 16,
+      "context": "the NAO and winter precipitation in the Hindu-Kush Karakoram. J Clim. http://dx.doi.org/10.1175/JCLI-D-14-00286.1. Fowler, H.J., Archer, D.R., 2006. Con\ufb02icting signals of climate change in the Upper Indus basin. J. Clim. 19, 4276\u20134293"
+    },
+    {
+      "page": 16,
+      "context": "arakoram glaciers in the early 21st century. Nat. Geosci. 5, 322\u2013325. http://dx.doi.org/10.1038/NGEO1450. Gardelle, J., Berthier, E., Arnaud, Y., K\u00e4\u00e4b, A., 2013. Region-wide glacier mass balances over the Pamir\u2013Karakoram\u2013Hima"
+    },
+    {
+      "page": 16,
+      "context": "e Pamir\u2013Karakoram\u2013Himalaya during 1999\u20132011. Cryosphere 7, 1263\u20131286. http://dx.doi.org/10.5194/tc-7-1263-2013. Gardner, A.S., Moholdt, G., Cogley, J.G., B., W.,s., Arendt, A.A., Wahr, J., Berthier, E.,., Hock, R., Pfeffer, W.T., K"
+    },
+    {
+      "page": 16,
+      "context": " contributions to sea level rise: 2003 to 2009. Science 340, 852\u2013857. http://dx.doi.org/10.1126/science.1226558 (2013). Goovaerts, P., 2000. Geostatistical approaches for incorporating elevation into the spatial interpolation of ra"
+    },
+    {
+      "page": 16,
+      "context": "c observations\u2014the CRU TS3.10 dataset. Int. J. Climatol. 34, 623\u2013642. http://dx.doi.org/10.1002/joc.3711. Hartkamp, A.D., DeBeurs, K., Stein, A., White, J.W., 1999. Interpolation Techniques for Cli- mate Variables, Geographic"
+    },
+    {
+      "page": 16,
+      "context": "ns of the Indus River system. Hydrol. Earth Syst. Sci. 18, 4077\u20134100. http://dx.doi.org/10.5194/hess-18-4077-4100. Hengl, T., Geuvelink, G.B.M., Stein, A., 2003. Comparison of Kriging With External Drift and Regression Kriging. Techni"
+    },
+    {
+      "page": 16,
+      "context": "ging With External Drift and Regression Kriging. Technical Note, ITC (https://www.itc.nl/library/Papers_2003/ misca/hengl_comparison.pdf). Hewitt, K., 2005. The Karakoram anomaly? Glacier expansion and the \u2018elevation effect\u2019, Kar"
+    },
+    {
+      "page": 16,
+      "context": "he \u2018elevation effect\u2019, Karakoram Himalaya. Mt. Res. Dev. 25, 332\u2013340. http://dx.doi.org/10.1659/0276- 4741(2005)025[0332:TKAGEA]2.0.CO;2. Hewitt, K., 2006. Glaciers of the Hunza basin and related features. In: Kreutzmann,"
+    },
+    {
+      "page": 16,
+      "context": "Karakoram Himalaya, Upper Indus Basin. Mt. Res. Dev. 31 (3), 188\u2013200. http://dx.doi.org/10. 1659/mrd-journal-d-11-00020.1. 304 Z.H. Dahri et al. / Science of the Total Environment 548\u2013549 (2016) 289\u2013306 "
+    },
+    {
+      "page": 17,
+      "context": " Hazards and Resources. Springer Dordrecht Heidelberg New York London http://dx. doi.org/10.1007/978-94-007-6311-1. NOAA-NCDC, Monthly Summaries of the Global Historical Climatology Network - Daily (G"
+    },
+    {
+      "page": 17,
+      "context": "atology Network - Daily (GHCN-D), NOAA National Climatic Data Center, http://www.ncdc.noaa.gov/cdo- web/datasets (accessed in June, 2014). Huffman, G.J., Adler, R.F., Bolvin, D.T., Gu, G., Nelkin, E.J., Bowman, K.P., Ho"
+    },
+    {
+      "page": 17,
+      "context": "or precipitation estimates at \ufb01ne scales. J. Hydrometeorol. 8, 38\u201355. http://dx.doi.org/10.1175/JHM560.1. ICES, 2005. Report of the Working Group on Marine Habitat Mapping (WGMHM), ICES CM 2005/E:05. Bremerhaven, Germany. Imm"
+    },
+    {
+      "page": 17,
+      "context": "ion of precipitation in the Hunza basin. Mt. Res. Dev. 32 (1), 30\u201338. http://dx.doi.org/10.1659/MRD-JOURNAL-D-11-00097.1. Immerzeel, W.W., Petersen, L., Ragettli, S., Pellicciotti, F., 2014. The importance of ob- served gradients of air temp"
+    },
+    {
+      "page": 17,
+      "context": "atershed in the Nepalese Himalayas. Water Resour. Res. 50, 2212\u20132226. http://dx.doi.org/10.1002/2013WR014506. Immerzeel, W.W., Wanders, N., Lutz, A.F., Shea, J.M., Bierkens, M.F.P., 2015. Reconciling high altitude precipitation i"
+    },
+    {
+      "page": 17,
+      "context": "s balances and runoff. Hydrol. Earth Syst. Sci. 19 (4673\u20134687), 2015. http://dx.doi.org/10.5194/ hessd-12-4755-2015. Jacob, T., Wahr, J., Pfeffer, W.T., Swenson, S., 2012. Recent contributions of glaciers and ice cap"
+    },
+    {
+      "page": 17,
+      "context": "lacier mass change in the Himalayas. Nature 488 (7412), 495\u2013498 (doi: http://www.nature.com/nature/journal/v488/n7412/abs/ nature11324.html#supplementary-information). Kaab, A., Treichler, D., Nuth, C., Berthier, E., 2015. Brief Communication"
+    },
+    {
+      "page": 17,
+      "context": "http://www.nature.com/nature/journal/v488/n7412/abs/ nature11324.html#supplementary-information). Kaab, A., Treichler, D., Nuth, C., Berthier, E., 2015. Brief Communication: contending esti- mates of 200"
+    },
+    {
+      "page": 17,
+      "context": "ance over the Pamir\u2013Karakoram\u2013Himalaya. Cryosphere 9 (557\u2013564), 2015. http://dx.doi.org/10.5194/tc-9-557-2015. Karki, M.B., Shrestha, A.B., Winiger, M., 2011. Enhancing knowledge management and ad- aptation capacity for integrated"
+    },
+    {
+      "page": 17,
+      "context": "er resources in the Indus River Basin. Mt. Res. Dev. 31 (3), 242\u2013251. http://dx.doi.org/10.1659/MRD-JOURNAL-D- 11-00017.1 2011. Khan, A., Richards, K.S., Parker, G.T., McRobie, A., Mukhopadhyay, B., 2014. How large is the Upper In"
+    },
+    {
+      "page": 17,
+      "context": "pitfalls of auto-delineation using DEMs. J. Hydrol. 509 (0), 442\u2013453. http://dx.doi.org/10.1016/j.jhydrol.2013.11.028. Kick, W., 1980. Material for a glacier inventory of the Indus drainage basin\u2014the Nanga Parbat massif, World Glacier Inv"
+    },
+    {
+      "page": 17,
+      "context": "nces: performance and impact factors. Ecol. Inform. 6 (3\u20134), 228\u2013241. http://dx.doi.org/10.1016/j.ecoinf.2010.12.003. Li, J., Heap, A.D., 2014. Spatial interpolation methods applied in the environmental sci- ences: a review. Environ. Mod"
+    },
+    {
+      "page": 17,
+      "context": "- soon in relation to land\u2013sea thermal contrast. J. Clim. 9, 358\u2013375. http://dx.doi.org/ 10.1175/1520-0442(1996)009b0358:TOAIVON2.0.CO;2. Li, L., Xu, C.-Y., Zhang, Z., Jain, S.K., 2013. Validation of a new me"
+    },
+    {
+      "page": 17,
+      "context": "poral variability of precipitation in India. Stoch. Env. Res. Risk A. http://dx.doi.org/10.1007/s00477-013-0745-7. Lin, Z., Wu, X., 1990. A preliminary analysis about the tracks of moisture transport on the Qinghai\u2013Xizang Plateau. Geo"
+    },
+    {
+      "page": 17,
+      "context": "f due to increasing glacier melt and precipitation. Nat. Clim. Chang. http://dx.doi.org/10.1038/nclimate2237 advance online publication. Lutz, A.F., Immerzeel, W.W., Kraaijenbrink, P.D.A., 2014b. Gridded Meteorological Datasets "
+    },
+    {
+      "page": 17,
+      "context": "n: 1900\u20132008 gridded monthly time series, at. (accessed in July 2014) http://climate.geog.udel.edu/~climate/html_ pages/download.html. Mayer, C., Lambrecht, A., Bel\u00f2, M., Smiraglia, C., Diolaiuti, G., 2006. Glaciological character- i"
+    },
+    {
+      "page": 17,
+      "context": " Baltoro glacier, Karakoram, Pakistan. Ann. Glaciol. 43 (1), 123\u2013131. http://dx.doi.org/10.3189/172756406781812087. Mayer, C., Lambrecht, A., Oerter, H., Schwikowski, M., Vuillermoz, E., Frank, N., Diolaiuti, G., 2014. Accumulation stu"
+    },
+    {
+      "page": 17,
+      "context": " glacier site in central Karakoram. Adv. Meteorol., Article ID 215162 http://dx.doi.org/10.1155/2014/215162 Volume 2014. Mayewski, P.A., Lyons, W.B., Ahmad, N., 1983. Chemical Composition of a High Altitude Fresh Snowfall in th"
+    },
+    {
+      "page": 17,
+      "context": "ate of the \u201cKarakoram anomaly\u201d. Cryosphere Discuss. 7 (3), 2891\u20132941. http://dx.doi.org/10.5194/tcd-7-2891-2013. Mukhopadhyay, B., 2012. Detection of dual effects of degradation of perennial snow and ice covers on the hydrologic reg"
+    },
+    {
+      "page": 17,
+      "context": " stream water avail- ability modeling. J. Hydrol. 412\u2013413 (0), 14\u201333. http://dx.doi.org/10.1016/j.jhydrol. 2011.06.005. Nesbitt, S.W., Anders, A.M., 2009. Very high resolution precipitation climatologies from the Tropical Rain"
+    },
+    {
+      "page": 17,
+      "context": "easuring Mission precipitation radar. Geophys. Res. Lett. 36, L15815. http://dx.doi.org/10.1029/2009GL038026. Pal, I., Robertson, A.W., Lall, U., Cane, M.A., 2014. Modeling winter rainfall in northwest India using a hidden Markov"
+    },
+    {
+      "page": 17,
+      "context": "states and their dynamical connections. Clim. Dyn. 44 (3), 1003\u20131015. http://dx.doi.org/ 10.1007/s00382-014-2178-5. Palazzi, E., von Hardenberg, J., Provenzale, A., 2013. Precipitation in the Hindu-Kush Karak"
+    },
+    {
+      "page": 17,
+      "context": "ations and future scenarios. J. Geophys. Res. Atmos. 118 (1), 85\u2013100. http://dx.doi.org/10.1029/2012JD018697. Pang, H., Hou, S., Kaspari, S., Mayewski, P.A., 2014. In\ufb02uence of regional precipitation pat- terns on stable isotopes "
+    },
+    {
+      "page": 17,
+      "context": "n ice cores from the central Himalayas. Cryosphere 8 (2014), 289\u2013301. http://dx.doi.org/10.5194/tc-8-289-2014. Pellicciotti, F., Buergi, C., Immerzeel, W.W., Konz, M., Shrestha, A.B., 2012. Challenges and uncertainties in hydrolog"
+    },
+    {
+      "page": 17,
+      "context": " suggestions for calibration strategies. Mt. Res. Dev. 32 (1), 39\u201350. http://dx.doi.org/10.1659/MRD-JOURNAL-D-11-00092.1. Prakash, S., Mahesh, C., Gairola, R.M., 2013. Comparison of TRMM Multisatellite Precipitation Analysis (TMPA)-3B43 vers"
+    },
+    {
+      "page": 17,
+      "context": " rain gauge data from ocean buoys. Remote Sens. Lett. 4 (7), 677\u2013685. http://dx.doi.org/10.1080/2150704X.2013.783248. Qazi, N.A., 1973. Water Resources Development in Suru Basin (Ladakh). 51. Vacant Press, Srinagar, India, p. 1973. Qiu, "
+    },
+    {
+      "page": 17,
+      "context": "oming fast and furious to the Tibet- an plateau. Nature 454, 393\u2013396. http://dx.doi.org/10.1038/454393a 2008. Rajeevan, M., Bhate, J., 2009. A high resolution daily gridded rainfall dataset (1971\u20132005) for meso-scale meteor"
+    },
+    {
+      "page": 17,
+      "context": "inter precipita- tion test bed. Bull. Am. Meteorol. Soc. 93, 811\u2013829. http://dx.doi.org/10.1175/ BAMS-D-11-00052.1. Reggiani, P., Rientjes, T.H.M., 2015. A re\ufb02ection on the long-term water balance of the Upper Indus "
+    },
+    {
+      "page": 17,
+      "context": "erm water balance of the Upper Indus Basin. Hydrol. Res. 46, 446\u2013462. http://dx.doi.org/10.2166/nh.2014.060. Rivoirard, J., Wieland, K., 2001. Correcting for the effect of daylight in abundance estima- tion of juvenile haddock ("
+    },
+    {
+      "page": 17,
+      "context": "Systems and Monsoons. Springer Heidelberg Dor- drecht London New York http://dx.doi.org/10.1007/978-3-642-03373-5. Sakai, A., Nuimura, T., Fujita, K., Takenaka, S., Nagai, H., Lamsal, D., 2014. Climate regime of Asian glaciers reveale"
+    },
+    {
+      "page": 17,
+      "context": "by GAMDAM Glacier Inventory. Cryosphere Discuss. 8 (3629\u20133663), 2014. http://dx.doi.org/10.5194/tcd-8-3629-2014. Schaake, J., 2004. Application of PRISM Climatologies for Hydrologic Modeling and Fore- casting in the Western U.S. Pro"
+    },
+    {
+      "page": 17,
+      "context": "Proc. 18th Conf. on Hydrology, Seattle, WA, Amer. Meteor. Soc., 5.3. [Available online at http://ams.confex.com/ams/pdfpapers/72159.pdf.] Schabenberger, O., Gotway, C.A., 2005. Statistical Methods for Spati"
+    },
+    {
+      "page": 17,
+      "context": "Hydrology, Seattle, WA, Amer. Meteor. Soc., 5.3. [Available online at http://ams.confex.com/ams/pdfpapers/72159.pdf.] Schabenberger, O., Gotway, C.A., 2005. Statistical Methods for Spatial Data Analysis, Chap- man an. CRC Press. Schae\ufb02i,"
+    },
+    {
+      "page": 17,
+      "context": "igh mountainous catchments. Hydrol. Earth Syst. Sci. 9 (1/2), 95\u2013109. http://dx. doi.org/10.5194/hess-9-95-2005. Scherler, D., Bookhagen, B., Strecker, M.R., 2011. Spatially variable response of Himal"
+    },
+    {
+      "page": 17,
+      "context": "f, Ladakh, Northwest India. Arct. Antarct. Alp. Res. 44 (1), 107\u2013121. http://dx.doi.org/10.1657/1938-4246-44.1.107. 305 Z.H. Dahri et al. / Science of the Total Environment 548\u2013549 (2016) 289\u2013306 "
+    },
+    {
+      "page": 18,
+      "context": "uantifying the global water cycle. Theor. Appl. Climatol. 115, 15\u201340. http://dx.doi.org/10.1007/s00704-013-0860-x. Shepard, D., 1968. A two-dimensional interpolation function for irregularly-spaced data. Proc. 23rd ACM National Confer"
+    },
+    {
+      "page": 18,
+      "context": "Himalaya, Pakistan. Geogr. Annal.: Ser. A Phys. Geogr. 82 (1), 17\u201331. http://dx.doi.org/10.1111/j.0435-3676.2000.00108.x. SIHP, 1997. Snow and Ice Hydrology, Pakistan Phase-II Final Report to CIDA, Report No. 54, IDRC File No. 88-8009-00. In"
+    },
+    {
+      "page": 18,
+      "context": " Asia part 1: observations. Theor. Appl. Climatol. 86 (1\u20134), 147\u2013160. http://dx.doi.org/10.1007/s00704-0050217-1. Tahir, A.A., Chevallier, P., Arnaud, Y., Ahmad, B., 2011. Snow cover dynamics and hydro- logical regime of the Hunza Ri"
+    },
+    {
+      "page": 18,
+      "context": "the Hunza basin (Karakoram region). Sci. Total Environ. 505, 748\u2013761. http://dx.doi.org/10.1016/j.scitotenv.2014.10.065. Tobin, C., Nicotina, L., Parlange, M.B., Berne, A., Rinaldo, A., 2011. Improved interpolation of meteorological forcing"
+    },
+    {
+      "page": 18,
+      "context": "rologic applications in a Swiss Alpine region. J. Hydrol. 401, 77\u201389. http://dx.doi.org/10.1016/j.jhydrol.2011.02.010. Treydte, K.S., Schleser, G.H., Helle, G., Frank, D.C., Winiger, M., Haug, G.H., Esper, J., 2006. The twentieth century "
+    },
+    {
+      "page": 18,
+      "context": "rn Pakistan over the past mil- lennium. Nature 440 (7088), 1179\u20131182 (http://www.nature.com/nature/journal/ v440/n7088/suppinfo/nature04743_S1.html). UNESCO-SCOPE-UNEP, 2011. Third Pole Environment, Policy Briefs, No. 13 June 2"
+    },
+    {
+      "page": 18,
+      "context": "304. (MA), Wilfrid Laurier University, Ottawa, Canada. Retrieved from http://scholars.wlu.ca/etd/304. Wake, C.P., 1989. Glaciochemical investigations as a tool for determining the spatial and seasonal variation of snow ac"
+    },
+    {
+      "page": 18,
+      "context": "ed to ERA- Interim reanalysis data. Water Resour. Res. 50, 7505\u20137514. http://dx.doi.org/10. 1002/2014WR015638. Wei, K., Gasse, F., 1999. Oxygen isotopes in lacustrine carbonates of West China revisited: implicat"
+    },
+    {
+      "page": 18,
+      "context": "indu Kush, Karakoram and Himalayan region. The Cryosphere 8, 941\u2013958. http://dx.doi.org/10. 5194/tc-8-941-2014 www.the-cryosphere.net/8/941/2014/. Winiger, M., Gumpert, M., Yamout, H., 2005. Karakorum\u2013Hindukush\u2013"
+    },
+    {
+      "page": 18,
+      "context": "uth Asia and the south China sea. Mon. Weather Rev. AMS 126, 913\u2013927. http://dx. doi.org/10.1175/1520-0493. Yatagai, A., Kawamoto, H., 2008. Quantitative Estimation of Orographic Precipitation Over th"
+    },
+    {
+      "page": 18,
+      "context": "s vol. 7148, 71480C. International Society for Opti- cal Engineering. http://dx.doi.org/10.1117/12.811943. Yatagai, A., Xie, P., 2006. Utilization of a rain gauge-based daily precipitation dataset over Asia for validation of p"
+    },
+    {
+      "page": 18,
+      "context": " precipitation derived from TRMM/PR and JRA-25. SPIE 2006, 6404\u20136453. http://dx.doi.org/10.1117/12.723829. Yatagai, A., Kamiguchi, K., Arakawa, O., Hamada, A., Yasutomi, N., Kitoh, A., 2012. APHRO- DITE: constructing a long-te"
+    },
+    {
+      "page": 18,
+      "context": "study of rainy seasons in China. Meteorog. Atmos. Phys. 100, 121\u2013138. http://dx.doi.org/10.1007/s00703-008-02992 2008. Yin, Z.-Y., Zhang, X., Liu, X., Colella, M., Chen, X., 2008. An assessment of the biases of sat- ellite rainfall "
+    }
+  ]
+}

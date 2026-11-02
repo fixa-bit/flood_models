@@ -1,0 +1,13 @@
+{
+  "landcover_bare_sparse": 0.17808527879975453,
+  "landcover_built_up": 0.006209210447890113,
+  "landcover_cropland": 0.050990437214177564,
+  "landcover_grassland": 0.23088015243779111,
+  "landcover_herbaceous_wetland": 0,
+  "landcover_mangroves": 0,
+  "landcover_moss_lichen": 0.07476383860750102,
+  "landcover_permanent_water": 0.006888793660133093,
+  "landcover_shrubland": 0.006088401258644557,
+  "landcover_snow_ice": 0.13768619807103905,
+  "landcover_tree_cover": 0.3084076895030691
+}

@@ -1,0 +1,28 @@
+{
+  "source_checksum_verifications": 363,
+  "unique_daily_dates": true,
+  "conversion_and_provenance_checks": "passed",
+  "quality_exclusions": "passed",
+  "official_2026_07_24_spot_check": "passed for all 3 stations",
+  "stations": [
+    {
+      "station": "Khanki",
+      "daily_dates": 852,
+      "observed": 350,
+      "nan": 502
+    },
+    {
+      "station": "Qadirabad",
+      "daily_dates": 852,
+      "observed": 350,
+      "nan": 502
+    },
+    {
+      "station": "Trimmu",
+      "daily_dates": 852,
+      "observed": 350,
+      "nan": 502
+    }
+  ],
+  "regression_analysis_performed": false
+}

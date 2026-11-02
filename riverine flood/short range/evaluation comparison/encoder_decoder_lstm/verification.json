@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "output_shape_single_issue": [
+    1,
+    15,
+    5
+  ],
+  "no_quantile_crossing": true,
+  "input_sources_unchanged": true,
+  "inherited_test_years_excluded": true,
+  "test_samples": 1082,
+  "observed_target_pairs": 16152,
+  "forecast_mode": "reanalysis_with_noise",
+  "training_years": [
+    1985,
+    1986,
+    1987,
+    1988,
+    1989,
+    1990,
+    1991,
+    1992,
+    1993,
+    1994,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
+  ],
+  "selection_years": [
+    1995,
+    1996,
+    2021
+  ]
+}

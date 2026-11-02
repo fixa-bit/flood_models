@@ -1,0 +1,3 @@
+date,compact_copy_mm,official_chc_geotiff_mm,absolute_difference_mm,missing_catchment_cells,boundary_sha256,official_source_url,official_raw_sha256,check
+2024-01-30,2.998987,2.999638,0.000651,0,49efd115f5d3ce2d1241fb35adaaf48bf6c8d0705768ac93dc88fbd4f11ab651,https://data.chc.ucsb.edu/products/CHIRPS/v3.0/daily/final/rnl/2024/chirps-v3.0.rnl.2024.01.30.tif,91e588c22146750cd06c85437c4bd97a260456bfceab6e89e00534e02afc2625,matches_within_0.05_mm
+2024-03-13,3.243966,3.244839,0.000873,0,49efd115f5d3ce2d1241fb35adaaf48bf6c8d0705768ac93dc88fbd4f11ab651,https://data.chc.ucsb.edu/products/CHIRPS/v3.0/daily/final/rnl/2024/chirps-v3.0.rnl.2024.03.13.tif,64a71825123cbba978c7da7b31a7fb0da7e9bc0f22d7225e424d4b22725aecf9,matches_within_0.05_mm

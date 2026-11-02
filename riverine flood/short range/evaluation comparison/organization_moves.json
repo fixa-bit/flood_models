@@ -1,0 +1,106 @@
+﻿[
+    {
+        "old":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\experiments\\marala_observed\\train.py",
+        "new":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\discharge_history_lstm\\train.py"
+    },
+    {
+        "old":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\experiments\\marala_observed\\prepare.py",
+        "new":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\discharge_history_lstm\\prepare.py"
+    },
+    {
+        "old":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\experiments\\marala_observed\\data",
+        "new":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\discharge_history_lstm\\data"
+    },
+    {
+        "old":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\experiments\\marala_observed\\observed_only",
+        "new":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\discharge_history_lstm\\observed_only"
+    },
+    {
+        "old":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\experiments\\marala_observed\\README.md",
+        "new":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\discharge_history_lstm\\README.md"
+    },
+    {
+        "old":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\experiments\\marala_observed\\requirements.txt",
+        "new":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\discharge_history_lstm\\requirements.txt"
+    },
+    {
+        "old":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\experiments\\marala_observed\\requirements-lock.txt",
+        "new":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\discharge_history_lstm\\requirements-lock.txt"
+    },
+    {
+        "old":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\experiments\\marala_grrr",
+        "new":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\grrr_lstm"
+    },
+    {
+        "old":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\glofas_correction",
+        "new":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\experiments\\glofas_correction_pending"
+    },
+    {
+        "old":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\__pycache__",
+        "new":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\evaluation comparison\\archive\\root_python_cache"
+    },
+    {
+        "old":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\pretrained_multibasin_lstm\\reports\\initial",
+        "new":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\evaluation comparison\\pretrained_multibasin_lstm"
+    },
+    {
+        "old":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\fine_tuned_global_pretrained_lstm\\reports\\initial",
+        "new":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\evaluation comparison\\global_pretrained_lstm"
+    },
+    {
+        "old":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\hybrid_physics_ml\\reports\\initial",
+        "new":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\evaluation comparison\\hybrid_physics_ml"
+    },
+    {
+        "old":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\spatially_distributed_model\\reports\\initial",
+        "new":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\evaluation comparison\\spatially_distributed_model"
+    },
+    {
+        "old":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\encoder_decoder_lstm\\reports\\initial",
+        "new":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\evaluation comparison\\encoder_decoder_lstm"
+    },
+    {
+        "old":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\hbv_residual\\runs\\2026-10-30\\reports",
+        "new":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\evaluation comparison\\hbv_residual_2026-10-30\\reports"
+    },
+    {
+        "old":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\hbv_residual\\runs\\2026-10-30\\REPORT.md",
+        "new":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\evaluation comparison\\hbv_residual_2026-10-30\\REPORT.md"
+    },
+    {
+        "old":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\ensemble\\reports\\initial\\baselines.pkl",
+        "new":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\evaluation comparison\\initial_lstm_baselines\\baselines.pkl"
+    },
+    {
+        "old":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\ensemble\\reports\\initial\\evaluation_manifest.json",
+        "new":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\evaluation comparison\\initial_lstm_baselines\\evaluation_manifest.json"
+    },
+    {
+        "old":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\ensemble\\reports\\initial\\evaluation_report.md",
+        "new":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\evaluation comparison\\initial_lstm_baselines\\evaluation_report.md"
+    },
+    {
+        "old":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\ensemble\\reports\\initial\\predictions.csv",
+        "new":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\evaluation comparison\\initial_lstm_baselines\\predictions.csv"
+    },
+    {
+        "old":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\ensemble\\reports\\initial\\quantile_calibration.csv",
+        "new":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\evaluation comparison\\initial_lstm_baselines\\quantile_calibration.csv"
+    },
+    {
+        "old":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\ensemble\\reports\\initial\\scores_by_season_and_lead.csv",
+        "new":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\evaluation comparison\\initial_lstm_baselines\\scores_by_season_and_lead.csv"
+    },
+    {
+        "old":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\ensemble\\reports\\initial\\scores_overall.csv",
+        "new":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\evaluation comparison\\initial_lstm_baselines\\scores_overall.csv"
+    },
+    {
+        "old":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\ensemble\\reports\\initial\\skill_by_lead.png",
+        "new":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\evaluation comparison\\initial_lstm_baselines\\skill_by_lead.png"
+    },
+    {
+        "old":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\ensemble\\reports\\initial\\verification.json",
+        "new":  "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\evaluation comparison\\initial_lstm_baselines\\verification.json"
+    }
+]

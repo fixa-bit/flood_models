@@ -1,0 +1,16 @@
+{
+  "authentication_verified": true,
+  "jobs": [
+    {
+      "jobID": "8e956f40-d250-4dbb-860f-b40c986a0fc2",
+      "job_id": null,
+      "request_id": null,
+      "status": "running",
+      "processID": "cems-glofas-reforecast",
+      "created": "2026-10-30T11:02:29.944544",
+      "started": "2026-10-30T11:02:52.742781",
+      "finished": null,
+      "message": null
+    }
+  ]
+}

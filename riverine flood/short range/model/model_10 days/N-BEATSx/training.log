@@ -1,0 +1,20 @@
+Seed 42 epoch 1/40: train=0.13757, validation=0.11717
+Seed 42 epoch 2/40: train=0.09989, validation=0.10686
+Seed 42 epoch 3/40: train=0.08665, validation=0.10379
+Seed 42 epoch 4/40: train=0.07736, validation=0.09984
+Seed 42 epoch 5/40: train=0.07333, validation=0.10379
+Seed 42 epoch 6/40: train=0.06892, validation=0.09832
+Seed 42 epoch 7/40: train=0.06651, validation=0.10734
+Seed 42 epoch 8/40: train=0.06496, validation=0.09790
+Seed 42 epoch 9/40: train=0.06001, validation=0.09951
+Seed 42 epoch 10/40: train=0.05981, validation=0.09785
+Seed 42 epoch 11/40: train=0.05425, validation=0.09711
+Seed 42 epoch 12/40: train=0.05298, validation=0.09615
+Seed 42 epoch 13/40: train=0.05157, validation=0.09822
+Seed 42 epoch 14/40: train=0.05042, validation=0.10018
+Seed 42 epoch 15/40: train=0.04932, validation=0.10169
+Seed 42 epoch 16/40: train=0.04981, validation=0.09951
+Seed 42 epoch 17/40: train=0.04852, validation=0.10070
+Seed 42 epoch 18/40: train=0.04626, validation=0.09887
+Seed 42 epoch 19/40: train=0.04493, validation=0.10180
+Completed nbeatsx ['D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\N-BEATSx\\runs\\initial\\seed_42\\best.pt']

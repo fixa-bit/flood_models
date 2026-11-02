@@ -1,0 +1,13 @@
+{
+  "original_and_local_data_byte_identical": true,
+  "observed_test_targets_exactly_preserved": true,
+  "upstream_physics_bytes_match_pinned_sources": true,
+  "original_lstm_forecast_weather_matched_before_precipitation_clipping": true,
+  "observed_test_sample_dates_match_original_lstm": true,
+  "saved_metrics_independently_reproduced": true,
+  "loaded_checkpoint_reproduces_saved_predictions": true,
+  "correctness_tests_passed": 5,
+  "source_sha256": "d21788d62afc9e54d8e2aa6e1f27dcc244ef3b6a1a734249650abd84ccdbe11f",
+  "training_capped_at_configured_epochs": true,
+  "convergence_established": false
+}

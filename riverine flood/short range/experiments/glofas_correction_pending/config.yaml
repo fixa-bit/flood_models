@@ -1,0 +1,70 @@
+project_config: ../config.yaml
+catchment_metadata: ../../dataset/chenab_marala/raw/marala/temperature/google_earth_engine/catchment_metadata.json
+station:
+  name: Marala
+  latitude: 32.67
+  longitude: 74.46
+  upstream_area_km2: null
+  area_source: repository_research_delineation_not_official_gauge_area
+  relative_area_tolerance: 0.20
+  search_radius_km: 15
+  selection: nearest_area_match
+  cell_override: null
+download:
+  api_url: https://ewds.climate.copernicus.eu/api
+  credential_file: null
+  system_version: version_4_0
+  forecast_system_version: operational
+  hydrological_model: lisflood
+  max_lead_days: 30
+  forecast_dates: ['2026-10-29']
+  reforecast_years: [2016, 2017, 2018, 2019, 2020, 2021, 2022]
+  reforecast_months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+  auxiliary_url: https://confluence.ecmwf.int/download/attachments/242067380/uparea_glofas_v4_0.nc?version=2
+  raw_dir: data/raw
+  grid_report: data/grid_cell.json
+  forecast_file: data/processed/forecasts.csv.gz
+  reforecast_file: data/processed/reforecasts.csv.gz
+  expected_reforecast_members: 11
+  publication_lag_hours: 12
+  # GloFAS is a preceding-24-hour mean stamped at its END; gauge alignment is an assumption.
+  observed_date_alignment: validity_end_date
+experiment:
+  first_training_year: 2016
+  first_oof_year: 2018
+  test_years: [2021, 2022]
+  monsoon_months: [6, 7, 8, 9]
+  observation_lag_days: 1
+  use_weather_features: false  # avoid assuming CHIRPS/ERA5 final data were published by issue time
+  min_samples_per_horizon: 40
+  min_qrf_samples: 40
+  thresholds_cumecs: {}
+  statistical_threshold_quantiles: [0.90, 0.95, 0.99]
+  seed: 42
+  threads: 2
+  output_dir: runs/initial
+  weekly_statistic: maximum
+bias:
+  min_pairs: 25
+  n_quantiles: 101
+  tail_slope: 1.0
+residual:
+  n_estimators: 150
+  learning_rate: 0.04
+  num_leaves: 7
+  min_child_samples: 25
+  reg_lambda: 5.0
+postprocessing:
+  n_estimators: 150
+  min_samples_leaf: 15
+  max_depth: 8
+  max_samples_leaf: null
+blending:
+  min_samples: 40
+  peak_weight: 2.0
+  # Existing OOF predictions must not use realized future weather by default.
+  allow_reanalysis_existing: false
+  existing_predictions: ../hbv_residual/runs/2026-10-30/reports/rolling_predictions.csv.gz
+  existing_model: HBV_LSTM
+  existing_folds_dir: ../hbv_residual/runs/2026-10-30/folds
+  imported_oof_file: null

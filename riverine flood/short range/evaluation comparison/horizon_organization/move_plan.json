@@ -1,0 +1,272 @@
+[
+  {
+    "name": "catchment_mean_lstm",
+    "horizon": 10,
+    "evidence": "config.yaml: data.forecast_horizon",
+    "checkpoint_evidence": [
+      "runs/initial/seed_42/best.pt: 10"
+    ],
+    "old": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\catchment_mean_lstm",
+    "new": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\model_10 days\\catchment_mean_lstm",
+    "status": "saved run",
+    "reference_checkpoints_are_not_separate_forecast_variants": false
+  },
+  {
+    "name": "climatology",
+    "horizon": 10,
+    "evidence": "config.yaml: data.forecast_horizon",
+    "checkpoint_evidence": [],
+    "old": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\climatology",
+    "new": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\model_10 days\\climatology",
+    "status": "saved run",
+    "reference_checkpoints_are_not_separate_forecast_variants": false
+  },
+  {
+    "name": "delta_hbv",
+    "horizon": 10,
+    "evidence": "config.yaml: data.forecast_horizon",
+    "checkpoint_evidence": [
+      "runs/initial/seed_42/best.pt: 10"
+    ],
+    "old": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\delta_hbv",
+    "new": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\model_10 days\\delta_hbv",
+    "status": "saved run",
+    "reference_checkpoints_are_not_separate_forecast_variants": false
+  },
+  {
+    "name": "ensemble",
+    "horizon": 10,
+    "evidence": "config.yaml: data.forecast_horizon",
+    "checkpoint_evidence": [],
+    "old": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\ensemble",
+    "new": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\model_10 days\\ensemble",
+    "status": "saved run",
+    "reference_checkpoints_are_not_separate_forecast_variants": false
+  },
+  {
+    "name": "fine_tuned_global_pretrained_lstm",
+    "horizon": 10,
+    "evidence": "config.yaml: data.forecast_horizon",
+    "checkpoint_evidence": [],
+    "old": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\fine_tuned_global_pretrained_lstm",
+    "new": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\model_10 days\\fine_tuned_global_pretrained_lstm",
+    "status": "saved run",
+    "reference_checkpoints_are_not_separate_forecast_variants": false
+  },
+  {
+    "name": "gradient_boosting",
+    "horizon": 10,
+    "evidence": "config.yaml: data.forecast_horizon",
+    "checkpoint_evidence": [],
+    "old": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\gradient_boosting",
+    "new": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\model_10 days\\gradient_boosting",
+    "status": "saved run",
+    "reference_checkpoints_are_not_separate_forecast_variants": false
+  },
+  {
+    "name": "hbv_lightgbm",
+    "horizon": 10,
+    "evidence": "config.json: horizon",
+    "checkpoint_evidence": [],
+    "old": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\hbv_lightgbm",
+    "new": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\model_10 days\\hbv_lightgbm",
+    "status": "saved run",
+    "reference_checkpoints_are_not_separate_forecast_variants": false
+  },
+  {
+    "name": "hbv_lstm",
+    "horizon": 10,
+    "evidence": "config.json: horizon",
+    "checkpoint_evidence": [],
+    "old": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\hbv_lstm",
+    "new": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\model_10 days\\hbv_lstm",
+    "status": "saved run",
+    "reference_checkpoints_are_not_separate_forecast_variants": false
+  },
+  {
+    "name": "hbv_residual",
+    "horizon": 10,
+    "evidence": "config.json: horizon",
+    "checkpoint_evidence": [],
+    "old": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\hbv_residual",
+    "new": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\model_10 days\\hbv_residual",
+    "status": "saved run",
+    "reference_checkpoints_are_not_separate_forecast_variants": false
+  },
+  {
+    "name": "hybrid_physics_ml",
+    "horizon": 10,
+    "evidence": "config.yaml: data.forecast_horizon",
+    "checkpoint_evidence": [
+      "runs/initial/seed_42/best.pt: 10"
+    ],
+    "old": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\hybrid_physics_ml",
+    "new": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\model_10 days\\hybrid_physics_ml",
+    "status": "saved run",
+    "reference_checkpoints_are_not_separate_forecast_variants": false
+  },
+  {
+    "name": "lstm",
+    "horizon": 10,
+    "evidence": "config.yaml: data.forecast_horizon",
+    "checkpoint_evidence": [
+      "runs/initial/seed_42/best.pt: 10"
+    ],
+    "old": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\lstm",
+    "new": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\model_10 days\\lstm",
+    "status": "saved run",
+    "reference_checkpoints_are_not_separate_forecast_variants": false
+  },
+  {
+    "name": "lstm_past_discharge_weather",
+    "horizon": 10,
+    "evidence": "config.yaml: data.forecast_horizon",
+    "checkpoint_evidence": [
+      "runs/initial/seed_42/best.pt: 10"
+    ],
+    "old": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\lstm_past_discharge_weather",
+    "new": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\model_10 days\\lstm_past_discharge_weather",
+    "status": "saved run",
+    "reference_checkpoints_are_not_separate_forecast_variants": false
+  },
+  {
+    "name": "lstm_two_input_scratch",
+    "horizon": 10,
+    "evidence": "config.yaml: data.forecast_horizon",
+    "checkpoint_evidence": [
+      "runs/initial/seed_42/best.pt: 10"
+    ],
+    "old": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\lstm_two_input_scratch",
+    "new": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\model_10 days\\lstm_two_input_scratch",
+    "status": "saved run",
+    "reference_checkpoints_are_not_separate_forecast_variants": false
+  },
+  {
+    "name": "N-BEATSx",
+    "horizon": 10,
+    "evidence": "config.yaml: data.forecast_horizon",
+    "checkpoint_evidence": [
+      "runs/initial/seed_42/best.pt: 10"
+    ],
+    "old": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\N-BEATSx",
+    "new": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\model_10 days\\N-BEATSx",
+    "status": "saved run",
+    "reference_checkpoints_are_not_separate_forecast_variants": false
+  },
+  {
+    "name": "N-HiTS",
+    "horizon": 10,
+    "evidence": "config.yaml: data.forecast_horizon",
+    "checkpoint_evidence": [
+      "runs/initial/seed_42/best.pt: 10"
+    ],
+    "old": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\N-HiTS",
+    "new": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\model_10 days\\N-HiTS",
+    "status": "saved run",
+    "reference_checkpoints_are_not_separate_forecast_variants": false
+  },
+  {
+    "name": "persistence",
+    "horizon": 10,
+    "evidence": "config.yaml: data.forecast_horizon",
+    "checkpoint_evidence": [],
+    "old": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\persistence",
+    "new": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\model_10 days\\persistence",
+    "status": "saved run",
+    "reference_checkpoints_are_not_separate_forecast_variants": false
+  },
+  {
+    "name": "pretrained_multibasin_lstm",
+    "horizon": 10,
+    "evidence": "config.yaml: data.forecast_horizon",
+    "checkpoint_evidence": [
+      "runs/initial/seed_42/best.pt: 10"
+    ],
+    "old": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\pretrained_multibasin_lstm",
+    "new": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\model_10 days\\pretrained_multibasin_lstm",
+    "status": "saved run",
+    "reference_checkpoints_are_not_separate_forecast_variants": false
+  },
+  {
+    "name": "pretrained_multibasin_lstm_finetuned",
+    "horizon": 10,
+    "evidence": "config.yaml: data.forecast_horizon",
+    "checkpoint_evidence": [
+      "runs/initial/seed_42/best.pt: 10"
+    ],
+    "old": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\pretrained_multibasin_lstm_finetuned",
+    "new": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\model_10 days\\pretrained_multibasin_lstm_finetuned",
+    "status": "saved run",
+    "reference_checkpoints_are_not_separate_forecast_variants": false
+  },
+  {
+    "name": "spatially_distributed_model",
+    "horizon": 10,
+    "evidence": "config.yaml: data.forecast_horizon",
+    "checkpoint_evidence": [
+      "runs/initial/seed_42/best.pt: 10"
+    ],
+    "old": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\spatially_distributed_model",
+    "new": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\model_10 days\\spatially_distributed_model",
+    "status": "saved run",
+    "reference_checkpoints_are_not_separate_forecast_variants": false
+  },
+  {
+    "name": "discharge_history_lstm",
+    "horizon": 15,
+    "evidence": "train.py: HORIZON",
+    "checkpoint_evidence": [
+      "observed_only/model.pt: 15"
+    ],
+    "old": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\discharge_history_lstm",
+    "new": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\model_15 days\\discharge_history_lstm",
+    "status": "saved run",
+    "reference_checkpoints_are_not_separate_forecast_variants": false
+  },
+  {
+    "name": "encoder_decoder_lstm",
+    "horizon": 15,
+    "evidence": "config.yaml: data.forecast_horizon",
+    "checkpoint_evidence": [
+      "runs/initial/seed_42/best.pt: 15"
+    ],
+    "old": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\encoder_decoder_lstm",
+    "new": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\model_15 days\\encoder_decoder_lstm",
+    "status": "saved run",
+    "reference_checkpoints_are_not_separate_forecast_variants": true
+  },
+  {
+    "name": "encoder_decoder_lstm_finetuned",
+    "horizon": 15,
+    "evidence": "config.yaml: data.forecast_horizon",
+    "checkpoint_evidence": [
+      "runs/initial/seed_42/best.pt: 15"
+    ],
+    "old": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\encoder_decoder_lstm_finetuned",
+    "new": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\model_15 days\\encoder_decoder_lstm_finetuned",
+    "status": "saved run",
+    "reference_checkpoints_are_not_separate_forecast_variants": true
+  },
+  {
+    "name": "grrr_lstm",
+    "horizon": 15,
+    "evidence": "protocol.json: architecture.horizon",
+    "checkpoint_evidence": [
+      "runs/initial/nan_gaps.pt: 15"
+    ],
+    "old": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\grrr_lstm",
+    "new": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\model_15 days\\grrr_lstm",
+    "status": "saved run",
+    "reference_checkpoints_are_not_separate_forecast_variants": false
+  },
+  {
+    "name": "grrr_lstm_weighted_fills_rejected",
+    "horizon": 15,
+    "evidence": "protocol.json: architecture.horizon",
+    "checkpoint_evidence": [],
+    "old": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\grrr_lstm_weighted_fills_rejected",
+    "new": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\model_15 days\\grrr_lstm_weighted_fills_rejected",
+    "status": "rejected; checkpoint not retained",
+    "reference_checkpoints_are_not_separate_forecast_variants": false
+  }
+]

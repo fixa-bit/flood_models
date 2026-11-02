@@ -1,0 +1,27 @@
+{
+  "pdf": "irsa_wcap_volume1.pdf",
+  "embedded_files": [],
+  "links": [
+    {
+      "page": 160,
+      "url": "http://srtm.csi.cgiar.org/"
+    },
+    {
+      "page": 161,
+      "url": "ftp://n5eil01u.ecs.nsidc.org/SAN/MOST/MOD10A1.005/"
+    },
+    {
+      "page": 196,
+      "url": "ftp://ftp.ncdc.noaa.gov/pub/data/gsod/"
+    },
+    {
+      "page": 201,
+      "url": "ftp://ftp.ncdc.noaa.gov/pub/data/gsod/"
+    },
+    {
+      "page": 269,
+      "url": "http://www.r-project.org/"
+    }
+  ],
+  "supplement_references": []
+}

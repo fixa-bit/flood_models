@@ -1,0 +1,101 @@
+{
+  "test_years_used": [
+    2022,
+    2023,
+    2024
+  ],
+  "unique_observed_basin_days": 1084,
+  "observed_forecast_target_pairs": 10795,
+  "availability": {
+    "train": {
+      "samples": 1767,
+      "target_values_observed": 17625,
+      "forecast_input_missing_pct": 0.0,
+      "entire_forecast_window_missing_samples": 0
+    },
+    "validation": {
+      "samples": 356,
+      "target_values_observed": 3550,
+      "forecast_input_missing_pct": 0.0,
+      "entire_forecast_window_missing_samples": 0
+    },
+    "test": {
+      "samples": 1084,
+      "target_values_observed": 10795,
+      "forecast_input_missing_pct": 0.0,
+      "entire_forecast_window_missing_samples": 0
+    }
+  },
+  "checkpoint_paths": [
+    "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\lstm\\runs\\initial\\seed_42\\best.pt"
+  ],
+  "training_years_ever_used": [
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
+  ],
+  "selection_years_ever_used": [
+    2021
+  ],
+  "forecast_mode": "reanalysis_with_noise",
+  "thresholds": {
+    "marala": {
+      "peak": 2494.7141847552,
+      "flood": 2494.7141847552
+    }
+  },
+  "daily_file_sha256": "d21788d62afc9e54d8e2aa6e1f27dcc244ef3b6a1a734249650abd84ccdbe11f",
+  "ensemble_fit_years": [
+    2021
+  ],
+  "ensemble_members": [
+    "LSTM",
+    "gradient_boosting"
+  ],
+  "ensemble_weights": [
+    [
+      0.5755700572878834,
+      0.42442994271211676
+    ],
+    [
+      0.38614412104347445,
+      0.6138558789565255
+    ],
+    [
+      0.4829452778956749,
+      0.5170547221043251
+    ],
+    [
+      0.5874347981681521,
+      0.4125652018318479
+    ],
+    [
+      0.740537965269777,
+      0.259462034730223
+    ],
+    [
+      0.5559787750127809,
+      0.444021224987219
+    ],
+    [
+      0.8443489351161296,
+      0.15565106488387037
+    ],
+    [
+      1.0,
+      0.0
+    ],
+    [
+      1.0,
+      0.0
+    ],
+    [
+      0.8013946147898107,
+      0.1986053852101893
+    ]
+  ],
+  "no_discharge_filled": true,
+  "lstm_seed_members": 1
+}

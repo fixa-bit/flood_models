@@ -1,0 +1,30 @@
+{
+  "calendar": [
+    3455,
+    359,
+    13442,
+    8,
+    8,
+    30
+  ],
+  "review_days": [
+    18,
+    13,
+    3248,
+    0,
+    0,
+    0
+  ],
+  "zeroes_withheld_dates_and_time_certainty": true,
+  "full_collected_history": {
+    "start": "1970-07-02",
+    "end": "2026-10-23",
+    "days": 20568
+  },
+  "independent_native_scroll_and_modes": true,
+  "mobile_layout": {
+    "scroll": 390,
+    "width": 390
+  },
+  "browser_errors": []
+}

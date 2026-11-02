@@ -1,0 +1,33 @@
+{
+  "model": "NBEATSx",
+  "checkpoints": [
+    "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\N-BEATSx\\runs\\initial\\seed_42\\best.pt"
+  ],
+  "test_years": [
+    2022,
+    2023,
+    2024
+  ],
+  "unique_observed_test_days": 1084,
+  "observed_issue_lead_pairs": 10795,
+  "missing_target_pairs_not_scored": 45,
+  "peak_threshold_cumecs": 2494.7141847552,
+  "flood_threshold_cumecs": 2494.7141847552,
+  "past_discharge": true,
+  "forecast_mode": "reanalysis_with_noise",
+  "all_future_weather_inputs_identical_to_original_experiment": true,
+  "source_sha256": "d21788d62afc9e54d8e2aa6e1f27dcc244ef3b6a1a734249650abd84ccdbe11f",
+  "no_discharge_filling": true,
+  "run_details": [
+    {
+      "seed": 42,
+      "epochs_run": 19,
+      "selected_epoch": 12,
+      "validation_pinball": 0.09614819393191538,
+      "training_seconds": 24.224515000001702,
+      "trainable_parameters": 1737437,
+      "train_samples": 1767,
+      "validation_samples": 356
+    }
+  ]
+}

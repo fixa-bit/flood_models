@@ -1,0 +1,13 @@
+{
+  "shared_synthetic_tests_passed": 15,
+  "hybrid_synthetic_tests_passed": 5,
+  "original_source_sha256_unchanged": true,
+  "observed_targets_and_nan_positions_preserved_in_outputs": true,
+  "finite_noncrossing_quantiles": true,
+  "physical_parameters_within_bounds": true,
+  "test_years_disjoint_from_training_and_selection_years": true,
+  "score_rows": 60,
+  "seasonal_score_rows": 180,
+  "maximum_bucket_water_balance_residual_mm": 0.0003504753112792969,
+  "no_test_driven_retraining": true
+}

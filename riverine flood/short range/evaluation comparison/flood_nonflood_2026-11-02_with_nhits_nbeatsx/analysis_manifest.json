@@ -1,0 +1,994 @@
+{
+  "report_date": "2026-11-02",
+  "flood_definition": "observed Q > observed-training Q95",
+  "no_retraining": true,
+  "no_discharge_filling": true,
+  "all_input_hashes_unchanged": true,
+  "overall_day10_scores_reproduced": true,
+  "group_error_partitions_verified": true,
+  "cohorts": {
+    "main_2022_2024": {
+      "models": [
+        "Original LSTM",
+        "Gradient boosting",
+        "LSTM + boosting ensemble",
+        "Persistence",
+        "Climatology",
+        "Global LSTM fine-tuned",
+        "Global LSTM zero-shot (reference)",
+        "Elevation-band LSTM",
+        "Catchment-mean LSTM control",
+        "Snow-bucket + LSTM",
+        "8-basin LSTM fine-tuned",
+        "2-input LSTM scratch",
+        "8-basin donor LSTM without adaptation",
+        "15-day seq2seq fine-tuned",
+        "15-day seq2seq scratch",
+        "N-HiTS",
+        "N-BEATSx",
+        "Matched past-Q/weather LSTM"
+      ],
+      "thresholds_cumecs": [
+        2494.7141847552
+      ],
+      "counts_by_lead": [
+        {
+          "lead_day": 1,
+          "n": 1082,
+          "flood_n": 51,
+          "unique_days": 1082,
+          "unique_flood_days": 51,
+          "excluded_for_common_alignment": {
+            "Original LSTM": 2,
+            "Gradient boosting": 2,
+            "LSTM + boosting ensemble": 2,
+            "Persistence": 2,
+            "Climatology": 2,
+            "Global LSTM fine-tuned": 2,
+            "Global LSTM zero-shot (reference)": 2,
+            "Elevation-band LSTM": 2,
+            "Catchment-mean LSTM control": 2,
+            "Snow-bucket + LSTM": 2,
+            "8-basin LSTM fine-tuned": 2,
+            "2-input LSTM scratch": 2,
+            "8-basin donor LSTM without adaptation": 2,
+            "15-day seq2seq fine-tuned": 0,
+            "15-day seq2seq scratch": 0,
+            "N-HiTS": 2,
+            "N-BEATSx": 2,
+            "Matched past-Q/weather LSTM": 2
+          }
+        },
+        {
+          "lead_day": 2,
+          "n": 1082,
+          "flood_n": 51,
+          "unique_days": 1082,
+          "unique_flood_days": 51,
+          "excluded_for_common_alignment": {
+            "Original LSTM": 1,
+            "Gradient boosting": 1,
+            "LSTM + boosting ensemble": 1,
+            "Persistence": 1,
+            "Climatology": 1,
+            "Global LSTM fine-tuned": 1,
+            "Global LSTM zero-shot (reference)": 1,
+            "Elevation-band LSTM": 1,
+            "Catchment-mean LSTM control": 1,
+            "Snow-bucket + LSTM": 1,
+            "8-basin LSTM fine-tuned": 1,
+            "2-input LSTM scratch": 1,
+            "8-basin donor LSTM without adaptation": 1,
+            "15-day seq2seq fine-tuned": 0,
+            "15-day seq2seq scratch": 0,
+            "N-HiTS": 1,
+            "N-BEATSx": 1,
+            "Matched past-Q/weather LSTM": 1
+          }
+        },
+        {
+          "lead_day": 3,
+          "n": 1082,
+          "flood_n": 51,
+          "unique_days": 1082,
+          "unique_flood_days": 51,
+          "excluded_for_common_alignment": {
+            "Original LSTM": 0,
+            "Gradient boosting": 0,
+            "LSTM + boosting ensemble": 0,
+            "Persistence": 0,
+            "Climatology": 0,
+            "Global LSTM fine-tuned": 0,
+            "Global LSTM zero-shot (reference)": 0,
+            "Elevation-band LSTM": 0,
+            "Catchment-mean LSTM control": 0,
+            "Snow-bucket + LSTM": 0,
+            "8-basin LSTM fine-tuned": 0,
+            "2-input LSTM scratch": 0,
+            "8-basin donor LSTM without adaptation": 0,
+            "15-day seq2seq fine-tuned": 0,
+            "15-day seq2seq scratch": 0,
+            "N-HiTS": 0,
+            "N-BEATSx": 0,
+            "Matched past-Q/weather LSTM": 0
+          }
+        },
+        {
+          "lead_day": 4,
+          "n": 1081,
+          "flood_n": 51,
+          "unique_days": 1081,
+          "unique_flood_days": 51,
+          "excluded_for_common_alignment": {
+            "Original LSTM": 0,
+            "Gradient boosting": 0,
+            "LSTM + boosting ensemble": 0,
+            "Persistence": 0,
+            "Climatology": 0,
+            "Global LSTM fine-tuned": 0,
+            "Global LSTM zero-shot (reference)": 0,
+            "Elevation-band LSTM": 0,
+            "Catchment-mean LSTM control": 0,
+            "Snow-bucket + LSTM": 0,
+            "8-basin LSTM fine-tuned": 0,
+            "2-input LSTM scratch": 0,
+            "8-basin donor LSTM without adaptation": 0,
+            "15-day seq2seq fine-tuned": 0,
+            "15-day seq2seq scratch": 0,
+            "N-HiTS": 0,
+            "N-BEATSx": 0,
+            "Matched past-Q/weather LSTM": 0
+          }
+        },
+        {
+          "lead_day": 5,
+          "n": 1080,
+          "flood_n": 51,
+          "unique_days": 1080,
+          "unique_flood_days": 51,
+          "excluded_for_common_alignment": {
+            "Original LSTM": 0,
+            "Gradient boosting": 0,
+            "LSTM + boosting ensemble": 0,
+            "Persistence": 0,
+            "Climatology": 0,
+            "Global LSTM fine-tuned": 0,
+            "Global LSTM zero-shot (reference)": 0,
+            "Elevation-band LSTM": 0,
+            "Catchment-mean LSTM control": 0,
+            "Snow-bucket + LSTM": 0,
+            "8-basin LSTM fine-tuned": 0,
+            "2-input LSTM scratch": 0,
+            "8-basin donor LSTM without adaptation": 0,
+            "15-day seq2seq fine-tuned": 0,
+            "15-day seq2seq scratch": 0,
+            "N-HiTS": 0,
+            "N-BEATSx": 0,
+            "Matched past-Q/weather LSTM": 0
+          }
+        },
+        {
+          "lead_day": 6,
+          "n": 1079,
+          "flood_n": 51,
+          "unique_days": 1079,
+          "unique_flood_days": 51,
+          "excluded_for_common_alignment": {
+            "Original LSTM": 0,
+            "Gradient boosting": 0,
+            "LSTM + boosting ensemble": 0,
+            "Persistence": 0,
+            "Climatology": 0,
+            "Global LSTM fine-tuned": 0,
+            "Global LSTM zero-shot (reference)": 0,
+            "Elevation-band LSTM": 0,
+            "Catchment-mean LSTM control": 0,
+            "Snow-bucket + LSTM": 0,
+            "8-basin LSTM fine-tuned": 0,
+            "2-input LSTM scratch": 0,
+            "8-basin donor LSTM without adaptation": 0,
+            "15-day seq2seq fine-tuned": 0,
+            "15-day seq2seq scratch": 0,
+            "N-HiTS": 0,
+            "N-BEATSx": 0,
+            "Matched past-Q/weather LSTM": 0
+          }
+        },
+        {
+          "lead_day": 7,
+          "n": 1078,
+          "flood_n": 51,
+          "unique_days": 1078,
+          "unique_flood_days": 51,
+          "excluded_for_common_alignment": {
+            "Original LSTM": 0,
+            "Gradient boosting": 0,
+            "LSTM + boosting ensemble": 0,
+            "Persistence": 0,
+            "Climatology": 0,
+            "Global LSTM fine-tuned": 0,
+            "Global LSTM zero-shot (reference)": 0,
+            "Elevation-band LSTM": 0,
+            "Catchment-mean LSTM control": 0,
+            "Snow-bucket + LSTM": 0,
+            "8-basin LSTM fine-tuned": 0,
+            "2-input LSTM scratch": 0,
+            "8-basin donor LSTM without adaptation": 0,
+            "15-day seq2seq fine-tuned": 0,
+            "15-day seq2seq scratch": 0,
+            "N-HiTS": 0,
+            "N-BEATSx": 0,
+            "Matched past-Q/weather LSTM": 0
+          }
+        },
+        {
+          "lead_day": 8,
+          "n": 1077,
+          "flood_n": 51,
+          "unique_days": 1077,
+          "unique_flood_days": 51,
+          "excluded_for_common_alignment": {
+            "Original LSTM": 0,
+            "Gradient boosting": 0,
+            "LSTM + boosting ensemble": 0,
+            "Persistence": 0,
+            "Climatology": 0,
+            "Global LSTM fine-tuned": 0,
+            "Global LSTM zero-shot (reference)": 0,
+            "Elevation-band LSTM": 0,
+            "Catchment-mean LSTM control": 0,
+            "Snow-bucket + LSTM": 0,
+            "8-basin LSTM fine-tuned": 0,
+            "2-input LSTM scratch": 0,
+            "8-basin donor LSTM without adaptation": 0,
+            "15-day seq2seq fine-tuned": 0,
+            "15-day seq2seq scratch": 0,
+            "N-HiTS": 0,
+            "N-BEATSx": 0,
+            "Matched past-Q/weather LSTM": 0
+          }
+        },
+        {
+          "lead_day": 9,
+          "n": 1076,
+          "flood_n": 51,
+          "unique_days": 1076,
+          "unique_flood_days": 51,
+          "excluded_for_common_alignment": {
+            "Original LSTM": 0,
+            "Gradient boosting": 0,
+            "LSTM + boosting ensemble": 0,
+            "Persistence": 0,
+            "Climatology": 0,
+            "Global LSTM fine-tuned": 0,
+            "Global LSTM zero-shot (reference)": 0,
+            "Elevation-band LSTM": 0,
+            "Catchment-mean LSTM control": 0,
+            "Snow-bucket + LSTM": 0,
+            "8-basin LSTM fine-tuned": 0,
+            "2-input LSTM scratch": 0,
+            "8-basin donor LSTM without adaptation": 0,
+            "15-day seq2seq fine-tuned": 0,
+            "15-day seq2seq scratch": 0,
+            "N-HiTS": 0,
+            "N-BEATSx": 0,
+            "Matched past-Q/weather LSTM": 0
+          }
+        },
+        {
+          "lead_day": 10,
+          "n": 1075,
+          "flood_n": 51,
+          "unique_days": 1075,
+          "unique_flood_days": 51,
+          "excluded_for_common_alignment": {
+            "Original LSTM": 0,
+            "Gradient boosting": 0,
+            "LSTM + boosting ensemble": 0,
+            "Persistence": 0,
+            "Climatology": 0,
+            "Global LSTM fine-tuned": 0,
+            "Global LSTM zero-shot (reference)": 0,
+            "Elevation-band LSTM": 0,
+            "Catchment-mean LSTM control": 0,
+            "Snow-bucket + LSTM": 0,
+            "8-basin LSTM fine-tuned": 0,
+            "2-input LSTM scratch": 0,
+            "8-basin donor LSTM without adaptation": 0,
+            "15-day seq2seq fine-tuned": 0,
+            "15-day seq2seq scratch": 0,
+            "N-HiTS": 0,
+            "N-BEATSx": 0,
+            "Matched past-Q/weather LSTM": 0
+          }
+        }
+      ],
+      "first_test_date": "2022-01-01",
+      "last_test_date": "2024-12-19"
+    },
+    "seq2seq_15day_2022_2024": {
+      "models": [
+        "15-day seq2seq fine-tuned",
+        "15-day seq2seq scratch",
+        "Persistence",
+        "Climatology"
+      ],
+      "thresholds_cumecs": [
+        2494.7141847552
+      ],
+      "counts_by_lead": [
+        {
+          "lead_day": 1,
+          "n": 1082,
+          "flood_n": 51,
+          "unique_days": 1082,
+          "unique_flood_days": 51,
+          "excluded_for_common_alignment": {
+            "15-day seq2seq fine-tuned": 0,
+            "15-day seq2seq scratch": 0,
+            "Persistence": 0,
+            "Climatology": 0
+          }
+        },
+        {
+          "lead_day": 2,
+          "n": 1082,
+          "flood_n": 51,
+          "unique_days": 1082,
+          "unique_flood_days": 51,
+          "excluded_for_common_alignment": {
+            "15-day seq2seq fine-tuned": 0,
+            "15-day seq2seq scratch": 0,
+            "Persistence": 0,
+            "Climatology": 0
+          }
+        },
+        {
+          "lead_day": 3,
+          "n": 1082,
+          "flood_n": 51,
+          "unique_days": 1082,
+          "unique_flood_days": 51,
+          "excluded_for_common_alignment": {
+            "15-day seq2seq fine-tuned": 0,
+            "15-day seq2seq scratch": 0,
+            "Persistence": 0,
+            "Climatology": 0
+          }
+        },
+        {
+          "lead_day": 4,
+          "n": 1081,
+          "flood_n": 51,
+          "unique_days": 1081,
+          "unique_flood_days": 51,
+          "excluded_for_common_alignment": {
+            "15-day seq2seq fine-tuned": 0,
+            "15-day seq2seq scratch": 0,
+            "Persistence": 0,
+            "Climatology": 0
+          }
+        },
+        {
+          "lead_day": 5,
+          "n": 1080,
+          "flood_n": 51,
+          "unique_days": 1080,
+          "unique_flood_days": 51,
+          "excluded_for_common_alignment": {
+            "15-day seq2seq fine-tuned": 0,
+            "15-day seq2seq scratch": 0,
+            "Persistence": 0,
+            "Climatology": 0
+          }
+        },
+        {
+          "lead_day": 6,
+          "n": 1079,
+          "flood_n": 51,
+          "unique_days": 1079,
+          "unique_flood_days": 51,
+          "excluded_for_common_alignment": {
+            "15-day seq2seq fine-tuned": 0,
+            "15-day seq2seq scratch": 0,
+            "Persistence": 0,
+            "Climatology": 0
+          }
+        },
+        {
+          "lead_day": 7,
+          "n": 1078,
+          "flood_n": 51,
+          "unique_days": 1078,
+          "unique_flood_days": 51,
+          "excluded_for_common_alignment": {
+            "15-day seq2seq fine-tuned": 0,
+            "15-day seq2seq scratch": 0,
+            "Persistence": 0,
+            "Climatology": 0
+          }
+        },
+        {
+          "lead_day": 8,
+          "n": 1077,
+          "flood_n": 51,
+          "unique_days": 1077,
+          "unique_flood_days": 51,
+          "excluded_for_common_alignment": {
+            "15-day seq2seq fine-tuned": 0,
+            "15-day seq2seq scratch": 0,
+            "Persistence": 0,
+            "Climatology": 0
+          }
+        },
+        {
+          "lead_day": 9,
+          "n": 1076,
+          "flood_n": 51,
+          "unique_days": 1076,
+          "unique_flood_days": 51,
+          "excluded_for_common_alignment": {
+            "15-day seq2seq fine-tuned": 0,
+            "15-day seq2seq scratch": 0,
+            "Persistence": 0,
+            "Climatology": 0
+          }
+        },
+        {
+          "lead_day": 10,
+          "n": 1075,
+          "flood_n": 51,
+          "unique_days": 1075,
+          "unique_flood_days": 51,
+          "excluded_for_common_alignment": {
+            "15-day seq2seq fine-tuned": 0,
+            "15-day seq2seq scratch": 0,
+            "Persistence": 0,
+            "Climatology": 0
+          }
+        },
+        {
+          "lead_day": 11,
+          "n": 1074,
+          "flood_n": 51,
+          "unique_days": 1074,
+          "unique_flood_days": 51,
+          "excluded_for_common_alignment": {
+            "15-day seq2seq fine-tuned": 0,
+            "15-day seq2seq scratch": 0,
+            "Persistence": 0,
+            "Climatology": 0
+          }
+        },
+        {
+          "lead_day": 12,
+          "n": 1073,
+          "flood_n": 51,
+          "unique_days": 1073,
+          "unique_flood_days": 51,
+          "excluded_for_common_alignment": {
+            "15-day seq2seq fine-tuned": 0,
+            "15-day seq2seq scratch": 0,
+            "Persistence": 0,
+            "Climatology": 0
+          }
+        },
+        {
+          "lead_day": 13,
+          "n": 1072,
+          "flood_n": 51,
+          "unique_days": 1072,
+          "unique_flood_days": 51,
+          "excluded_for_common_alignment": {
+            "15-day seq2seq fine-tuned": 0,
+            "15-day seq2seq scratch": 0,
+            "Persistence": 0,
+            "Climatology": 0
+          }
+        },
+        {
+          "lead_day": 14,
+          "n": 1071,
+          "flood_n": 51,
+          "unique_days": 1071,
+          "unique_flood_days": 51,
+          "excluded_for_common_alignment": {
+            "15-day seq2seq fine-tuned": 0,
+            "15-day seq2seq scratch": 0,
+            "Persistence": 0,
+            "Climatology": 0
+          }
+        },
+        {
+          "lead_day": 15,
+          "n": 1070,
+          "flood_n": 51,
+          "unique_days": 1070,
+          "unique_flood_days": 51,
+          "excluded_for_common_alignment": {
+            "15-day seq2seq fine-tuned": 0,
+            "15-day seq2seq scratch": 0,
+            "Persistence": 0,
+            "Climatology": 0
+          }
+        }
+      ],
+      "first_test_date": "2022-01-01",
+      "last_test_date": "2024-12-19"
+    },
+    "hbv_monsoons_2021_2024": {
+      "models": [
+        "HBV",
+        "persistence",
+        "HBV_LightGBM",
+        "HBV_LSTM"
+      ],
+      "thresholds_cumecs": [
+        2487.6349731072,
+        2492.5904212608,
+        2494.7141847552,
+        2520.199346688
+      ],
+      "counts_by_lead": [
+        {
+          "lead_day": 1,
+          "n": 452,
+          "flood_n": 63,
+          "unique_days": 452,
+          "unique_flood_days": 63,
+          "excluded_for_common_alignment": {
+            "HBV": 0,
+            "persistence": 0,
+            "HBV_LightGBM": 0,
+            "HBV_LSTM": 0
+          }
+        },
+        {
+          "lead_day": 2,
+          "n": 452,
+          "flood_n": 63,
+          "unique_days": 452,
+          "unique_flood_days": 63,
+          "excluded_for_common_alignment": {
+            "HBV": 0,
+            "persistence": 0,
+            "HBV_LightGBM": 0,
+            "HBV_LSTM": 0
+          }
+        },
+        {
+          "lead_day": 3,
+          "n": 452,
+          "flood_n": 63,
+          "unique_days": 452,
+          "unique_flood_days": 63,
+          "excluded_for_common_alignment": {
+            "HBV": 0,
+            "persistence": 0,
+            "HBV_LightGBM": 0,
+            "HBV_LSTM": 0
+          }
+        },
+        {
+          "lead_day": 4,
+          "n": 452,
+          "flood_n": 63,
+          "unique_days": 452,
+          "unique_flood_days": 63,
+          "excluded_for_common_alignment": {
+            "HBV": 0,
+            "persistence": 0,
+            "HBV_LightGBM": 0,
+            "HBV_LSTM": 0
+          }
+        },
+        {
+          "lead_day": 5,
+          "n": 452,
+          "flood_n": 63,
+          "unique_days": 452,
+          "unique_flood_days": 63,
+          "excluded_for_common_alignment": {
+            "HBV": 0,
+            "persistence": 0,
+            "HBV_LightGBM": 0,
+            "HBV_LSTM": 0
+          }
+        },
+        {
+          "lead_day": 6,
+          "n": 452,
+          "flood_n": 63,
+          "unique_days": 452,
+          "unique_flood_days": 63,
+          "excluded_for_common_alignment": {
+            "HBV": 0,
+            "persistence": 0,
+            "HBV_LightGBM": 0,
+            "HBV_LSTM": 0
+          }
+        },
+        {
+          "lead_day": 7,
+          "n": 452,
+          "flood_n": 63,
+          "unique_days": 452,
+          "unique_flood_days": 63,
+          "excluded_for_common_alignment": {
+            "HBV": 0,
+            "persistence": 0,
+            "HBV_LightGBM": 0,
+            "HBV_LSTM": 0
+          }
+        },
+        {
+          "lead_day": 8,
+          "n": 452,
+          "flood_n": 63,
+          "unique_days": 452,
+          "unique_flood_days": 63,
+          "excluded_for_common_alignment": {
+            "HBV": 0,
+            "persistence": 0,
+            "HBV_LightGBM": 0,
+            "HBV_LSTM": 0
+          }
+        },
+        {
+          "lead_day": 9,
+          "n": 452,
+          "flood_n": 63,
+          "unique_days": 452,
+          "unique_flood_days": 63,
+          "excluded_for_common_alignment": {
+            "HBV": 0,
+            "persistence": 0,
+            "HBV_LightGBM": 0,
+            "HBV_LSTM": 0
+          }
+        },
+        {
+          "lead_day": 10,
+          "n": 452,
+          "flood_n": 63,
+          "unique_days": 452,
+          "unique_flood_days": 63,
+          "excluded_for_common_alignment": {
+            "HBV": 0,
+            "persistence": 0,
+            "HBV_LightGBM": 0,
+            "HBV_LSTM": 0
+          }
+        }
+      ],
+      "first_test_date": "2021-06-01",
+      "last_test_date": "2024-09-30"
+    },
+    "earlier_2023_2026": {
+      "models": [
+        "Discharge-history LSTM",
+        "LSTM + lagged GRRR, gaps retained",
+        "GRRR weighted-fill LSTM (rejected)",
+        "Persistence"
+      ],
+      "thresholds_cumecs": [
+        2487.6349731072
+      ],
+      "counts_by_lead": [
+        {
+          "lead_day": 1,
+          "n": 917,
+          "flood_n": 68,
+          "unique_days": 917,
+          "unique_flood_days": 68,
+          "excluded_for_common_alignment": {
+            "Discharge-history LSTM": 0,
+            "LSTM + lagged GRRR, gaps retained": 0,
+            "GRRR weighted-fill LSTM (rejected)": 0,
+            "Persistence": 0
+          }
+        },
+        {
+          "lead_day": 2,
+          "n": 915,
+          "flood_n": 67,
+          "unique_days": 915,
+          "unique_flood_days": 67,
+          "excluded_for_common_alignment": {
+            "Discharge-history LSTM": 0,
+            "LSTM + lagged GRRR, gaps retained": 0,
+            "GRRR weighted-fill LSTM (rejected)": 0,
+            "Persistence": 0
+          }
+        },
+        {
+          "lead_day": 3,
+          "n": 913,
+          "flood_n": 67,
+          "unique_days": 913,
+          "unique_flood_days": 67,
+          "excluded_for_common_alignment": {
+            "Discharge-history LSTM": 0,
+            "LSTM + lagged GRRR, gaps retained": 0,
+            "GRRR weighted-fill LSTM (rejected)": 0,
+            "Persistence": 0
+          }
+        },
+        {
+          "lead_day": 4,
+          "n": 912,
+          "flood_n": 67,
+          "unique_days": 912,
+          "unique_flood_days": 67,
+          "excluded_for_common_alignment": {
+            "Discharge-history LSTM": 0,
+            "LSTM + lagged GRRR, gaps retained": 0,
+            "GRRR weighted-fill LSTM (rejected)": 0,
+            "Persistence": 0
+          }
+        },
+        {
+          "lead_day": 5,
+          "n": 910,
+          "flood_n": 67,
+          "unique_days": 910,
+          "unique_flood_days": 67,
+          "excluded_for_common_alignment": {
+            "Discharge-history LSTM": 0,
+            "LSTM + lagged GRRR, gaps retained": 0,
+            "GRRR weighted-fill LSTM (rejected)": 0,
+            "Persistence": 0
+          }
+        },
+        {
+          "lead_day": 6,
+          "n": 908,
+          "flood_n": 66,
+          "unique_days": 908,
+          "unique_flood_days": 66,
+          "excluded_for_common_alignment": {
+            "Discharge-history LSTM": 0,
+            "LSTM + lagged GRRR, gaps retained": 0,
+            "GRRR weighted-fill LSTM (rejected)": 0,
+            "Persistence": 0
+          }
+        },
+        {
+          "lead_day": 7,
+          "n": 906,
+          "flood_n": 68,
+          "unique_days": 906,
+          "unique_flood_days": 68,
+          "excluded_for_common_alignment": {
+            "Discharge-history LSTM": 0,
+            "LSTM + lagged GRRR, gaps retained": 0,
+            "GRRR weighted-fill LSTM (rejected)": 0,
+            "Persistence": 0
+          }
+        },
+        {
+          "lead_day": 8,
+          "n": 905,
+          "flood_n": 67,
+          "unique_days": 905,
+          "unique_flood_days": 67,
+          "excluded_for_common_alignment": {
+            "Discharge-history LSTM": 0,
+            "LSTM + lagged GRRR, gaps retained": 0,
+            "GRRR weighted-fill LSTM (rejected)": 0,
+            "Persistence": 0
+          }
+        },
+        {
+          "lead_day": 9,
+          "n": 902,
+          "flood_n": 66,
+          "unique_days": 902,
+          "unique_flood_days": 66,
+          "excluded_for_common_alignment": {
+            "Discharge-history LSTM": 0,
+            "LSTM + lagged GRRR, gaps retained": 0,
+            "GRRR weighted-fill LSTM (rejected)": 0,
+            "Persistence": 0
+          }
+        },
+        {
+          "lead_day": 10,
+          "n": 900,
+          "flood_n": 67,
+          "unique_days": 900,
+          "unique_flood_days": 67,
+          "excluded_for_common_alignment": {
+            "Discharge-history LSTM": 0,
+            "LSTM + lagged GRRR, gaps retained": 0,
+            "GRRR weighted-fill LSTM (rejected)": 0,
+            "Persistence": 0
+          }
+        },
+        {
+          "lead_day": 11,
+          "n": 898,
+          "flood_n": 67,
+          "unique_days": 898,
+          "unique_flood_days": 67,
+          "excluded_for_common_alignment": {
+            "Discharge-history LSTM": 0,
+            "LSTM + lagged GRRR, gaps retained": 0,
+            "GRRR weighted-fill LSTM (rejected)": 0,
+            "Persistence": 0
+          }
+        },
+        {
+          "lead_day": 12,
+          "n": 897,
+          "flood_n": 68,
+          "unique_days": 897,
+          "unique_flood_days": 68,
+          "excluded_for_common_alignment": {
+            "Discharge-history LSTM": 0,
+            "LSTM + lagged GRRR, gaps retained": 0,
+            "GRRR weighted-fill LSTM (rejected)": 0,
+            "Persistence": 0
+          }
+        },
+        {
+          "lead_day": 13,
+          "n": 895,
+          "flood_n": 67,
+          "unique_days": 895,
+          "unique_flood_days": 67,
+          "excluded_for_common_alignment": {
+            "Discharge-history LSTM": 0,
+            "LSTM + lagged GRRR, gaps retained": 0,
+            "GRRR weighted-fill LSTM (rejected)": 0,
+            "Persistence": 0
+          }
+        },
+        {
+          "lead_day": 14,
+          "n": 893,
+          "flood_n": 68,
+          "unique_days": 893,
+          "unique_flood_days": 68,
+          "excluded_for_common_alignment": {
+            "Discharge-history LSTM": 0,
+            "LSTM + lagged GRRR, gaps retained": 0,
+            "GRRR weighted-fill LSTM (rejected)": 0,
+            "Persistence": 0
+          }
+        },
+        {
+          "lead_day": 15,
+          "n": 891,
+          "flood_n": 68,
+          "unique_days": 891,
+          "unique_flood_days": 68,
+          "excluded_for_common_alignment": {
+            "Discharge-history LSTM": 0,
+            "LSTM + lagged GRRR, gaps retained": 0,
+            "GRRR weighted-fill LSTM (rejected)": 0,
+            "Persistence": 0
+          }
+        }
+      ],
+      "first_test_date": "2023-01-01",
+      "last_test_date": "2026-10-23"
+    },
+    "nearby_reconstruction_monsoon_2026": {
+      "models": [
+        "Khanki same-day regression",
+        "Khanki lagged reconstruction",
+        "Qadirabad same-day regression",
+        "Qadirabad lagged reconstruction",
+        "Trimmu same-day regression",
+        "Trimmu lagged reconstruction",
+        "Qadirabad-next-day / Khanki fallback"
+      ],
+      "thresholds_cumecs": [
+        3424.9225953023997
+      ],
+      "counts_by_lead": [
+        {
+          "lead_day": 0,
+          "n": 92,
+          "flood_n": 6,
+          "unique_days": 92,
+          "unique_flood_days": 6,
+          "excluded_for_common_alignment": {
+            "Khanki same-day regression": 0,
+            "Khanki lagged reconstruction": 0,
+            "Qadirabad same-day regression": 0,
+            "Qadirabad lagged reconstruction": 0,
+            "Trimmu same-day regression": 0,
+            "Trimmu lagged reconstruction": 0,
+            "Qadirabad-next-day / Khanki fallback": 0
+          }
+        }
+      ],
+      "first_test_date": "2026-07-01",
+      "last_test_date": "2026-09-30"
+    }
+  },
+  "sources": [
+    {
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\ensemble\\reports\\initial\\evaluation_manifest.json",
+      "sha256": "4cc9871103848de05006e581bd05a0579f61d992ebd5f3ea35697b9a2ef65c65"
+    },
+    {
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\data\\marala_daily.csv",
+      "sha256": "d21788d62afc9e54d8e2aa6e1f27dcc244ef3b6a1a734249650abd84ccdbe11f"
+    },
+    {
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\ensemble\\reports\\initial\\predictions.csv",
+      "sha256": "319607cbbbbd5402597f3e801c9544bf0ae223530fe6bb474d31e1a7bcfaa370"
+    },
+    {
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\fine_tuned_global_pretrained_lstm\\reports\\initial\\predictions.csv",
+      "sha256": "e015a9745152d3e4ece9c4e5dd5d6a3015a506dad690fdfa86c890349556a547"
+    },
+    {
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\spatially_distributed_model\\reports\\initial\\predictions.csv",
+      "sha256": "1119ef0b4707b1bd477f4625cba804bffcff9e14670f2b1fa7945b6668d879a0"
+    },
+    {
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\hybrid_physics_ml\\reports\\initial\\predictions.csv",
+      "sha256": "73d544796c55ee51bba9c18085fc8355e637a4075f1aa0e306d82ceebb8ea73f"
+    },
+    {
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\pretrained_multibasin_lstm\\reports\\initial\\predictions.csv",
+      "sha256": "1d09c20fca211208ead1828cb1a0c61f0b46beb7f4f27b9ae11ef60c7825f6da"
+    },
+    {
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\encoder_decoder_lstm\\reports\\initial\\predictions.csv.gz",
+      "sha256": "292674d45671f91333be588fd3e44b02bb299217b831035335fcb367f808842e"
+    },
+    {
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\nhits\\reports\\initial\\predictions.csv",
+      "sha256": "ea7a6c5d17e78698cc2d2874371e607e1cae160e828a2916e082fe0314804d3f"
+    },
+    {
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\nbeatsx\\reports\\initial\\predictions.csv",
+      "sha256": "3e14343b198739362e055b0d95d9961c0f6efeaf1b50f8b15157088eae4bea0e"
+    },
+    {
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\nhits\\controls\\lstm\\reports\\initial\\predictions.csv",
+      "sha256": "c2f11598c26090e26528445ed114e937513f238c5f024eae208210497c43f315"
+    },
+    {
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\hbv_residual\\runs\\2026-10-30\\reports\\rolling_predictions.csv.gz",
+      "sha256": "7c42d88e7d2a1b3a84dd12889b08616c29f61c001312d8cc607f1a269e91cb9a"
+    },
+    {
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\experiments\\marala_grrr\\experiment\\report.json",
+      "sha256": "fc60b6b1e8bcadf202e9430047a4b3a4ff58675f731c1772ae33242f4656d084"
+    },
+    {
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\experiments\\marala_observed\\data\\daily_observed_priority.csv",
+      "sha256": "d1e4196b48320da02a51c105b7de0320fc5677a595d19dcb936d910e22bb2d3c"
+    },
+    {
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\experiments\\marala_observed\\observed_only\\predictions_observed_days.csv",
+      "sha256": "3b19efba6fa33dc4f98374251b3b06ffdef95a9edc0ebfdb853bf4b8187779a2"
+    },
+    {
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\experiments\\marala_grrr\\experiment\\predictions_observed_days.csv",
+      "sha256": "12adfdb041d88ac46dcf71e5b36b7c2d7877cfbc3dc61253945edfc77f728d87"
+    },
+    {
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\experiments\\marala_nearby_regression\\results\\seasonal_scores.csv",
+      "sha256": "2c52af8993c23b4135ea9673685d2cab17aeff465bada67a8d295d3896c99fcb"
+    },
+    {
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\experiments\\marala_nearby_regression\\results\\heldout_predictions.csv",
+      "sha256": "836de3addf9de379c60e0a94780ea1c1b53863cfc0e733a97e8778330f3fd0fd"
+    },
+    {
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\experiments\\marala_nearby_regression\\hybrid_results\\heldout_predictions.csv",
+      "sha256": "a396d6cd0ea954d0307b18be6182450a1428daf8c624c52caba2d0f67d900675"
+    },
+    {
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\fine_tuned_global_pretrained_lstm\\reports\\initial\\scores_by_lead.csv",
+      "sha256": "edfa7e3e0d470c8e10a79ac842d238ae3eaca77fc1a620d215b584aeaada017e"
+    }
+  ]
+}

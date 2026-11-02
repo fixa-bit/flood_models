@@ -1,0 +1,70 @@
+{
+  "request_id": "f7f288fe-f483-49ec-91e6-69551511ceed",
+  "dataset": "cems-glofas-reforecast",
+  "request": {
+    "system_version": "version_4_0",
+    "hydrological_model": "lisflood",
+    "product_type": [
+      "control_reforecast",
+      "ensemble_perturbed_reforecast"
+    ],
+    "variable": "river_discharge_in_the_last_24_hours",
+    "data_format": "grib2",
+    "download_format": "unarchived",
+    "leadtime_hour": [
+      "24",
+      "48",
+      "72",
+      "96",
+      "120",
+      "144",
+      "168",
+      "192",
+      "216",
+      "240",
+      "264",
+      "288",
+      "312",
+      "336",
+      "360",
+      "384",
+      "408",
+      "432",
+      "456",
+      "480",
+      "504",
+      "528",
+      "552",
+      "576",
+      "600",
+      "624",
+      "648",
+      "672",
+      "696",
+      "720"
+    ],
+    "area": [
+      32.675,
+      74.475,
+      32.675,
+      74.475
+    ],
+    "hyear": "2016",
+    "hmonth": "03",
+    "hday": [
+      "04",
+      "07",
+      "11",
+      "14",
+      "18",
+      "21",
+      "25",
+      "27",
+      "28",
+      "30"
+    ]
+  },
+  "submitted_utc": "2026-10-30T11:08:05.218361+00:00",
+  "status": "accepted",
+  "last_checked_utc": "2026-10-30T11:10:36.649343+00:00"
+}

@@ -1,0 +1,21 @@
+{
+  "processID": "s2s-forecasts",
+  "type": "process",
+  "jobID": "88c5f157-0362-4e8d-a1ce-bf5fc927ecc9",
+  "status": "accepted",
+  "created": "2026-11-02T11:26:38.370643",
+  "updated": "2026-11-02T11:26:38.370643",
+  "links": [
+    {
+      "href": "https://ecds.ecmwf.int/api/retrieve/v1/jobs/88c5f157-0362-4e8d-a1ce-bf5fc927ecc9",
+      "rel": "self",
+      "type": "application/json"
+    }
+  ],
+  "metadata": {
+    "datasetMetadata": {
+      "catalogue": "ecds"
+    },
+    "origin": "api"
+  }
+}

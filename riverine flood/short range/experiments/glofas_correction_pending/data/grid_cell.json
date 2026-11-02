@@ -1,0 +1,69 @@
+{
+  "passed": true,
+  "selection": "nearest_area_match",
+  "reference_area_km2": 28794.390101044257,
+  "reference_area_source": "repository_research_delineation_not_official_gauge_area",
+  "selected": {
+    "latitude": 32.675,
+    "longitude": 74.475,
+    "upstream_area_km2": 29160.5234375,
+    "distance_km": 1.510083875176362,
+    "relative_area_error": 0.012715458869934082
+  },
+  "geographically_nearest": {
+    "latitude": 32.675,
+    "longitude": 74.475,
+    "upstream_area_km2": 29160.5234375,
+    "distance_km": 1.510083875176362,
+    "relative_area_error": 0.012715458869934082
+  },
+  "nearby_area_matches": [
+    {
+      "latitude": 32.675,
+      "longitude": 74.475,
+      "upstream_area_km2": 29160.5234375,
+      "distance_km": 1.510083875176362,
+      "relative_area_error": 0.012715458869934082
+    },
+    {
+      "latitude": 32.675,
+      "longitude": 74.42499999999998,
+      "upstream_area_km2": 29186.52734375,
+      "distance_km": 3.3228663264434455,
+      "relative_area_error": 0.01361846923828125
+    },
+    {
+      "latitude": 32.725,
+      "longitude": 74.52499999999998,
+      "upstream_area_km2": 23305.7265625,
+      "distance_km": 8.625370321685185,
+      "relative_area_error": 0.190615713596344
+    },
+    {
+      "latitude": 32.625,
+      "longitude": 74.37499999999997,
+      "upstream_area_km2": 29238.5625,
+      "distance_km": 9.40064170232194,
+      "relative_area_error": 0.015425682067871094
+    },
+    {
+      "latitude": 32.775,
+      "longitude": 74.52499999999998,
+      "upstream_area_km2": 23253.748046875,
+      "distance_km": 13.164005284629175,
+      "relative_area_error": 0.19242089986801147
+    },
+    {
+      "latitude": 32.625,
+      "longitude": 74.32499999999999,
+      "upstream_area_km2": 29316.57421875,
+      "distance_km": 13.594039890618062,
+      "relative_area_error": 0.0181349515914917
+    }
+  ],
+  "area_tolerance": 0.2,
+  "note": "Area agreement alone does not prove river-network identity.",
+  "system_version": "version_4_0",
+  "auxiliary_sha256": "e0a90c2f5bc43092241b122317412e6e64b791cba17f35b9b9e5e4ece89be198",
+  "source_url": "https://confluence.ecmwf.int/download/attachments/242067380/uparea_glofas_v4_0.nc?version=2"
+}

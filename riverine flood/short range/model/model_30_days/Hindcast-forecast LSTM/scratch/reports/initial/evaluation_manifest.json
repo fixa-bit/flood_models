@@ -1,0 +1,41 @@
+{
+  "forecast_horizon": 30,
+  "training_years": [
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
+  ],
+  "selection_years": [
+    2021
+  ],
+  "test_years": [
+    2022,
+    2023,
+    2024
+  ],
+  "test_samples": 1067,
+  "unique_observed_test_days": 1084,
+  "observed_issue_lead_pairs": 31932,
+  "day30_observations": 1055,
+  "training_samples": 1767,
+  "validation_samples": 336,
+  "training_seconds": 80.90455659999861,
+  "epochs": 34,
+  "selected_epoch": 22,
+  "validation_pinball": 0.07896358133076531,
+  "stopping_reason": "validation patience reached",
+  "seed": 42,
+  "parameters": 42037,
+  "flood_threshold_cumecs": 2494.7141847552,
+  "source_sha256": "d21788d62afc9e54d8e2aa6e1f27dcc244ef3b6a1a734249650abd84ccdbe11f",
+  "checkpoint_sha256": "0e68f75a28200bb36dcb4f9f16c4c34dba3c9f1cd09f855c2ccd0ba1ecebe328",
+  "forecast_mode": "reanalysis_with_noise",
+  "archived_forecasts_available": false,
+  "hpo_search_performed": false,
+  "real_data_training_runs": 1,
+  "targets_unchanged": true,
+  "noncrossing_quantiles_verified": true,
+  "inference_and_report_seconds": 6.525580300003639
+}

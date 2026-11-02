@@ -1,0 +1,9 @@
+{
+  "source": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\model_30_days\\Hindcast-forecast LSTM\\scratch\\data\\marala_daily.csv",
+  "source_sha256": "d21788d62afc9e54d8e2aa6e1f27dcc244ef3b6a1a734249650abd84ccdbe11f",
+  "local_sha256": "d21788d62afc9e54d8e2aa6e1f27dcc244ef3b6a1a734249650abd84ccdbe11f",
+  "byte_identical": true,
+  "source_values_never_filled": true,
+  "past_discharge_handling": "training-normalized log flow plus missing indicator, inside samples only",
+  "other_training_settings_unchanged": true
+}

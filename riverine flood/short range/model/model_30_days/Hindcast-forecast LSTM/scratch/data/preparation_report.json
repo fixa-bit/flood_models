@@ -1,0 +1,30 @@
+{
+  "source": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\evaluation comparison\\common\\data\\marala_daily.csv",
+  "source_sha256": "d21788d62afc9e54d8e2aa6e1f27dcc244ef3b6a1a734249650abd84ccdbe11f",
+  "local_sha256": "d21788d62afc9e54d8e2aa6e1f27dcc244ef3b6a1a734249650abd84ccdbe11f",
+  "byte_identical": true,
+  "no_discharge_imputation": true,
+  "code_sources": [
+    {
+      "source": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\evaluation comparison\\common\\data.py",
+      "original_sha256": "496ee7ea018750c895dbf06cf895ada910ee8e23d821736dd822634cc07df056",
+      "bundled": "data.py",
+      "bundled_sha256": "5b4e2e182c6f1e3522e90d61a39169c6849a230654c50aa1f49720696c65084c",
+      "change": "Removed workspace sys.path bootstrap only"
+    },
+    {
+      "source": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\model_10 days\\lstm\\model.py",
+      "original_sha256": "f4bb127d0defa065b92e8721a59714e6fa3667545cb1e31970eac61aa9e728ed",
+      "bundled": "model.py",
+      "bundled_sha256": "38d655502ebd125b84f688f4f451a9e750251e51484f22247859a90cf11958ed",
+      "change": "Removed workspace sys.path bootstrap only"
+    },
+    {
+      "source": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\model_10 days\\lstm\\train.py",
+      "original_sha256": "85e23e14b151568f4581e3e55096e3a753f65f03bda41065828a616270539313",
+      "bundled": "_training.py",
+      "bundled_sha256": "ec6a43a11bbb20111a2b9ea127fcf84ebad6db74ddc25f05ef30c016a2faccb5",
+      "change": "Removed workspace sys.path bootstrap only"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+Seed 42 epoch 1/120: train=0.35130, validation=0.14011
+Seed 42 epoch 2/120: train=0.13880, validation=0.11401
+Seed 42 epoch 3/120: train=0.12027, validation=0.10237
+Seed 42 epoch 4/120: train=0.11023, validation=0.10012
+Seed 42 epoch 5/120: train=0.09951, validation=0.09957
+Seed 42 epoch 6/120: train=0.08961, validation=0.10699
+Seed 42 epoch 7/120: train=0.08100, validation=0.09393
+Seed 42 epoch 8/120: train=0.07625, validation=0.09164
+Seed 42 epoch 9/120: train=0.07299, validation=0.10750
+Seed 42 epoch 10/120: train=0.07017, validation=0.09024
+Seed 42 epoch 11/120: train=0.06929, validation=0.08654
+Seed 42 epoch 12/120: train=0.06825, validation=0.09913
+Seed 42 epoch 13/120: train=0.06672, validation=0.09620
+Seed 42 epoch 14/120: train=0.06421, validation=0.10413
+Seed 42 epoch 15/120: train=0.06363, validation=0.10550
+Seed 42 epoch 16/120: train=0.06272, validation=0.10865
+Seed 42 epoch 17/120: train=0.06207, validation=0.09117
+Seed 42 epoch 18/120: train=0.06132, validation=0.09254
+Seed 42 epoch 19/120: train=0.06030, validation=0.09801
+Seed 42 epoch 20/120: train=0.05984, validation=0.08245
+Seed 42 epoch 21/120: train=0.05983, validation=0.09158
+Seed 42 epoch 22/120: train=0.05869, validation=0.07896
+Seed 42 epoch 23/120: train=0.05861, validation=0.10001
+Seed 42 epoch 24/120: train=0.05809, validation=0.09857
+Seed 42 epoch 25/120: train=0.05676, validation=0.09662
+Seed 42 epoch 26/120: train=0.05678, validation=0.09899
+Seed 42 epoch 27/120: train=0.05665, validation=0.09577
+Seed 42 epoch 28/120: train=0.05767, validation=0.09297
+Seed 42 epoch 29/120: train=0.05593, validation=0.09788
+Seed 42 epoch 30/120: train=0.05622, validation=0.09304
+Seed 42 epoch 31/120: train=0.05466, validation=0.09684
+Seed 42 epoch 32/120: train=0.05436, validation=0.09769
+Seed 42 epoch 33/120: train=0.05475, validation=0.08934
+Seed 42 epoch 34/120: train=0.05391, validation=0.08824
+      model  lead_day    n      NSE      KGE  RMSE_cumecs  MAE_cumecs  PBIAS_pct
+   LSTM_30d         1 1067 0.870371 0.915802   282.122600  167.986001  -3.061349
+Persistence         1 1067 0.868104 0.934054   284.577855  135.984557  -0.003098
+Climatology         1 1067 0.781996 0.848668   365.862612  235.512036   7.634337
+   LSTM_30d        10 1067 0.855854 0.926888   297.220036  180.195860  -0.805783
+Persistence        10 1067 0.650043 0.825165   463.110603  275.108647   0.327921
+Climatology        10 1067 0.789115 0.849963   359.501446  233.107625   8.019856
+   LSTM_30d        15 1067 0.840594 0.920458   313.077934  190.044663   0.398741
+Persistence        15 1067 0.571621 0.785598   513.233047  321.546153   0.600588
+Climatology        15 1067 0.790620 0.848085   358.813354  232.385638   8.346605
+   LSTM_30d        20 1065 0.822609 0.909617   330.739819  202.641284   1.159447
+Persistence        20 1065 0.502112 0.750506   554.098528  349.166660   0.756353
+Climatology        20 1065 0.791022 0.847095   358.980591  232.233904   8.481970
+   LSTM_30d        30 1055 0.784410 0.883699   366.024735  224.065896   3.333387
+Persistence        30 1055 0.262315 0.629497   677.066486  446.423810   1.148887
+Climatology        30 1055 0.792145 0.844519   359.398279  231.857132   8.837113
+Report: D:\projects\flood_model\flood_model\riverine flood\short range\evaluation comparison\model_30_days\hindcast_forecast_lstm_scratch\comparison_report.md
+First model complete. No other 30-day model was trained. Awaiting user feedback.

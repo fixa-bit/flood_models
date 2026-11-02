@@ -1,0 +1,13 @@
+{
+  "real_pretraining_basins": 8,
+  "train_samples_pretrain": 29144,
+  "fine_tuning_changed_weights": true,
+  "fine_and_matched_scratch_statistics_equal": true,
+  "test_years_disjoint_from_all_inherited_training_selection_years": true,
+  "training_input_hashes_unchanged": true,
+  "noncrossing_finite_quantiles_all_models": true,
+  "overall_score_rows": 60,
+  "seasonal_score_rows": 180,
+  "observed_test_target_pairs": 10795,
+  "synthetic_correctness_tests_passed": 15
+}

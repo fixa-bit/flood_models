@@ -1,0 +1,19 @@
+{
+  "protocol_hash_matches": true,
+  "comparison_and_model_use_same_grrr": true,
+  "observed_dataset_hash_matches": true,
+  "original_calendar_preserved": true,
+  "original_observations_and_nans_unchanged": true,
+  "fills_never_overwrite_observations": true,
+  "every_scored_target_is_originally_observed": true,
+  "all_arms_have_same_scoring_keys": true,
+  "no_post_archive_fill": true,
+  "all_2026_gaps_remain_nan": true,
+  "heldout_days_have_zero_training_weight": true,
+  "decision_recomputed_from_saved_predictions": true,
+  "bootstrap_interval_recomputed": true,
+  "nan_gaps_test_rmse_recomputed": true,
+  "weighted_fills_test_rmse_recomputed": true,
+  "selected_checkpoint_exists": true,
+  "rejected_filled_checkpoint_absent": true
+}

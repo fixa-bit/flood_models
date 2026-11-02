@@ -1,0 +1,7 @@
+seed,parameter,initial,learned
+42,rain_snow_threshold_c,0.0,-0.02521228790283203
+42,degree_day_mm_per_c_day,3.0,2.984015941619873
+42,soil_capacity_mm,200.0,199.38575744628906
+42,recharge_fraction,0.03,0.028225522488355637
+42,groundwater_recession,0.04,0.039265431463718414
+42,evaporation_mm_per_c_day,0.15,0.1433248370885849

@@ -1,0 +1,32 @@
+{
+  "target": "FFD observed Marala inflow at confirmed 06:00 PKT; no interpolated/model targets",
+  "eligible_marala_dates": 350,
+  "common_all_station_all_lag_dates": 311,
+  "common_development_dates": 193,
+  "common_2026_dates": 118,
+  "seasonal_common_dates": {
+    "Oct-Mar": 25,
+    "Apr-Jun": 28,
+    "Jul-Sep": 258
+  },
+  "random_block_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "block_length_days": 30,
+  "blocks_per_seed": 2,
+  "actual_hidden_days_per_seed": 60,
+  "development_observed_days": 228,
+  "lag_convention": "Q_Marala(t) from Q_nearby(t-lag). Negative uses future nearby observations, reconstruction only.",
+  "primary_selection": "Use 2024-2025 blocked validation; 2026 is a later-year generalization check. No tuning after 2026 scores.",
+  "metrics": "NSE, original KGE, positive-overprediction PBIAS, RMSE/MAE in m3/s; peak MAPE above training-season Q95.",
+  "no_discharge_values_changed": true
+}

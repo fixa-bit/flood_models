@@ -1,0 +1,1262 @@
+﻿[
+    {
+        "path":  "climatology\\reports\\initial\\model_predictions.csv",
+        "sha256":  "de2115aaa99a3ca95b2e98993296fe733c64d9b28e9a5e92eea79f780ba80bae",
+        "bytes":  786271
+    },
+    {
+        "path":  "climatology\\reports\\initial\\model_scores_by_season_and_lead.csv",
+        "sha256":  "02d8915e714f50a89ad7bc8306fc5961bd4bdffa22a8664dc33c09a46081fe38",
+        "bytes":  5419
+    },
+    {
+        "path":  "climatology\\reports\\initial\\model_scores_overall.csv",
+        "sha256":  "12bd51215bb75b1a83d598cd9b276541b29d555d0f2e2b455832e023792951a3",
+        "bytes":  1349
+    },
+    {
+        "path":  "climatology\\runs\\initial\\model.pkl",
+        "sha256":  "1fa1cd517d73338b4bd1c9532a6b2431db2a38a293a08d5fc9e6ad80f8ebf79d",
+        "bytes":  7907
+    },
+    {
+        "path":  "data\\marala_daily.csv",
+        "sha256":  "d21788d62afc9e54d8e2aa6e1f27dcc244ef3b6a1a734249650abd84ccdbe11f",
+        "bytes":  3132184
+    },
+    {
+        "path":  "encoder_decoder_lstm\\data\\marala_daily.csv",
+        "sha256":  "fa537d4af974a686ca7afec1e2728b8fd63380ae290af373dd6c832ad57c7ded",
+        "bytes":  281403
+    },
+    {
+        "path":  "encoder_decoder_lstm\\data\\sample_splits.csv",
+        "sha256":  "dcf185881ff1d38320d0464019c17da149423540eb0836dcc96423957fad7e76",
+        "bytes":  138317
+    },
+    {
+        "path":  "encoder_decoder_lstm\\pretrained\\camels_us_adapted_15day.pt",
+        "sha256":  "0b704a8cbb9c6bd7e0e236005111858de444aff88e04978abb7d7e6a00de89af",
+        "bytes":  153919
+    },
+    {
+        "path":  "encoder_decoder_lstm\\pretrained\\camels_us_original_10day.pt",
+        "sha256":  "a30d0bfdc465aab90db819636a9bd1c3efbf61f4b9332a4829aea6a88c25f6da",
+        "bytes":  149385
+    },
+    {
+        "path":  "encoder_decoder_lstm\\reports\\initial\\mean_scores_leads07_15.csv",
+        "sha256":  "d8aff26868bedf7bddf1c7663a9bef46fb486743e488d1c4e3d564df6b199a2b",
+        "bytes":  478
+    },
+    {
+        "path":  "encoder_decoder_lstm\\reports\\initial\\monsoon_2022_lead15.png",
+        "sha256":  "29c6812a4775c6a7ef010ca282ac7395a00d22c03ba0dd36db78e34f5c1da383",
+        "bytes":  154875
+    },
+    {
+        "path":  "encoder_decoder_lstm\\reports\\initial\\monsoon_2023_lead15.png",
+        "sha256":  "ea6ed6110e7b85a0b7a8d4d1d2ea03afc22201eecc386b3fb656ede16d1abd3f",
+        "bytes":  143908
+    },
+    {
+        "path":  "encoder_decoder_lstm\\reports\\initial\\monsoon_2024_lead15.png",
+        "sha256":  "eafd9f58c9cb89d95694ca4f7a1fe28cf3f3445d00695edf126584fab0722968",
+        "bytes":  150739
+    },
+    {
+        "path":  "encoder_decoder_lstm\\reports\\initial\\predictions.csv.gz",
+        "sha256":  "292674d45671f91333be588fd3e44b02bb299217b831035335fcb367f808842e",
+        "bytes":  1858684
+    },
+    {
+        "path":  "encoder_decoder_lstm\\reports\\initial\\quantile_calibration.csv",
+        "sha256":  "a9d7edd3b5c09051990cdf059fcb2dde78f6182da1073c79e55eb153e4704136",
+        "bytes":  1818
+    },
+    {
+        "path":  "encoder_decoder_lstm\\reports\\initial\\scores_by_lead.csv",
+        "sha256":  "0b04fc956fca85e947505e7a814893cc1c741b317d09d1c7274d9bfe7047928e",
+        "bytes":  17082
+    },
+    {
+        "path":  "encoder_decoder_lstm\\reports\\initial\\scores_leads07_15.csv",
+        "sha256":  "fc6d35ceaccc59d184e29cdd800e0ee35c8bd68d7416793e8332be76ac6b2701",
+        "bytes":  10364
+    },
+    {
+        "path":  "encoder_decoder_lstm\\reports\\initial\\scores_monsoon_by_lead.csv",
+        "sha256":  "83e18aa2941890952843050e3c58d57690e2d20d070039d24e539ecd311f388b",
+        "bytes":  16353
+    },
+    {
+        "path":  "encoder_decoder_lstm\\reports\\initial\\skill_by_lead.png",
+        "sha256":  "1ff30e5913c8bcf36c184f74a62d3d69199285fc28ccbf261b18c6119f8c7286",
+        "bytes":  152919
+    },
+    {
+        "path":  "encoder_decoder_lstm\\reports\\initial\\transfer_comparison.csv",
+        "sha256":  "044958113555cd8b72f76aecfce28299bc9a45c7cd9c6437d5bad469ce29b903",
+        "bytes":  1088
+    },
+    {
+        "path":  "encoder_decoder_lstm\\runs\\finetuned\\seed_42\\best.pt",
+        "sha256":  "cddaece6ff92365c62a2f1589acd4d4077627973316e9a08e18cedc8aea284ad",
+        "bytes":  154121
+    },
+    {
+        "path":  "encoder_decoder_lstm\\runs\\scratch\\seed_42\\best.pt",
+        "sha256":  "575f77a9a938b825d027330b304063186a4cb37bc75d752f025d1ed09cd0a46c",
+        "bytes":  153289
+    },
+    {
+        "path":  "ensemble\\reports\\initial\\baselines.pkl",
+        "sha256":  "e4f3eb276ce9b22d037d9f54b61ae0e2e02ec676596baabd4df94eb90cfd0b8b",
+        "bytes":  3550280
+    },
+    {
+        "path":  "ensemble\\reports\\initial\\model_predictions.csv",
+        "sha256":  "7ff368d434eabc165d4d14fd0a572dce925dd5cf84a3ab819b3156f4627c9532",
+        "bytes":  804026
+    },
+    {
+        "path":  "ensemble\\reports\\initial\\model_scores_by_season_and_lead.csv",
+        "sha256":  "d75fff01ff75b5ff2d6c9c65202d215ba5cf7f9d91bff7474f8a6816520532fd",
+        "bytes":  5327
+    },
+    {
+        "path":  "ensemble\\reports\\initial\\model_scores_overall.csv",
+        "sha256":  "b5b4bae360484739114bee7874f2ddbd5c774a1139348da8dd14751fba2f2e0b",
+        "bytes":  1323
+    },
+    {
+        "path":  "ensemble\\reports\\initial\\predictions.csv",
+        "sha256":  "319607cbbbbd5402597f3e801c9544bf0ae223530fe6bb474d31e1a7bcfaa370",
+        "bytes":  2554991
+    },
+    {
+        "path":  "ensemble\\reports\\initial\\quantile_calibration.csv",
+        "sha256":  "1d8ccacc5a4b0af803081477ca386e15a2da15fb89f98b17bd72917b3cdc69be",
+        "bytes":  5329
+    },
+    {
+        "path":  "ensemble\\reports\\initial\\scores_by_season_and_lead.csv",
+        "sha256":  "cb6f4ca9a1f50e1d5802834f7cf773d2b53024733399745e380570afd283b31d",
+        "bytes":  26636
+    },
+    {
+        "path":  "ensemble\\reports\\initial\\scores_overall.csv",
+        "sha256":  "2ab6924516b0f8aa603819a96f765129d982d06bdaeba72c794d30e8567c2fc0",
+        "bytes":  6229
+    },
+    {
+        "path":  "ensemble\\reports\\initial\\skill_by_lead.png",
+        "sha256":  "e751d4e96452cb5592c18d73b0a976199a211ef65718f2f521bd0bf09e50cb9d",
+        "bytes":  128586
+    },
+    {
+        "path":  "ensemble\\runs\\initial\\model.pkl",
+        "sha256":  "03b918eb5fc8cd593832ddf2370d810f432da4075afa90a3f7c81e9b9ac5cea1",
+        "bytes":  458
+    },
+    {
+        "path":  "evaluation comparison\\archive\\time_series_mlp_original\\reports\\initial\\new_model_flood_nonflood.csv",
+        "sha256":  "015c140ec61e667b7208fa7c0e5853e52261cda9f80674afc391a8fa40e497d3",
+        "bytes":  9459
+    },
+    {
+        "path":  "evaluation comparison\\archive\\time_series_mlp_original\\reports\\initial\\new_model_scores_by_lead.csv",
+        "sha256":  "b12ff0c946858fa44435f253936d3709f39c8ccf36c811c2c7fa5c3f177a725e",
+        "bytes":  5818
+    },
+    {
+        "path":  "evaluation comparison\\archive\\time_series_mlp_original\\reports\\initial\\skill_by_lead.png",
+        "sha256":  "b73ab8437d1f7653c74e9f9d239b2becd4de24d89eb8cde5a5ceb7c76d78b203",
+        "bytes":  120848
+    },
+    {
+        "path":  "evaluation comparison\\archive\\time_series_mlp_original\\reports\\initial\\training_runs.csv",
+        "sha256":  "2e5bafa83dd241d004717c9515fb263f8a901f4851a9051dd8737a836558be64",
+        "bytes":  349
+    },
+    {
+        "path":  "evaluation comparison\\flood_nonflood_2026-11-02\\flood_detection_by_lead.csv",
+        "sha256":  "cca471f79e3da4ab35273d2b8e1d7546320fe5be85645e90bb582e05365e81c0",
+        "bytes":  40905
+    },
+    {
+        "path":  "evaluation comparison\\flood_nonflood_2026-11-02\\main_day10_scores.csv",
+        "sha256":  "2d14427cab502d35b1814e0546d90407351d5f1b6e3374ade957ed70cf2d36ec",
+        "bytes":  7506
+    },
+    {
+        "path":  "evaluation comparison\\flood_nonflood_2026-11-02\\scores_flood_nonflood_by_lead.csv",
+        "sha256":  "1b0bdff43808f0287805700444a624434adb3c0470cb6d983796b29dedd4085f",
+        "bytes":  158346
+    },
+    {
+        "path":  "evaluation comparison\\flood_nonflood_2026-11-02_with_nhits_nbeatsx\\flood_detection_by_lead.csv",
+        "sha256":  "2b036d8ff2ae974b437646d55661a682db6d647c187857560348bfc2f408f84d",
+        "bytes":  44665
+    },
+    {
+        "path":  "evaluation comparison\\flood_nonflood_2026-11-02_with_nhits_nbeatsx\\main_day10_scores.csv",
+        "sha256":  "375c1f4381242191dbcec430c4770a2b4931a75efd2428159af44200445b2d92",
+        "bytes":  8925
+    },
+    {
+        "path":  "evaluation comparison\\flood_nonflood_2026-11-02_with_nhits_nbeatsx\\rankings_day10_trained_models.csv",
+        "sha256":  "aa82265375003cbc77bd21e5a87085a998bcbfc6a2a3dedcce388001a5aa6886",
+        "bytes":  3976
+    },
+    {
+        "path":  "evaluation comparison\\flood_nonflood_2026-11-02_with_nhits_nbeatsx\\scores_flood_nonflood_by_lead.csv",
+        "sha256":  "3c697624fc0305d0b083aed56296f9e1f5898cf9fd657f4fe928ae6657a42c90",
+        "bytes":  172468
+    },
+    {
+        "path":  "fine_tuned_global_pretrained_lstm\\data\\marala_global_daily.csv",
+        "sha256":  "c02f27b5ab6c2188f56fcf521bfe6c63ad670506783fbd640bb9f70b68491d7b",
+        "bytes":  5814362
+    },
+    {
+        "path":  "fine_tuned_global_pretrained_lstm\\data\\marala_static_attributes.csv",
+        "sha256":  "c5d7af2532f06103df6b8356a37a8c95a7ec2628e96a4899e8772c3cd9269eb0",
+        "bytes":  1312
+    },
+    {
+        "path":  "fine_tuned_global_pretrained_lstm\\data\\static_attribute_provenance.csv",
+        "sha256":  "6b510f6462c8b09f1337fac2ae4922e5bc3922e4cbcfdd991729cfffc6929d00",
+        "bytes":  2862
+    },
+    {
+        "path":  "fine_tuned_global_pretrained_lstm\\data\\raw\\era5land_daily\\2015.csv",
+        "sha256":  "c4b1de2fdf148ae46591142da00afe0786d65c51b055a7358fe19b7ba0cc2413",
+        "bytes":  102469
+    },
+    {
+        "path":  "fine_tuned_global_pretrained_lstm\\data\\raw\\era5land_daily\\2016.csv",
+        "sha256":  "c26d8ac2e843a9d727cf246e92c546902ca241db914a550752dca4fb447a1c05",
+        "bytes":  102876
+    },
+    {
+        "path":  "fine_tuned_global_pretrained_lstm\\data\\raw\\era5land_daily\\2017.csv",
+        "sha256":  "c92eef8296384083bbfe19050475bd7a6d1b6e7f3f56cb68c11b7c29dee0a697",
+        "bytes":  102501
+    },
+    {
+        "path":  "fine_tuned_global_pretrained_lstm\\data\\raw\\era5land_daily\\2018.csv",
+        "sha256":  "f623aa471b235a9f5ab464b4b530b9630ba8b7c233b076abec4a5af269ebb3ba",
+        "bytes":  102487
+    },
+    {
+        "path":  "fine_tuned_global_pretrained_lstm\\data\\raw\\era5land_daily\\2019.csv",
+        "sha256":  "fe5d0f760c9f5e90980f779d20a22cbbcef11661014faaa1dbda776642bc0b72",
+        "bytes":  102480
+    },
+    {
+        "path":  "fine_tuned_global_pretrained_lstm\\data\\raw\\era5land_daily\\2020.csv",
+        "sha256":  "bf9f72572ae1a11d4498694f3cb8eb23d82ede981847de5fa7444a0e02db6437",
+        "bytes":  102862
+    },
+    {
+        "path":  "fine_tuned_global_pretrained_lstm\\data\\raw\\era5land_daily\\2021.csv",
+        "sha256":  "d3be2181bc748b3bc72894ab83d99e3f9701bd3cbfe396edf9bb514417d3bbc2",
+        "bytes":  102429
+    },
+    {
+        "path":  "fine_tuned_global_pretrained_lstm\\data\\raw\\era5land_daily\\2022.csv",
+        "sha256":  "9ae26b0e8e8bebedf0c2ef34c45e2762995a227c84c9d94cf93b98fd787e6eca",
+        "bytes":  102471
+    },
+    {
+        "path":  "fine_tuned_global_pretrained_lstm\\data\\raw\\era5land_daily\\2023.csv",
+        "sha256":  "87bab0c4714d00139e582c1b9b10402cdcfb7da94fb2364f4c6bf895383fc6bd",
+        "bytes":  102589
+    },
+    {
+        "path":  "fine_tuned_global_pretrained_lstm\\data\\raw\\era5land_daily\\2024.csv",
+        "sha256":  "5dc6061b84b74061f137f2de63766ed1cd70135b96860b01fed741ac38b416f4",
+        "bytes":  102875
+    },
+    {
+        "path":  "fine_tuned_global_pretrained_lstm\\pretrained\\caravan_base\\model_epoch040.pt",
+        "sha256":  "94a4f84aac309b778460b518c7d156f6f18d0aa7585a90a88be5b190aeadd104",
+        "bytes":  1161163
+    },
+    {
+        "path":  "fine_tuned_global_pretrained_lstm\\reports\\initial\\data_availability.csv",
+        "sha256":  "ca8b599d5c6087d9492c4fa5763a8bb39f92bb1df54072423c8da13499fe3e2a",
+        "bytes":  163
+    },
+    {
+        "path":  "fine_tuned_global_pretrained_lstm\\reports\\initial\\observed_test_days_by_year.csv",
+        "sha256":  "2fc3457bd0140c0b25b123b4ab2fe0965f2de07f6e8cc1e1c188e9109d9901bc",
+        "bytes":  50
+    },
+    {
+        "path":  "fine_tuned_global_pretrained_lstm\\reports\\initial\\predictions.csv",
+        "sha256":  "e015a9745152d3e4ece9c4e5dd5d6a3015a506dad690fdfa86c890349556a547",
+        "bytes":  1011227
+    },
+    {
+        "path":  "fine_tuned_global_pretrained_lstm\\reports\\initial\\scores_by_lead.csv",
+        "sha256":  "edfa7e3e0d470c8e10a79ac842d238ae3eaca77fc1a620d215b584aeaada017e",
+        "bytes":  5594
+    },
+    {
+        "path":  "fine_tuned_global_pretrained_lstm\\reports\\initial\\scores_by_season_and_lead.csv",
+        "sha256":  "3be43ce96f845a95ca7a3b83d8643efde3a40920e9eba4019e53fbf9adb6aa64",
+        "bytes":  15412
+    },
+    {
+        "path":  "fine_tuned_global_pretrained_lstm\\reports\\initial\\skill_by_lead.png",
+        "sha256":  "d7e188d1617a938bfd508c18e45ea2c88644d2496659c36528363eaee219cae9",
+        "bytes":  66604
+    },
+    {
+        "path":  "fine_tuned_global_pretrained_lstm\\runs\\finetuned\\seed_42\\best.pt",
+        "sha256":  "a3275abdbd445258f7e6d130fa44d1679024e5fcbb659c2c85b1660f23eccad8",
+        "bytes":  1173205
+    },
+    {
+        "path":  "glofas_correction\\data\\raw\\uparea_glofas_v4_0.nc",
+        "sha256":  "e0a90c2f5bc43092241b122317412e6e64b791cba17f35b9b9e5e4ece89be198",
+        "bytes":  86495717
+    },
+    {
+        "path":  "gradient_boosting\\reports\\initial\\model_predictions.csv",
+        "sha256":  "f0290feedbbfb4cc785b2a057e2f538477ac4f7403421bc3e0537fa66b2c1db6",
+        "bytes":  803827
+    },
+    {
+        "path":  "gradient_boosting\\reports\\initial\\model_scores_by_season_and_lead.csv",
+        "sha256":  "e9e75282c92921602fff015d1d3091009618f6fe4eaa2e6c7d6d27d8f4ace285",
+        "bytes":  5585
+    },
+    {
+        "path":  "gradient_boosting\\reports\\initial\\model_scores_overall.csv",
+        "sha256":  "7a7dc464f8eeb30617a125c60fd36f0cb6950b894f0767448cef32e588de7a4b",
+        "bytes":  1422
+    },
+    {
+        "path":  "gradient_boosting\\runs\\initial\\model.pkl",
+        "sha256":  "716ef0e1166209c9312ab52ef9c02013df1d01c73d661d66618caa46c390b0d1",
+        "bytes":  3541179
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\data\\daily_inputs.csv",
+        "sha256":  "20dfa0ea692ba79d78a4478fa5db64204818884f5fc1598e6c3e92b8fa8b9f8d",
+        "bytes":  871717
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\final\\sample_splits.csv",
+        "sha256":  "478b3fd405c03bc63e995a8af30741f06fa7142ed46e6e076fd77f473c2f916c",
+        "bytes":  253486
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\final\\forecasts\\hbv_trajectories.csv.gz",
+        "sha256":  "165aa3fac3d2b914d302bb1bf2a42a8a34bcf1a6fcf7bc9768558fc22c75c840",
+        "bytes":  1554
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\final\\forecasts\\hydrographs.csv",
+        "sha256":  "8d175322b003e7574a741e70c937c60f731a0d6a6b866429bacd02e0b598b72b",
+        "bytes":  9170
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\final\\forecasts\\member_hydrographs.csv.gz",
+        "sha256":  "05da6262347afa3b601d52523151816a774f3c54533d3c0bf1a0205ad69042e7",
+        "bytes":  1096
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\final\\models\\lightgbm\\feature_importance.csv",
+        "sha256":  "5209927b993ae0a4e98f2de5899a2c22b5686e3786f2b3e7df494e456d7107cf",
+        "bytes":  131695
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\final\\models\\lstm\\best.pt",
+        "sha256":  "47dd33c754bb42de5c0315dc5770673920c0ff61a4c8781f0b4170685aac8a95",
+        "bytes":  170185
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\final\\physical\\calibration_history.csv",
+        "sha256":  "20453c5003303fe53194ca019361cdf625601e4ebe8a80e9c1fe5b719b756800",
+        "bytes":  5257
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\final\\physical\\daily_states.csv",
+        "sha256":  "0310ab0af792a4d9a80f0534d3a3dbee403c1d04df3643e0f0ed5f2dfc34a4de",
+        "bytes":  1100986
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\final\\physical\\modis_diagnostic_by_year.csv",
+        "sha256":  "f4954266d66f809cf9b4600fbf1efe8d8160d937e7742d378035e200b269ce48",
+        "bytes":  268
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\final\\physical\\modis_snow_diagnostic.csv",
+        "sha256":  "c4ae4510d870ef352fa24e87d5d2f33a6501e71979ad71ac29fff1fe64a158e5",
+        "bytes":  218524
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\folds\\2021\\sample_splits.csv",
+        "sha256":  "cf6049e0478fd5e50e64ed031d9b18cdd726f6cc6b376baae188b7f3daaaa696",
+        "bytes":  254843
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\folds\\2021\\forecasts\\hbv_trajectories.csv.gz",
+        "sha256":  "2ffe12380534ae0e20a9860998720bc3012a200a8648f6e83e4e49e5249452f1",
+        "bytes":  92866
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\folds\\2021\\forecasts\\hydrographs.csv",
+        "sha256":  "6d26d794cad64afe2b6fe5b64df6fa7fbe3c3aa7d816a5aca0ea92f0fa8985aa",
+        "bytes":  950363
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\folds\\2021\\forecasts\\member_hydrographs.csv.gz",
+        "sha256":  "3cc0e00c7d42431eb7fb811c4f2f570d6938b1f06d08713c680ed5cc059e8eeb",
+        "bytes":  135299
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\folds\\2021\\models\\lightgbm\\feature_importance.csv",
+        "sha256":  "017f11e90f16f0c78fc33c1c58c515185572b7ebb3f1451d7d028ddacf6084c0",
+        "bytes":  127742
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\folds\\2021\\models\\lstm\\best.pt",
+        "sha256":  "c0f41d76adee3237bf3eb7130426dc93447e8395cf4f0dc94bae1ee7f2315290",
+        "bytes":  170185
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\folds\\2021\\physical\\calibration_history.csv",
+        "sha256":  "03a31bb1ac3b5a7cfb940607148abe136ddd8252b40f0875a99bcdbe569c4c2f",
+        "bytes":  5253
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\folds\\2021\\physical\\daily_states.csv",
+        "sha256":  "15506d084ca344eb3353c2295c4389fdb834d3de37503f1a3803d63a002fbc4c",
+        "bytes":  1093498
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\folds\\2021\\physical\\modis_diagnostic_by_year.csv",
+        "sha256":  "7e081e4e9f920d3073b191a142a7e22a58bd498f564213f65db23a66549e9e27",
+        "bytes":  272
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\folds\\2021\\physical\\modis_snow_diagnostic.csv",
+        "sha256":  "d973bb9bc8725553e7f229ed2c45132c1286eef831ff817db92068c7e9c8088f",
+        "bytes":  214244
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\folds\\2022\\sample_splits.csv",
+        "sha256":  "ffd917f849e191f7b2b317659ddd4efa967c550900381715137633b1398455cf",
+        "bytes":  254478
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\folds\\2022\\forecasts\\hbv_trajectories.csv.gz",
+        "sha256":  "f2b2f749719527aa6a71c2c61ac9f62682ad692424dbf76c35fd2752153266ed",
+        "bytes":  90941
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\folds\\2022\\forecasts\\hydrographs.csv",
+        "sha256":  "496c922f0c433a867f798456c3d868e14d220723c0f582c3550a280b9b4b3d57",
+        "bytes":  994098
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\folds\\2022\\forecasts\\member_hydrographs.csv.gz",
+        "sha256":  "8ba009c1047739e63a49dbe4b6b528124756d6341e759fc77e9f8c4027de614c",
+        "bytes":  135388
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\folds\\2022\\models\\lightgbm\\feature_importance.csv",
+        "sha256":  "3f951b8cc5dc0ead8891cb7c2ac430e57affbc14cfc2a121e9166be3f541064a",
+        "bytes":  131109
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\folds\\2022\\models\\lstm\\best.pt",
+        "sha256":  "9160cbae3cd72d4cf38437d46550c865729cc5801d2381b4891cc6107c4226c5",
+        "bytes":  170185
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\folds\\2022\\physical\\calibration_history.csv",
+        "sha256":  "cfd815b80a0d1e550a6ff14236c62ad03daa4ce4acde950fd2bee33e59125faf",
+        "bytes":  5246
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\folds\\2022\\physical\\daily_states.csv",
+        "sha256":  "772facf84422ab9e759eb011c7a623204c3167662a08f5835239d9518f307f37",
+        "bytes":  1093944
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\folds\\2022\\physical\\modis_diagnostic_by_year.csv",
+        "sha256":  "fc2915ecc3e34968743ba21e383bcd2204c1f43eab82808a8abd8dc106e2f98a",
+        "bytes":  271
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\folds\\2022\\physical\\modis_snow_diagnostic.csv",
+        "sha256":  "59f24e50265747fe2b15e60cc2ba916c3948613548d369fa8749389249d1187d",
+        "bytes":  212417
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\folds\\2023\\sample_splits.csv",
+        "sha256":  "f415e5c91da0570ed8e2196e1d44ff523586e50a47d122f8b50a4188f09b1dcc",
+        "bytes":  254113
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\folds\\2023\\forecasts\\hbv_trajectories.csv.gz",
+        "sha256":  "f385b9235012931bfd7f28de0b3f06e219b6b6e7037695f4030d883be0556243",
+        "bytes":  90789
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\folds\\2023\\forecasts\\hydrographs.csv",
+        "sha256":  "4957174f319877021fd16e0e722013c47a3e2436433949f7057f1474f487c8cf",
+        "bytes":  977297
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\folds\\2023\\forecasts\\member_hydrographs.csv.gz",
+        "sha256":  "7af282d7559b81ac00aa0391a84b965e48479a68328732a0dd86d2ab7ca5f13d",
+        "bytes":  135537
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\folds\\2023\\models\\lightgbm\\feature_importance.csv",
+        "sha256":  "f7526f9d8f128137c1cf307cf9e684a3ed10d89c3a4ebe283511e0a7dde84c8e",
+        "bytes":  129580
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\folds\\2023\\models\\lstm\\best.pt",
+        "sha256":  "bc3c1b82361c0502cca45013c02bdb9e20b6afec1fbb5214ebdb9bfb9a686bee",
+        "bytes":  170185
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\folds\\2023\\physical\\calibration_history.csv",
+        "sha256":  "34ebeb652ca274c1f366e6adfcd0578cdde1a100adf3fe763d9cd0cb2b540acd",
+        "bytes":  5252
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\folds\\2023\\physical\\daily_states.csv",
+        "sha256":  "9612db926b3997dd77b7dabad46e60e6afbf923232cc1eed7424f80986cf3214",
+        "bytes":  1101296
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\folds\\2023\\physical\\modis_diagnostic_by_year.csv",
+        "sha256":  "031b09a604448d055c02f036ba6ddea114b92b51fa9a8368807704f81fa88124",
+        "bytes":  271
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\folds\\2023\\physical\\modis_snow_diagnostic.csv",
+        "sha256":  "e55429fd37c85550abd45591b4359e19f5afc4145d8c0436c03bd272b987c046",
+        "bytes":  212393
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\folds\\2024\\sample_splits.csv",
+        "sha256":  "c863e0e3a0164094a3e7354626f1020beda209a24ce636ac6e58a03d91be027a",
+        "bytes":  253748
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\folds\\2024\\forecasts\\hbv_trajectories.csv.gz",
+        "sha256":  "ff8dbf35bbd9f9c09cc93a51c03d0b981e7bc1d17310ed28e91b57c9aedffe9a",
+        "bytes":  90987
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\folds\\2024\\forecasts\\hydrographs.csv",
+        "sha256":  "61605bf45ad6d7b348bbd2b237784f87f9845c7d979630e079457c4ec5b2b0b9",
+        "bytes":  974499
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\folds\\2024\\forecasts\\member_hydrographs.csv.gz",
+        "sha256":  "6fdadcd987a31e6889d66ed2ac4b19fbb0b0d2cc8a3137435636f68f8a0ca82e",
+        "bytes":  135307
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\folds\\2024\\models\\lightgbm\\feature_importance.csv",
+        "sha256":  "2a76841dc8e9e8a1fd489e4007f8a81682e7659268c8e6533baa5629b6019da0",
+        "bytes":  131780
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\folds\\2024\\models\\lstm\\best.pt",
+        "sha256":  "70a15b003ddb69b34b6d091826644970f5d42b2acbc6e300d73200fb683fb7cf",
+        "bytes":  170185
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\folds\\2024\\physical\\calibration_history.csv",
+        "sha256":  "2efa9c044a9951640a564bff065fa0b9f5ee88968db8ce3c695e14971e944b6c",
+        "bytes":  5245
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\folds\\2024\\physical\\daily_states.csv",
+        "sha256":  "0de8563095c74d09f5b9151bd3cf20861015c6c2ed5a01a8ec24ffbfe67a5c29",
+        "bytes":  1105600
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\folds\\2024\\physical\\modis_diagnostic_by_year.csv",
+        "sha256":  "46ceaea52ab72a4729ea7e73b429cec3e54a177966f42012c1cdeb10daf76e4f",
+        "bytes":  271
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\folds\\2024\\physical\\modis_snow_diagnostic.csv",
+        "sha256":  "76c79adea6720471f4c2a67c30fdd410438df695246de15df0613d4c4875fb0f",
+        "bytes":  212279
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\reports\\baseline_comparison.csv",
+        "sha256":  "6bf34daab5caff86eba5dd1c83d305c25243251512daaee38901dd7cc3172892",
+        "bytes":  4267
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\reports\\hydrograph_2021_lead05.png",
+        "sha256":  "d39e710130dbc1690baf2e53c6fdc9d1ad488b831ffaf96383fa0654f11a1190",
+        "bytes":  204210
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\reports\\hydrograph_2022_lead05.png",
+        "sha256":  "9160ea78927185fc031e73261e2d7af1bb03c46d62639837eaf9a03c164032b0",
+        "bytes":  247652
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\reports\\hydrograph_2023_lead05.png",
+        "sha256":  "35807e759fa801c769de141e835364780464a101e54082245722ef5bb388e102",
+        "bytes":  237617
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\reports\\hydrograph_2024_lead05.png",
+        "sha256":  "4f27f307918ee28ac0889e476342b7151a1d1fa7f3f407ba8dfe2c9efa584c20",
+        "bytes":  208923
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\reports\\mean_q95_threshold_scores.csv",
+        "sha256":  "ff09b801dd8b5f0d664bac31379e219ce31e6d3deb6a034b6b30f3fc126e9edf",
+        "bytes":  381
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\reports\\mean_scores_across_leads.csv",
+        "sha256":  "726efe7837d67f542c288b1b97ef9f170cf518125deaa726fc7146585237690d",
+        "bytes":  524
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\reports\\peak_events.csv",
+        "sha256":  "9204cb3d2ccf7400ae9673348f2e651b38552bdb142dd01fce98d7f6ef808d41",
+        "bytes":  42039
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\reports\\quantile_calibration.csv",
+        "sha256":  "aa65c1ddc874b317f65f24d77770d0f5bf0312f11a5784bda1a1eb673e621f0f",
+        "bytes":  16425
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\reports\\rolling_predictions.csv.gz",
+        "sha256":  "7c42d88e7d2a1b3a84dd12889b08616c29f61c001312d8cc607f1a269e91cb9a",
+        "bytes":  539985
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\reports\\scores_by_lead.csv",
+        "sha256":  "1a65b5e6ace7dfbc8c63af623f54ae30f72ea03b5f257935d664f6146268ae25",
+        "bytes":  6456
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\reports\\scores_by_season_and_lead.csv",
+        "sha256":  "3c4252a572fd3cc7302d40ea585c98066465bb7a9f7738f4062f1367cf7a282f",
+        "bytes":  26236
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\reports\\skill_by_lead.png",
+        "sha256":  "423a87823063ed78ab1b04dc6e5fa22de576fb8f449a4ac737fe0f85a2125206",
+        "bytes":  162479
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\reports\\threshold_scores_by_lead.csv",
+        "sha256":  "24db4f89795698cc3177e2209cab080712ef36c6d3e8027ff3e82a6d4dd55ae7",
+        "bytes":  12490
+    },
+    {
+        "path":  "hbv_residual\\runs\\2026-10-30\\reports\\threshold_scores_by_season_and_lead.csv",
+        "sha256":  "215ad5c618de2d84e668f3c1c67b23e03b0e46b31649188b2eae1c35cb3e607c",
+        "bytes":  54616
+    },
+    {
+        "path":  "hybrid_physics_ml\\reports\\initial\\learned_physics_parameters.csv",
+        "sha256":  "fc50e39b49d4d6b21d3e10e52bf2b2ccfff7486a4b01bda473cc0fd36f20eefa",
+        "bytes":  332
+    },
+    {
+        "path":  "hybrid_physics_ml\\reports\\initial\\predictions.csv",
+        "sha256":  "73d544796c55ee51bba9c18085fc8355e637a4075f1aa0e306d82ceebb8ea73f",
+        "bytes":  2753864
+    },
+    {
+        "path":  "hybrid_physics_ml\\reports\\initial\\quantile_calibration.csv",
+        "sha256":  "31bf49f6ccb73945ea99960970358b0a794675aa065c07a824f0589ca466382c",
+        "bytes":  504
+    },
+    {
+        "path":  "hybrid_physics_ml\\reports\\initial\\scores_by_lead.csv",
+        "sha256":  "1b3bfd98f8e47a91abffa11f98132d0b90f2599dfb79116e317134020065264e",
+        "bytes":  11584
+    },
+    {
+        "path":  "hybrid_physics_ml\\reports\\initial\\scores_by_season_and_lead.csv",
+        "sha256":  "db8466d0437358271636ba6d1b8658c8e8f6caa5f012c7305efe9f9d134a9ab2",
+        "bytes":  30728
+    },
+    {
+        "path":  "hybrid_physics_ml\\reports\\initial\\skill_by_lead.png",
+        "sha256":  "d836c23201e55f71ef0798117f77569e9a72014fd803f5695a9482cf1fa81a97",
+        "bytes":  143614
+    },
+    {
+        "path":  "hybrid_physics_ml\\reports\\initial\\water_balance_audit.csv",
+        "sha256":  "044c3a0990302fc5642a073e5fefa75851abb521a8097cc908abf155ff684d9f",
+        "bytes":  172
+    },
+    {
+        "path":  "hybrid_physics_ml\\runs\\initial\\seed_42\\best.pt",
+        "sha256":  "2b74d4632df37636c478a14fc0663366c54861e8d92e233b795f4d84bfdb69e1",
+        "bytes":  562843
+    },
+    {
+        "path":  "lstm\\reports\\initial\\model_predictions.csv",
+        "sha256":  "f3a86b8c30482f352b4a5ad9d341dc66998eb36c7ba5afdee8c5177a74e2966a",
+        "bytes":  1803400
+    },
+    {
+        "path":  "lstm\\reports\\initial\\model_scores_by_season_and_lead.csv",
+        "sha256":  "9f7e89dd32cbcd295ed2603a9e7db02b10d9a984cf7342495215845ddb460095",
+        "bytes":  5247
+    },
+    {
+        "path":  "lstm\\reports\\initial\\model_scores_overall.csv",
+        "sha256":  "63d684a1eb33d27291b9078a574f1f8ed05913c5b0ee206e5f248812bbc29d13",
+        "bytes":  1287
+    },
+    {
+        "path":  "lstm\\reports\\initial\\quantile_calibration.csv",
+        "sha256":  "1d8ccacc5a4b0af803081477ca386e15a2da15fb89f98b17bd72917b3cdc69be",
+        "bytes":  5329
+    },
+    {
+        "path":  "lstm\\runs\\initial\\seed_42\\best.pt",
+        "sha256":  "5c4e794911deb184184e72980093184f708c9a89a5594d5afaa744781c34c1c3",
+        "bytes":  519945
+    },
+    {
+        "path":  "N-BEATSx\\data\\marala_daily.csv",
+        "sha256":  "d21788d62afc9e54d8e2aa6e1f27dcc244ef3b6a1a734249650abd84ccdbe11f",
+        "bytes":  3132184
+    },
+    {
+        "path":  "N-BEATSx\\reference\\original_lstm\\best.pt",
+        "sha256":  "5c4e794911deb184184e72980093184f708c9a89a5594d5afaa744781c34c1c3",
+        "bytes":  519945
+    },
+    {
+        "path":  "N-BEATSx\\reports\\all_models_comparison\\flood_detection_by_lead.csv",
+        "sha256":  "2b036d8ff2ae974b437646d55661a682db6d647c187857560348bfc2f408f84d",
+        "bytes":  44665
+    },
+    {
+        "path":  "N-BEATSx\\reports\\all_models_comparison\\main_day10_scores.csv",
+        "sha256":  "375c1f4381242191dbcec430c4770a2b4931a75efd2428159af44200445b2d92",
+        "bytes":  8925
+    },
+    {
+        "path":  "N-BEATSx\\reports\\all_models_comparison\\rankings_day10_trained_models.csv",
+        "sha256":  "aa82265375003cbc77bd21e5a87085a998bcbfc6a2a3dedcce388001a5aa6886",
+        "bytes":  3976
+    },
+    {
+        "path":  "N-BEATSx\\reports\\all_models_comparison\\scores_flood_nonflood_by_lead.csv",
+        "sha256":  "3c697624fc0305d0b083aed56296f9e1f5898cf9fd657f4fe928ae6657a42c90",
+        "bytes":  172468
+    },
+    {
+        "path":  "N-BEATSx\\reports\\comparison\\new_model_flood_nonflood.csv",
+        "sha256":  "015c140ec61e667b7208fa7c0e5853e52261cda9f80674afc391a8fa40e497d3",
+        "bytes":  9459
+    },
+    {
+        "path":  "N-BEATSx\\reports\\comparison\\new_model_scores_by_lead.csv",
+        "sha256":  "b12ff0c946858fa44435f253936d3709f39c8ccf36c811c2c7fa5c3f177a725e",
+        "bytes":  5818
+    },
+    {
+        "path":  "N-BEATSx\\reports\\comparison\\skill_by_lead.png",
+        "sha256":  "b73ab8437d1f7653c74e9f9d239b2becd4de24d89eb8cde5a5ceb7c76d78b203",
+        "bytes":  120848
+    },
+    {
+        "path":  "N-BEATSx\\reports\\comparison\\training_runs.csv",
+        "sha256":  "2e5bafa83dd241d004717c9515fb263f8a901f4851a9051dd8737a836558be64",
+        "bytes":  349
+    },
+    {
+        "path":  "N-BEATSx\\reports\\initial\\flood_detection.csv",
+        "sha256":  "56743b26260db0098398fa326b2f129b836dfe804bdfd2e0b85df34f27086302",
+        "bytes":  1057
+    },
+    {
+        "path":  "N-BEATSx\\reports\\initial\\predictions.csv",
+        "sha256":  "3e14343b198739362e055b0d95d9961c0f6efeaf1b50f8b15157088eae4bea0e",
+        "bytes":  1802127
+    },
+    {
+        "path":  "N-BEATSx\\reports\\initial\\quantile_calibration.csv",
+        "sha256":  "e3cea2d83e6afd6fc69e477e2e7499b9a35953c1d0ae903088b2619f65b48d18",
+        "bytes":  802
+    },
+    {
+        "path":  "N-BEATSx\\reports\\initial\\scores_by_lead.csv",
+        "sha256":  "06919fa3b1bc43a487d5bc9dd09f2fa27fca0eb5d23f790ac8a560ae6ca625e4",
+        "bytes":  2023
+    },
+    {
+        "path":  "N-BEATSx\\reports\\initial\\scores_by_season_and_lead.csv",
+        "sha256":  "ffd7829489565764f960cb72380ef30217b70c84b10784511e40920e7c0f3034",
+        "bytes":  5173
+    },
+    {
+        "path":  "N-BEATSx\\reports\\initial\\scores_flood_nonflood_by_lead.csv",
+        "sha256":  "da8d5efd8667145039c1c187cc2b8217051d5414e21083147d5afeb732f47bf1",
+        "bytes":  3225
+    },
+    {
+        "path":  "N-BEATSx\\runs\\initial\\seed_42\\best.pt",
+        "sha256":  "0006ccc7f39a13be7e3d6880841c5b484812989b1c1d7a687426875b3e464040",
+        "bytes":  20903433
+    },
+    {
+        "path":  "N-HiTS\\controls\\lstm\\reports\\initial\\flood_detection.csv",
+        "sha256":  "8d8af638526c00141767aac9280d7bdb9f0dccdbd2359018aa496846f841c2d1",
+        "bytes":  1130
+    },
+    {
+        "path":  "N-HiTS\\controls\\lstm\\reports\\initial\\predictions.csv",
+        "sha256":  "c2f11598c26090e26528445ed114e937513f238c5f024eae208210497c43f315",
+        "bytes":  1803223
+    },
+    {
+        "path":  "N-HiTS\\controls\\lstm\\reports\\initial\\quantile_calibration.csv",
+        "sha256":  "567ad373232273fc14de275394030f4b7fcab3e7e02ad18476e3f890f6bfb65e",
+        "bytes":  850
+    },
+    {
+        "path":  "N-HiTS\\controls\\lstm\\reports\\initial\\scores_by_lead.csv",
+        "sha256":  "b90c78794ccd05cf55434f9808b3e7ace13661fbb727a6142ccbe9311f31c89c",
+        "bytes":  2069
+    },
+    {
+        "path":  "N-HiTS\\controls\\lstm\\reports\\initial\\scores_by_season_and_lead.csv",
+        "sha256":  "f0e3ea2e5c547f7f4c00f63a70ababfeaf1fd45e54139614bd0482dfdc68d526",
+        "bytes":  5353
+    },
+    {
+        "path":  "N-HiTS\\controls\\lstm\\reports\\initial\\scores_flood_nonflood_by_lead.csv",
+        "sha256":  "939d86fb17abb7cbb369fc09061f8aae256dc792ad5e93f5f41fe46fbc8df48c",
+        "bytes":  3320
+    },
+    {
+        "path":  "N-HiTS\\controls\\lstm\\runs\\initial\\seed_42\\best.pt",
+        "sha256":  "c5fabfbeadf2a69f7c87516ca58edac4cb2fd1d49d64f315a32a09c055b455b4",
+        "bytes":  536265
+    },
+    {
+        "path":  "N-HiTS\\data\\marala_daily.csv",
+        "sha256":  "d21788d62afc9e54d8e2aa6e1f27dcc244ef3b6a1a734249650abd84ccdbe11f",
+        "bytes":  3132184
+    },
+    {
+        "path":  "N-HiTS\\reference\\original_lstm\\best.pt",
+        "sha256":  "5c4e794911deb184184e72980093184f708c9a89a5594d5afaa744781c34c1c3",
+        "bytes":  519945
+    },
+    {
+        "path":  "N-HiTS\\reports\\all_models_comparison\\flood_detection_by_lead.csv",
+        "sha256":  "2b036d8ff2ae974b437646d55661a682db6d647c187857560348bfc2f408f84d",
+        "bytes":  44665
+    },
+    {
+        "path":  "N-HiTS\\reports\\all_models_comparison\\main_day10_scores.csv",
+        "sha256":  "375c1f4381242191dbcec430c4770a2b4931a75efd2428159af44200445b2d92",
+        "bytes":  8925
+    },
+    {
+        "path":  "N-HiTS\\reports\\all_models_comparison\\rankings_day10_trained_models.csv",
+        "sha256":  "aa82265375003cbc77bd21e5a87085a998bcbfc6a2a3dedcce388001a5aa6886",
+        "bytes":  3976
+    },
+    {
+        "path":  "N-HiTS\\reports\\all_models_comparison\\scores_flood_nonflood_by_lead.csv",
+        "sha256":  "3c697624fc0305d0b083aed56296f9e1f5898cf9fd657f4fe928ae6657a42c90",
+        "bytes":  172468
+    },
+    {
+        "path":  "N-HiTS\\reports\\comparison\\new_model_flood_nonflood.csv",
+        "sha256":  "015c140ec61e667b7208fa7c0e5853e52261cda9f80674afc391a8fa40e497d3",
+        "bytes":  9459
+    },
+    {
+        "path":  "N-HiTS\\reports\\comparison\\new_model_scores_by_lead.csv",
+        "sha256":  "b12ff0c946858fa44435f253936d3709f39c8ccf36c811c2c7fa5c3f177a725e",
+        "bytes":  5818
+    },
+    {
+        "path":  "N-HiTS\\reports\\comparison\\skill_by_lead.png",
+        "sha256":  "b73ab8437d1f7653c74e9f9d239b2becd4de24d89eb8cde5a5ceb7c76d78b203",
+        "bytes":  120848
+    },
+    {
+        "path":  "N-HiTS\\reports\\comparison\\training_runs.csv",
+        "sha256":  "2e5bafa83dd241d004717c9515fb263f8a901f4851a9051dd8737a836558be64",
+        "bytes":  349
+    },
+    {
+        "path":  "N-HiTS\\reports\\initial\\flood_detection.csv",
+        "sha256":  "a2d3bdc6467d68ab58d2df5b5e093969531d0138fe638fcda9a44ecaf355937d",
+        "bytes":  1019
+    },
+    {
+        "path":  "N-HiTS\\reports\\initial\\predictions.csv",
+        "sha256":  "ea7a6c5d17e78698cc2d2874371e607e1cae160e828a2916e082fe0314804d3f",
+        "bytes":  1802411
+    },
+    {
+        "path":  "N-HiTS\\reports\\initial\\quantile_calibration.csv",
+        "sha256":  "15d93e994e5f3c01f134d41e4a6dd2f202977b1f8370fb2214830a9db50f975e",
+        "bytes":  785
+    },
+    {
+        "path":  "N-HiTS\\reports\\initial\\scores_by_lead.csv",
+        "sha256":  "28af8f4a27d0afd4d9f61f329f332b7c83469f3e3d89ba35476088b35770ad95",
+        "bytes":  1986
+    },
+    {
+        "path":  "N-HiTS\\reports\\initial\\scores_by_season_and_lead.csv",
+        "sha256":  "3450ffa945dd4dad0a0884750f81f9d84226dc476f598cc5f79f4c46adb1356a",
+        "bytes":  5140
+    },
+    {
+        "path":  "N-HiTS\\reports\\initial\\scores_flood_nonflood_by_lead.csv",
+        "sha256":  "871b3bc465298dfd77708aa96057fbd7a48b0b87a46107c81862164096b317c7",
+        "bytes":  3186
+    },
+    {
+        "path":  "N-HiTS\\runs\\initial\\seed_42\\best.pt",
+        "sha256":  "e3d078e906aba049be077dc2c3942b4fb3a2f8befdb6c0a515a28466a7bb544f",
+        "bytes":  9981409
+    },
+    {
+        "path":  "persistence\\reports\\initial\\model_predictions.csv",
+        "sha256":  "aee0a86b6854a0cff15b15d146e54e5559ff5496e4b0c66fe928361f3264297c",
+        "bytes":  774087
+    },
+    {
+        "path":  "persistence\\reports\\initial\\model_scores_by_season_and_lead.csv",
+        "sha256":  "09dd9d8c78136730bf2ded96ce4042abb6e42b20ada1a844ab68b5053790dbce",
+        "bytes":  5642
+    },
+    {
+        "path":  "persistence\\reports\\initial\\model_scores_overall.csv",
+        "sha256":  "3b7b822c5e1049047603e9a01b915792cc089aec4d7fc56b3ab13410a1d24b7d",
+        "bytes":  1368
+    },
+    {
+        "path":  "persistence\\runs\\initial\\model.pkl",
+        "sha256":  "ef59be212be37d8c22c8302b936fb7eb1a439625c43eeac6e39eb533d3c8c0c2",
+        "bytes":  51
+    },
+    {
+        "path":  "pretrained_multibasin_lstm\\data\\camels_daily.csv",
+        "sha256":  "5a74eaeaea422f4084b81190501e9c0642b00b8b2179444887137dd2b8de14f7",
+        "bytes":  6321950
+    },
+    {
+        "path":  "pretrained_multibasin_lstm\\data\\marala_daily.csv",
+        "sha256":  "bc3e7720916c1874cff38ab82f16a0692ae338b1435cf7fa5061f25ffbc41ba6",
+        "bytes":  1137961
+    },
+    {
+        "path":  "pretrained_multibasin_lstm\\reports\\initial\\predictions.csv",
+        "sha256":  "1d09c20fca211208ead1828cb1a0c61f0b46beb7f4f27b9ae11ef60c7825f6da",
+        "bytes":  5747502
+    },
+    {
+        "path":  "pretrained_multibasin_lstm\\reports\\initial\\quantile_calibration.csv",
+        "sha256":  "81487014bc37ec5774e9f609d3f17c4c727f5de8968e881eb95406aa534c8d7c",
+        "bytes":  2449
+    },
+    {
+        "path":  "pretrained_multibasin_lstm\\reports\\initial\\scores_by_lead.csv",
+        "sha256":  "bb2e42486adf5a031cf251bba0c312475a06f014fee9527c47daf0f7d9114a9f",
+        "bytes":  11267
+    },
+    {
+        "path":  "pretrained_multibasin_lstm\\reports\\initial\\scores_by_season_and_lead.csv",
+        "sha256":  "8c804596e720a34240a33d72b4d73391f7ce9b756dafabcb64dde1ee2927fdcb",
+        "bytes":  30556
+    },
+    {
+        "path":  "pretrained_multibasin_lstm\\reports\\initial\\skill_by_lead.png",
+        "sha256":  "40014065922b25055f72dc9887a19b8f651266c448d85a75cf03f90e6d28711f",
+        "bytes":  95284
+    },
+    {
+        "path":  "pretrained_multibasin_lstm\\reports\\initial\\climatology\\predictions.csv",
+        "sha256":  "de2115aaa99a3ca95b2e98993296fe733c64d9b28e9a5e92eea79f780ba80bae",
+        "bytes":  786271
+    },
+    {
+        "path":  "pretrained_multibasin_lstm\\reports\\initial\\climatology\\scores_by_lead.csv",
+        "sha256":  "6e8806f9723666228cefef2c1a78f92d8b83847f43d9667642e3f2cb1ab4d9f7",
+        "bytes":  2055
+    },
+    {
+        "path":  "pretrained_multibasin_lstm\\reports\\initial\\climatology\\scores_by_season_and_lead.csv",
+        "sha256":  "f1e7fa9a3da0b7404f29d45a115c8002f8d5fcd439b2104f900329ea924d3e4c",
+        "bytes":  5200
+    },
+    {
+        "path":  "pretrained_multibasin_lstm\\reports\\initial\\finetuned\\predictions.csv",
+        "sha256":  "83c19873a129a34bab909f1a63f3f083192c971bb34fac8a5a1f2024b10ae9a5",
+        "bytes":  1802254
+    },
+    {
+        "path":  "pretrained_multibasin_lstm\\reports\\initial\\finetuned\\scores_by_lead.csv",
+        "sha256":  "98e54a1eec09aee38cc3b1720247065b4c072e1071688feb63ff0fd29ad5f333",
+        "bytes":  2024
+    },
+    {
+        "path":  "pretrained_multibasin_lstm\\reports\\initial\\finetuned\\scores_by_season_and_lead.csv",
+        "sha256":  "96c028d5c3201b1b32c5508af9bf3292a032b5616f4ef072903adb914c67db20",
+        "bytes":  5195
+    },
+    {
+        "path":  "pretrained_multibasin_lstm\\reports\\initial\\original_8input_LSTM\\predictions.csv",
+        "sha256":  "b2b9b1c046b52d35c9b68ae9dbf1891a5cd53c47286555cbe8a0d06e866f353d",
+        "bytes":  1803521
+    },
+    {
+        "path":  "pretrained_multibasin_lstm\\reports\\initial\\original_8input_LSTM\\scores_by_lead.csv",
+        "sha256":  "fba90faa3b06571b642a39d72775218056d647127c3f165f77f2c7bcf0802887",
+        "bytes":  2115
+    },
+    {
+        "path":  "pretrained_multibasin_lstm\\reports\\initial\\original_8input_LSTM\\scores_by_season_and_lead.csv",
+        "sha256":  "023d1e169058f1484621e8e5f4c65eb922395fe706bb46c537171f4cd82b9ece",
+        "bytes":  5508
+    },
+    {
+        "path":  "pretrained_multibasin_lstm\\reports\\initial\\persistence\\predictions.csv",
+        "sha256":  "aee0a86b6854a0cff15b15d146e54e5559ff5496e4b0c66fe928361f3264297c",
+        "bytes":  774087
+    },
+    {
+        "path":  "pretrained_multibasin_lstm\\reports\\initial\\persistence\\scores_by_lead.csv",
+        "sha256":  "84a8b59e86b47f3e509fb09c9e744dc936f176998283814375b33258f5d6d0f2",
+        "bytes":  2076
+    },
+    {
+        "path":  "pretrained_multibasin_lstm\\reports\\initial\\persistence\\scores_by_season_and_lead.csv",
+        "sha256":  "448a8547ebfb4e601dff2f1f7220bad19d2a1ba93360f644b6111298a38bb05f",
+        "bytes":  5423
+    },
+    {
+        "path":  "pretrained_multibasin_lstm\\reports\\initial\\pretrained_only\\predictions.csv",
+        "sha256":  "a08648016e99208f74204e98fe510451c7e5871e4b747d6bfaa29bf80ff696d6",
+        "bytes":  1800429
+    },
+    {
+        "path":  "pretrained_multibasin_lstm\\reports\\initial\\pretrained_only\\scores_by_lead.csv",
+        "sha256":  "1160a9463005755920bdef0359af0948dab6d7b2a5c44c41f0bbdc7ca4f07078",
+        "bytes":  1634
+    },
+    {
+        "path":  "pretrained_multibasin_lstm\\reports\\initial\\pretrained_only\\scores_by_season_and_lead.csv",
+        "sha256":  "054d8734ca66b76291b9ec936f811d8927db7edd0ca0f9d4b379a552f258c09f",
+        "bytes":  4797
+    },
+    {
+        "path":  "pretrained_multibasin_lstm\\reports\\initial\\scratch\\predictions.csv",
+        "sha256":  "bd079d029766e761c136e8ac9ec430c38e389bceed83d85bc602c0bac9770a4a",
+        "bytes":  1801715
+    },
+    {
+        "path":  "pretrained_multibasin_lstm\\reports\\initial\\scratch\\scores_by_lead.csv",
+        "sha256":  "de8a5e863b289e804389473d83c811645bec6df0c825ef69685fe48f19029e54",
+        "bytes":  2013
+    },
+    {
+        "path":  "pretrained_multibasin_lstm\\reports\\initial\\scratch\\scores_by_season_and_lead.csv",
+        "sha256":  "e305d651318323d4df065f6a6b5a8b819d912ec32da028ab5c1d25a953727bd3",
+        "bytes":  5118
+    },
+    {
+        "path":  "pretrained_multibasin_lstm\\runs\\marala_finetuned\\seed_42\\best.pt",
+        "sha256":  "3bbd0b7f516396298d9f4d23dcd5fc365f92d31989e4ed9445a8cc4dcda0e4f7",
+        "bytes":  149577
+    },
+    {
+        "path":  "pretrained_multibasin_lstm\\runs\\marala_scratch\\seed_42\\best.pt",
+        "sha256":  "48f511e9b434191c4ad3926b9a406dae34329b7e14b0475c42b026d567aa4962",
+        "bytes":  149193
+    },
+    {
+        "path":  "pretrained_multibasin_lstm\\runs\\pretrained\\seed_42\\best.pt",
+        "sha256":  "a30d0bfdc465aab90db819636a9bd1c3efbf61f4b9332a4829aea6a88c25f6da",
+        "bytes":  149385
+    },
+    {
+        "path":  "spatially_distributed_model\\data\\aggregation_quality_check.csv",
+        "sha256":  "5921106e0b3229b23c4e941974cecead443aa5bc6431ae649606e2b36253f259",
+        "bytes":  428
+    },
+    {
+        "path":  "spatially_distributed_model\\data\\band_input_profile.csv",
+        "sha256":  "405f74d70fad0c16773be97fa3ab654fe07e68d187e8356ab87ae9cc8742019b",
+        "bytes":  1586
+    },
+    {
+        "path":  "spatially_distributed_model\\data\\spatial_daily.csv",
+        "sha256":  "ea3bc0fd1da809c65811306339d15e030587b9b96e93487bc21fbb78f66b0097",
+        "bytes":  5601386
+    },
+    {
+        "path":  "spatially_distributed_model\\data\\raw\\era5land_elevation_bands\\2015.csv",
+        "sha256":  "cb5b3c7fe4d0752c32e76dbcb4e26a91bef6eeb57f590821ec58756e41561abc",
+        "bytes":  16398
+    },
+    {
+        "path":  "spatially_distributed_model\\data\\raw\\era5land_elevation_bands\\2016.csv",
+        "sha256":  "d1afdf242263f5ef3189b2f58e23b246214158ce04d380ffe74ed8a5b9ff285b",
+        "bytes":  16442
+    },
+    {
+        "path":  "spatially_distributed_model\\data\\raw\\era5land_elevation_bands\\2017.csv",
+        "sha256":  "d76727e3901104c415a43517e89a2084070696d18db790b57252fda5ced0d2ab",
+        "bytes":  16398
+    },
+    {
+        "path":  "spatially_distributed_model\\data\\raw\\era5land_elevation_bands\\2018.csv",
+        "sha256":  "c05301665788e97bab57c6e4d9fee0a2c7074ffee39b37bca56d5b4af3d3c90e",
+        "bytes":  16398
+    },
+    {
+        "path":  "spatially_distributed_model\\data\\raw\\era5land_elevation_bands\\2019.csv",
+        "sha256":  "142629d6d59c4bc0ed80eb5392d94398a0ef771c7fc8caac2132fd2790baad52",
+        "bytes":  16398
+    },
+    {
+        "path":  "spatially_distributed_model\\data\\raw\\era5land_elevation_bands\\2020.csv",
+        "sha256":  "5da7f3f7ef8bcb75ea50b5c03a006f24f8c5cb0728b783479ebbe34673fa04bf",
+        "bytes":  16442
+    },
+    {
+        "path":  "spatially_distributed_model\\data\\raw\\era5land_elevation_bands\\2021.csv",
+        "sha256":  "ce869c6c40e32007d1fa69fc978e36412ec2101863269d969b7b50a70fc01fe0",
+        "bytes":  16398
+    },
+    {
+        "path":  "spatially_distributed_model\\data\\raw\\era5land_elevation_bands\\2022.csv",
+        "sha256":  "09c0d509f6ed7edf5e8619d8a23eb9fef20b00eec3a6c57f829ec4bda8a0583e",
+        "bytes":  16398
+    },
+    {
+        "path":  "spatially_distributed_model\\data\\raw\\era5land_elevation_bands\\2023.csv",
+        "sha256":  "0e28b0e9950426cbf0e0090ed87d27e17bbc87dd1679d0cabeda360d2abf3eed",
+        "bytes":  16398
+    },
+    {
+        "path":  "spatially_distributed_model\\data\\raw\\era5land_elevation_bands\\2024.csv",
+        "sha256":  "2303a526d6ab63ff0114278e070ffc1149dd632cddda00af366338c704b0856f",
+        "bytes":  16442
+    },
+    {
+        "path":  "spatially_distributed_model\\data\\raw\\era5land_elevation_bands_v2\\2015.csv",
+        "sha256":  "b32861df0b60a6e6710b21f52789d6bcc20ba3bb938fc5a67d6526799bcb8675",
+        "bytes":  142848
+    },
+    {
+        "path":  "spatially_distributed_model\\data\\raw\\era5land_elevation_bands_v2\\2016.csv",
+        "sha256":  "cf30799b878f6090ecee40fe4d4b57e5a361bf0b3356a65582dff3db50a09085",
+        "bytes":  144156
+    },
+    {
+        "path":  "spatially_distributed_model\\data\\raw\\era5land_elevation_bands_v2\\2017.csv",
+        "sha256":  "c884701165642457a280ebcaaf5937bc3588a3ec67624a7196c1ae4d637fc422",
+        "bytes":  142520
+    },
+    {
+        "path":  "spatially_distributed_model\\data\\raw\\era5land_elevation_bands_v2\\2018.csv",
+        "sha256":  "c44a8818f879289072768a542e1a1d702e26d64574c4e79073dde62702e497e6",
+        "bytes":  143349
+    },
+    {
+        "path":  "spatially_distributed_model\\data\\raw\\era5land_elevation_bands_v2\\2019.csv",
+        "sha256":  "4634b71607d4e5f93e9640535704b3ff26388ed84344d190616d864c0e8be720",
+        "bytes":  141442
+    },
+    {
+        "path":  "spatially_distributed_model\\data\\raw\\era5land_elevation_bands_v2\\2020.csv",
+        "sha256":  "ebd19de865f32a88d8c1a34ca0731262035e4199a7a4bf85387ff7b7a329aafe",
+        "bytes":  143140
+    },
+    {
+        "path":  "spatially_distributed_model\\data\\raw\\era5land_elevation_bands_v2\\2021.csv",
+        "sha256":  "15d8a38b5e4e32b53f8a6e4e9b08e2b722c75c407e2c181d3f786f890e426c56",
+        "bytes":  143472
+    },
+    {
+        "path":  "spatially_distributed_model\\data\\raw\\era5land_elevation_bands_v2\\2022.csv",
+        "sha256":  "6b28e367e27f6a623de49777c3c8e627cb572b8d90e8bfb3a6423f812a134a8d",
+        "bytes":  142716
+    },
+    {
+        "path":  "spatially_distributed_model\\data\\raw\\era5land_elevation_bands_v2\\2023.csv",
+        "sha256":  "4f7b38afda7bbe27be581a93385f72e7584861c4f1b82daea0c88b63c56ab3d7",
+        "bytes":  143010
+    },
+    {
+        "path":  "spatially_distributed_model\\data\\raw\\era5land_elevation_bands_v2\\2024.csv",
+        "sha256":  "c953af80d8b88c78bb54151626f35742ae0451ce055ec6868970060917975ac8",
+        "bytes":  143874
+    },
+    {
+        "path":  "spatially_distributed_model\\reports\\initial\\band_inputs.png",
+        "sha256":  "14e48d96c11483d3ecd1dc4d5b8217fd17af521108b5da100e3cfd7deae3129f",
+        "bytes":  346243
+    },
+    {
+        "path":  "spatially_distributed_model\\reports\\initial\\predictions.csv",
+        "sha256":  "1119ef0b4707b1bd477f4625cba804bffcff9e14670f2b1fa7945b6668d879a0",
+        "bytes":  3952086
+    },
+    {
+        "path":  "spatially_distributed_model\\reports\\initial\\quantile_calibration.csv",
+        "sha256":  "419ea98ed5eb20bb6a3d5743d38783cef2e7853599c15a1eb792c13a6357c91d",
+        "bytes":  1241
+    },
+    {
+        "path":  "spatially_distributed_model\\reports\\initial\\scores_by_lead.csv",
+        "sha256":  "445c2047b5f1ccd92215506b724601a503fbe81a2b4ffb3a1fd01ce28e400f30",
+        "bytes":  13679
+    },
+    {
+        "path":  "spatially_distributed_model\\reports\\initial\\scores_by_season_and_lead.csv",
+        "sha256":  "299178e98109aec77f1e4e4e17cbd9dcfcd575cec5056b89fdd397064493dc91",
+        "bytes":  36225
+    },
+    {
+        "path":  "spatially_distributed_model\\reports\\initial\\skill_by_lead.png",
+        "sha256":  "fed92c5de253d43d4affbcbecbf30db6e4871086ab615270f55eb88edb05a10c",
+        "bytes":  147572
+    },
+    {
+        "path":  "spatially_distributed_model\\runs\\mean_control\\seed_42\\best.pt",
+        "sha256":  "32774f38691b1ae787f8c3a0736332abd42cb738f990757696588c514db694ed",
+        "bytes":  493961
+    },
+    {
+        "path":  "spatially_distributed_model\\runs\\spatial\\seed_42\\best.pt",
+        "sha256":  "e7657d5d579baf566de20fabbf1c702ab4a7f52f7cbc4adc7ec834e6775f35c5",
+        "bytes":  600556
+    }
+]

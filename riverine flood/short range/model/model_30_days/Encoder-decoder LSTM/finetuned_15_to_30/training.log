@@ -1,0 +1,102 @@
+Seed 42: initial smooth-climatology validation scaled MSE=0.23739
+Seed 42 epoch 1: train=0.24331 validation_MSE=0.23226
+Seed 42 epoch 2: train=0.23922 validation_MSE=0.22627
+Seed 42 epoch 3: train=0.23585 validation_MSE=0.23677
+Seed 42 epoch 4: train=0.23297 validation_MSE=0.23765
+Seed 42 epoch 5: train=0.22937 validation_MSE=0.24484
+Seed 42 epoch 6: train=0.22579 validation_MSE=0.20423
+Seed 42 epoch 7: train=0.22268 validation_MSE=0.22214
+Seed 42 epoch 8: train=0.21869 validation_MSE=0.20911
+Seed 42 epoch 9: train=0.21437 validation_MSE=0.19272
+Seed 42 epoch 10: train=0.21010 validation_MSE=0.23447
+Seed 42 epoch 11: train=0.20508 validation_MSE=0.24342
+Seed 42 epoch 12: train=0.20151 validation_MSE=0.24538
+Seed 42 epoch 13: train=0.19662 validation_MSE=0.23646
+Seed 42 epoch 14: train=0.19250 validation_MSE=0.24146
+Seed 42 epoch 15: train=0.18860 validation_MSE=0.24382
+Seed 42 epoch 16: train=0.18414 validation_MSE=0.22769
+Seed 42 epoch 17: train=0.18206 validation_MSE=0.22593
+Seed 42 epoch 18: train=0.17865 validation_MSE=0.23577
+Seed 42 epoch 19: train=0.17634 validation_MSE=0.22120
+Seed 42 epoch 20: train=0.17353 validation_MSE=0.21628
+Seed 42 epoch 21: train=0.17101 validation_MSE=0.21159
+Seed 43: initial smooth-climatology validation scaled MSE=0.23739
+Seed 43 epoch 1: train=0.24344 validation_MSE=0.23104
+Seed 43 epoch 2: train=0.23925 validation_MSE=0.22838
+Seed 43 epoch 3: train=0.23599 validation_MSE=0.23823
+Seed 43 epoch 4: train=0.23277 validation_MSE=0.22186
+Seed 43 epoch 5: train=0.22929 validation_MSE=0.24487
+Seed 43 epoch 6: train=0.22559 validation_MSE=0.24777
+Seed 43 epoch 7: train=0.22210 validation_MSE=0.24474
+Seed 43 epoch 8: train=0.21698 validation_MSE=0.24442
+Seed 43 epoch 9: train=0.21620 validation_MSE=0.22998
+Seed 43 epoch 10: train=0.22239 validation_MSE=0.21956
+Seed 43 epoch 11: train=0.21410 validation_MSE=0.20661
+Seed 43 epoch 12: train=0.20830 validation_MSE=0.22881
+Seed 43 epoch 13: train=0.19932 validation_MSE=0.22849
+Seed 43 epoch 14: train=0.19473 validation_MSE=0.21986
+Seed 43 epoch 15: train=0.19098 validation_MSE=0.15701
+Seed 43 epoch 16: train=0.18865 validation_MSE=0.25853
+Seed 43 epoch 17: train=0.18436 validation_MSE=0.20218
+Seed 43 epoch 18: train=0.18092 validation_MSE=0.22707
+Seed 43 epoch 19: train=0.18037 validation_MSE=0.26877
+Seed 43 epoch 20: train=0.17617 validation_MSE=0.22314
+Seed 43 epoch 21: train=0.17348 validation_MSE=0.28638
+Seed 43 epoch 22: train=0.17207 validation_MSE=0.23492
+Seed 43 epoch 23: train=0.17012 validation_MSE=0.26201
+Seed 43 epoch 24: train=0.16751 validation_MSE=0.21683
+Seed 43 epoch 25: train=0.16460 validation_MSE=0.26937
+Seed 43 epoch 26: train=0.16352 validation_MSE=0.26856
+Seed 43 epoch 27: train=0.16287 validation_MSE=0.27015
+Seed 44: initial smooth-climatology validation scaled MSE=0.23739
+Seed 44 epoch 1: train=0.24352 validation_MSE=0.23136
+Seed 44 epoch 2: train=0.23946 validation_MSE=0.22957
+Seed 44 epoch 3: train=0.23650 validation_MSE=0.23023
+Seed 44 epoch 4: train=0.23339 validation_MSE=0.23820
+Seed 44 epoch 5: train=0.23023 validation_MSE=0.24444
+Seed 44 epoch 6: train=0.22704 validation_MSE=0.23321
+Seed 44 epoch 7: train=0.22313 validation_MSE=0.24808
+Seed 44 epoch 8: train=0.21873 validation_MSE=0.24706
+Seed 44 epoch 9: train=0.21382 validation_MSE=0.24730
+Seed 44 epoch 10: train=0.21050 validation_MSE=0.23996
+Seed 44 epoch 11: train=0.20545 validation_MSE=0.24484
+Seed 44 epoch 12: train=0.20060 validation_MSE=0.24304
+Seed 44 epoch 13: train=0.19445 validation_MSE=0.23148
+Seed 44 epoch 14: train=0.19161 validation_MSE=0.15986
+Seed 44 epoch 15: train=0.18861 validation_MSE=0.23276
+Seed 44 epoch 16: train=0.18278 validation_MSE=0.23405
+Seed 44 epoch 17: train=0.18090 validation_MSE=0.23210
+Seed 44 epoch 18: train=0.17857 validation_MSE=0.22342
+Seed 44 epoch 19: train=0.17593 validation_MSE=0.22354
+Seed 44 epoch 20: train=0.17161 validation_MSE=0.22355
+Seed 44 epoch 21: train=0.17177 validation_MSE=0.20850
+Seed 44 epoch 22: train=0.16803 validation_MSE=0.19455
+Seed 44 epoch 23: train=0.16732 validation_MSE=0.20106
+Seed 44 epoch 24: train=0.16401 validation_MSE=0.19579
+Seed 44 epoch 25: train=0.16166 validation_MSE=0.18629
+Seed 44 epoch 26: train=0.16034 validation_MSE=0.14575
+Seed 44 epoch 27: train=0.16199 validation_MSE=0.17705
+Seed 44 epoch 28: train=0.15878 validation_MSE=0.19893
+Seed 44 epoch 29: train=0.15825 validation_MSE=0.18840
+Seed 44 epoch 30: train=0.15664 validation_MSE=0.19409
+Seed 44 epoch 31: train=0.15466 validation_MSE=0.19758
+Seed 44 epoch 32: train=0.15351 validation_MSE=0.18277
+Seed 44 epoch 33: train=0.15212 validation_MSE=0.17909
+Seed 44 epoch 34: train=0.15001 validation_MSE=0.16791
+Seed 44 epoch 35: train=0.15162 validation_MSE=0.18205
+Seed 44 epoch 36: train=0.14888 validation_MSE=0.17966
+Seed 44 epoch 37: train=0.14904 validation_MSE=0.19014
+Seed 44 epoch 38: train=0.14751 validation_MSE=0.18808
+All validation selection and postprocessing frozen. Starting one benchmark evaluation.
+Day-30 mean-flow NSE is **0.849**, versus exact climatology **0.792** and smoothed climatology **0.820**. Beats the original climatology: **True**; beats the smoothed control: **True**. Previous best ensemble NSE: **0.858**.
+                 model  lead_day    n      NSE      KGE  RMSE_cumecs  MAE_cumecs  PBIAS_pct
+  Seq2seq_30d_ensemble        30 1055 0.848911 0.914735   306.416732  195.363491   3.819674
+  Raw_seq2seq_ensemble        30 1055 0.848911 0.914735   306.416732  195.363491   3.819674
+           Climatology        30 1055 0.792145 0.844519   359.398279  231.857132   8.837113
+    Smooth_climatology        30 1055 0.819974 0.834760   334.474595  219.162289   8.780933
+     Weather_only_LSTM        30 1055 0.784410 0.883699   366.024735  224.065896   3.333387
+   Past_discharge_LSTM        30 1055 0.788109 0.870909   362.871348  215.195864  -5.659522
+Previous_best_ensemble        30 1055 0.857523 0.874387   297.555882  191.689903   4.150481
+           Persistence        30 1055 0.262315 0.629497   677.066486  446.423810   1.148887
+Report: D:\projects\flood_model\flood_model\riverine flood\short range\evaluation comparison\model_30_days\encoder_decoder_finetuned_15_to_30\comparison_report.md
+Thirty-day encoder-decoder complete; later model families remain pending feedback.

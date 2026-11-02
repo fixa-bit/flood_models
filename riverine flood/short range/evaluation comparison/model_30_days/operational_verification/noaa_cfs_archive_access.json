@@ -1,0 +1,31 @@
+{
+  "url": "https://www.ncei.noaa.gov/thredds/catalog/model-cfs_v2_for_ts/2022/202208/20220801/catalog.xml",
+  "http_status": 200,
+  "entries": [
+    {
+      "name": "2022/202208/20220801/",
+      "href": null,
+      "url_path": null
+    },
+    {
+      "name": "2022080118",
+      "href": "2022080118/catalog.xml",
+      "url_path": null
+    },
+    {
+      "name": "2022080112",
+      "href": "2022080112/catalog.xml",
+      "url_path": null
+    },
+    {
+      "name": "2022080106",
+      "href": "2022080106/catalog.xml",
+      "url_path": null
+    },
+    {
+      "name": "2022080100",
+      "href": "2022080100/catalog.xml",
+      "url_path": null
+    }
+  ]
+}

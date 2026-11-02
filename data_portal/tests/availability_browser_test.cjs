@@ -40,6 +40,8 @@ const {chromium}=require(path.join(process.env.TEMP,'flood_portal_browser/node_m
         withheldInflow:heat.z[0][day('2024-09-19')]>0,
         lateDischargeMissing:heat.z[0][day('2024-12-20')]===0,
         fullYearRain:heat.z[2][day('2024-12-31')]>0,
+        earlyChirpsRain:heat.z[2][day('1990-01-01')]>0,
+        sourceNames2024:heat.customdata[2][day('2024-09-22')][3],
         february29:dates.includes('2024-02-29'),
         unknownTime:heat.customdata[0][day('2024-01-01')][4],
         confirmedTime:heat.customdata[0][day('2024-12-19')][4],
@@ -53,9 +55,11 @@ const {chromium}=require(path.join(process.env.TEMP,'flood_portal_browser/node_m
     });
     assert.equal(inventory.days,20568);assert.equal(inventory.rows.length,6);
     assert.deepEqual(inventory.span,['1970-07-02','2026-10-23']);
-    assert.deepEqual(inventory.present,[3455,359,3887,8,8,30]);
-    assert.deepEqual(inventory.reviews,[18,13,3887,0,0,0]);
-    assert.ok(inventory.zeroRainDayPresent&&inventory.withheldInflow&&inventory.lateDischargeMissing&&inventory.fullYearRain&&inventory.february29);
+    assert.deepEqual(inventory.present,[3455,359,13442,8,8,30]);
+    assert.deepEqual(inventory.reviews,[18,13,3248,0,0,0]);
+    assert.ok(inventory.zeroRainDayPresent&&inventory.withheldInflow&&inventory.lateDischargeMissing&&inventory.fullYearRain&&inventory.earlyChirpsRain&&inventory.february29);
+    assert.match(inventory.sourceNames2024,/CHIRPS Final.*NASA POWER fresh/);
+    assert.doesNotMatch(inventory.sourceNames2024,/NASA POWER saved/);
     assert.deepEqual(inventory.dateLevelRows,[20568,20568,20568,20568,20568,20568]);
     assert.ok(inventory.earliestPeak&&inventory.earlyDailyMissing&&inventory.irsaLatest&&inventory.missingLatestRain);
     assert.ok(inventory.width<=16000);
@@ -88,7 +92,7 @@ const {chromium}=require(path.join(process.env.TEMP,'flood_portal_browser/node_m
     assert.doesNotMatch(normal,/22,900|cusecs/);
     assert.equal(await page.locator('#summary-chart-viewport').evaluate(element=>element.scrollLeft),500);
     const missing=await hoverCell(3,'2024-09-22');assert.match(missing,/No saved reading/);
-    const period=await hoverCell(2,'2024-09-22');assert.match(period,/24-hour period/);assert.match(period,/on hold/);
+    const period=await hoverCell(2,'2024-09-22');assert.match(period,/CHIRPS Final.*NASA POWER fresh/);assert.match(period,/on hold/);
     await page.mouse.move(2,2);
 
     await page.locator('#availability-scroll').evaluate(element=>{element.value=0;element.dispatchEvent(new Event('input',{bubbles:true}));});

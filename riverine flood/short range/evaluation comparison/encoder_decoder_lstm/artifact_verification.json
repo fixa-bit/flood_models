@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "artifacts_and_source_hashes_valid": true,
+  "samples": {
+    "train": 1767,
+    "validation": 351,
+    "test": 1082
+  },
+  "sample_split_calendar_verified": true,
+  "target_values_and_nan_positions_preserved": true,
+  "pretrained_recurrent_weights_changed_during_finetuning": true,
+  "weight_change_l2": {
+    "lead.weight": 0.5540821552276611,
+    "hindcast.weight_ih_l0": 0.8041110038757324,
+    "hindcast.weight_hh_l0": 1.0550899505615234,
+    "hindcast.bias_ih_l0": 0.15280793607234955,
+    "hindcast.bias_hh_l0": 0.15279380977153778,
+    "forecast.weight_ih_l0": 1.335903286933899,
+    "forecast.weight_hh_l0": 2.1499853134155273,
+    "forecast.bias_ih_l0": 0.2867148518562317,
+    "forecast.bias_hh_l0": 0.2867170572280884,
+    "head.weight": 0.9462207555770874,
+    "head.bias": 0.2076144963502884
+  },
+  "raw_input_inference_cli": {
+    "passed": true,
+    "lead_days": 15,
+    "quantiles": 5,
+    "input_kind": "Historical reanalysis execution replay, not an archived forecast"
+  },
+  "tests_executed": {
+    "seq2seq_tests": {
+      "passed": 5,
+      "command": "python -m unittest discover -s encoder_decoder_lstm/tests -v"
+    },
+    "shared_pipeline_tests": {
+      "passed": 15,
+      "command": "python -m unittest discover -s tests -v"
+    }
+  }
+}

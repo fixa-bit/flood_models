@@ -1,0 +1,48 @@
+{
+  "output": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\data\\marala_daily.csv",
+  "observed_target_days": 3454,
+  "target_nan_days": 13636,
+  "no_discharge_filling": true,
+  "sources": [
+    {
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\dataset\\chenab_marala\\processed\\marala\\discharge\\marala_wapda_daily_inflow.csv",
+      "sha256": "e62270025e4b1b312c4fecebb37c30107fef52ce81e51ba32e9d8fcb8e1a6cd6"
+    },
+    {
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\dataset\\chenab_marala\\processed\\marala\\discharge\\marala_ffd_2024_bulletin_discharge.csv",
+      "sha256": "9047f723085a617ce4ba51689300b448d286d27c3f985e4a97e89a92973a30c8"
+    },
+    {
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\dataset\\chenab_marala\\processed\\marala\\discharge\\marala_ffd_2025_bulletin_discharge.csv",
+      "sha256": "306096440a5eab0e8e847286e45b2801b84ef765d2f68ac2213be2259ece132e"
+    },
+    {
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\dataset\\chenab_marala\\processed\\marala\\discharge\\marala_ffd_2026_bulletin_discharge.csv",
+      "sha256": "592969e660f889fbb1ab9012d97e611462e138bad4c5697f4da9d82539a6191a"
+    },
+    {
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\dataset\\chenab_marala\\processed\\marala\\rainfall\\chirps_v3_primary\\marala_chirps_v3_final_rnl_daily_1990_2026.csv",
+      "sha256": "0c4535bf8086c99c4b4cb69ce074a3eb1fda9273665a683422f13c7e58f7faa2"
+    },
+    {
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\dataset\\chenab_marala\\raw\\marala\\rainfall\\google_earth_engine\\marala_daily_precipitation_1980_2024.csv",
+      "sha256": "3d34949c7b4901a3447e4793c4ea704d9f949426f6694880946a23bc1ebe1824"
+    },
+    {
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\dataset\\chenab_marala\\raw\\marala\\temperature\\google_earth_engine\\marala_daily_temperature_1980_2024.csv",
+      "sha256": "1688af545544151217223181084e8e7c54c5f9ad361c6adc7f4aa18468c0e534"
+    },
+    {
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\dataset\\chenab_marala\\raw\\marala\\marala_daily_snow_1980_2024.csv",
+      "sha256": "134c1549cc7e9dc1604277f5fd39e6c8836e222add43d1b87b9b4c4fc0323753"
+    },
+    {
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\dataset\\chenab_marala\\raw\\marala\\marala_daily_dewpoint_ssrd_1980_2024.csv",
+      "sha256": "7fe359259375ff02159ef1059b9aaf31c1d814267fe7b0bdbbdde9953c549704"
+    },
+    {
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\dataset\\chenab_marala\\raw\\marala\\potential_evaporation_sum\\marala_daily_pet_1980_2024.csv",
+      "sha256": "89e16336bdd87eb80827a45abd01b64e12cb6ce5af9f4989cdabfbd3f2b0a6bd"
+    }
+  ]
+}

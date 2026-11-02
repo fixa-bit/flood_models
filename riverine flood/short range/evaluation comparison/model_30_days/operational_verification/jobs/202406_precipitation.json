@@ -1,0 +1,116 @@
+{
+  "id": "202406_precipitation",
+  "request": {
+    "origin": "ecmwf",
+    "year": "2024",
+    "month": "06",
+    "day": [
+      "01",
+      "02",
+      "03",
+      "04",
+      "05",
+      "06",
+      "07",
+      "08",
+      "09",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "20",
+      "21",
+      "22",
+      "23",
+      "24",
+      "25",
+      "26",
+      "27",
+      "28",
+      "29",
+      "30"
+    ],
+    "time": "00:00",
+    "level_type": "single_level",
+    "variable": [
+      "total_precipitation"
+    ],
+    "forecast_type": "control_forecast",
+    "leadtime_hour": [
+      "48",
+      "72",
+      "96",
+      "120",
+      "144",
+      "168",
+      "192",
+      "216",
+      "240",
+      "264",
+      "288",
+      "312",
+      "336",
+      "360",
+      "384",
+      "408",
+      "432",
+      "456",
+      "480",
+      "504",
+      "528",
+      "552",
+      "576",
+      "600",
+      "624",
+      "648",
+      "672",
+      "696",
+      "720",
+      "744",
+      "768"
+    ],
+    "data_format": "grib",
+    "area": [
+      35,
+      73.5,
+      31.5,
+      78
+    ]
+  },
+  "origins": 30,
+  "variable": "precipitation",
+  "target": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\dataset\\chenab_marala\\raw\\marala\\weather_forecasts\\operational_verification\\ecmwf_s2s\\202406_precipitation.grib",
+  "http_status": 201,
+  "response": {
+    "processID": "s2s-forecasts",
+    "type": "process",
+    "jobID": "22384027-1ee8-418f-8d60-3a8c12dfc706",
+    "status": "accepted",
+    "created": "2026-11-02T11:26:41.722274",
+    "updated": "2026-11-02T11:26:41.722274",
+    "links": [
+      {
+        "href": "https://ecds.ecmwf.int/api/retrieve/v1/processes/s2s-forecasts/execution",
+        "rel": "self"
+      },
+      {
+        "href": "https://ecds.ecmwf.int/api/retrieve/v1/jobs/22384027-1ee8-418f-8d60-3a8c12dfc706",
+        "rel": "monitor",
+        "type": "application/json",
+        "title": "job status info"
+      }
+    ],
+    "metadata": {
+      "datasetMetadata": {
+        "messages": []
+      },
+      "origin": "api"
+    }
+  }
+}

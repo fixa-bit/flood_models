@@ -1,0 +1,17 @@
+{
+  "dewpoint_c": {
+    "units": "degrees C",
+    "missing_days": [],
+    "valid_days": 16437,
+    "min": -28.1431590541494,
+    "max": 14.449327157423163
+  },
+  "ssrd_wm2": {
+    "units": "W/m2",
+    "missing_days": [],
+    "valid_days": 16437,
+    "min": 36.50447286766429,
+    "max": 373.0729001975771
+  },
+  "merged_csv_sha256": "7fe359259375ff02159ef1059b9aaf31c1d814267fe7b0bdbbdde9953c549704"
+}

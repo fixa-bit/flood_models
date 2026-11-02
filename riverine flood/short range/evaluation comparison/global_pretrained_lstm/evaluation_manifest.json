@@ -1,0 +1,62 @@
+{
+  "checkpoint": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\fine_tuned_global_pretrained_lstm\\runs\\finetuned\\seed_42\\best.pt",
+  "checkpoint_sha256": "a3275abdbd445258f7e6d130fa44d1679024e5fcbb659c2c85b1660f23eccad8",
+  "parent_repository": "EmilRyd/caravan_model",
+  "parent_basin_count": 6375,
+  "pretrained_training_years": [
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
+  ],
+  "local_training_years": [
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
+  ],
+  "local_validation_years": [
+    2021
+  ],
+  "test_years": [
+    2022,
+    2023,
+    2024
+  ],
+  "best_epoch": 25,
+  "test_samples": 1084,
+  "unique_observed_test_days": 1084,
+  "observed_issue_lead_pairs": 10795,
+  "missing_target_pairs_not_scored": 45,
+  "peak_threshold_cumecs": 2494.7141847552,
+  "flood_threshold_cumecs": 2494.7141847552,
+  "same_target_values_and_dates": true,
+  "matched_future_rain_temperature_max_abs_difference": 1.2185876229864334e-05,
+  "no_discharge_filled": true,
+  "source_hashes": {
+    "daily": "c02f27b5ab6c2188f56fcf521bfe6c63ad670506783fbd640bb9f70b68491d7b",
+    "static": "c5d7af2532f06103df6b8356a37a8c95a7ec2628e96a4899e8772c3cd9269eb0",
+    "parent": "94a4f84aac309b778460b518c7d156f6f18d0aa7585a90a88be5b190aeadd104",
+    "global_scaler": "2f049713c5d77a3684ac6f04593c38eff21f2875a6aea228c8f06039dfa68e7b"
+  },
+  "day10_nse_change_vs_existing": 0.01889688008582946,
+  "forecast_mode": "reanalysis_with_noise; other 12 predictors persisted from issue day",
+  "quantile_calibration": "Not applicable to the deterministic global regression head"
+}

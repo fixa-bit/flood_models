@@ -1,0 +1,7 @@
+station,mode,selected_lag,combined_missing_days,missing_days_with_predictor_before_accuracy_gate,candidate_dates
+Khanki,past_only,0,427,0,
+Khanki,reconstruction,-1,427,7,2025-06-14;2025-06-30;2025-08-06;2025-09-02;2025-10-04;2025-10-12;2026-06-15
+Qadirabad,past_only,0,427,0,
+Qadirabad,reconstruction,-1,427,7,2025-06-14;2025-06-30;2025-08-06;2025-09-02;2025-10-04;2025-10-12;2026-06-15
+Trimmu,past_only,0,427,0,
+Trimmu,reconstruction,-2,427,10,2025-06-13;2025-06-14;2025-06-30;2025-08-06;2025-09-01;2025-09-02;2025-10-04;2025-10-12;2026-06-14;2026-06-15

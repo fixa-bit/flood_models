@@ -1,0 +1,142 @@
+{
+  "collection": "ECMWF/ERA5_LAND/DAILY_AGGR",
+  "units_and_conversions": {
+    "snow_depth_water_equivalent_mean": [
+      "snow_depth_water_equivalent",
+      1000.0,
+      0.0
+    ],
+    "surface_net_solar_radiation_mean": [
+      "surface_net_solar_radiation_sum",
+      1.1574074074074073e-05,
+      0.0
+    ],
+    "surface_net_thermal_radiation_mean": [
+      "surface_net_thermal_radiation_sum",
+      1.1574074074074073e-05,
+      0.0
+    ],
+    "surface_pressure_mean": [
+      "surface_pressure",
+      0.001,
+      0.0
+    ],
+    "temperature_2m_mean": [
+      "temperature_2m",
+      1.0,
+      -273.15
+    ],
+    "dewpoint_temperature_2m_mean": [
+      "dewpoint_temperature_2m",
+      1.0,
+      -273.15
+    ],
+    "u_component_of_wind_10m_mean": [
+      "u_component_of_wind_10m",
+      1.0,
+      0.0
+    ],
+    "v_component_of_wind_10m_mean": [
+      "v_component_of_wind_10m",
+      1.0,
+      0.0
+    ],
+    "volumetric_soil_water_layer_1_mean": [
+      "volumetric_soil_water_layer_1",
+      1.0,
+      0.0
+    ],
+    "volumetric_soil_water_layer_2_mean": [
+      "volumetric_soil_water_layer_2",
+      1.0,
+      0.0
+    ],
+    "volumetric_soil_water_layer_3_mean": [
+      "volumetric_soil_water_layer_3",
+      1.0,
+      0.0
+    ],
+    "volumetric_soil_water_layer_4_mean": [
+      "volumetric_soil_water_layer_4",
+      1.0,
+      0.0
+    ],
+    "total_precipitation_sum": [
+      "total_precipitation_sum",
+      1000.0,
+      0.0
+    ],
+    "potential_evaporation_sum": [
+      "potential_evaporation_sum",
+      -1000.0,
+      0.0
+    ]
+  },
+  "time_standard": "UTC",
+  "catchment_sha256": "49efd115f5d3ce2d1241fb35adaaf48bf6c8d0705768ac93dc88fbd4f11ab651",
+  "area_km2": 28794.390101044257,
+  "files": [
+    {
+      "year": 2015,
+      "days": 365,
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\fine_tuned_global_pretrained_lstm\\data\\raw\\era5land_daily\\2015.csv",
+      "sha256": "c4b1de2fdf148ae46591142da00afe0786d65c51b055a7358fe19b7ba0cc2413"
+    },
+    {
+      "year": 2016,
+      "days": 366,
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\fine_tuned_global_pretrained_lstm\\data\\raw\\era5land_daily\\2016.csv",
+      "sha256": "c26d8ac2e843a9d727cf246e92c546902ca241db914a550752dca4fb447a1c05"
+    },
+    {
+      "year": 2017,
+      "days": 365,
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\fine_tuned_global_pretrained_lstm\\data\\raw\\era5land_daily\\2017.csv",
+      "sha256": "c92eef8296384083bbfe19050475bd7a6d1b6e7f3f56cb68c11b7c29dee0a697"
+    },
+    {
+      "year": 2018,
+      "days": 365,
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\fine_tuned_global_pretrained_lstm\\data\\raw\\era5land_daily\\2018.csv",
+      "sha256": "f623aa471b235a9f5ab464b4b530b9630ba8b7c233b076abec4a5af269ebb3ba"
+    },
+    {
+      "year": 2019,
+      "days": 365,
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\fine_tuned_global_pretrained_lstm\\data\\raw\\era5land_daily\\2019.csv",
+      "sha256": "fe5d0f760c9f5e90980f779d20a22cbbcef11661014faaa1dbda776642bc0b72"
+    },
+    {
+      "year": 2020,
+      "days": 366,
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\fine_tuned_global_pretrained_lstm\\data\\raw\\era5land_daily\\2020.csv",
+      "sha256": "bf9f72572ae1a11d4498694f3cb8eb23d82ede981847de5fa7444a0e02db6437"
+    },
+    {
+      "year": 2021,
+      "days": 365,
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\fine_tuned_global_pretrained_lstm\\data\\raw\\era5land_daily\\2021.csv",
+      "sha256": "d3be2181bc748b3bc72894ab83d99e3f9701bd3cbfe396edf9bb514417d3bbc2"
+    },
+    {
+      "year": 2022,
+      "days": 365,
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\fine_tuned_global_pretrained_lstm\\data\\raw\\era5land_daily\\2022.csv",
+      "sha256": "9ae26b0e8e8bebedf0c2ef34c45e2762995a227c84c9d94cf93b98fd787e6eca"
+    },
+    {
+      "year": 2023,
+      "days": 365,
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\fine_tuned_global_pretrained_lstm\\data\\raw\\era5land_daily\\2023.csv",
+      "sha256": "87bab0c4714d00139e582c1b9b10402cdcfb7da94fb2364f4c6bf895383fc6bd"
+    },
+    {
+      "year": 2024,
+      "days": 366,
+      "path": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\fine_tuned_global_pretrained_lstm\\data\\raw\\era5land_daily\\2024.csv",
+      "sha256": "5dc6061b84b74061f137f2de63766ed1cd70135b96860b01fed741ac38b416f4"
+    }
+  ],
+  "retrieved_at_utc": "2026-10-30T09:56:58.103911+00:00",
+  "hydroatlas_sha256": "c1f058c259f9b4996235f45030e2340cb12bc1e0b8c3497e36f24743a1658914"
+}

@@ -1,0 +1,67 @@
+Seed 42: initial smooth-climatology validation scaled MSE=0.23739
+Seed 42 epoch 1: train=0.23800 validation_MSE=0.23301
+Seed 42 epoch 2: train=0.21372 validation_MSE=0.22609
+Seed 42 epoch 3: train=0.19293 validation_MSE=0.22477
+Seed 42 epoch 4: train=0.17756 validation_MSE=0.19127
+Seed 42 epoch 5: train=0.16183 validation_MSE=0.24056
+Seed 42 epoch 6: train=0.15979 validation_MSE=0.21823
+Seed 42 epoch 7: train=0.15059 validation_MSE=0.24757
+Seed 42 epoch 8: train=0.14523 validation_MSE=0.20138
+Seed 42 epoch 9: train=0.13982 validation_MSE=0.22229
+Seed 42 epoch 10: train=0.13464 validation_MSE=0.25634
+Seed 42 epoch 11: train=0.13110 validation_MSE=0.22732
+Seed 42 epoch 12: train=0.12937 validation_MSE=0.22119
+Seed 42 epoch 13: train=0.12595 validation_MSE=0.22341
+Seed 42 epoch 14: train=0.12391 validation_MSE=0.23558
+Seed 42 epoch 15: train=0.12165 validation_MSE=0.22626
+Seed 42 epoch 16: train=0.11930 validation_MSE=0.20688
+Seed 43: initial smooth-climatology validation scaled MSE=0.23739
+Seed 43 epoch 1: train=0.23911 validation_MSE=0.23892
+Seed 43 epoch 2: train=0.21483 validation_MSE=0.23243
+Seed 43 epoch 3: train=0.19291 validation_MSE=0.23749
+Seed 43 epoch 4: train=0.17619 validation_MSE=0.24782
+Seed 43 epoch 5: train=0.16210 validation_MSE=0.25961
+Seed 43 epoch 6: train=0.15562 validation_MSE=0.25573
+Seed 43 epoch 7: train=0.14900 validation_MSE=0.24923
+Seed 43 epoch 8: train=0.14338 validation_MSE=0.26451
+Seed 43 epoch 9: train=0.13737 validation_MSE=0.29193
+Seed 43 epoch 10: train=0.13608 validation_MSE=0.32250
+Seed 43 epoch 11: train=0.13350 validation_MSE=0.25392
+Seed 43 epoch 12: train=0.12941 validation_MSE=0.27404
+Seed 43 epoch 13: train=0.12549 validation_MSE=0.31259
+Seed 43 epoch 14: train=0.12291 validation_MSE=0.28127
+Seed 44: initial smooth-climatology validation scaled MSE=0.23739
+Seed 44 epoch 1: train=0.23883 validation_MSE=0.23376
+Seed 44 epoch 2: train=0.21641 validation_MSE=0.21313
+Seed 44 epoch 3: train=0.19495 validation_MSE=0.19365
+Seed 44 epoch 4: train=0.17657 validation_MSE=0.16731
+Seed 44 epoch 5: train=0.16404 validation_MSE=0.16985
+Seed 44 epoch 6: train=0.15484 validation_MSE=0.17847
+Seed 44 epoch 7: train=0.14936 validation_MSE=0.16856
+Seed 44 epoch 8: train=0.14505 validation_MSE=0.16129
+Seed 44 epoch 9: train=0.13995 validation_MSE=0.17498
+Seed 44 epoch 10: train=0.13748 validation_MSE=0.15737
+Seed 44 epoch 11: train=0.13339 validation_MSE=0.16191
+Seed 44 epoch 12: train=0.13039 validation_MSE=0.16784
+Seed 44 epoch 13: train=0.12862 validation_MSE=0.16696
+Seed 44 epoch 14: train=0.12402 validation_MSE=0.17382
+Seed 44 epoch 15: train=0.12351 validation_MSE=0.22357
+Seed 44 epoch 16: train=0.12118 validation_MSE=0.16148
+Seed 44 epoch 17: train=0.11878 validation_MSE=0.24353
+Seed 44 epoch 18: train=0.11648 validation_MSE=0.21073
+Seed 44 epoch 19: train=0.11350 validation_MSE=0.22403
+Seed 44 epoch 20: train=0.11242 validation_MSE=0.17889
+Seed 44 epoch 21: train=0.11163 validation_MSE=0.22294
+Seed 44 epoch 22: train=0.10949 validation_MSE=0.23004
+All validation selection and postprocessing frozen. Starting one benchmark evaluation.
+Day-30 mean-flow NSE is **0.858**, versus exact climatology **0.792** and smoothed climatology **0.820**. Beats the original climatology: **True**; beats the smoothed control: **True**.
+                model  lead_day    n      NSE      KGE  RMSE_cumecs  MAE_cumecs  PBIAS_pct
+    Residual_ensemble        30 1055 0.857523 0.874387   297.555882  191.689903   4.150481
+Raw_residual_ensemble        30 1055 0.857523 0.874387   297.555882  191.689903   4.150481
+          Climatology        30 1055 0.792145 0.844519   359.398279  231.857132   8.837113
+   Smooth_climatology        30 1055 0.819974 0.834760   334.474595  219.162289   8.780933
+    Weather_only_LSTM        30 1055 0.784410 0.883699   366.024735  224.065896   3.333387
+  Past_discharge_LSTM        30 1055 0.788109 0.870909   362.871348  215.195864  -5.659522
+          Persistence        30 1055 0.262315 0.629497   677.066486  446.423810   1.148887
+Report: D:\projects\flood_model\flood_model\riverine flood\short range\evaluation comparison\model_30_days\climatology_residual_ensemble\comparison_report.md
+Residual ensemble complete; all other model families remain pending feedback.

@@ -184,52 +184,11 @@
     "daily_candidate_rows": 3228,
     "full_cell_days": 3228
   },
-  "imerg_metadata": {
-    "precipitation_2014": {
-      "version": "v06",
-      "variable": "precipitationCal",
-      "source_url": "https://erddap.aoml.noaa.gov/hdb/erddap/griddap/precipitation_2014.das",
-      "sha256": "2c91faa2f5f57e842c4466a88791562c5940e296d14d6c86c915cc4bfe7cd96f",
-      "fill_value": "-9999.9",
-      "missing_value": "0.0",
-      "source_archive": "GPM_3IMERGHH.06"
-    },
-    "precipitation_2016": {
-      "version": "v06",
-      "variable": "precipitationCal",
-      "source_url": "https://erddap.aoml.noaa.gov/hdb/erddap/griddap/precipitation_2016.das",
-      "sha256": "fde4bcefc88ee29c82f32aaf77b61c1ebe11a066de9119ac8f6e5c4144b0d4f5",
-      "fill_value": "-9999.9",
-      "missing_value": "0.0",
-      "source_archive": "GPM_3IMERGHH.06"
-    },
-    "precipitation_2024": {
-      "version": "v06",
-      "variable": "precipitationCal",
-      "source_url": "https://erddap.aoml.noaa.gov/hdb/erddap/griddap/precipitation_2024.das",
-      "sha256": "18f599a5faab33054607a362349ab37ed95e4b7e9de670d1512e9366829430c6",
-      "fill_value": "-9999.9",
-      "missing_value": "0.0",
-      "source_archive": "GPM_3IMERGHHE.06"
-    },
-    "precipitation_2024_v07": {
-      "version": "v07",
-      "variable": "precipitation",
-      "source_url": "https://erddap.aoml.noaa.gov/hdb/erddap/griddap/precipitation_2024_v07.das",
-      "sha256": "310c23e74dde3104e0cb8d26e5d78c3174f76d158e35577d260c0ca0deb0d36a",
-      "fill_value": "0.0",
-      "missing_value": "0.0",
-      "source_archive": "GPM_3IMERGHH.07"
-    }
-  },
-  "imerg_full_days": 9,
   "chirps_full_days": 10,
   "status": "investigation_only_do_not_train",
   "notes": [
-    "Source disagreement is not resolved by selecting whichever rainfall value is closer to IMERG or CHIRPS.",
+    "Source disagreement is not resolved by selecting whichever rainfall value is closer to CHIRPS.",
     "CHIRPS v3 rnl uses ERA5 to distribute pentad totals across UTC dates; daily station observation windows are not uniform.",
-    "IMERG half-hourly rates (mm/hour) are integrated as rate x 0.5 hours for each of 48 intervals.",
-    "NOAA's v07 mirror encodes 0 as missing and fill as well as a valid dry value. For 2024-08-08 only a lower bound is saved; its catchment average is withheld.",
-    "IMERG and CHIRPS sample days are not complete historical training series."
+    "CHIRPS sample days are not a complete historical training series."
   ]
 }

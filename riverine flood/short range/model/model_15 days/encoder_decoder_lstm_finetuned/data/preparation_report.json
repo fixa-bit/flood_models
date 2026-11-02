@@ -1,0 +1,15 @@
+{
+  "source": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\data\\marala_daily.csv",
+  "sha256": "d21788d62afc9e54d8e2aa6e1f27dcc244ef3b6a1a734249650abd84ccdbe11f",
+  "prepared_sha256": "fa537d4af974a686ca7afec1e2728b8fd63380ae290af373dd6c832ad57c7ded",
+  "rows": 3653,
+  "observed_discharge_days": 3215,
+  "target_values_and_missingness_preserved": true,
+  "no_target_imputation": true,
+  "period": [
+    "2015-01-01",
+    "2024-12-31"
+  ],
+  "rain_source": "ERA5-Land rain_era5_mm, matching donor variable meaning; precipitation is mm/day",
+  "temperature_source": "ERA5-Land mean 2m temperature in Celsius"
+}

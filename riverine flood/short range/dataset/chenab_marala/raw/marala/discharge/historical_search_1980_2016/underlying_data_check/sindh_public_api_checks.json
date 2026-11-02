@@ -1,0 +1,156 @@
+[
+  {
+    "url": "https://api.hicsindh.pk/public/ELib/Books",
+    "file": "sindh_books_api.json",
+    "status": 200,
+    "bytes": 96249,
+    "sha256": "171816f25a2b67910d3c250e6e46294d63375c93a4e7a20640e9f81fda83eda2",
+    "structure": "<class 'list'>",
+    "preview": "[{'bookID': 5, 'title': 'A Catalogue of Manuscript and printed Reports Filed Books  Maps', 'author': 'Order of Her Majesty', 'publisher': 'W.H. Allen & Co.', 'yearPublished': 1878, 'isbn': '-', 'category': 'Maps', 'language': 'English', 'description': '-', 'isHidden': False, 'entryDate': '2024-12-17T17:46:27', 'modificationDate': '0001-01-01T00:00:00', 'hiddenDate': '0001-01-01T00:00:00', 'entryID': 0, 'modificationID': 0, 'hiddenID': 0, 'getPictureURL': '/files/Books//5.jpg', 'getBookURL': '/fi"
+  },
+  {
+    "url": "https://irrigation.sindh.gov.pk/content/scripts/libbooks.js",
+    "file": "sindh_books_script.js",
+    "status": 200,
+    "bytes": 64640,
+    "sha256": "dc817127fb98d17fbb776dfd578d8a34eeb0730bb6a35657ed36bdd49e87f507"
+  },
+  {
+    "url": "https://irrigation.sindh.gov.pk/Flows/ReservoirSituation",
+    "file": "sindh_flow_page_0.html",
+    "status": 200,
+    "bytes": 22845,
+    "sha256": "ba6def3a3c082c425743c0611b7a4842b5d6f7e35e67992b1bea0863cb536e9c",
+    "scripts": [
+      "/lib/jquery/dist/jquery.min.js",
+      "/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
+      "https://unpkg.com/aos@2.3.1/dist/aos.js",
+      "https://unpkg.com/boxicons@2.1.4/dist/boxicons.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/js/glightbox.min.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/waypoints/3.0.0/noframework.waypoints.min.js",
+      "https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js",
+      "/Content/vendor/php-email-form/validate.js",
+      "/Content/PublicLayout/main.js?abcdf",
+      "https://cdn.jsdelivr.net/momentjs/latest/moment.min.js",
+      "https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js",
+      "/Component/ReservoirSituation.js"
+    ]
+  },
+  {
+    "url": "https://irrigation.sindh.gov.pk/Flows/Rimstation",
+    "file": "sindh_flow_page_1.html",
+    "status": 200,
+    "bytes": 22820,
+    "sha256": "08631db75ad986f0fff4376e2acab130cfbc30e40028f6386d429d1845f308bd",
+    "scripts": [
+      "/lib/jquery/dist/jquery.min.js",
+      "/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
+      "https://unpkg.com/aos@2.3.1/dist/aos.js",
+      "https://unpkg.com/boxicons@2.1.4/dist/boxicons.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/js/glightbox.min.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/waypoints/3.0.0/noframework.waypoints.min.js",
+      "https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js",
+      "/Content/vendor/php-email-form/validate.js",
+      "/Content/PublicLayout/main.js?abcdf",
+      "https://cdn.jsdelivr.net/momentjs/latest/moment.min.js",
+      "https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js",
+      "/component/Rimstation.js"
+    ]
+  },
+  {
+    "url": "https://irrigation.sindh.gov.pk/Flows/Pakistan",
+    "file": "sindh_flow_page_2.html",
+    "status": 200,
+    "bytes": 65496,
+    "sha256": "89f85229bab57b53119945a892fb85ae5ef0e5b39b060303ba0cd862a4c8ba37",
+    "scripts": [
+      "/lib/jquery/dist/jquery.min.js",
+      "/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
+      "https://unpkg.com/aos@2.3.1/dist/aos.js",
+      "https://unpkg.com/boxicons@2.1.4/dist/boxicons.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/js/glightbox.min.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/waypoints/3.0.0/noframework.waypoints.min.js",
+      "https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js",
+      "/Content/vendor/php-email-form/validate.js",
+      "/Content/PublicLayout/main.js?abcdf",
+      "https://cdn.jsdelivr.net/npm/chart.js@3.4.1/dist/chart.min.js",
+      "https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0",
+      "https://cdn.jsdelivr.net/momentjs/latest/moment.min.js",
+      "https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js",
+      "/Component/Pub_Flow.js"
+    ]
+  },
+  {
+    "url": "https://irrigation.sindh.gov.pk/Flows/Compare",
+    "file": "sindh_flow_page_3.html",
+    "status": 200,
+    "bytes": 66751,
+    "sha256": "67cf6406dc0d178275a1cde486de41ac2107a41296c31b13eb34b52227444dcf",
+    "scripts": [
+      "/lib/jquery/dist/jquery.min.js",
+      "/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
+      "https://unpkg.com/aos@2.3.1/dist/aos.js",
+      "https://unpkg.com/boxicons@2.1.4/dist/boxicons.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/js/glightbox.min.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/waypoints/3.0.0/noframework.waypoints.min.js",
+      "https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js",
+      "/Content/vendor/php-email-form/validate.js",
+      "/Content/PublicLayout/main.js?abcdf",
+      "https://cdn.jsdelivr.net/npm/chart.js@3.4.1/dist/chart.min.js",
+      "https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0",
+      "https://cdn.jsdelivr.net/momentjs/latest/moment.min.js",
+      "https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js",
+      "/Component/Pub_Flow.js"
+    ]
+  },
+  {
+    "url": "https://irrigation.sindh.gov.pk#HydroInformatics",
+    "file": "sindh_flow_page_4.html",
+    "status": 200,
+    "bytes": 258763,
+    "sha256": "9f245cc2785f6c9cb1a1fcbce29d98d9a2cf9913e586bffd5ffd80fe87d610bb",
+    "scripts": [
+      "https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v20.0&appId=414827935281233",
+      "/lib/jquery/dist/jquery.min.js",
+      "/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
+      "https://unpkg.com/aos@2.3.1/dist/aos.js",
+      "https://unpkg.com/boxicons@2.1.4/dist/boxicons.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/js/glightbox.min.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/waypoints/3.0.0/noframework.waypoints.min.js",
+      "https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js",
+      "/Content/vendor/php-email-form/validate.js",
+      "/Content/PublicLayout/main.js?abcdf",
+      "https://cdn.jsdelivr.net/npm/chart.js@3.4.1/dist/chart.min.js",
+      "https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0",
+      "/Component/Pub_Flow.js"
+    ]
+  },
+  {
+    "url": "https://irrigation.sindh.gov.pk/public/DevII#aboutchotiari",
+    "file": "sindh_flow_page_5.html",
+    "status": 200,
+    "bytes": 199746,
+    "sha256": "c48953d082c402c0a329b2d54e73e2102ace47ceed03961aa7a520fe39cf46b2",
+    "scripts": [
+      "/lib/jquery/dist/jquery.min.js",
+      "/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
+      "https://unpkg.com/aos@2.3.1/dist/aos.js",
+      "https://unpkg.com/boxicons@2.1.4/dist/boxicons.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/js/glightbox.min.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/waypoints/3.0.0/noframework.waypoints.min.js",
+      "https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js",
+      "/Content/vendor/php-email-form/validate.js",
+      "/Content/PublicLayout/main.js?abcdf",
+      "https://cdn.jsdelivr.net/npm/chart.js@3.4.1/dist/chart.min.js",
+      "https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0",
+      "https://cdn.jsdelivr.net/momentjs/latest/moment.min.js",
+      "/Component/Pub_Flow.js"
+    ]
+  }
+]

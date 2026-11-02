@@ -1,0 +1,29 @@
+{
+  "collection": "ECMWF/ERA5_LAND/DAILY_AGGR",
+  "features": {
+    "swe_mm": [
+      "snow_depth_water_equivalent",
+      "mm"
+    ],
+    "snow_depth_m": [
+      "snow_depth",
+      "m"
+    ],
+    "snowmelt_mm": [
+      "snowmelt_sum",
+      "mm/day"
+    ]
+  },
+  "scale_m": 11132,
+  "reducer": "ee.Reducer.mean()",
+  "period": [
+    "1980-01-01",
+    "2025-01-01"
+  ],
+  "catchment_sha256": "49efd115f5d3ce2d1241fb35adaaf48bf6c8d0705768ac93dc88fbd4f11ab651",
+  "conversions": {
+    "swe_mm": "m * 1000",
+    "snow_depth_m": "m unchanged",
+    "snowmelt_mm": "m/day * 1000"
+  }
+}

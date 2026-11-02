@@ -1,0 +1,9 @@
+{
+  "rule": "Observed Marala always wins. Otherwise Qadirabad(t+1), otherwise Khanki(t), otherwise NaN.",
+  "rule_evaluation": "Scored ungated routing to test whether this proposal improves errors; no fills applied.",
+  "original_missing_marala_dates": 427,
+  "gaps_with_qadirabad_predictor": 7,
+  "gaps_only_khanki_fallback_can_cover": 0,
+  "no_discharge_data_modified": true,
+  "limitation": "Post-hoc comparison on previously inspected holdouts. A separate untouched period is needed for an independent confirmation."
+}

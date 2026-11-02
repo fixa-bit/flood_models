@@ -1,0 +1,18 @@
+{
+  "ten_day_folders": 19,
+  "fifteen_day_folders": 5,
+  "mixed_trained_horizons": false,
+  "protected_files_unchanged": 529,
+  "all_active_daily_files_exist": true,
+  "python_files_parse": 195,
+  "correctness_tests_passed": 31,
+  "test_suites": {
+    "shared": 15,
+    "delta_hbv": 5,
+    "encoder_decoder": 5,
+    "spatial": 6
+  },
+  "baseline_pickles_loaded": 4,
+  "full_comparison_scores_byte_identical": true,
+  "delta_hbv_evaluation_reproduced": true
+}

@@ -1,0 +1,59 @@
+[
+  {
+    "order": 1,
+    "family": "Hindcast-forecast LSTM, including pretrained variants",
+    "folder": "Hindcast-forecast LSTM",
+    "status": "trained and evaluated; awaiting user feedback",
+    "completed_variant": "climatology_residual_ensemble",
+    "completed_variants": [
+      "scratch",
+      "past_discharge",
+      "climatology_residual_ensemble"
+    ],
+    "selected_epochs": [
+      4,
+      2,
+      10
+    ]
+  },
+  {
+    "order": 2,
+    "family": "Encoder-decoder LSTM",
+    "folder": "Encoder-decoder LSTM",
+    "status": "trained and evaluated; awaiting user feedback",
+    "completed_variants": [
+      "finetuned_15_to_30"
+    ],
+    "completed_variant": "finetuned_15_to_30",
+    "selected_epochs": [
+      9,
+      15,
+      26
+    ],
+    "training_seconds": 176.7818544000038
+  },
+  {
+    "order": 3,
+    "family": "delta-HBV, physical HBV and HBV residual hybrids",
+    "folder": "HBV hybrids",
+    "status": "pending user feedback; not trained"
+  },
+  {
+    "order": 4,
+    "family": "Spatial elevation-band LSTM",
+    "folder": "Spatial elevation-band LSTM",
+    "status": "pending user feedback; not trained"
+  },
+  {
+    "order": 5,
+    "family": "N-HiTS",
+    "folder": "N-HiTS",
+    "status": "pending user feedback; not trained"
+  },
+  {
+    "order": 6,
+    "family": "N-BEATSx",
+    "folder": "N-BEATSx",
+    "status": "pending user feedback; not trained"
+  }
+]

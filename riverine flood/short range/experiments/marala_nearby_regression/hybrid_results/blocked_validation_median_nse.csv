@@ -1,0 +1,13 @@
+scope,season,method,median_nse
+all_available_heldout_dates,Apr-Jun,Hybrid,-5.731414255084262
+all_available_heldout_dates,Apr-Jun,Khanki,0.6754283121918738
+all_available_heldout_dates,Apr-Jun,Qadirabad,-5.731414255084262
+all_available_heldout_dates,Jul-Sep,Hybrid,0.5564597471237058
+all_available_heldout_dates,Jul-Sep,Khanki,0.5905291871891712
+all_available_heldout_dates,Jul-Sep,Qadirabad,0.5585426353604943
+same_dates_as_previous,Apr-Jun,Hybrid,-5.731414255084262
+same_dates_as_previous,Apr-Jun,Khanki,0.6754283121918738
+same_dates_as_previous,Apr-Jun,Qadirabad,-5.731414255084262
+same_dates_as_previous,Jul-Sep,Hybrid,0.11818225606506566
+same_dates_as_previous,Jul-Sep,Khanki,0.38844279028768725
+same_dates_as_previous,Jul-Sep,Qadirabad,0.11818225606506566

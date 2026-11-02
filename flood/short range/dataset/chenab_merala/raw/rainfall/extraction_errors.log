@@ -1,0 +1,12 @@
+
+[notice] A new release of pip is available: 24.0 -> 26.2.2
+[notice] To update, run: D:\projects\flood_model\flood_model\flood\short range\dataset\chenab_merala\raw\rainfall\.venv\Scripts\python.exe -m pip install --upgrade pip
+Extraction or QA did not finish successfully. Review the error before rebuilding the portal.
+At D:\projects\flood_model\flood_model\flood\short range\dataset\chenab_merala\raw\rainfall\run_precipitation.ps1:18 
+char:28
++ ... DE -ne 0) { throw 'Extraction or QA did not finish successfully. Revi ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (Extraction or Q...ing the portal.:String) [], RuntimeException
+    + FullyQualifiedErrorId : Extraction or QA did not finish successfully. Review the error before rebuilding the por 
+   tal.
+ 

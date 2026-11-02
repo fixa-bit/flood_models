@@ -1,0 +1,23 @@
+{
+  "horizon": 30,
+  "all_thirty_leads_verified": true,
+  "original_source_and_local_copy_byte_identical": true,
+  "observed_values_and_missing_target_policy_preserved": true,
+  "test_years_disjoint_from_fit_and_selection_years": true,
+  "quantiles_non_crossing": true,
+  "all_saved_lead_metrics_reproduced": true,
+  "configuration_frozen_before_fit_and_unchanged": true,
+  "only_first_thirty_day_model_trained": true,
+  "other_families_pending": [
+    "Encoder-decoder LSTM",
+    "delta-HBV, physical HBV and HBV residual hybrids",
+    "Spatial elevation-band LSTM",
+    "N-HiTS",
+    "N-BEATSx"
+  ],
+  "correctness_tests_passed": 6,
+  "source_sha256": "d21788d62afc9e54d8e2aa6e1f27dcc244ef3b6a1a734249650abd84ccdbe11f",
+  "checkpoint_sha256": "0e68f75a28200bb36dcb4f9f16c4c34dba3c9f1cd09f855c2ccd0ba1ecebe328",
+  "real_accuracy_from_observed_test_days_only": true,
+  "operational_forecast_skill_verified": false
+}

@@ -1,0 +1,120 @@
+{
+  "type": "Collection",
+  "id": "s2s-forecasts",
+  "stac_version": "1.1.0",
+  "title": "S2S global sub-seasonal to seasonal ensemble real-time forecasts from multiple NWP and research centres since 2015",
+  "description": "The Sub-seasonal To Seasonal dataset (S2S) consists of global ensemble real-time forecasts and reforecasts from thirteen numerical weather prediction (NWP) and research centres. \nS2S project behind the dataset started in 2013 as a joint initiative of the World Weather Research Programme (WWRP) and the World Climate Research Programme (WCRP).\nThe goal of S2S project was to improve sub-seasonal forecast skill through combining multiple forecasting systems, enable multi-model evaluations and enhance knowledge sharing between operational centres.\nAlthough S2S project ended at the end of 2023, data archiving continues and is currently undergoing another five-year phase (2024\u20132028).\nThere are two related datasets in ECDS:\n- real-time forecasts (s2s-forecasts)\n- reforecasts complementing the real-time data (s2s-reforecasts)\nThe S2S real-time forecasts have been available since January 2015 (depending on the centre). \nThe typical forecast length is from 34 to 65 days with ensemble sizes varying from 4 to 101.\nS2S variables are available on surface, soil, oceanic, potential temperature and selected pressure levels.\nThe access to the S2S real-time data is allowed with a delay of 48 hours or 1 week depending on the centre (see details in S2S licence).\nPlease consult the Documentation section for details, including data sources, model configurations and limitations.\nThe data discovery and sample downloads can be done either via ECDS forms (under Download tab) or alternatively via dedicated\u00a0MARS S2S catalogue (MARS stands for ECMWF's Meteorological Archival and Retrieval System).\n(S2S picture used - WMO Lead Centre for Sub-seasonal Prediction Multi-Model Ensemble (example of Precipitation weekly mean anomalies))",
+  "summaries": {},
+  "providers": [
+    {
+      "name": "ECMWF"
+    }
+  ],
+  "keywords": [
+    "Temporal coverage: Past",
+    "Spatial coverage: Global",
+    "Temporal coverage: Present",
+    "Variable domain: Atmosphere (surface)",
+    "Variable domain: Atmosphere (upper air)",
+    "Variable domain: Ocean (physics)",
+    "Temporal coverage: Future",
+    "Product type: Sub-seasonal forecasts"
+  ],
+  "license": "other",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          0.0,
+          -90.0,
+          360.0,
+          90.0
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2015-01-01T00:00:00+00:00",
+          "2026-10-31T00:00:00+00:00"
+        ]
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "self",
+      "type": "application/json",
+      "href": "https://ecds.ecmwf.int/api/catalogue/v1/collections/s2s-forecasts"
+    },
+    {
+      "rel": "parent",
+      "type": "application/json",
+      "href": "https://ecds.ecmwf.int/api/catalogue/v1/"
+    },
+    {
+      "rel": "root",
+      "type": "application/json",
+      "href": "https://ecds.ecmwf.int/api/catalogue/v1/"
+    },
+    {
+      "rel": "license",
+      "href": "https://object-store.os-api.cci2.ecmwf.int:443/cci2-prod-catalogue/licences/s2s-licence/s2s-licence_c6d3b10fff18f2016c2bd4071748c73609d92c0d3cb4938132012457bdf77900.pdf",
+      "title": "S2S licence",
+      "rev": 5,
+      "id": "s2s-licence"
+    },
+    {
+      "rel": "form",
+      "href": "https://object-store.os-api.cci2.ecmwf.int:443/cci2-prod-catalogue/resources/s2s-forecasts/form_da7621a3ac88fd232b83446f00bbb6847067fcb99db81930f25f97b43192f2ef.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "constraints",
+      "href": "https://object-store.os-api.cci2.ecmwf.int:443/cci2-prod-catalogue/resources/s2s-forecasts/constraints_577a00fb5b0131a7a2079f680b76540eecfebf0f7f65132e09d254676e2e5075.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "retrieve",
+      "href": "https://ecds.ecmwf.int/api/retrieve/v1/processes/s2s-forecasts",
+      "type": "application/json"
+    },
+    {
+      "rel": "costing_api",
+      "href": "https://ecds.ecmwf.int/api/retrieve/v1/processes/s2s-forecasts/costing",
+      "type": "application/json"
+    },
+    {
+      "rel": "layout",
+      "href": "https://object-store.os-api.cci2.ecmwf.int:443/cci2-prod-catalogue/resources/s2s-forecasts/layout_de5fdf411adf2cfe724fc2c0f8d8914ec0397b6585dfb2d59b7ffa88297eddf6.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "related",
+      "href": "https://ecds.ecmwf.int/api/catalogue/v1/collections/s2s-reforecasts",
+      "title": "S2S global sub-seasonal to seasonal ensemble reforecasts from multiple NWP and research centres since 2015"
+    },
+    {
+      "rel": "messages",
+      "href": "https://ecds.ecmwf.int/api/catalogue/v1/collections/s2s-forecasts/messages",
+      "title": "All active messages on S2S global sub-seasonal to seasonal ensemble real-time forecasts from multiple NWP and research centres since 2015"
+    }
+  ],
+  "assets": {
+    "thumbnail": {
+      "href": "https://object-store.os-api.cci2.ecmwf.int:443/cci2-prod-catalogue/resources/s2s-forecasts/overview_166822a468f1145c8478cd02fa1d27d24b3af5d349aad60853c46b4a346df081.png",
+      "type": "image/jpg",
+      "roles": [
+        "thumbnail"
+      ]
+    }
+  },
+  "published": "2026-04-01T00:00:00Z",
+  "updated": "2026-11-02T00:00:00Z",
+  "sci:doi": "10.21957/5ac361bf",
+  "cads:disabled_reason": null,
+  "cads:sanity_check": {
+    "status": "available",
+    "timestamp": "2026-11-02T11:16:31.578511+00:00"
+  }
+}

@@ -7,11 +7,8 @@ from __future__ import annotations
 
 import csv
 import hashlib
-import io
 import json
 import math
-import re
-import struct
 import time
 import urllib.parse
 import urllib.request
@@ -30,7 +27,6 @@ MODEL = Path(__file__).resolve().parents[1]
 RAW = MODEL / "raw/marala/rainfall"
 OUT = MODEL / "processed/marala/rainfall/source_comparison_2026-10-26"
 BOUNDARY = MODEL / "processed/marala/catchment/marala_upstream_catchment.geojson"
-SOURCE = "https://erddap.aoml.noaa.gov/hdb/erddap/griddap"
 LAEA = Transformer.from_crs(4326, "+proj=laea +lat_0=33 +lon_0=76 +datum=WGS84 +units=m +no_defs", always_xy=True)
 CASES = {
     "ordinary": ["2016-03-01", "2016-07-15"],
@@ -297,97 +293,6 @@ def power_history_profile(spot_means):
     return profile
 
 
-def parse_dods(body: bytes):
-    header, payload = body.split(b"\nData:\n", 1)
-    header = header.decode("ascii")
-    match = re.search(r"Float32\s+\w+\[time = (\d+)\]\[latitude = (\d+)\]\[longitude = (\d+)\]", header)
-    if not match:
-        raise ValueError("Unexpected NOAA DODS schema")
-    nt, ny, nx = map(int, match.groups())
-    length = nt * ny * nx
-    offset = 0
-
-    def array(item_size, count, code):
-        nonlocal offset
-        a, b = struct.unpack_from(">II", payload, offset)
-        if (a, b) != (count, count):
-            raise ValueError(f"DODS array shape error: {(a, b)}, expected {count}")
-        offset += 8
-        values = struct.unpack_from(f">{count}{code}", payload, offset)
-        offset += item_size * count
-        offset += (-offset) % 4
-        return values
-
-    rates = array(4, length, "f")
-    times = array(8, nt, "d")
-    lats = array(4, ny, "f")
-    lons = array(4, nx, "f")
-    if offset != len(payload):
-        raise ValueError(f"Unparsed DODS payload bytes: {len(payload)-offset}")
-    return rates, times, lats, lons
-
-
-def imerg_version(day):
-    # The v06 archive ends 2 June 2024; the August check uses the v07 archive.
-    year = int(day[:4])
-    return (f"precipitation_{year}", "precipitationCal", "v06") if day < "2024-06-02" else (f"precipitation_{year}_v07", "precipitation", "v07")
-
-
-def imerg_day(day, basin, weights_cache):
-    dataset, variable, version = imerg_version(day)
-    end = day + "T23:30:00Z"
-    start = day + "T00:00:00Z"
-    xmin, ymin, xmax, ymax = basin.bounds
-    # NOAA's IMERG cell centers are -179.95 + 0.1*n, -89.95 + 0.1*n.
-    centers = lambda low, high, first: [round(first + n * .1, 2) for n in range(math.floor((low-.05-first)/.1), math.ceil((high+.05-first)/.1)+1)]
-    lats = centers(ymin, ymax, -89.95)
-    lons = centers(xmin, xmax, -179.95)
-    lat_range = f"({lats[0]}):1:({lats[-1]})"
-    lon_range = f"({lons[0]}):1:({lons[-1]})"
-    query = f"{variable}[({start}):1:({end})][{lat_range}][{lon_range}]"
-    url = f"{SOURCE}/{dataset}.dods?" + urllib.parse.quote(query, safe="[]():-.,")
-    raw = RAW / "imerg" / "noaa_aoml" / "comparison_2026-10-26" / f"{day}_{version}.dods"
-    body, receipt = get_saved(url, raw)
-    rates, times, actual_lats, actual_lons = parse_dods(body)
-    if len(times) != 48 or datetime.fromtimestamp(times[0], timezone.utc).isoformat().startswith(day) is False:
-        raise ValueError(f"IMERG day does not contain 48 half-hour periods: {day}")
-    if not math.isclose(times[-1]-times[0], 47*1800, abs_tol=1):
-        raise ValueError("IMERG half-hour spacing changed")
-    if any(abs(v - w) > 1e-3 for v, w in zip(actual_lats, lats)) or len(actual_lats) != len(lats):
-        raise ValueError("IMERG latitude grid differs from request")
-    if any(abs(v - w) > 1e-3 for v, w in zip(actual_lons, lons)) or len(actual_lons) != len(lons):
-        raise ValueError("IMERG longitude grid differs from request")
-    if "weights" not in weights_cache:
-        pixels = [(lat, lon, box(lon-.05, lat-.05, lon+.05, lat+.05)) for lat in lats for lon in lons]
-        weights_cache["weights"] = build_weights(basin, pixels)
-    weights = weights_cache["weights"]
-    ix = {(round(lat, 2), round(lon, 2)): j * len(lons) + i for j, lat in enumerate(lats) for i, lon in enumerate(lons)}
-    pixels_per_step = len(lats) * len(lons)
-    by_pixel = []
-    missing = 0
-    zero_intervals = 0
-    for lat, lon, weight in weights:
-        index = ix[(lat, lon)]
-        values = [rates[step*pixels_per_step+index] for step in range(48)]
-        zero_intervals += sum(value == 0 for value in values)
-        if any(not math.isfinite(value) or value < 0 for value in values):
-            missing += 1
-        else:
-            by_pixel.append((math.fsum(values)*.5, weight))
-    positive_only = math.fsum(depth * weight for depth, weight in by_pixel) if missing == 0 else None
-    # The NOAA v07 mirror marks 0 as both fill and missing; its zeros cannot
-    # be distinguished from genuine dry intervals. Do not report a full mean.
-    ambiguous = version == "v07" and zero_intervals > 0
-    total = None if ambiguous else positive_only
-    return {"date": day, "precipitation_mm_day": total, "cells": len(weights), "missing_cells": missing,
-            "zero_intervals": zero_intervals, "positive_only_lower_bound_mm_day": positive_only if ambiguous else None,
-            "quality_flag": "v07_zero_equals_fill_value" if ambiguous else ("missing_interval" if missing else "sample_complete"),
-            "time_period_utc": f"{day}T00:00:00Z to next 00:00:00Z", "version": version,
-            "source_run": "NOAA mirror of NASA IMERG half-hourly archive; run label retained in DAS metadata",
-            "zero_encoding_note": "NOAA DAS has missing_value=0; raw DODS zeroes retained as zero because NASA IMERG specifies -9999.9 as missing. Review before training.",
-            "raw_sha256": receipt["sha256"], "source_url": receipt["source_url"]}
-
-
 def chirps_day(day, basin, weights_cache):
     year, month, dom = day.split("-")
     path = f"{year}/chirps-v3.0.rnl.{year}.{month}.{dom}.tif"
@@ -451,42 +356,22 @@ def main():
     with (MODEL / "processed/marala/rainfall/marala_catchment_daily_precipitation.csv").open(encoding="utf-8", newline="") as handle:
         for row in csv.DictReader(handle):
             existing[row["date"]] = float(row["precipitation_mm_day"]) if row["precipitation_mm_day"] else None
-    metadata = {}
-    for dataset, variable, version in sorted({imerg_version(day) for day in DAYS}):
-        url = f"{SOURCE}/{dataset}.das"
-        path = RAW / "imerg/noaa_aoml/comparison_2026-10-26/metadata" / f"{dataset}.das"
-        body, receipt = get_saved(url, path)
-        das = body.decode("utf-8")
-        block = das[das.find("  " + variable + " {"):das.find("  NC_GLOBAL {")]
-        if 'String units "MM/Hr"' not in block:
-            raise ValueError(f"IMERG rates are no longer in MM/Hr for {dataset}")
-        metadata[dataset] = {"version": version, "variable": variable, "source_url": url,
-                             "sha256": receipt["sha256"], "fill_value": re.search(r"Float32 _FillValue ([^;]+);", block).group(1),
-                             "missing_value": re.search(r"Float32 missing_value ([^;]+);", block).group(1),
-                             "source_archive": re.search(r"GPM_L3/([^/]+)", das).group(1)}
-    imerg_cache, chirps_cache = {}, {}
+    chirps_cache = {}
     outcomes = {}
     def collect(day):
-        # Each source is processed in its own worker; weights are immutable once built.
-        return day, imerg_day(day, basin, imerg_cache), chirps_day(day, basin, chirps_cache)
+        return day, chirps_day(day, basin, chirps_cache)
     with ThreadPoolExecutor(max_workers=2) as pool:
         jobs = {pool.submit(collect, day): day for day in DAYS}
         for future in as_completed(jobs):
-            day, imerg, chirps = future.result()
-            outcomes[day] = (imerg, chirps)
-            print(f"Compared {day}: IMERG={imerg['precipitation_mm_day']}, CHIRPS={chirps['precipitation_mm_day']}", flush=True)
-    imerg_rows = [outcomes[day][0] for day in DAYS]
-    chirps_rows = [outcomes[day][1] for day in DAYS]
-    write_csv(OUT / "imerg_daily_catchment_sample.csv", imerg_rows)
+            day, chirps = future.result()
+            outcomes[day] = chirps
+            print(f"Compared {day}: CHIRPS={chirps['precipitation_mm_day']}", flush=True)
+    chirps_rows = [outcomes[day] for day in DAYS]
     write_csv(OUT / "chirps_v3_daily_catchment_sample.csv", chirps_rows)
     comparison = [{"date": day, "case": CASE_FOR[day], "nasa_power_saved_mm": existing.get(day),
                    "nasa_power_fresh_single_day_mm": fresh_power_basin.get(day),
-                   "imerg_mm": outcomes[day][0]["precipitation_mm_day"],
-                   "imerg_positive_only_lower_bound_mm": outcomes[day][0]["positive_only_lower_bound_mm_day"],
-                   "imerg_quality_flag": outcomes[day][0]["quality_flag"],
-                   "chirps_v3_rnl_mm": outcomes[day][1]["precipitation_mm_day"],
-                   "imerg_missing_cells": outcomes[day][0]["missing_cells"],
-                   "chirps_missing_cells": outcomes[day][1]["missing_cells"],
+                   "chirps_v3_rnl_mm": outcomes[day]["precipitation_mm_day"],
+                   "chirps_missing_cells": outcomes[day]["missing_cells"],
                    "training_status": "HOLD; source comparison only"} for day in DAYS]
     write_csv(OUT / "marala_precipitation_source_comparison.csv", comparison)
     after = {str(p.relative_to(MODEL)): digest(p.read_bytes()) for p in original}
@@ -497,17 +382,13 @@ def main():
               "power_range_test": power, "case_dates": CASES, "comparison_rows": len(comparison),
               "power_fresh_single_day_basin_means_mm": fresh_power_basin,
               "power_historical_profile": power_history,
-              "imerg_metadata": metadata,
-              "imerg_full_days": sum(r["precipitation_mm_day"] is not None for r in imerg_rows),
               "chirps_full_days": sum(r["missing_cells"] == 0 for r in chirps_rows),
               "status": "investigation_only_do_not_train",
-              "notes": ["Source disagreement is not resolved by selecting whichever rainfall value is closer to IMERG or CHIRPS.",
+              "notes": ["Source disagreement is not resolved by selecting whichever rainfall value is closer to CHIRPS.",
                         "CHIRPS v3 rnl uses ERA5 to distribute pentad totals across UTC dates; daily station observation windows are not uniform.",
-                        "IMERG half-hourly rates (mm/hour) are integrated as rate x 0.5 hours for each of 48 intervals.",
-                        "NOAA's v07 mirror encodes 0 as missing and fill as well as a valid dry value. For 2024-08-08 only a lower bound is saved; its catchment average is withheld.",
-                        "IMERG and CHIRPS sample days are not complete historical training series."]}
+                        "CHIRPS sample days are not a complete historical training series."]}
     (OUT / "source_comparison_report.json").write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
-    print(json.dumps({"power": power, "days": len(DAYS), "imerg_full_days": report["imerg_full_days"],
+    print(json.dumps({"power": power, "days": len(DAYS),
                       "chirps_full_days": report["chirps_full_days"]}, indent=2), flush=True)
 
 

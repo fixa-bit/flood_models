@@ -1,0 +1,26 @@
+Global fine-tune 1/25: train=0.978173, validation=0.530275
+Global fine-tune 2/25: train=0.518130, validation=0.239656
+Global fine-tune 3/25: train=0.292593, validation=0.189676
+Global fine-tune 4/25: train=0.244488, validation=0.133226
+Global fine-tune 5/25: train=0.206769, validation=0.116150
+Global fine-tune 6/25: train=0.189369, validation=0.105529
+Global fine-tune 7/25: train=0.181327, validation=0.109619
+Global fine-tune 8/25: train=0.169899, validation=0.095192
+Global fine-tune 9/25: train=0.161955, validation=0.103446
+Global fine-tune 10/25: train=0.160339, validation=0.103698
+Global fine-tune 11/25: train=0.141574, validation=0.101346
+Global fine-tune 12/25: train=0.127612, validation=0.082776
+Global fine-tune 13/25: train=0.119794, validation=0.073817
+Global fine-tune 14/25: train=0.110831, validation=0.077708
+Global fine-tune 15/25: train=0.107495, validation=0.076314
+Global fine-tune 16/25: train=0.105100, validation=0.066981
+Global fine-tune 17/25: train=0.101276, validation=0.071670
+Global fine-tune 18/25: train=0.096076, validation=0.064010
+Global fine-tune 19/25: train=0.094426, validation=0.066739
+Global fine-tune 20/25: train=0.092550, validation=0.065871
+Global fine-tune 21/25: train=0.089164, validation=0.064169
+Global fine-tune 22/25: train=0.086840, validation=0.061416
+Global fine-tune 23/25: train=0.085914, validation=0.061424
+Global fine-tune 24/25: train=0.083333, validation=0.060017
+Global fine-tune 25/25: train=0.082560, validation=0.058991
+Saved actual global fine-tune: D:\projects\flood_model\flood_model\riverine flood\short range\model\fine_tuned_global_pretrained_lstm\runs\finetuned\seed_42\best.pt

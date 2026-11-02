@@ -1,0 +1,34 @@
+{
+  "credentials_file_present": true,
+  "credential_values_recorded": false,
+  "new_licences_accepted": false,
+  "endpoint": "https://ecds.ecmwf.int/api/retrieve/v1/processes/s2s-forecasts/execution",
+  "http_status": 201,
+  "response": {
+    "processID": "s2s-forecasts",
+    "type": "process",
+    "jobID": "b4d5d013-327f-408f-b213-54d90bba1083",
+    "status": "accepted",
+    "created": "2026-11-02T11:20:43.792991",
+    "updated": "2026-11-02T11:20:43.792991",
+    "links": [
+      {
+        "href": "https://ecds.ecmwf.int/api/retrieve/v1/processes/s2s-forecasts/execution",
+        "rel": "self"
+      },
+      {
+        "href": "https://ecds.ecmwf.int/api/retrieve/v1/jobs/b4d5d013-327f-408f-b213-54d90bba1083",
+        "rel": "monitor",
+        "type": "application/json",
+        "title": "job status info"
+      }
+    ],
+    "metadata": {
+      "datasetMetadata": {
+        "messages": []
+      },
+      "origin": "api"
+    }
+  },
+  "location": "https://ecds.ecmwf.int/api/retrieve/v1/jobs/b4d5d013-327f-408f-b213-54d90bba1083"
+}

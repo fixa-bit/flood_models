@@ -1,0 +1,96 @@
+{
+  "id": "202306_temperature",
+  "request": {
+    "origin": "ecmwf",
+    "year": "2023",
+    "month": "06",
+    "day": [
+      "01",
+      "05",
+      "08",
+      "12",
+      "15",
+      "19",
+      "22",
+      "26",
+      "28",
+      "29",
+      "30"
+    ],
+    "time": "00:00",
+    "level_type": "single_level",
+    "variable": [
+      "2_m_temperature"
+    ],
+    "forecast_type": "control_forecast",
+    "leadtime_hour": [
+      "48_72",
+      "72_96",
+      "96_120",
+      "120_144",
+      "144_168",
+      "168_192",
+      "192_216",
+      "216_240",
+      "240_264",
+      "264_288",
+      "288_312",
+      "312_336",
+      "336_360",
+      "360_384",
+      "384_408",
+      "408_432",
+      "432_456",
+      "456_480",
+      "480_504",
+      "504_528",
+      "528_552",
+      "552_576",
+      "576_600",
+      "600_624",
+      "624_648",
+      "648_672",
+      "672_696",
+      "696_720",
+      "720_744",
+      "744_768"
+    ],
+    "data_format": "grib",
+    "area": [
+      35,
+      73.5,
+      31.5,
+      78
+    ]
+  },
+  "origins": 11,
+  "variable": "temperature",
+  "target": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\dataset\\chenab_marala\\raw\\marala\\weather_forecasts\\operational_verification\\ecmwf_s2s\\202306_temperature.grib",
+  "http_status": 201,
+  "response": {
+    "processID": "s2s-forecasts",
+    "type": "process",
+    "jobID": "af6da765-59ea-4e8f-a268-cf4544de2256",
+    "status": "accepted",
+    "created": "2026-11-02T11:26:38.573087",
+    "updated": "2026-11-02T11:26:38.573087",
+    "links": [
+      {
+        "href": "https://ecds.ecmwf.int/api/retrieve/v1/processes/s2s-forecasts/execution",
+        "rel": "self"
+      },
+      {
+        "href": "https://ecds.ecmwf.int/api/retrieve/v1/jobs/af6da765-59ea-4e8f-a268-cf4544de2256",
+        "rel": "monitor",
+        "type": "application/json",
+        "title": "job status info"
+      }
+    ],
+    "metadata": {
+      "datasetMetadata": {
+        "messages": []
+      },
+      "origin": "api"
+    }
+  }
+}

@@ -1,0 +1,121 @@
+STAGE download
+Elevation bands: [0.24504237932840592, 0.22418427517823308, 0.2835395315043776, 0.24723381398898345] area km2: 28784.093148077605
+Extracted 2017-01-01 to 2017-04-03
+Extracted 2017-10-04 to 2018-01-01
+Extracted 2017-04-03 to 2017-07-04
+Extracted 2017-07-04 to 2017-10-04
+Saved 2017: 365 days x 4 actual elevation-band records
+Extracted 2018-04-03 to 2018-07-04
+Extracted 2018-07-04 to 2018-10-04
+Extracted 2018-01-01 to 2018-04-03
+Extracted 2018-10-04 to 2019-01-01
+Saved 2018: 365 days x 4 actual elevation-band records
+Extracted 2019-01-01 to 2019-04-03
+Extracted 2019-04-03 to 2019-07-04
+Extracted 2019-07-04 to 2019-10-04
+Extracted 2019-10-04 to 2020-01-01
+Saved 2019: 365 days x 4 actual elevation-band records
+Extracted 2020-04-02 to 2020-07-03
+Extracted 2020-07-03 to 2020-10-03
+Extracted 2020-01-01 to 2020-04-02
+Extracted 2020-10-03 to 2021-01-01
+Saved 2020: 366 days x 4 actual elevation-band records
+Extracted 2021-01-01 to 2021-04-03
+Extracted 2021-04-03 to 2021-07-04
+Extracted 2021-07-04 to 2021-10-04
+Extracted 2021-10-04 to 2022-01-01
+Saved 2021: 365 days x 4 actual elevation-band records
+Extracted 2022-04-03 to 2022-07-04
+Extracted 2022-07-04 to 2022-10-04
+Extracted 2022-01-01 to 2022-04-03
+Extracted 2022-10-04 to 2023-01-01
+Saved 2022: 365 days x 4 actual elevation-band records
+Extracted 2023-07-04 to 2023-10-04
+Extracted 2023-04-03 to 2023-07-04
+Extracted 2023-01-01 to 2023-04-03
+Extracted 2023-10-04 to 2024-01-01
+Saved 2023: 365 days x 4 actual elevation-band records
+Extracted 2024-04-02 to 2024-07-03
+Extracted 2024-01-01 to 2024-04-02
+Extracted 2024-07-03 to 2024-10-03
+Extracted 2024-10-03 to 2025-01-01
+Saved 2024: 366 days x 4 actual elevation-band records
+STAGE prepare
+{
+  "observed_source": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\data\\marala_daily.csv",
+  "observed_source_sha256": "d21788d62afc9e54d8e2aa6e1f27dcc244ef3b6a1a734249650abd84ccdbe11f",
+  "prepared_sha256": "ea3bc0fd1da809c65811306339d15e030587b9b96e93487bc21fbb78f66b0097",
+  "observed_targets_exactly_preserved": true,
+  "no_target_filling": true,
+  "extracted_first_date": "2015-01-01",
+  "extracted_last_date": "2024-12-31",
+  "extracted_daily_rows": 3653,
+  "band_count": 4,
+  "observed_targets": 3454,
+  "nan_targets": 13636,
+  "area_fractions": [
+    0.24504237932840592,
+    0.22418427517823308,
+    0.2835395315043776,
+    0.24723381398898345
+  ]
+}
+STAGE train
+Seed 42 epoch 1/30: train=0.46430, validation=0.40337
+Seed 42 epoch 2/30: train=0.22957, validation=0.11338
+Seed 42 epoch 3/30: train=0.11440, validation=0.10754
+Seed 42 epoch 4/30: train=0.09997, validation=0.09760
+Seed 42 epoch 5/30: train=0.09218, validation=0.09487
+Seed 42 epoch 6/30: train=0.08372, validation=0.09781
+Seed 42 epoch 7/30: train=0.07625, validation=0.08880
+Seed 42 epoch 8/30: train=0.07283, validation=0.08469
+Seed 42 epoch 9/30: train=0.07018, validation=0.09847
+Seed 42 epoch 10/30: train=0.06579, validation=0.09559
+Seed 42 epoch 11/30: train=0.06333, validation=0.09013
+Seed 42 epoch 12/30: train=0.06216, validation=0.08706
+Seed 42 epoch 13/30: train=0.06055, validation=0.08646
+Seed 42 epoch 14/30: train=0.05909, validation=0.09104
+spatial saved: D:\projects\flood_model\flood_model\riverine flood\short range\model\spatially_distributed_model\runs\spatial\seed_42\best.pt
+Seed 42 epoch 1/30: train=0.36546, validation=0.15491
+Seed 42 epoch 2/30: train=0.13269, validation=0.11630
+Seed 42 epoch 3/30: train=0.10718, validation=0.09821
+Seed 42 epoch 4/30: train=0.09415, validation=0.09347
+Seed 42 epoch 5/30: train=0.08183, validation=0.10363
+Seed 42 epoch 6/30: train=0.07537, validation=0.08913
+Seed 42 epoch 7/30: train=0.07070, validation=0.09391
+Seed 42 epoch 8/30: train=0.06875, validation=0.08639
+Seed 42 epoch 9/30: train=0.06750, validation=0.10073
+Seed 42 epoch 10/30: train=0.06566, validation=0.09457
+Seed 42 epoch 11/30: train=0.06503, validation=0.08889
+Seed 42 epoch 12/30: train=0.06236, validation=0.08481
+Seed 42 epoch 13/30: train=0.06333, validation=0.08330
+Seed 42 epoch 14/30: train=0.06141, validation=0.08822
+Seed 42 epoch 15/30: train=0.06119, validation=0.08401
+Seed 42 epoch 16/30: train=0.06097, validation=0.08122
+Seed 42 epoch 17/30: train=0.06013, validation=0.08086
+Seed 42 epoch 18/30: train=0.06032, validation=0.07394
+Seed 42 epoch 19/30: train=0.06028, validation=0.08064
+Seed 42 epoch 20/30: train=0.05910, validation=0.08025
+Seed 42 epoch 21/30: train=0.05809, validation=0.08002
+Seed 42 epoch 22/30: train=0.05712, validation=0.08524
+Seed 42 epoch 23/30: train=0.05623, validation=0.08210
+Seed 42 epoch 24/30: train=0.05683, validation=0.08404
+mean_control saved: D:\projects\flood_model\flood_model\riverine flood\short range\model\spatially_distributed_model\runs\mean_control\seed_42\best.pt
+STAGE evaluate
+               model  lead_day    n      NSE      KGE  RMSE_cumecs
+      ElevationBands         1 1084 0.867482 0.890144   284.750113
+         MeanControl         1 1084 0.873362 0.935018   278.361175
+         persistence         1 1084 0.869699 0.934849   282.358121
+         climatology         1 1084 0.784149 0.848941   363.415087
+original_8input_LSTM         1 1084 0.886299 0.902012   263.760155
+   gradient_boosting         1 1084 0.874819 0.915528   276.754999
+            Ensemble         1 1084 0.890687 0.911608   258.620594
+      ElevationBands        10 1075 0.853113 0.874997   299.831337
+         MeanControl        10 1075 0.867115 0.930736   285.182124
+         persistence        10 1075 0.652151 0.826156   461.402653
+         climatology        10 1075 0.789917 0.849550   358.575479
+original_8input_LSTM        10 1075 0.857131 0.910494   295.702014
+   gradient_boosting        10 1075 0.850562 0.876906   302.423900
+            Ensemble        10 1075 0.865920 0.915669   286.462322
+Updated accuracy README: D:\projects\flood_model\flood_model\riverine flood\short range\model\spatially_distributed_model\README.md
+PIPELINE COMPLETE

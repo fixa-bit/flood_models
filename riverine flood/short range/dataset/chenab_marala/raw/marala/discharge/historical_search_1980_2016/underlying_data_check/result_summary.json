@@ -1,0 +1,9 @@
+{
+  "historical_1980_2016_daily_dataset_obtained": false,
+  "historical_request_http_status": 401,
+  "recent_api_records_saved": 49,
+  "recent_start": "2026-09-01",
+  "recent_end": "2026-10-19",
+  "existing_pdf_hashes_unchanged": true,
+  "no_existing_discharge_values_modified": true
+}

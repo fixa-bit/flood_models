@@ -1,0 +1,37 @@
+{
+  "seconds": 88.46431010000015,
+  "epochs": 40,
+  "best_validation_loss": 0.532665502836167,
+  "parameters": 6668,
+  "train_samples_available": 1767,
+  "train_samples_per_epoch": 589,
+  "validation_samples": 356,
+  "seed": 42,
+  "training_years": [
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
+  ],
+  "selection_years": [
+    2021
+  ],
+  "source_sha256_unchanged": "d21788d62afc9e54d8e2aa6e1f27dcc244ef3b6a1a734249650abd84ccdbe11f",
+  "hpo_trials": 1,
+  "selected_epoch": 40,
+  "test_years": [
+    2022,
+    2023,
+    2024
+  ],
+  "unique_observed_test_days": 1084,
+  "observed_issue_lead_pairs": 10795,
+  "test_samples": 1084,
+  "flood_threshold_cumecs": 2494.7141847552,
+  "inference_seconds": 2.8759693000029074,
+  "checkpoint_sha256": "03b192ccde4158971dc6a4726c1ef3be5e9407c27183a3426a98a6082b62da69",
+  "input_sha256": "d21788d62afc9e54d8e2aa6e1f27dcc244ef3b6a1a734249650abd84ccdbe11f",
+  "source_targets_unchanged": true,
+  "forecast_type": "noisy reanalysis, not operational forecasts"
+}

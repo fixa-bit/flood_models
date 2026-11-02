@@ -1,0 +1,22 @@
+.rainfall-card{margin-top:18px}
+.rainfall-comparison-plot{width:100%;min-height:390px;padding:0 10px}
+.rainfall-pickers{display:flex;gap:12px;flex-wrap:wrap;align-items:end;color:#b9c8b4;font-size:11px}
+.rainfall-pickers label{display:flex;flex-direction:column;gap:6px}
+.rainfall-pickers select{min-width:145px;max-width:230px}
+.rainfall-panels{padding:0 22px 18px}
+.rainfall-panel{padding:17px 0 15px;border-top:1px solid #344334}
+.rainfall-panel-heading{display:flex;align-items:start;justify-content:space-between;gap:16px}
+.rainfall-panel h3{margin:0 0 5px;color:#e6eadb;font-size:15px}
+.rainfall-panel p{margin:0;color:#a9bbac;font-size:11px;line-height:1.5}
+.rainfall-panel-facts{display:flex;align-items:center;gap:14px;flex-wrap:wrap;white-space:nowrap;font-size:10px;color:#c9d7bd}
+.rainfall-panel-facts a{color:#ecc28d}
+.rainfall-source-plot{width:100%;min-height:205px}
+.rainfall-empty{padding:25px 8px}
+.rainfall-panel .rainfall-issue{margin:3px 0 0;padding:8px 10px;border-left:2px solid #dcaa65;background:#2a251a;color:#e8c495}
+.rainfall-availability-legend{display:flex;flex-wrap:wrap;gap:10px 16px;padding:0 22px 15px;color:#c1cfbd;font-size:10px}
+.rainfall-availability-legend span{display:inline-flex;align-items:center;gap:6px}
+.rainfall-availability-legend i{display:inline-block;width:10px;height:10px;border-radius:2px}
+.rainfall-availability-viewport{max-width:100%;width:100%;overflow-x:auto;overflow-y:hidden;scrollbar-color:#688b77 #17231b}
+.rainfall-availability-chart{height:375px;min-width:0}
+.rainfall-card>.card-note{margin:0;padding:13px 22px}
+@media(max-width:700px){.rainfall-comparison-plot{min-height:340px;padding:0 2px}.rainfall-pickers{width:100%}.rainfall-pickers label{flex:1;min-width:120px}.rainfall-pickers select{min-width:0;width:100%}.rainfall-panels{padding:0 14px 15px}.rainfall-panel-heading{flex-direction:column;gap:8px}.rainfall-availability-legend{padding:0 14px 14px}}

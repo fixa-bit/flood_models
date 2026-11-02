@@ -1,0 +1,24 @@
+{
+  "swe_mm": {
+    "units": "mm",
+    "missing_days": [],
+    "valid_days": 16437,
+    "min": 1019.3033672026797,
+    "max": 1570.0844822004906
+  },
+  "snow_depth_m": {
+    "units": "m",
+    "missing_days": [],
+    "valid_days": 16437,
+    "min": 3.397631232610974,
+    "max": 5.372918734690016
+  },
+  "snowmelt_mm": {
+    "units": "mm/day",
+    "missing_days": [],
+    "valid_days": 16437,
+    "min": 0.00024312287732989072,
+    "max": 9.629517450688667
+  },
+  "merged_csv_sha256": "134c1549cc7e9dc1604277f5fd39e6c8836e222add43d1b87b9b4c4fc0323753"
+}

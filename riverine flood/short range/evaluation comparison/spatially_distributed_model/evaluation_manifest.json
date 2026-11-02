@@ -1,0 +1,37 @@
+{
+  "stage_checkpoints": {
+    "spatial": [
+      "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\spatially_distributed_model\\runs\\spatial\\seed_42\\best.pt"
+    ],
+    "mean_control": [
+      "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\spatially_distributed_model\\runs\\mean_control\\seed_42\\best.pt"
+    ]
+  },
+  "daily_sha256": "ea3bc0fd1da809c65811306339d15e030587b9b96e93487bc21fbb78f66b0097",
+  "discharge_preserved": true,
+  "unique_observed_test_days": 1084,
+  "observed_target_pairs": 10795,
+  "test_years": [
+    2022,
+    2023,
+    2024
+  ],
+  "training_years": [
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
+  ],
+  "validation_years": [
+    2021
+  ],
+  "band_area_fractions": [
+    0.24504237932840592,
+    0.22418427517823308,
+    0.2835395315043776,
+    0.24723381398898345
+  ],
+  "paired_forecast_error_check_passed": true,
+  "forecast_mode": "reanalysis_with_noise"
+}

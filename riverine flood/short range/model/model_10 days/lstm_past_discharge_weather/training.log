@@ -1,0 +1,19 @@
+Seed 42 epoch 1/40: train=0.33677, validation=0.14023
+Seed 42 epoch 2/40: train=0.12652, validation=0.10231
+Seed 42 epoch 3/40: train=0.09969, validation=0.09508
+Seed 42 epoch 4/40: train=0.08244, validation=0.08105
+Seed 42 epoch 5/40: train=0.07073, validation=0.08178
+Seed 42 epoch 6/40: train=0.06499, validation=0.07401
+Seed 42 epoch 7/40: train=0.06161, validation=0.07146
+Seed 42 epoch 8/40: train=0.05978, validation=0.07721
+Seed 42 epoch 9/40: train=0.05922, validation=0.07201
+Seed 42 epoch 10/40: train=0.05758, validation=0.07678
+Seed 42 epoch 11/40: train=0.05816, validation=0.06527
+Seed 42 epoch 12/40: train=0.05629, validation=0.07194
+Seed 42 epoch 13/40: train=0.05408, validation=0.07287
+Seed 42 epoch 14/40: train=0.05395, validation=0.07348
+Seed 42 epoch 15/40: train=0.05273, validation=0.07132
+Seed 42 epoch 16/40: train=0.05204, validation=0.07377
+Seed 42 epoch 17/40: train=0.05220, validation=0.06668
+Seed 42 epoch 18/40: train=0.05159, validation=0.06969
+Completed lstm_matched_nhits_nbeatsx ['D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\N-HiTS\\controls\\lstm\\runs\\initial\\seed_42\\best.pt']

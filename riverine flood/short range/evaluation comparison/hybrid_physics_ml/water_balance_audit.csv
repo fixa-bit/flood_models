@@ -1,0 +1,2 @@
+seed,maximum_water_balance_residual_mm,minimum_state_or_flux_mm,forecast_missing_pct,negative_noisy_precipitation_clipped_in_bucket
+42,0.0003504753112792969,0.0,0.0,2191

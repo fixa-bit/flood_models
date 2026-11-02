@@ -1,0 +1,28 @@
+{
+  "kind": "storage#objects",
+  "items": [
+    {
+      "kind": "storage#object",
+      "id": "flood-forecasting/hydrologic_predictions/distributed_model_2026_11/reanalysis/streamflow.zarr/zarr.json/1793173107783793",
+      "selfLink": "https://www.googleapis.com/storage/v1/b/flood-forecasting/o/hydrologic_predictions%2Fdistributed_model_2026_11%2Freanalysis%2Fstreamflow.zarr%2Fzarr.json",
+      "mediaLink": "https://storage.googleapis.com/download/storage/v1/b/flood-forecasting/o/hydrologic_predictions%2Fdistributed_model_2026_11%2Freanalysis%2Fstreamflow.zarr%2Fzarr.json?generation=1793173107783793&alt=media",
+      "name": "hydrologic_predictions/distributed_model_2026_11/reanalysis/streamflow.zarr/zarr.json",
+      "bucket": "flood-forecasting",
+      "generation": "1793173107783793",
+      "metageneration": "1",
+      "contentType": "application/json",
+      "storageClass": "STANDARD",
+      "size": "3310",
+      "md5Hash": "Et7gXI06ll9JURyEPfSLWg==",
+      "crc32c": "RvBvUA==",
+      "etag": "CPHw8LCa3JcDEAE=",
+      "timeCreated": "2026-10-28T07:38:27.840Z",
+      "updated": "2026-10-28T07:38:27.840Z",
+      "timeStorageClassUpdated": "2026-10-28T07:38:27.840Z",
+      "timeFinalized": "2026-10-28T07:38:27.840Z",
+      "metadata": {
+        "goog-reserved-file-mtime": "1793171810"
+      }
+    }
+  ]
+}

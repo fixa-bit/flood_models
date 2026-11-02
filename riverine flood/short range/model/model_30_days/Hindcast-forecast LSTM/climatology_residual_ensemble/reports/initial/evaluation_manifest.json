@@ -1,0 +1,40 @@
+{
+  "training_years": [
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
+  ],
+  "selection_years": [
+    2021
+  ],
+  "test_years": [
+    2022,
+    2023,
+    2024
+  ],
+  "selected_epochs": [
+    4,
+    2,
+    10
+  ],
+  "training_seconds": 150.5237446999963,
+  "new_seed_models": 3,
+  "parameters_per_member": 42870,
+  "unique_observed_test_days": 1084,
+  "observed_issue_lead_pairs": 31932,
+  "day30_observations": 1055,
+  "day30_nse": 0.857522859708504,
+  "climatology_day30_nse": 0.7921451817805871,
+  "smooth_climatology_day30_nse": 0.8199743517971636,
+  "beats_original_climatology_day30": true,
+  "beats_smooth_climatology_day30": true,
+  "source_sha256": "d21788d62afc9e54d8e2aa6e1f27dcc244ef3b6a1a734249650abd84ccdbe11f",
+  "postprocessing_sha256": "4fcfff9e0aa722ce1dbf9dd939c602982b0446053b628488373d32cbeaa970ed",
+  "test_evaluations_before_this_report": 0,
+  "all_choices_fixed_using_training_and_validation_only": true,
+  "test_years_inspected_in_prior_project_experiments": true,
+  "operational_forecast_skill_established": false,
+  "flood_threshold_cumecs": 2494.7141847552
+}

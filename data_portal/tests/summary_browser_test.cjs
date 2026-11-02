@@ -15,10 +15,11 @@ const {chromium} = require(path.join(process.env.TEMP,'flood_portal_browser/node
       ranges:Array.from({length:6},(_,index)=>graph._fullLayout['xaxis'+(index?index+1:'')].range),
       values:JSON.stringify(graph.data.map(trace=>({x:trace.x,y:trace.y}))),
       axes:[...new Set(graph.data.map(trace=>trace.yaxis))],
+      rainfallTraces:graph.data.filter(trace=>trace.xaxis==='x3').map(trace=>({name:trace.name,axis:trace.yaxis})),
       domains:Array.from({length:6},(_,index)=>graph._fullLayout['yaxis'+(index?index+1:'')].domain),
       noOtherYears:graph.data.every(trace=>trace.x.every(day=>day.startsWith('2024-'))),
       emptyCounts:graph.data.slice(-3).map(trace=>trace.x.length),
-      rainDays:graph.data.find(trace=>trace.type==='bar').x.length,
+      rainDays:graph.data.find(trace=>trace.name==='CHIRPS Final').x.length,
       withheld:graph.data[1].x.length};
   });
   const fullYear=chart=>{
@@ -40,8 +41,8 @@ const {chromium} = require(path.join(process.env.TEMP,'flood_portal_browser/node
           expectedHeight:graph._fullLayout['yaxis'+(index?index+1:'')]._length})),
         line:marker.querySelector('.summary-crosshair-line')?.getBoundingClientRect().height,
         points:[...marker.querySelectorAll('.summary-cursor-segment')].map((segment,index)=>[...segment.querySelectorAll('.summary-reading-point')].map(point=>({
-          date:point.dataset.date,value:Number(point.dataset.value),sources:point.dataset.sources,top:parseFloat(point.style.top),
-          expectedTop:graph._fullLayout['yaxis'+(index?index+1:'')].d2p(Number(point.dataset.value))
+          date:point.dataset.date,value:Number(point.dataset.value),sources:point.dataset.sources,axis:point.dataset.axis,top:parseFloat(point.style.top),
+          expectedTop:graph._fullLayout[point.dataset.axis==='y7'?'yaxis7':'yaxis'+(index?index+1:'')].d2p(Number(point.dataset.value))
         })))};
     });
     assert.equal(cursor.date,day);assert.equal(cursor.hidden,false);assert.equal(cursor.panels.length,6);
@@ -86,7 +87,7 @@ const {chromium} = require(path.join(process.env.TEMP,'flood_portal_browser/node
     await page.waitForFunction(()=>document.querySelector('#discharge-chart').data[0].x.length===0);
     const overviewBefore=await page.evaluate(()=>JSON.stringify(document.querySelector('#discharge-chart').data.map(trace=>({name:trace.name,x:trace.x,y:trace.y}))));
     await page.click('[data-view="summary"]');
-    await page.waitForFunction(()=>document.querySelector('#summary-chart').data?.length===10);
+    await page.waitForFunction(()=>document.querySelector('#summary-chart').data?.length===13);
     await page.evaluate(()=>document.querySelector('#summary-view').hidden=true);
     await page.click('[data-view="summary"]');
     await page.waitForFunction(()=>!document.querySelector('#summary-view').hidden);
@@ -95,6 +96,11 @@ const {chromium} = require(path.join(process.env.TEMP,'flood_portal_browser/node
     assert.ok(initial.width>initial.client+500);
     assert.equal(initial.rainDays,366);assert.equal(initial.withheld,6);
     assert.equal(initial.axes.length,6);assert.ok(initial.noOtherYears);
+    assert.equal(initial.rainfallTraces.length,4);
+    assert.ok(initial.rainfallTraces.every(trace=>trace.axis==='y3'));
+    assert.equal(initial.rainfallTraces.some(trace=>trace.name.includes('saved')),false);
+    assert.ok(initial.rainfallTraces.some(trace=>trace.name==='CHIRPS Final'));
+    assert.ok(initial.rainfallTraces.some(trace=>trace.name==='NASA POWER fresh'));
     assert.ok(await page.locator('#summary-chart .scatterlayer .points .point').count()>350);
     assert.deepEqual(initial.emptyCounts,[0,0,0]);
     for(let i=1;i<6;i++)assert.ok(initial.domains[i][1]<initial.domains[i-1][0]);
@@ -165,11 +171,18 @@ const {chromium} = require(path.join(process.env.TEMP,'flood_portal_browser/node
     assert.match(normal,/22 September 2024/);assert.match(normal,/WAPDA:\s+22,900 cusecs/);
     assert.match(normal,/FFD:\s+22,900 cusecs/);assert.match(normal,/Both sources report the same flow/);
     assert.doesNotMatch(normal,/19 September|52,000|cross_source/);
+    const rainfall=await hoverReading(6,'2024-03-01');
+    assert.match(rainfall,/1 March 2024/);
+    assert.match(rainfall,/CHIRPS Final:/);
+    assert.match(rainfall,/NASA POWER fresh:/);
+    assert.doesNotMatch(rainfall,/NASA POWER saved|128\.718/);
+    await hoverReading(0,'2024-09-22');
     const selectedPoints=await checkDateCursor('2024-09-22');
     assert.deepEqual(selectedPoints.points[0].map(point=>point.value),[22900]);
     assert.equal(selectedPoints.points[0][0].sources,'WAPDA / FFD');
     assert.deepEqual(selectedPoints.points[1].map(point=>point.value),[4000]);
-    assert.equal(selectedPoints.points[2].length,1);
+    assert.ok(selectedPoints.points[2].length>=2);
+    assert.equal(selectedPoints.points[2].some(point=>point.sources.includes('NASA POWER saved')),false);
     const lockPoint=await readingPosition(0,'2024-09-22');
     await page.mouse.dblclick(lockPoint.x,lockPoint.y);
     assert.equal(await page.getAttribute('#summary-date-cursor','data-locked'),'true');
@@ -246,7 +259,7 @@ const {chromium} = require(path.join(process.env.TEMP,'flood_portal_browser/node
 
     await page.setViewportSize({width:390,height:844});
     await page.goto('http://127.0.0.1:8787/?check=full-year#summary',{waitUntil:'networkidle'});
-    await page.waitForFunction(()=>document.querySelector('#summary-chart').data?.length===10);
+    await page.waitForFunction(()=>document.querySelector('#summary-chart').data?.length===13);
     await wide();fullYear(await readChart());
     await page.locator('.summary-panel-scrollbar').nth(4).evaluate(bar=>{bar.value=bar.max;bar.dispatchEvent(new Event('input',{bubbles:true}));});
     await page.waitForFunction(()=>{const v=document.querySelector('#summary-chart-viewport');return v.scrollLeft>=v.scrollWidth-v.clientWidth-1;});

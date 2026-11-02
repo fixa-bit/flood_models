@@ -1,0 +1,5 @@
+__pycache__/
+*.py[cod]
+*.pid
+.pytest_cache/
+.ipynb_checkpoints/

@@ -1,0 +1,17 @@
+{
+  "original_sources_sha256_unchanged": true,
+  "merged_data_sha256_matches_training": true,
+  "combined_metrics_rows": 50,
+  "combined_seasonal_metrics_rows": 150,
+  "model_count": 5,
+  "synthetic_unit_tests_passed": 13,
+  "daily_file_sha256": "d21788d62afc9e54d8e2aa6e1f27dcc244ef3b6a1a734249650abd84ccdbe11f",
+  "package_versions": {
+    "torch": "2.15.0+cpu",
+    "numpy": "2.4.6",
+    "pandas": "3.1.0",
+    "scikit-learn": "1.9.1",
+    "matplotlib": "3.11.2",
+    "PyYAML": "6.0.3"
+  }
+}

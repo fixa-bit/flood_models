@@ -1,0 +1,26 @@
+{
+  "collection": "MODIS/061/MOD10A1",
+  "band": "NDSI_Snow_Cover",
+  "scale_m": 500,
+  "maxPixels": 10000000000000.0,
+  "tileScale": 4,
+  "catchment_sha256": "49efd115f5d3ce2d1241fb35adaaf48bf6c8d0705768ac93dc88fbd4f11ab651",
+  "period": [
+    "2000-03-01",
+    "2025-01-01"
+  ],
+  "projection": {
+    "type": "Projection",
+    "crs": "SR-ORG:6974",
+    "transform": [
+      463.3127165279165,
+      0,
+      -20015109.354,
+      0,
+      -463.3127165279167,
+      10007554.677003
+    ]
+  },
+  "valid_values": "0 through 100, inclusive",
+  "valid_fraction": "mean of unmasked 0/1 validity over whole catchment"
+}

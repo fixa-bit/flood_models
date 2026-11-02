@@ -1,0 +1,24 @@
+{
+  "messages": [
+    {
+      "id": "contents/cems/2024-11-11-warning-cems-glofas-reforecast.md",
+      "date": "2024-11-11T00:00:00Z",
+      "summary": null,
+      "url": null,
+      "severity": "info",
+      "content": "Temporary freeze of medium-range reforecasts available from the EWDS, with no update of the dataset from GloFAS v4.2 release date. If you require access to the reforecast data, please get in touch with us via the [ECMWF Support Portal](https://confluence.ecmwf.int/site/support) using the title 'Access to GloFAS Reforecast Data' when creating the ticket. Information on how to raise a ticket in our support portal is available\n[here](https://confluence.ecmwf.int/display/CEMS/CEMS-Flood+Data+Support).",
+      "live": true,
+      "show_date": true
+    },
+    {
+      "id": "contents/cems/2024-02-01-known-issues-glofas.md",
+      "date": "2024-02-01T00:00:00Z",
+      "summary": null,
+      "url": null,
+      "severity": "info",
+      "content": "Please note we suggest checking the list of known issues on the GloFAS wiki\n[here](https://confluence.ecmwf.int/display/CEMS/GloFAS+-+Known+Issues)\nbefore downloading the dataset.",
+      "live": true,
+      "show_date": true
+    }
+  ]
+}

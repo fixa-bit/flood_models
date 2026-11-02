@@ -19,6 +19,19 @@ Open http://127.0.0.1:8787. You can also double-click `start_portal.cmd`, or run
 
 ## Refresh after adding project data
 
+The Summary catchment precipitation panel also supports ERA5-Land, CHIRPS v2
+Daily, PERSIANN-CDR and IMERG V07 Final from
+`riverine flood/short range/dataset/chenab_marala/raw/marala/rainfall/google_earth_engine`. The existing checked
+Marala catchment is reused, with native pixel-area and boundary-fraction weights.
+These four series appear after extraction passes QA and the exported CSV matches
+the checksum recorded by `quality_report.json`. Missing/unvalidated exports show
+an explicit status in Summary; no placeholder rainfall is plotted. The existing
+CHIRPS v3 and POWER comparison series remain separate. Download the extraction
+script/instructions from Data library, or run them directly in that folder.
+After extraction, rebuild the snapshot using the command below and reload the
+portal. Earth Engine login and a project are required for extraction, not for
+viewing this local portal.
+
 ```powershell
 python build_dashboard.py
 ```
@@ -29,8 +42,9 @@ The supported scientific inputs currently come from the existing Marala collecto
 
 ## Views
 
-- Overview: date/year filters, eligible and withheld Marala inflow, separate FFD readings, catchment precipitation, monthly usability, distributions and exploratory annual-maximum windows.
-- Summary: stacked inflow, outflow, precipitation, IRSA mean-flow and PMD peak panels. **Feature graph year** selects a full January–December calendar year for all six aligned panels (default: 2024). Each variable has its own y-axis. Choose a full-year chart fitted to the screen or a wider chart that scrolls horizontally. Years and variables without saved readings are explicitly labeled; no data is filled in. Changing the feature year clears the previous selected/locked date and leaves the availability chart and Overview filters untouched.
+- Overview: date/year filters, eligible and withheld Marala inflow, separate FFD readings, CHIRPS Final catchment precipitation, monthly usability, distributions and exploratory annual-maximum windows.
+- Summary: stacked inflow, outflow, precipitation, IRSA mean-flow and PMD peak panels. The precipitation row overlays four retained rainfall series on one mm/day scale. The inconsistent saved NASA POWER request is omitted from precipitation charts. **Feature graph year** selects a full January–December calendar year for all six aligned panels (default: 2024). Choose a full-year chart fitted to the screen or a wider chart that scrolls horizontally. Years and variables without saved readings are explicitly labeled; no data is filled in. Changing the feature year clears the previous selected/locked date and leaves the availability chart and Overview filters untouched.
+- Rainfall sources: one combined precipitation comparison and four separate catchment-rainfall plots for CHIRPS v3 Final RNL, CHIRPS v3 Preliminary SAT, the fresh NASA POWER historical candidate, and original CHIRPS GeoTIFF check samples. The inconsistent saved POWER request remains downloadable for audit. Choose any collected year or **All collected years**, and filter the individual panels to one source if needed. A separate, independently scrollable daily availability chart covers the entire plotted rainfall collection. Missing or withheld values are labeled rather than plotted as readings. Source CSVs, checks, and the NASA source-cell table are downloadable in the Data library.
 
 Summary hover cards use the selected point's exact calendar date, with plain source labels and a short explanation. Matching inflow records say “Both sources report the same flow.” Withheld readings say “Needs checking — excluded from training,” and date-conflicted FFD bulletins identify the printed and website dates. Nearby dates are never combined into one observation box. Hover or tap a point to inspect it; use scrollable mode to distinguish individual days on small screens.
 
@@ -46,7 +60,10 @@ The bottom **Data availability across variables** chart covers **all collected y
 - Sources: all saved provider groups, exact source URLs and local checksum results.
 - Integrity & quality: freshly recomputed SHA-256 ledger, measurement uncertainties, seven withheld WAPDA dates, time certainty and recent coverage gaps.
 - Catchment: interactive boundary, upstream river network, clipped precipitation cells, weights and boundary checks.
-- Data library: downloadable principal series, quality reports, original-source manifests and geospatial evidence. The large source-cell CSV stays in the local workspace and is identified as such.
+
+- Data library: downloadable principal series, rainfall source samples, source-cell values, quality reports, original-source manifests and geospatial evidence. Raw CHIRPS Zarr chunks and GeoTIFFs remain in the local source folders and appear in the integrity ledger.
+
+**Rainfall source update (28 October 2026):** CHIRPS v3 Final is the preferred historical Marala catchment rainfall candidate, with separate recent Preliminary dates. Overview, Summary and Rainfall sources plot CHIRPS Final and the other retained comparison series. The inconsistent saved NASA POWER request is excluded from value charts and retained in the Data library for audit. Two plotted CHIRPS dates were checked against original CHC GeoTIFFs; see [the CHIRPS collection notes](../riverine%20flood/short%20range/dataset/chenab_marala/processed/marala/rainfall/chirps_v3_primary/README.md).
 
 IRSA daily means and the PMD journal's selected event peaks have separate charts and measurement labels. FFD date conflicts are identified separately. WAPDA historical date labels are not turned into invented observation times. Annual maximum windows are exploratory and are not presented as official flood categories. The catchment is a checked research delineation, not agency-certified.
 

@@ -1,0 +1,12 @@
+{
+  "year": 2025,
+  "url": "https://ffd.pmd.gov.pk/bulletins/archive/200/download",
+  "local_file": "_sources\\2025\\2025-06-18_archive_200.pdf",
+  "retrieved_utc": "2026-10-30T05:00:11.613901+00:00",
+  "retrieval_mode": "downloaded_from_official_ffd",
+  "network_error": "",
+  "final_url": "https://ffd.pmd.gov.pk/bulletins/archive/200/download",
+  "sha256": "340c2daf8ef88b66fc24c5e0f61f3515e9c986f3e9ae61fd0d4c4d99d9d13f7d",
+  "bytes": 677014,
+  "matches_existing_marala_snapshot": true
+}

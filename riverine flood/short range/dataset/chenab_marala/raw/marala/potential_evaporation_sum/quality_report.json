@@ -1,0 +1,8 @@
+{
+  "units": "mm/day",
+  "missing_days": [],
+  "valid_days": 16437,
+  "min": 0.0907203573098815,
+  "max": 6.494123504953841,
+  "negative_after_sign_reversal": 0
+}

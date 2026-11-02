@@ -1,0 +1,833 @@
+{
+  "source_folder": "C:\\Users\\PC\\Desktop\\discharge",
+  "inspected_local_date": "2026-10-30",
+  "source_files_modified": false,
+  "workbooks": [
+    {
+      "file": "Hunza1966_2008.xls",
+      "path": "C:\\Users\\PC\\Desktop\\discharge\\Hunza1966_2008.xls",
+      "sha256": "1e6b0037724251dde9383811fd0043292fe7864eb1113cf904fc3c586dc6cdba",
+      "sheet_layout": [
+        {
+          "name": "data obtained",
+          "rows": 1089,
+          "columns": 64
+        },
+        {
+          "name": "rearranged data",
+          "rows": 15707,
+          "columns": 17
+        }
+      ],
+      "audited_daily_sheet": "rearranged data",
+      "header": [
+        "Date",
+        "Discharge (m3/s)"
+      ],
+      "first_date": "1966-01-01",
+      "last_date": "2008-12-31",
+      "dated_rows": 15706,
+      "numeric_days": 14611,
+      "missing_discharge_rows": 1095,
+      "duplicate_dates": 0,
+      "nonmonotonic_steps": 0,
+      "invalid_date_rows": [],
+      "zero_values": 0,
+      "negative_values": 0,
+      "min_saved_numeric": 27.168,
+      "max_saved_numeric": 2558.0,
+      "missing_years": [
+        2005,
+        2006,
+        2007
+      ],
+      "partial_years": [],
+      "missing_calendar_dates": 0,
+      "overlaps_marala_2016_2026": false,
+      "source_labels": [],
+      "raw_to_rearranged_checks": [
+        {
+          "sheet": "data obtained",
+          "raw_numeric_dates": 12326,
+          "raw_years": [
+            "1966",
+            "1967",
+            "1968",
+            "1969",
+            "1970",
+            "1971",
+            "1972",
+            "1973",
+            "1974",
+            "1975",
+            "1976",
+            "1977",
+            "1978",
+            "1979",
+            "1980",
+            "1981",
+            "1982",
+            "1983",
+            "1984",
+            "1985",
+            "1986",
+            "1987",
+            "1988",
+            "1989",
+            "1990",
+            "1991",
+            "1992",
+            "1993",
+            "1994",
+            "1995",
+            "1996",
+            "1997",
+            "1998",
+            "1999"
+          ],
+          "unit_counts": {
+            "not_explicitly_labeled": 12326
+          },
+          "paired_dates_compared": 12326,
+          "mismatches_over_0_1percent_or_0_1_absolute": 189,
+          "sample_differences": [
+            {
+              "date": "1999-01-01",
+              "raw_value": 50.518,
+              "raw_units": "not_explicitly_labeled",
+              "expected_with_standard_conversion": 50.518,
+              "rearranged_value": 51.42,
+              "source_row": 1059,
+              "source_column": 2
+            },
+            {
+              "date": "1999-05-01",
+              "raw_value": 71.168,
+              "raw_units": "not_explicitly_labeled",
+              "expected_with_standard_conversion": 71.168,
+              "rearranged_value": 70.3,
+              "source_row": 1059,
+              "source_column": 6
+            },
+            {
+              "date": "1999-06-01",
+              "raw_value": 259.636,
+              "raw_units": "not_explicitly_labeled",
+              "expected_with_standard_conversion": 259.636,
+              "rearranged_value": 260.9,
+              "source_row": 1059,
+              "source_column": 7
+            },
+            {
+              "date": "1999-07-01",
+              "raw_value": 711.989,
+              "raw_units": "not_explicitly_labeled",
+              "expected_with_standard_conversion": 711.989,
+              "rearranged_value": 716.7,
+              "source_row": 1059,
+              "source_column": 8
+            },
+            {
+              "date": "1999-08-01",
+              "raw_value": 1269.204,
+              "raw_units": "not_explicitly_labeled",
+              "expected_with_standard_conversion": 1269.204,
+              "rearranged_value": 1278.0,
+              "source_row": 1059,
+              "source_column": 9
+            },
+            {
+              "date": "1999-09-01",
+              "raw_value": 822.299,
+              "raw_units": "not_explicitly_labeled",
+              "expected_with_standard_conversion": 822.299,
+              "rearranged_value": 596.3,
+              "source_row": 1059,
+              "source_column": 10
+            },
+            {
+              "date": "1999-01-02",
+              "raw_value": 49.757,
+              "raw_units": "not_explicitly_labeled",
+              "expected_with_standard_conversion": 49.757,
+              "rearranged_value": 50.69,
+              "source_row": 1060,
+              "source_column": 2
+            },
+            {
+              "date": "1999-05-02",
+              "raw_value": 74.409,
+              "raw_units": "not_explicitly_labeled",
+              "expected_with_standard_conversion": 74.409,
+              "rearranged_value": 73.59,
+              "source_row": 1060,
+              "source_column": 6
+            },
+            {
+              "date": "1999-06-02",
+              "raw_value": 282.159,
+              "raw_units": "not_explicitly_labeled",
+              "expected_with_standard_conversion": 282.159,
+              "rearranged_value": 283.6,
+              "source_row": 1060,
+              "source_column": 7
+            },
+            {
+              "date": "1999-07-02",
+              "raw_value": 768.043,
+              "raw_units": "not_explicitly_labeled",
+              "expected_with_standard_conversion": 768.043,
+              "rearranged_value": 772.8,
+              "source_row": 1060,
+              "source_column": 8
+            }
+          ],
+          "numeric_years_present_only_in_rearranged": [
+            "2000",
+            "2001",
+            "2002",
+            "2003",
+            "2004",
+            "2008"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "Indus River at Partab br.-Bunji 1962-2007.xls",
+      "path": "C:\\Users\\PC\\Desktop\\discharge\\Indus River at Partab br.-Bunji 1962-2007.xls",
+      "sha256": "a55f3da8e6e23d8779e87547b2358566f84bbdd87a7be03700f5b2f78c99cdeb",
+      "sheet_layout": [
+        {
+          "name": "PARTAB DATA",
+          "rows": 1335,
+          "columns": 13
+        },
+        {
+          "name": "Rearranged",
+          "rows": 16802,
+          "columns": 2
+        }
+      ],
+      "audited_daily_sheet": "Rearranged",
+      "header": [
+        "Date",
+        "Discharge"
+      ],
+      "first_date": "1962-01-01",
+      "last_date": "2007-12-31",
+      "dated_rows": 16801,
+      "numeric_days": 16071,
+      "missing_discharge_rows": 730,
+      "duplicate_dates": 0,
+      "nonmonotonic_steps": 0,
+      "invalid_date_rows": [],
+      "zero_values": 0,
+      "negative_values": 0,
+      "min_saved_numeric": 228.0,
+      "max_saved_numeric": 11419.0,
+      "missing_years": [
+        1997,
+        1998
+      ],
+      "partial_years": [],
+      "missing_calendar_dates": 0,
+      "overlaps_marala_2016_2026": false,
+      "source_labels": [],
+      "raw_to_rearranged_checks": [
+        {
+          "sheet": "PARTAB DATA",
+          "raw_numeric_dates": 13515,
+          "raw_years": [
+            "1962",
+            "1963",
+            "1964",
+            "1965",
+            "1966",
+            "1967",
+            "1968",
+            "1969",
+            "1970",
+            "1971",
+            "1972",
+            "1973",
+            "1974",
+            "1975",
+            "1976",
+            "1977",
+            "1978",
+            "1979",
+            "1980",
+            "1981",
+            "1982",
+            "1983",
+            "1984",
+            "1985",
+            "1986",
+            "1987",
+            "1988",
+            "1989",
+            "1990",
+            "1991",
+            "1992",
+            "1993",
+            "1994",
+            "1995",
+            "1996",
+            "1999",
+            "2000"
+          ],
+          "unit_counts": {
+            "not_explicitly_labeled": 13515
+          },
+          "paired_dates_compared": 13515,
+          "mismatches_over_0_1percent_or_0_1_absolute": 0,
+          "sample_differences": [],
+          "numeric_years_present_only_in_rearranged": [
+            "2001",
+            "2002",
+            "2003",
+            "2004",
+            "2005",
+            "2006",
+            "2007"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "Indus River at Shatial 1998-2007.xls",
+      "path": "C:\\Users\\PC\\Desktop\\discharge\\Indus River at Shatial 1998-2007.xls",
+      "sha256": "ab0a555e9e02feecce42507355319e1c503fc9dc6aea5743ed7ff05b6ffb64b0",
+      "sheet_layout": [
+        {
+          "name": "Shatial",
+          "rows": 3653,
+          "columns": 2
+        },
+        {
+          "name": "Feuil2",
+          "rows": 0,
+          "columns": 0
+        },
+        {
+          "name": "Feuil3",
+          "rows": 0,
+          "columns": 0
+        }
+      ],
+      "audited_daily_sheet": "Shatial",
+      "header": [
+        "Date",
+        "Discharge"
+      ],
+      "first_date": "1998-01-01",
+      "last_date": "2007-12-31",
+      "dated_rows": 3652,
+      "numeric_days": 3652,
+      "missing_discharge_rows": 0,
+      "duplicate_dates": 0,
+      "nonmonotonic_steps": 0,
+      "invalid_date_rows": [],
+      "zero_values": 0,
+      "negative_values": 0,
+      "min_saved_numeric": 290.7,
+      "max_saved_numeric": 12602.0,
+      "missing_years": [],
+      "partial_years": [],
+      "missing_calendar_dates": 0,
+      "overlaps_marala_2016_2026": false,
+      "source_labels": [],
+      "raw_to_rearranged_checks": []
+    },
+    {
+      "file": "Shigar River at Shigar_1985-2001.xls",
+      "path": "C:\\Users\\PC\\Desktop\\discharge\\Shigar River at Shigar_1985-2001.xls",
+      "sha256": "35118d6952253f0969d8db63e91357b12bdd2d06f9881b5d85910b76c3d473fa",
+      "sheet_layout": [
+        {
+          "name": "Shingar River",
+          "rows": 645,
+          "columns": 13
+        },
+        {
+          "name": "Shingar River (cumecs)",
+          "rows": 645,
+          "columns": 13
+        },
+        {
+          "name": "rearranged",
+          "rows": 6210,
+          "columns": 2
+        }
+      ],
+      "audited_daily_sheet": "rearranged",
+      "header": [
+        "Date",
+        "Discharge"
+      ],
+      "first_date": "1985-01-01",
+      "last_date": "2001-12-31",
+      "dated_rows": 6209,
+      "numeric_days": 5478,
+      "missing_discharge_rows": 731,
+      "duplicate_dates": 0,
+      "nonmonotonic_steps": 0,
+      "invalid_date_rows": [],
+      "zero_values": 0,
+      "negative_values": 0,
+      "min_saved_numeric": 4.016,
+      "max_saved_numeric": 1784.0,
+      "missing_years": [
+        1999,
+        2000
+      ],
+      "partial_years": [],
+      "missing_calendar_dates": 0,
+      "overlaps_marala_2016_2026": false,
+      "source_labels": [
+        "Source, SWHP, WAPDA"
+      ],
+      "raw_to_rearranged_checks": [
+        {
+          "sheet": "Shingar River",
+          "raw_numeric_dates": 5478,
+          "raw_years": [
+            "1985",
+            "1986",
+            "1987",
+            "1988",
+            "1989",
+            "1990",
+            "1991",
+            "1992",
+            "1993",
+            "1994",
+            "1995",
+            "1996",
+            "1997",
+            "1998",
+            "2001"
+          ],
+          "unit_counts": {
+            "cusecs": 1461,
+            "m3/s": 4017
+          },
+          "paired_dates_compared": 5478,
+          "mismatches_over_0_1percent_or_0_1_absolute": 33,
+          "sample_differences": [
+            {
+              "date": "1998-01-20",
+              "raw_value": 34.13,
+              "raw_units": "m3/s",
+              "expected_with_standard_conversion": 34.13,
+              "rearranged_value": 28.73,
+              "source_row": 586,
+              "source_column": 2
+            },
+            {
+              "date": "1998-02-20",
+              "raw_value": 27.29,
+              "raw_units": "m3/s",
+              "expected_with_standard_conversion": 27.29,
+              "rearranged_value": 27.961000000000002,
+              "source_row": 586,
+              "source_column": 3
+            },
+            {
+              "date": "1998-04-20",
+              "raw_value": 40.16,
+              "raw_units": "m3/s",
+              "expected_with_standard_conversion": 40.16,
+              "rearranged_value": 33.05800000000001,
+              "source_row": 586,
+              "source_column": 5
+            },
+            {
+              "date": "1998-05-20",
+              "raw_value": 49.44,
+              "raw_units": "m3/s",
+              "expected_with_standard_conversion": 49.44,
+              "rearranged_value": 40.366,
+              "source_row": 586,
+              "source_column": 6
+            },
+            {
+              "date": "1998-06-20",
+              "raw_value": 247.8,
+              "raw_units": "m3/s",
+              "expected_with_standard_conversion": 247.8,
+              "rearranged_value": 151.57999999999998,
+              "source_row": 586,
+              "source_column": 7
+            },
+            {
+              "date": "1998-07-20",
+              "raw_value": 1097.0,
+              "raw_units": "m3/s",
+              "expected_with_standard_conversion": 1097.0,
+              "rearranged_value": 1278.4,
+              "source_row": 586,
+              "source_column": 8
+            },
+            {
+              "date": "1998-08-20",
+              "raw_value": 1076.0,
+              "raw_units": "m3/s",
+              "expected_with_standard_conversion": 1076.0,
+              "rearranged_value": 962.15,
+              "source_row": 586,
+              "source_column": 9
+            },
+            {
+              "date": "1998-09-20",
+              "raw_value": 142.8,
+              "raw_units": "m3/s",
+              "expected_with_standard_conversion": 142.8,
+              "rearranged_value": 250.86000000000004,
+              "source_row": 586,
+              "source_column": 10
+            },
+            {
+              "date": "1998-10-20",
+              "raw_value": 31.8,
+              "raw_units": "m3/s",
+              "expected_with_standard_conversion": 31.8,
+              "rearranged_value": 50.524,
+              "source_row": 586,
+              "source_column": 11
+            },
+            {
+              "date": "1998-11-20",
+              "raw_value": 27.39,
+              "raw_units": "m3/s",
+              "expected_with_standard_conversion": 27.39,
+              "rearranged_value": 26.733999999999998,
+              "source_row": 586,
+              "source_column": 12
+            }
+          ],
+          "numeric_years_present_only_in_rearranged": []
+        },
+        {
+          "sheet": "Shingar River (cumecs)",
+          "raw_numeric_dates": 5478,
+          "raw_years": [
+            "1985",
+            "1986",
+            "1987",
+            "1988",
+            "1989",
+            "1990",
+            "1991",
+            "1992",
+            "1993",
+            "1994",
+            "1995",
+            "1996",
+            "1997",
+            "1998",
+            "2001"
+          ],
+          "unit_counts": {
+            "m3/s": 5478
+          },
+          "paired_dates_compared": 5478,
+          "mismatches_over_0_1percent_or_0_1_absolute": 33,
+          "sample_differences": [
+            {
+              "date": "1998-01-20",
+              "raw_value": 34.13,
+              "raw_units": "m3/s",
+              "expected_with_standard_conversion": 34.13,
+              "rearranged_value": 28.73,
+              "source_row": 586,
+              "source_column": 2
+            },
+            {
+              "date": "1998-02-20",
+              "raw_value": 27.29,
+              "raw_units": "m3/s",
+              "expected_with_standard_conversion": 27.29,
+              "rearranged_value": 27.961000000000002,
+              "source_row": 586,
+              "source_column": 3
+            },
+            {
+              "date": "1998-04-20",
+              "raw_value": 40.16,
+              "raw_units": "m3/s",
+              "expected_with_standard_conversion": 40.16,
+              "rearranged_value": 33.05800000000001,
+              "source_row": 586,
+              "source_column": 5
+            },
+            {
+              "date": "1998-05-20",
+              "raw_value": 49.44,
+              "raw_units": "m3/s",
+              "expected_with_standard_conversion": 49.44,
+              "rearranged_value": 40.366,
+              "source_row": 586,
+              "source_column": 6
+            },
+            {
+              "date": "1998-06-20",
+              "raw_value": 247.8,
+              "raw_units": "m3/s",
+              "expected_with_standard_conversion": 247.8,
+              "rearranged_value": 151.57999999999998,
+              "source_row": 586,
+              "source_column": 7
+            },
+            {
+              "date": "1998-07-20",
+              "raw_value": 1097.0,
+              "raw_units": "m3/s",
+              "expected_with_standard_conversion": 1097.0,
+              "rearranged_value": 1278.4,
+              "source_row": 586,
+              "source_column": 8
+            },
+            {
+              "date": "1998-08-20",
+              "raw_value": 1076.0,
+              "raw_units": "m3/s",
+              "expected_with_standard_conversion": 1076.0,
+              "rearranged_value": 962.15,
+              "source_row": 586,
+              "source_column": 9
+            },
+            {
+              "date": "1998-09-20",
+              "raw_value": 142.8,
+              "raw_units": "m3/s",
+              "expected_with_standard_conversion": 142.8,
+              "rearranged_value": 250.86000000000004,
+              "source_row": 586,
+              "source_column": 10
+            },
+            {
+              "date": "1998-10-20",
+              "raw_value": 31.8,
+              "raw_units": "m3/s",
+              "expected_with_standard_conversion": 31.8,
+              "rearranged_value": 50.524,
+              "source_row": 586,
+              "source_column": 11
+            },
+            {
+              "date": "1998-11-20",
+              "raw_value": 27.39,
+              "raw_units": "m3/s",
+              "expected_with_standard_conversion": 27.39,
+              "rearranged_value": 26.733999999999998,
+              "source_row": 586,
+              "source_column": 12
+            }
+          ],
+          "numeric_years_present_only_in_rearranged": []
+        }
+      ]
+    },
+    {
+      "file": "Shyok River at Yogu_1974-2007.xls",
+      "path": "C:\\Users\\PC\\Desktop\\discharge\\Shyok River at Yogu_1974-2007.xls",
+      "sha256": "4b8d763d7a21c0945dbccbaa806e5f0fce11e1ab5311fd6e16af4c3bc3fea1c4",
+      "sheet_layout": [
+        {
+          "name": "MAIN DATA",
+          "rows": 1295,
+          "columns": 18
+        },
+        {
+          "name": "Rearranged",
+          "rows": 12419,
+          "columns": 2
+        }
+      ],
+      "audited_daily_sheet": "Rearranged",
+      "header": [
+        "Date",
+        "Discharge"
+      ],
+      "first_date": "1974-01-01",
+      "last_date": "2007-12-31",
+      "dated_rows": 12418,
+      "numeric_days": 12053,
+      "missing_discharge_rows": 365,
+      "duplicate_dates": 0,
+      "nonmonotonic_steps": 0,
+      "invalid_date_rows": [],
+      "zero_values": 0,
+      "negative_values": 0,
+      "min_saved_numeric": 5.097218330823607,
+      "max_saved_numeric": 3623.0,
+      "missing_years": [
+        2005
+      ],
+      "partial_years": [],
+      "missing_calendar_dates": 0,
+      "overlaps_marala_2016_2026": false,
+      "source_labels": [
+        "SOURCE: SWHP, WAPDA",
+        "Source: SWHP, WAPDA"
+      ],
+      "raw_to_rearranged_checks": [
+        {
+          "sheet": "MAIN DATA",
+          "raw_numeric_dates": 10955,
+          "raw_years": [
+            "1974",
+            "1975",
+            "1976",
+            "1977",
+            "1978",
+            "1979",
+            "1980",
+            "1981",
+            "1982",
+            "1983",
+            "1984",
+            "1985",
+            "1986",
+            "1987",
+            "1988",
+            "1989",
+            "1990",
+            "1991",
+            "1992",
+            "1993",
+            "1994",
+            "1995",
+            "1996",
+            "1997",
+            "1998",
+            "1999",
+            "2000",
+            "2001",
+            "2002",
+            "2003"
+          ],
+          "unit_counts": {
+            "m3/s": 5477,
+            "cusecs": 5478
+          },
+          "paired_dates_compared": 10955,
+          "mismatches_over_0_1percent_or_0_1_absolute": 537,
+          "sample_differences": [
+            {
+              "date": "2003-07-01",
+              "raw_value": 986.7,
+              "raw_units": "m3/s",
+              "expected_with_standard_conversion": 986.7,
+              "rearranged_value": 1006.0,
+              "source_row": 5,
+              "source_column": 8
+            },
+            {
+              "date": "2003-08-01",
+              "raw_value": 1944.0,
+              "raw_units": "m3/s",
+              "expected_with_standard_conversion": 1944.0,
+              "rearranged_value": 1699.0,
+              "source_row": 5,
+              "source_column": 9
+            },
+            {
+              "date": "2003-09-01",
+              "raw_value": 800.4,
+              "raw_units": "m3/s",
+              "expected_with_standard_conversion": 800.4,
+              "rearranged_value": 785.6,
+              "source_row": 5,
+              "source_column": 10
+            },
+            {
+              "date": "2003-10-01",
+              "raw_value": 246.3,
+              "raw_units": "m3/s",
+              "expected_with_standard_conversion": 246.3,
+              "rearranged_value": 256.5,
+              "source_row": 5,
+              "source_column": 11
+            },
+            {
+              "date": "2003-11-01",
+              "raw_value": 108.0,
+              "raw_units": "m3/s",
+              "expected_with_standard_conversion": 108.0,
+              "rearranged_value": 110.3,
+              "source_row": 5,
+              "source_column": 12
+            },
+            {
+              "date": "2003-12-01",
+              "raw_value": 76.12,
+              "raw_units": "m3/s",
+              "expected_with_standard_conversion": 76.12,
+              "rearranged_value": 74.98,
+              "source_row": 5,
+              "source_column": 13
+            },
+            {
+              "date": "2003-07-02",
+              "raw_value": 961.3,
+              "raw_units": "m3/s",
+              "expected_with_standard_conversion": 961.3,
+              "rearranged_value": 986.7,
+              "source_row": 6,
+              "source_column": 8
+            },
+            {
+              "date": "2003-08-02",
+              "raw_value": 1979.0,
+              "raw_units": "m3/s",
+              "expected_with_standard_conversion": 1979.0,
+              "rearranged_value": 1944.0,
+              "source_row": 6,
+              "source_column": 9
+            },
+            {
+              "date": "2003-10-02",
+              "raw_value": 238.0,
+              "raw_units": "m3/s",
+              "expected_with_standard_conversion": 238.0,
+              "rearranged_value": 246.3,
+              "source_row": 6,
+              "source_column": 11
+            },
+            {
+              "date": "2003-11-02",
+              "raw_value": 105.7,
+              "raw_units": "m3/s",
+              "expected_with_standard_conversion": 105.7,
+              "rearranged_value": 108.0,
+              "source_row": 6,
+              "source_column": 12
+            }
+          ],
+          "numeric_years_present_only_in_rearranged": [
+            "2004",
+            "2006",
+            "2007"
+          ]
+        }
+      ]
+    }
+  ],
+  "other_documents": [
+    {
+      "file": "DOC-20260826-WA0011.xlsx",
+      "sha256": "6d46af20137c4ba24b511425e9c85088cb1245b397bb1c058b8836246c60e2d1",
+      "sheets": [
+        {
+          "name": "Clarification 01",
+          "rows": 13,
+          "columns": 5
+        }
+      ],
+      "classification": "Climate/disaster UAV monitoring questionnaire; not station discharge observations"
+    }
+  ]
+}

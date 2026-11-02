@@ -1,0 +1,53 @@
+Snow catchment: D:\projects\flood_model\flood_model\riverine flood\short range\dataset\chenab_marala\processed\marala\catchment\marala_upstream_catchment.geojson
+Saved snow 1980: 366 daily rows in each feature folder
+Saved snow 1981: 365 daily rows in each feature folder
+Saved snow 1982: 365 daily rows in each feature folder
+Saved snow 1983: 365 daily rows in each feature folder
+Saved snow 1984: 366 daily rows in each feature folder
+Saved snow 1985: 365 daily rows in each feature folder
+Saved snow 1986: 365 daily rows in each feature folder
+Saved snow 1987: 365 daily rows in each feature folder
+Saved snow 1988: 366 daily rows in each feature folder
+Saved snow 1989: 365 daily rows in each feature folder
+Saved snow 1990: 365 daily rows in each feature folder
+Saved snow 1991: 365 daily rows in each feature folder
+Saved snow 1992: 366 daily rows in each feature folder
+Saved snow 1993: 365 daily rows in each feature folder
+Saved snow 1994: 365 daily rows in each feature folder
+Saved snow 1995: 365 daily rows in each feature folder
+Saved snow 1996: 366 daily rows in each feature folder
+Saved snow 1997: 365 daily rows in each feature folder
+Saved snow 1998: 365 daily rows in each feature folder
+Saved snow 1999: 365 daily rows in each feature folder
+Saved snow 2000: 366 daily rows in each feature folder
+Saved snow 2001: 365 daily rows in each feature folder
+Saved snow 2002: 365 daily rows in each feature folder
+Saved snow 2003: 365 daily rows in each feature folder
+Saved snow 2004: 366 daily rows in each feature folder
+Saved snow 2005: 365 daily rows in each feature folder
+Saved snow 2006: 365 daily rows in each feature folder
+Saved snow 2007: 365 daily rows in each feature folder
+Saved snow 2008: 366 daily rows in each feature folder
+Saved snow 2009: 365 daily rows in each feature folder
+Saved snow 2010: 365 daily rows in each feature folder
+Saved snow 2011: 365 daily rows in each feature folder
+Saved snow 2012: 366 daily rows in each feature folder
+Saved snow 2013: 365 daily rows in each feature folder
+Saved snow 2014: 365 daily rows in each feature folder
+Saved snow 2015: 365 daily rows in each feature folder
+Saved snow 2016: 366 daily rows in each feature folder
+Saved snow 2017: 365 daily rows in each feature folder
+Saved snow 2018: 365 daily rows in each feature folder
+Saved snow 2019: 365 daily rows in each feature folder
+Saved snow 2020: 366 daily rows in each feature folder
+Saved snow 2021: 365 daily rows in each feature folder
+Saved snow 2022: 365 daily rows in each feature folder
+Saved snow 2023: 365 daily rows in each feature folder
+Saved snow 2024: 366 daily rows in each feature folder
+swe_mm: missing days (0): []
+swe_mm: min=1019.3033672026797, max=1570.0844822004906
+snow_depth_m: missing days (0): []
+snow_depth_m: min=3.397631232610974, max=5.372918734690016
+snowmelt_mm: missing days (0): []
+snowmelt_mm: min=0.00024312287732989072, max=9.629517450688667
+Merged CSV: D:\projects\flood_model\flood_model\riverine flood\short range\dataset\chenab_marala\raw\marala\marala_daily_snow_1980_2024.csv

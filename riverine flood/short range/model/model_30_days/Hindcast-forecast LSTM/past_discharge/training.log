@@ -1,0 +1,53 @@
+Seed 42 epoch 1/120: train=0.30911, validation=0.11864
+Seed 42 epoch 2/120: train=0.13200, validation=0.10513
+Seed 42 epoch 3/120: train=0.11538, validation=0.10907
+Seed 42 epoch 4/120: train=0.10595, validation=0.10611
+Seed 42 epoch 5/120: train=0.09366, validation=0.09347
+Seed 42 epoch 6/120: train=0.08700, validation=0.08498
+Seed 42 epoch 7/120: train=0.08185, validation=0.07842
+Seed 42 epoch 8/120: train=0.07529, validation=0.07060
+Seed 42 epoch 9/120: train=0.07167, validation=0.06953
+Seed 42 epoch 10/120: train=0.06758, validation=0.06567
+Seed 42 epoch 11/120: train=0.06671, validation=0.06581
+Seed 42 epoch 12/120: train=0.06453, validation=0.06554
+Seed 42 epoch 13/120: train=0.06351, validation=0.06603
+Seed 42 epoch 14/120: train=0.06188, validation=0.06739
+Seed 42 epoch 15/120: train=0.06178, validation=0.07179
+Seed 42 epoch 16/120: train=0.06108, validation=0.07083
+Seed 42 epoch 17/120: train=0.06038, validation=0.07036
+Seed 42 epoch 18/120: train=0.05961, validation=0.07156
+Seed 42 epoch 19/120: train=0.05819, validation=0.06567
+Seed 42 epoch 20/120: train=0.05833, validation=0.07054
+Seed 42 epoch 21/120: train=0.05828, validation=0.06521
+Seed 42 epoch 22/120: train=0.05695, validation=0.07215
+Seed 42 epoch 23/120: train=0.05638, validation=0.07794
+Seed 42 epoch 24/120: train=0.05585, validation=0.07635
+Seed 42 epoch 25/120: train=0.05623, validation=0.07205
+Seed 42 epoch 26/120: train=0.05524, validation=0.07207
+Seed 42 epoch 27/120: train=0.05547, validation=0.07163
+Seed 42 epoch 28/120: train=0.05479, validation=0.06855
+Seed 42 epoch 29/120: train=0.05492, validation=0.07134
+Seed 42 epoch 30/120: train=0.05484, validation=0.06731
+Seed 42 epoch 31/120: train=0.05393, validation=0.07579
+Seed 42 epoch 32/120: train=0.05329, validation=0.07225
+Seed 42 epoch 33/120: train=0.05361, validation=0.07220
+         model  lead_day    n      NSE      KGE  RMSE_cumecs  MAE_cumecs  PBIAS_pct
+LSTM_30d_pastQ         1 1067 0.856072 0.898109   297.275330  172.650895  -5.982302
+   Persistence         1 1067 0.868104 0.934054   284.577855  135.984557  -0.003098
+   Climatology         1 1067 0.781996 0.848668   365.862612  235.512036   7.634337
+LSTM_30d_pastQ        10 1067 0.853450 0.922119   299.688765  181.219856  -2.604947
+   Persistence        10 1067 0.650043 0.825165   463.110603  275.108647   0.327921
+   Climatology        10 1067 0.789115 0.849963   359.501446  233.107625   8.019856
+LSTM_30d_pastQ        15 1067 0.829924 0.909703   323.386177  192.184798  -1.934605
+   Persistence        15 1067 0.571621 0.785598   513.233047  321.546153   0.600588
+   Climatology        15 1067 0.790620 0.848085   358.813354  232.385638   8.346605
+LSTM_30d_pastQ        20 1065 0.820499 0.906384   332.701045  197.070376  -2.874503
+   Persistence        20 1065 0.502112 0.750506   554.098528  349.166660   0.756353
+   Climatology        20 1065 0.791022 0.847095   358.980591  232.233904   8.481970
+LSTM_30d_pastQ        30 1055 0.788109 0.870909   362.871348  215.195864  -5.659522
+   Persistence        30 1055 0.262315 0.629497   677.066486  446.423810   1.148887
+   Climatology        30 1055 0.792145 0.844519   359.398279  231.857132   8.837113
+Report: D:\projects\flood_model\flood_model\riverine flood\short range\evaluation comparison\model_30_days\hindcast_forecast_lstm_past_discharge\comparison_report.md
+Day-30 NSE changed from **0.784** to **0.788** (+0.004). RMSE reduction: **+0.9%** overall, **+3.0%** on high-flow days, and **-0.1%** on other days. Positive reductions indicate improvement.
+Variant report: D:\projects\flood_model\flood_model\riverine flood\short range\evaluation comparison\model_30_days\hindcast_forecast_lstm_past_discharge\variant_comparison.md
+Past-discharge variant complete. No other model family was trained. Awaiting user feedback.

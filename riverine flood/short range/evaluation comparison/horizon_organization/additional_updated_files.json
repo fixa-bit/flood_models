@@ -1,0 +1,17 @@
+[
+  "model\\model_15 days\\encoder_decoder_lstm\\tests\\test_seq2seq.py",
+  "model\\model_10 days\\fine_tuned_global_pretrained_lstm\\tests\\test_global.py",
+  "model\\model_10 days\\spatially_distributed_model\\tests\\test_spatial.py",
+  "model\\model_10 days\\hybrid_physics_ml\\tests\\test_hybrid.py",
+  "model\\model_10 days\\catchment_mean_lstm\\config.yaml",
+  "model\\model_10 days\\catchment_mean_lstm\\config_mean_control.yaml",
+  "model\\model_10 days\\climatology\\config.yaml",
+  "model\\model_10 days\\ensemble\\config.yaml",
+  "model\\model_10 days\\gradient_boosting\\config.yaml",
+  "model\\model_10 days\\lstm\\config.yaml",
+  "model\\model_10 days\\persistence\\config.yaml",
+  "model\\model_10 days\\spatially_distributed_model\\config_mean_control.yaml",
+  "evaluation comparison\\common\\config.yaml",
+  "evaluation comparison\\verify_layout.py",
+  "evaluation comparison\\README.md"
+]

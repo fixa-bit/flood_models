@@ -1,0 +1,15 @@
+STAGE download
+Elevation bands: [0.24504237932840592, 0.22418427517823308, 0.2835395315043776, 0.24723381398898345] area km2: 28784.093148077605
+Extracted 2015-01-01 to 2015-04-03
+Extracted 2015-04-03 to 2015-07-04
+Extracted 2015-07-04 to 2015-10-04
+Extracted 2015-10-04 to 2016-01-01
+Saved 2015: 365 days x 4 actual elevation-band records
+Extracted 2016-01-01 to 2016-04-02
+Extracted 2016-04-02 to 2016-07-03
+Extracted 2016-07-03 to 2016-10-03
+Extracted 2016-10-03 to 2017-01-01
+Saved 2016: 366 days x 4 actual elevation-band records
+Extracted 2017-01-01 to 2017-04-03
+Extracted 2017-04-03 to 2017-07-04
+Extracted 2017-07-04 to 2017-10-04

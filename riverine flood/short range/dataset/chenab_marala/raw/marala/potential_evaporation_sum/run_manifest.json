@@ -1,0 +1,12 @@
+{
+  "collection": "ECMWF/ERA5_LAND/DAILY_AGGR",
+  "band": "potential_evaporation_sum",
+  "scale_m": 11132,
+  "catchment_sha256": "49efd115f5d3ce2d1241fb35adaaf48bf6c8d0705768ac93dc88fbd4f11ab651",
+  "period": [
+    "1980-01-01",
+    "2025-01-01"
+  ],
+  "conversion": "m * 1000 * -1",
+  "reducer": "mean"
+}

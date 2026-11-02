@@ -1,0 +1,13 @@
+{
+  "qa_passed": true,
+  "units": "degrees C",
+  "variable": "daily catchment-mean 2 m air temperature",
+  "day_definition": "00:00\u201324:00 UTC; 05:00\u201305:00 next day Pakistan time",
+  "valid_days": 16437,
+  "missing_days": [],
+  "negative_celsius_is_valid": true,
+  "min_c": -16.358145279413467,
+  "max_c": 16.88393284620112,
+  "mean_c": 2.8249578016016246,
+  "merged_csv_sha256": "1688af545544151217223181084e8e7c54c5f9ad361c6adc7f4aa18468c0e534"
+}

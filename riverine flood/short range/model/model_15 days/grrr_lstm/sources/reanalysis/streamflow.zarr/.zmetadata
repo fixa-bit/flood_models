@@ -1,0 +1,89 @@
+{
+    "metadata": {
+        ".zattrs": {},
+        ".zgroup": {
+            "zarr_format": 2
+        },
+        "gauge_id/.zarray": {
+            "chunks": [
+                16120
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<U16",
+            "fill_value": null,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                1031646
+            ],
+            "zarr_format": 2
+        },
+        "gauge_id/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "gauge_id"
+            ]
+        },
+        "streamflow/.zarray": {
+            "chunks": [
+                128,
+                11680
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f4",
+            "fill_value": "NaN",
+            "filters": null,
+            "order": "C",
+            "shape": [
+                1031646,
+                16063
+            ],
+            "zarr_format": 2
+        },
+        "streamflow/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "gauge_id",
+                "time"
+            ]
+        },
+        "time/.zarray": {
+            "chunks": [
+                16063
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<i8",
+            "fill_value": null,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                16063
+            ],
+            "zarr_format": 2
+        },
+        "time/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "time"
+            ],
+            "calendar": "proleptic_gregorian",
+            "units": "days since 1980-01-01 00:00:00"
+        }
+    },
+    "zarr_consolidated_format": 1
+}

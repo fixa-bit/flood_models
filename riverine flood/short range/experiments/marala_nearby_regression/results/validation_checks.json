@@ -1,0 +1,9 @@
+{
+  "heldout_prediction_rows_checked": 4152,
+  "observed_only_targets": true,
+  "source_date_and_lag_alignment": true,
+  "identical_test_dates_across_station_and_mode": true,
+  "independent_NSE_RMSE_verification": true,
+  "nonoverlapping_30_day_blocks": true,
+  "no_source_data_changed": true
+}

@@ -1,0 +1,16 @@
+numpy
+pandas
+PyYAML
+scipy
+scikit-learn
+lightgbm>=4.7
+quantile-forest>=1.4
+cdsapi>=0.7
+requests
+xarray
+netCDF4
+cfgrib
+eccodes
+joblib
+matplotlib
+torch

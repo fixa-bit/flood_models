@@ -1,0 +1,112 @@
+[
+  {
+    "url": "https://irrigation.sindh.gov.pk/Library/books",
+    "file": "sindh_books.html",
+    "status": 200,
+    "final_url": "https://irrigation.sindh.gov.pk/Library/books",
+    "bytes": 21808,
+    "sha256": "74625992e3ec490258fce15537eff94efb72a3f5c388c053e473a2617fefa3ff",
+    "candidate_links": [
+      {
+        "text": "Irrigation GIS",
+        "url": "https://irrigation.sindh.gov.pk/gis"
+      },
+      {
+        "text": "GIS Portal",
+        "url": "https://irrigation.sindh.gov.pk/gis/gismaps"
+      },
+      {
+        "text": "Apps",
+        "url": "https://irrigation.sindh.gov.pk/gis/#apps"
+      }
+    ]
+  },
+  {
+    "url": "http://pakirsa.gov.pk/",
+    "file": "irsa_http_landing.html",
+    "status": 200,
+    "final_url": "http://pakirsa.gov.pk/",
+    "bytes": 25734,
+    "sha256": "e85e436601e6bed5ac85a6f9e7da2d1265a53330fb06458ac5364de20c9dd187",
+    "candidate_links": [
+      {
+        "text": "Daily Data",
+        "url": "http://pakirsa.gov.pk/DailyData.aspx"
+      },
+      {
+        "text": "Daily\r\n\t\t\t\t\t\tData",
+        "url": "http://pakirsa.gov.pk/DailyData.aspx"
+      }
+    ]
+  },
+  {
+    "url": "http://pakirsa.gov.pk/DailyData.aspx",
+    "file": "irsa_http_daily.html",
+    "status": 200,
+    "final_url": "http://pakirsa.gov.pk/DailyData.aspx",
+    "bytes": 22835,
+    "sha256": "7c36007c9250590ea7c8e9b240535209fd9f8c146cf1a2de22a66f412837e785",
+    "candidate_links": [
+      {
+        "text": "Daily Data",
+        "url": "http://pakirsa.gov.pk/DailyData.aspx"
+      },
+      {
+        "text": "Daily Data 30/10/2026",
+        "url": "http://pakirsa.gov.pk/Doc/Data30-10-2026.pdf"
+      },
+      {
+        "text": "Daily Data 29/10/2026",
+        "url": "http://pakirsa.gov.pk/Doc/Data29-10-2026.pdf"
+      },
+      {
+        "text": "Daily Data 28/10/2026",
+        "url": "http://pakirsa.gov.pk/Doc/Data28-10-2026.pdf"
+      },
+      {
+        "text": "Daily Data 27/10/2026",
+        "url": "http://pakirsa.gov.pk/Doc/Data27-10-2026.pdf"
+      },
+      {
+        "text": "Daily Data 26/10/2026",
+        "url": "http://pakirsa.gov.pk/Doc/Data26-10-2026.pdf"
+      },
+      {
+        "text": "Daily Data 25/10/2026",
+        "url": "http://pakirsa.gov.pk/Doc/Data25-10-2026.pdf"
+      },
+      {
+        "text": "Daily Data 24/10/2026",
+        "url": "http://pakirsa.gov.pk/Doc/Data24-10-2026.pdf"
+      },
+      {
+        "text": "Daily Data 23/10/2026",
+        "url": "http://pakirsa.gov.pk/Doc/Data23-10-2026.pdf"
+      },
+      {
+        "text": "Daily\r\n\t\t\t\t\t\tData",
+        "url": "http://pakirsa.gov.pk/DailyData.aspx"
+      }
+    ]
+  },
+  {
+    "url": "https://api.elsevier.com/content/article/PII:S0048969716300018?httpAccept=text/xml",
+    "file": "publisher_article.xml",
+    "status": 200,
+    "final_url": "https://api.elsevier.com/content/article/PII:S0048969716300018?httpAccept=text/xml",
+    "bytes": 1979,
+    "sha256": "d27fa95be59e4b1b0d7a61b52cb4b7f23d1246c070e7f90ae87ed3837bbddfef"
+  },
+  {
+    "url": "https://zenodo.org/api/records/3825920",
+    "file": "zenodo_ssi_metadata.json",
+    "status": "failed",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://nepra.org.pk/tariff/Tariff/Petitions/2011/",
+    "file": "nepra_2011_index.html",
+    "status": "failed",
+    "error": "HTTP Error 403: Forbidden"
+  }
+]

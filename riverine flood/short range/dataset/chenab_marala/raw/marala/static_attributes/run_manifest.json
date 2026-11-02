@@ -1,0 +1,18 @@
+{
+  "catchment_sha256": "49efd115f5d3ce2d1241fb35adaaf48bf6c8d0705768ac93dc88fbd4f11ab651",
+  "method_version": 1,
+  "dem": "MERIT/DEM/v1_0_3",
+  "glaciers": "GLIMS/current",
+  "glacier_selection": "latest anlys_time per glac_id; dissolved union",
+  "landcover": "ESA/WorldCover/v200 (2021)",
+  "sand": "OpenLandMap/SOL/SOL_SAND-WFRACTION_USDA-3A1A1A_M/v02",
+  "clay": "OpenLandMap/SOL/SOL_CLAY-WFRACTION_USDA-3A1A1A_M/v02",
+  "soil_depth_method": "(b0 + 3*b10 + 2*b30)/6; silt=100-sand-clay",
+  "climate": "ECMWF/ERA5_LAND/DAILY_AGGR; 1980-01-01 through 2024-12-31",
+  "scales_m": {
+    "dem": 90,
+    "landcover": 90,
+    "soil": 250,
+    "climate": "native ERA5-Land"
+  }
+}

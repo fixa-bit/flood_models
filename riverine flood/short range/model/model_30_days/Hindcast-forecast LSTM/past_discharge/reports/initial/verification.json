@@ -1,0 +1,19 @@
+{
+  "only_past_discharge_flag_changed_for_model_inputs": true,
+  "architecture_and_optimizer_settings_matched": true,
+  "all_test_weather_windows_and_noise_exactly_matched": true,
+  "training_statistics_exactly_matched": true,
+  "same_sample_dates_and_target_masks": true,
+  "original_reference_files_unchanged": 38,
+  "source_tables_byte_identical": true,
+  "observed_targets_exactly_preserved": true,
+  "future_discharge_not_a_predictor_test_passed": true,
+  "all_saved_metrics_reproduced": true,
+  "checkpoint_has_30_leads": true,
+  "new_real_models_trained_this_step": 1,
+  "correctness_tests_passed": 9,
+  "source_sha256": "d21788d62afc9e54d8e2aa6e1f27dcc244ef3b6a1a734249650abd84ccdbe11f",
+  "checkpoint_sha256": "c3fddfcc14f86adb742039efcfd390b436b680a6b693e7f3da07794a2daae7c4",
+  "other_families_not_trained": true,
+  "operational_forecast_skill_established": false
+}

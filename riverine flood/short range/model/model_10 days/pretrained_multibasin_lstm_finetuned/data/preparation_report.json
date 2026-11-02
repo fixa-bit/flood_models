@@ -1,0 +1,58 @@
+{
+  "pretraining_basins": [
+    {
+      "basin_id": "13340000",
+      "observed_training_days": 3652,
+      "first_date": "1980-01-01",
+      "last_date": "2014-12-31"
+    },
+    {
+      "basin_id": "06191500",
+      "observed_training_days": 3652,
+      "first_date": "1980-01-01",
+      "last_date": "2014-12-31"
+    },
+    {
+      "basin_id": "12358500",
+      "observed_training_days": 3652,
+      "first_date": "1980-01-01",
+      "last_date": "2014-12-31"
+    },
+    {
+      "basin_id": "12414500",
+      "observed_training_days": 3652,
+      "first_date": "1980-01-01",
+      "last_date": "2014-12-31"
+    },
+    {
+      "basin_id": "06043500",
+      "observed_training_days": 3652,
+      "first_date": "1980-01-01",
+      "last_date": "2014-12-31"
+    },
+    {
+      "basin_id": "11528700",
+      "observed_training_days": 3652,
+      "first_date": "1980-01-01",
+      "last_date": "2014-12-31"
+    },
+    {
+      "basin_id": "12189500",
+      "observed_training_days": 3652,
+      "first_date": "1980-01-01",
+      "last_date": "2014-12-31"
+    },
+    {
+      "basin_id": "13235000",
+      "observed_training_days": 3652,
+      "first_date": "1980-01-01",
+      "last_date": "2014-12-31"
+    }
+  ],
+  "observed_targets_not_filled": true,
+  "marala_source": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\data\\marala_daily.csv",
+  "marala_source_sha256": "d21788d62afc9e54d8e2aa6e1f27dcc244ef3b6a1a734249650abd84ccdbe11f",
+  "prepared_pretrain_sha256": "5a74eaeaea422f4084b81190501e9c0642b00b8b2179444887137dd2b8de14f7",
+  "prepared_marala_sha256": "bc3e7720916c1874cff38ab82f16a0692ae338b1435cf7fa5061f25ffbc41ba6",
+  "source_file_hashes_unchanged": true
+}

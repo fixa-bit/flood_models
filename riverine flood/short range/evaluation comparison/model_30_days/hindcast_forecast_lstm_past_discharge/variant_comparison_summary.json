@@ -1,0 +1,17 @@
+{
+  "matched_observed_pairs": 31932,
+  "day30_observations": 1055,
+  "day30_weather_nse": 0.7844098178442254,
+  "day30_pastQ_nse": 0.7881085342871823,
+  "day30_nse_change": 0.0036987164429569397,
+  "day30_rmse_reduction_pct": 0.8615230018598208,
+  "day30_flood_rmse_reduction_pct": 2.955064847090494,
+  "day30_nonflood_rmse_reduction_pct": -0.07771599341395152,
+  "day30_weather_coverage": 0.7450236966824645,
+  "day30_pastQ_coverage": 0.7677725118483413,
+  "old_prediction_sha256": "f8a262e96963ccec8b93705e330bb0e790f016057366a552b3ab8179652887a4",
+  "new_prediction_sha256": "2d6bb923dba9bebe5f707607959441d09c04196d3b78ebcbaec3e445559fca8e",
+  "only_past_discharge_inputs_changed": true,
+  "new_real_training_runs": 1,
+  "heldout_years_previously_inspected": true
+}

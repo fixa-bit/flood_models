@@ -1,0 +1,94 @@
+{
+  "id": "202208_temperature",
+  "request": {
+    "origin": "ecmwf",
+    "year": "2022",
+    "month": "08",
+    "day": [
+      "01",
+      "04",
+      "08",
+      "11",
+      "15",
+      "18",
+      "22",
+      "25",
+      "29"
+    ],
+    "time": "00:00",
+    "level_type": "single_level",
+    "variable": [
+      "2_m_temperature"
+    ],
+    "forecast_type": "control_forecast",
+    "leadtime_hour": [
+      "48_72",
+      "72_96",
+      "96_120",
+      "120_144",
+      "144_168",
+      "168_192",
+      "192_216",
+      "216_240",
+      "240_264",
+      "264_288",
+      "288_312",
+      "312_336",
+      "336_360",
+      "360_384",
+      "384_408",
+      "408_432",
+      "432_456",
+      "456_480",
+      "480_504",
+      "504_528",
+      "528_552",
+      "552_576",
+      "576_600",
+      "600_624",
+      "624_648",
+      "648_672",
+      "672_696",
+      "696_720",
+      "720_744",
+      "744_768"
+    ],
+    "data_format": "grib",
+    "area": [
+      35,
+      73.5,
+      31.5,
+      78
+    ]
+  },
+  "origins": 9,
+  "variable": "temperature",
+  "target": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\dataset\\chenab_marala\\raw\\marala\\weather_forecasts\\operational_verification\\ecmwf_s2s\\202208_temperature.grib",
+  "http_status": 201,
+  "response": {
+    "processID": "s2s-forecasts",
+    "type": "process",
+    "jobID": "b6cbb107-2f3d-470d-8e57-7df5dbb3f14a",
+    "status": "accepted",
+    "created": "2026-11-02T11:26:36.973342",
+    "updated": "2026-11-02T11:26:36.973342",
+    "links": [
+      {
+        "href": "https://ecds.ecmwf.int/api/retrieve/v1/processes/s2s-forecasts/execution",
+        "rel": "self"
+      },
+      {
+        "href": "https://ecds.ecmwf.int/api/retrieve/v1/jobs/b6cbb107-2f3d-470d-8e57-7df5dbb3f14a",
+        "rel": "monitor",
+        "type": "application/json",
+        "title": "job status info"
+      }
+    ],
+    "metadata": {
+      "datasetMetadata": {
+        "messages": []
+      },
+      "origin": "api"
+    }
+  }
+}

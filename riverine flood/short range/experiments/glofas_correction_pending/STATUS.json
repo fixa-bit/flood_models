@@ -1,0 +1,20 @@
+{
+  "credential_file_present": true,
+  "environment_key_present": false,
+  "raw_reforecast_files": 0,
+  "raw_forecast_files": 0,
+  "processed_reforecasts_present": false,
+  "training_complete": false,
+  "existing_model": {
+    "reanalysis_rows_excluded": 4520,
+    "leakage_rows_excluded": 0,
+    "accepted_rows": 0,
+    "note": "Missing long-range forecasts are not extrapolated or replaced by observations.",
+    "source": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\hbv_residual\\runs\\2026-10-30\\reports\\rolling_predictions.csv.gz",
+    "status": "no_operationally_comparable_existing_oof"
+  },
+  "grid_check_present": true,
+  "api_setup": "https://ewds.climate.copernicus.eu/how-to-api",
+  "login": "https://ewds.climate.copernicus.eu/profile",
+  "state": "ready_for_authenticated_reforecast_retrieval"
+}

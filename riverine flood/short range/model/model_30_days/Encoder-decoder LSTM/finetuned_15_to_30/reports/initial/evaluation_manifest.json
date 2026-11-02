@@ -1,0 +1,75 @@
+{
+  "training_years": [
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
+  ],
+  "selection_years": [
+    2021
+  ],
+  "test_years": [
+    2022,
+    2023,
+    2024
+  ],
+  "selected_epochs": [
+    9,
+    15,
+    26
+  ],
+  "training_seconds": 176.7818544000038,
+  "new_seed_models": 3,
+  "source_horizon": 15,
+  "forecast_horizon": 30,
+  "inherited_training_years": [
+    1985,
+    1986,
+    1987,
+    1988,
+    1989,
+    1990,
+    1991,
+    1992,
+    1993,
+    1994,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
+  ],
+  "inherited_selection_years": [
+    1995,
+    1996,
+    2021
+  ],
+  "donor_basins": [
+    "06043500",
+    "06191500",
+    "11528700",
+    "12189500",
+    "12358500",
+    "12414500",
+    "13235000",
+    "13340000"
+  ],
+  "parameters_per_member": 11830,
+  "unique_observed_test_days": 1084,
+  "observed_issue_lead_pairs": 31932,
+  "day30_observations": 1055,
+  "day30_nse": 0.84891092544026,
+  "climatology_day30_nse": 0.7921451817805871,
+  "smooth_climatology_day30_nse": 0.8199743517971636,
+  "previous_best_day30_nse": 0.857522859708504,
+  "beats_original_climatology_day30": true,
+  "beats_smooth_climatology_day30": true,
+  "source_sha256": "fa537d4af974a686ca7afec1e2728b8fd63380ae290af373dd6c832ad57c7ded",
+  "postprocessing_sha256": "2b9c4815b058aa3e6ba7063d97f5dbe245da78cf40927cf17948adb8a80971e1",
+  "test_evaluations_before_this_report": 0,
+  "all_choices_fixed_using_training_and_validation_only": true,
+  "test_years_inspected_in_prior_project_experiments": true,
+  "operational_forecast_skill_established": false,
+  "flood_threshold_cumecs": 2494.7141847552
+}

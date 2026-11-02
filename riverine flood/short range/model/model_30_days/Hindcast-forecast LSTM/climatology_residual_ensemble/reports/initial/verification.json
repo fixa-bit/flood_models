@@ -1,0 +1,15 @@
+{
+  "original_reference_files_unchanged": 80,
+  "source_table_byte_identical": true,
+  "observed_targets_exactly_preserved": true,
+  "all_configuration_choices_frozen_before_test": true,
+  "validation_only_blending_and_offsets_reproduced": true,
+  "all_thirty_lead_scores_reproduced": true,
+  "original_climatology_benchmark_unchanged": true,
+  "noncrossing_intervals": true,
+  "correctness_tests_passed": 9,
+  "new_seed_models": 3,
+  "other_model_families_not_trained": true,
+  "source_sha256": "d21788d62afc9e54d8e2aa6e1f27dcc244ef3b6a1a734249650abd84ccdbe11f",
+  "operational_skill_verified": false
+}

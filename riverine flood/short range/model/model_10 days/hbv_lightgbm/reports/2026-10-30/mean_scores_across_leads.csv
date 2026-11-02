@@ -1,0 +1,2 @@
+model,kge,nse,mae_cumecs,flood_mae_cumecs,peak_magnitude_mae_cumecs,peak_timing_mae_days
+HBV_LightGBM,0.7217715624556958,0.6019289650191701,336.2691130778101,576.7350309063747,859.3668626919919,2.675

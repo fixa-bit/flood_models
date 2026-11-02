@@ -1,0 +1,24 @@
+{
+  "all_366_days_and_independent_axes": {
+    "chartWidth": 3036,
+    "viewport": 1174,
+    "rainDays": 366
+  },
+  "six_per_graph_scrollbars_native_drag_and_sync": true,
+  "native_slider_moves_canvas_without_changing_year": true,
+  "two_full_year_modes": true,
+  "double_click_lock_unlock_escape_and_scroll_persistence": true,
+  "shared_date_line_in_all_six_panels": true,
+  "continuous_crosshair_with_actual_reading_points": true,
+  "plain_language_single_date_hover": {
+    "normal": "22 September 2024 — Water entering Marala\nWAPDA:\n22,900 cusecs\nFFD:\n22,900 cusecs\n\nCheck: Both sources report the same flow.\n\nWater flow is measured in cubic feet per second (cusecs).",
+    "uncertain": "19 September 2024 — Water entering Marala\nWAPDA:\n24,600 cusecs\n\nNeeds checking — excluded from training\n\nAnother FFD record shows 52,000 cusecs, but its date is unclear: the bulletin says 19 September, while the website lists 2 September.\n\nWater flow is measured in cubic feet per second (cusecs)."
+  },
+  "native_horizontal_wheel": true,
+  "existing_graphs_preserved": true,
+  "mobile_modes_and_hover": {
+    "scroll": 390,
+    "width": 390
+  },
+  "browser_errors": []
+}

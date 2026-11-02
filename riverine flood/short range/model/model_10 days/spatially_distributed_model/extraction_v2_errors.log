@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "D:\projects\flood_model\flood_model\riverine flood\short range\model\spatially_distributed_model\download_data.py", line 172, in <module>
+    main()
+  File "D:\projects\flood_model\flood_model\riverine flood\short range\model\spatially_distributed_model\download_data.py", line 86, in main
+    raise ValueError(f'Native-cell area extraction mismatch for band {i}')
+ValueError: Native-cell area extraction mismatch for band 0

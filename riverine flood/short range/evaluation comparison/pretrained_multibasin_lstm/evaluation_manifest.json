@@ -1,0 +1,77 @@
+{
+  "pretraining_basins": [
+    "06043500",
+    "06191500",
+    "11528700",
+    "12189500",
+    "12358500",
+    "12414500",
+    "13235000",
+    "13340000"
+  ],
+  "pretrain_train_years": [
+    1985,
+    1986,
+    1987,
+    1988,
+    1989,
+    1990,
+    1991,
+    1992,
+    1993,
+    1994
+  ],
+  "pretrain_validation_years": [
+    1995,
+    1996
+  ],
+  "marala_train_years": [
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
+  ],
+  "marala_validation_years": [
+    2021
+  ],
+  "test_years": [
+    2022,
+    2023,
+    2024
+  ],
+  "unique_observed_days": 1084,
+  "observed_target_pairs": 10795,
+  "original_sources_unchanged": true,
+  "marala_targets_exactly_preserved": true,
+  "stages": {
+    "pretrain": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\pretrained_multibasin_lstm\\runs\\pretrained\\seed_42\\best.pt",
+    "finetune": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\pretrained_multibasin_lstm\\runs\\marala_finetuned\\seed_42\\best.pt",
+    "scratch": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\pretrained_multibasin_lstm\\runs\\marala_scratch\\seed_42\\best.pt"
+  },
+  "forecast_mode": "reanalysis_with_noise",
+  "peak_threshold_cumecs": 2494.7141847552,
+  "flood_threshold_cumecs": 2494.7141847552,
+  "training_year_history": [
+    1985,
+    1986,
+    1987,
+    1988,
+    1989,
+    1990,
+    1991,
+    1992,
+    1993,
+    1994,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
+  ],
+  "selection_year_history": [
+    1995,
+    1996,
+    2021
+  ]
+}

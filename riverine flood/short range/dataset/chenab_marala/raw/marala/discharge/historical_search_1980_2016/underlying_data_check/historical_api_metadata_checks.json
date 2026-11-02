@@ -1,0 +1,30 @@
+[
+  {
+    "url": "https://irrigation.sindh.gov.pk/Library/Reports",
+    "file": "sindh_reports.html",
+    "status": 200,
+    "bytes": 21946,
+    "sha256": "bccc7295efcf06ed44def16440d8fccf0c0417a7a8e4960d7563a3a165849ceb",
+    "inline_api_refs": [
+      "\r\n        const reportsComp = new ReportLibraryComponent('reportsRoot', { apiUrl: 'https://api.hicsindh.pk/public/ELib/Reports', pageSize: 12 });\r\n        reportsComp.load();\r\n    "
+    ]
+  },
+  {
+    "url": "https://api.hicsindh.pk/public/FlowBulletins/IndusRiver_Rimstation",
+    "file": "rimstation_bulletin_index.json",
+    "status": 200,
+    "bytes": 43746,
+    "sha256": "72b0954665203f032c6019f16c6831fa08ec8bc336ecc2d210f95eb55f99684f",
+    "type": "<class 'dict'>",
+    "preview": "{'pictures': [{'getDate': '2024-08-19T00:00:00', 'fileName': 'IMG-20240819-web08042022.pdf'}, {'getDate': '2024-10-07T00:00:00', 'fileName': 'IMG-20241007-web08042022.pdf'}, {'getDate': '2024-10-15T00:00:00', 'fileName': 'IMG-20241015-web08042022.pdf'}, {'getDate': '2024-10-21T00:00:00', 'fileName': 'IMG-20241021-web08042022.pdf'}, {'getDate': '2024-10-26T00:00:00', 'fileName': 'IMG-20241026-web08042022.pdf'}, {'getDate': '2025-01-06T00:00:00', 'fileName': 'IMG-20250106-web08042022.pdf'}, {'getDate': '2025-01-07T00:00:00', 'fileName': 'IMG-20250107-web08042022.pdf'}, {'getDate': '2025-01-08T00:00:00', 'fileName': 'IMG-20250108-web08042022.pdf'}, {'getDate': '2025-01-09T00:00:00', 'fileName': 'IMG-20250109-web08042022.pdf'}, {'getDate': '2025-01-10T00:00:00', 'fileName': 'IMG-20250110-web08042022.pdf'}, {'getDate': '2025-01-11T00:00:00', 'fileName': 'IMG-20250111-web08042022.pdf'}, {'getDate': '2025-01-13T00:00:00', 'fileName': 'IMG-2025"
+  },
+  {
+    "url": "https://api.hicsindh.pk/public/Flows/Tributry/Month/1",
+    "file": "tributary_month_sample.json",
+    "status": 200,
+    "bytes": 43896,
+    "sha256": "31984d3afa7b61c616c8f1e1886746082ca0779a0f404d1d3234f38272478c4f",
+    "type": "<class 'list'>",
+    "preview": "[{'id': 18041, 'dated': '2026-09-01T00:00:00', 'mangla': {'level': 1220, 'inflow': 20281, 'outflow': 8000, 'dated': '2026-09-01T00:00:00', 'dateJs': '01-09-2026'}, 'rasul': {'inflow': 5100, 'outflow': 0, 'dated': '2026-09-01T00:00:00', 'dateJs': '01-09-2026'}, 'marala': {'inflow': 59934, 'outflow': 36134, 'dated': '2026-09-01T00:00:00', 'dateJs': '01-09-2026'}, 'qadirabad': {'inflow': 61481, 'outflow': 53601, 'dated': '2026-09-01T00:00:00', 'dateJs': '01-09-2026'}, 'trimmu': {'inflow': 41901, 'outflow': 22376, 'dated': '2026-09-01T00:00:00', 'dateJs': '01-09-2026'}, 'balloki': {'inflow': 28748, 'outflow': 17648, 'dated': '2026-09-01T00:00:00', 'dateJs': '01-09-2026'}, 'sidhnai': {'inflow': 43155, 'outflow': 16805, 'dated': '2026-09-01T00:00:00', 'dateJs': '01-09-2026'}, 'sulemanki': {'inflow': 20756, 'outflow': 5356, 'dated': '2026-09-01T00:00:00', 'dateJs': '01-09-2026'}, 'islam': {'inflow': 16742, 'outflow': 3075, 'dated': '2026-09-01"
+  }
+]
