@@ -17,34 +17,77 @@ python serve.py
 
 Open http://127.0.0.1:8787. You can also double-click `start_portal.cmd`, or run `start_portal.ps1`. The launcher rebuilds the snapshot and recomputes source-file hashes first. Keep the launcher running while using the portal; Ctrl+C stops it. To choose another port, use `python serve.py --port 8788`.
 
-## Refresh after adding project data
+## Automatic refresh after adding project data
+
+When started with `python serve.py` or either launcher, the local server watches
+the Marala `raw` and `processed` data folders. After files stop changing for a
+few seconds, it rebuilds the portal snapshot. Open tabs check for the new
+snapshot about every 12 seconds, reload the data, and redraw the current view;
+Overview, Summary, availability, sources, quality, and downloads use the same
+updated snapshot. The server terminal reports successful rebuilds or errors.
+Keep the server running for automatic refresh. `python serve.py --no-watch`
+disables monitoring, and `--watch-interval 10` changes the folder scan interval.
+
+The station selector is registered for Chenab Marala, Khanki, Qadirabad and
+Trimmu. Each has a matching `raw/<station>` workspace with `catchment`,
+`dewpoint_temperature`, `discharge`, `NDSI_Snow_Cover`,
+`potential_evaporation_sum`, `rainfall`, `snow_depth`,
+`snow_depth_water_equivalent`, `snowmelt_sum`, `static_attributes`,
+`surface_solar_radiation_downwards_sum`, and `temperature/google_earth_engine`
+folders. The three nearby-station workspaces start empty; their downloaded
+comparison files remain in Marala's existing `discharge/nearby stations`
+archive and are not counted as station observations. For those workspaces, CSVs
+with a `date` (or `day`, `datetime`, `time`) column and numeric value columns
+appear in the station Summary chart and folder coverage table. Files are listed
+in Sources, Quality, Catchment or Rainfall views according to the selected tab.
+Static and geospatial files are indexed even if they do not form a daily series.
+New station directories placed directly under the Chenab `raw` directory are
+also registered automatically and get the same empty folder template at build
+time. Use a lowercase or underscore folder name for a clear selector label.
+On Marala Summary, daily weather and snow features are aligned as individual
+panels in the same vertically stacked, shared-date chart as discharge and
+rainfall. Each panel has its own scale and follows the same crosshair and
+scrolling controls. Static attributes and catchment geometry appear as tables
+because they do not have daily time-series values.
+
+Registered weather and snow daily CSVs are re-read on each rebuild. New files
+in those existing folders appear as separate series in Overview, Summary,
+availability, Sources, and Data library. A new variable or a different CSV
+schema still needs an adapter in `build_dashboard.py`; PDFs, spreadsheets and
+archives trigger a snapshot rebuild but are not automatically extracted into
+daily series. The portal does not fill gaps or change source data.
+
+## Manual refresh
 
 The Summary catchment precipitation panel also supports ERA5-Land, CHIRPS v2
 Daily, PERSIANN-CDR and IMERG V07 Final from
 `riverine flood/short range/dataset/chenab_marala/raw/marala/rainfall/google_earth_engine`. The existing checked
 Marala catchment is reused, with native pixel-area and boundary-fraction weights.
-These four series appear after extraction passes QA and the exported CSV matches
-the checksum recorded by `quality_report.json`. Missing/unvalidated exports show
-an explicit status in Summary; no placeholder rainfall is plotted. The existing
-CHIRPS v3 and POWER comparison series remain separate. Download the extraction
+These four series are plotted for visual comparison when the exported CSV matches
+the checksum recorded by `quality_report.json`; failed QA checks stay visible as
+warnings, and invalid negative daily means remain gaps. These exploratory values
+are not marked training-ready. CHIRPS v3 and NASA POWER comparisons remain
+separate. Download the extraction
 script/instructions from Data library, or run them directly in that folder.
-After extraction, rebuild the snapshot using the command below and reload the
-portal. Earth Engine login and a project are required for extraction, not for
-viewing this local portal.
+After extraction, rebuild the snapshot using the command below if the watcher
+is disabled. Earth Engine login and a project are required for extraction, not
+for viewing this local portal.
 
 ```powershell
 python build_dashboard.py
 ```
 
-Then use **Reload snapshot** in the local portal. No upload or deployment is needed. The displayed check timestamp is always the snapshot build time, not an assertion of a live agency feed.
+With the watcher enabled, the portal refreshes itself. Otherwise use **Reload
+snapshot** after rebuilding. No upload or deployment is needed. The displayed
+timestamp is the snapshot build time, not an assertion of a live agency feed.
 
 The supported scientific inputs currently come from the existing Marala collectors. Newly added files appear in model collection counts, but a new station's series and verification schema need an explicit adapter in `build_dashboard.py` before charts can be shown for it. The portal never invents data for an empty case and does not execute collector scripts or alter source/QC files.
 
 ## Views
 
 - Overview: date/year filters, eligible and withheld Marala inflow, separate FFD readings, CHIRPS Final catchment precipitation, monthly usability, distributions and exploratory annual-maximum windows.
-- Summary: stacked inflow, outflow, precipitation, IRSA mean-flow and PMD peak panels. The precipitation row overlays four retained rainfall series on one mm/day scale. The inconsistent saved NASA POWER request is omitted from precipitation charts. **Feature graph year** selects a full January–December calendar year for all six aligned panels (default: 2024). Choose a full-year chart fitted to the screen or a wider chart that scrolls horizontally. Years and variables without saved readings are explicitly labeled; no data is filled in. Changing the feature year clears the previous selected/locked date and leaves the availability chart and Overview filters untouched.
-- Rainfall sources: one combined precipitation comparison and four separate catchment-rainfall plots for CHIRPS v3 Final RNL, CHIRPS v3 Preliminary SAT, the fresh NASA POWER historical candidate, and original CHIRPS GeoTIFF check samples. The inconsistent saved POWER request remains downloadable for audit. Choose any collected year or **All collected years**, and filter the individual panels to one source if needed. A separate, independently scrollable daily availability chart covers the entire plotted rainfall collection. Missing or withheld values are labeled rather than plotted as readings. Source CSVs, checks, and the NASA source-cell table are downloadable in the Data library.
+- Summary: aligned panels for inflow, outflow, rainfall, IRSA mean-flow, PMD peaks and each daily weather/snow feature. The rainfall row compares CHIRPS Final, Google Earth Engine products, and the fresh NASA POWER candidate on one mm/day scale; QA and training holds are identified in the Summary notice and date hover. The inconsistent historical NASA POWER request is omitted. Feature year selects a full January–December calendar year across all panels. Original flow-panel size is retained as added features extend the chart vertically, with horizontal date scrolling unchanged. Missing values remain gaps.
+- Rainfall sources: one combined precipitation comparison and separate catchment-rainfall plots for CHIRPS v3 Final RNL, CHIRPS v3 Preliminary SAT, four Google Earth Engine products when the checked export exists, the fresh NASA POWER historical candidate, and original CHIRPS GeoTIFF check samples. QA warnings remain attached to exploratory series; negative daily means are gaps. The inconsistent historical POWER request remains downloadable for audit.
 
 Summary hover cards use the selected point's exact calendar date, with plain source labels and a short explanation. Matching inflow records say “Both sources report the same flow.” Withheld readings say “Needs checking — excluded from training,” and date-conflicted FFD bulletins identify the printed and website dates. Nearby dates are never combined into one observation box. Hover or tap a point to inspect it; use scrollable mode to distinguish individual days on small screens.
 

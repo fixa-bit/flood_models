@@ -4,7 +4,7 @@
 // cells mean a source reading exists, including withheld readings and valid zeroes.
 window.FloodAvailability = (() => {
   const DAY=86400000;
-  const definitions=[
+  const baseDefinitions=[
     {name:'Inflow discharge',short:'Inflow discharge',color:'#75d0ac'},
     {name:'Outflow discharge',short:'Outflow discharge',color:'#8db9df'},
     {name:'Catchment precipitation',short:'Catchment precipitation',color:'#efb35e'},
@@ -12,6 +12,7 @@ window.FloodAvailability = (() => {
     {name:'Daily mean outflow',short:'Daily mean outflow',color:'#f2a0bf'},
     {name:'Selected flood peak',short:'Selected flood peak',color:'#73d2df'},
   ];
+  let definitions=baseDefinitions;
   const state={bound:false,dates:[],days:0,year:'all'};
   const select=id=>document.getElementById(id);
   const valid=value=>value!==null&&value!==undefined&&Number.isFinite(Number(value));
@@ -21,8 +22,11 @@ window.FloodAvailability = (() => {
 
   function setSpan(data) {
     state.data=data;
-    const recorded=['inflow','ffd','precipitation','irsa','peaks'].flatMap(key=>data[key].map(row=>row.date));
-    recorded.push(...(data.rainfall_sources||[]).flatMap(source=>source.rows.map(row=>row.date)));
+    const recorded=[];
+    for(const key of ['inflow','ffd','precipitation','irsa','peaks'])for(const row of data[key])recorded.push(row.date);
+    for(const source of data.rainfall_sources||[])for(const row of source.rows)recorded.push(row.date);
+    for(const series of data.daily_inputs||[])for(const row of series.rows)recorded.push(row.date);
+    definitions=baseDefinitions.concat((data.daily_inputs||[]).map(series=>({name:series.name,short:series.name,color:series.color,featureId:series.id})));
     recorded.sort();
     const firstYear=Number(recorded[0].slice(0,4)),lastYear=Number(recorded.at(-1).slice(0,4));
     if(state.year!=='all'&&(Number(state.year)<firstYear||Number(state.year)>lastYear)) state.year='all';
@@ -60,6 +64,7 @@ window.FloodAvailability = (() => {
     const rain=byDate((data.rainfall_sources||[]).flatMap(source=>source.rows
       .filter(row=>valid(row.value)).map(row=>({date:row.date,id:source.id,name:rainNames[source.id]||source.name}))));
     const irsa=byDate(data.irsa),peaks=byDate(data.peaks);
+    const featureMaps=new Map((data.daily_inputs||[]).map(series=>[series.id,byDate(series.rows)]));
     const cells=definitions.map((definition,index)=>state.dates.map((day,dayIndex)=>{
       const w=wapda.get(day)?.[0],f=ffd.get(day)||[],r=rain.get(day)||[];
       const i=irsa.get(day)||[],p=peaks.get(day)||[];
@@ -88,6 +93,11 @@ window.FloodAvailability = (() => {
       } else if(index===5) {
         present=p.some(row=>valid(row.value));
         if(present) {sources.push('PMD journal');times.push('Selected event maximum; reading time not stated');}
+      } else if(definition.featureId) {
+        const rows=featureMaps.get(definition.featureId)?.get(day)||[];
+        present=rows.some(row=>valid(row.value));
+        if(present) {sources.push('Local daily input');times.push(`Saved daily value in ${definition.featureId}`);}
+        if(rows.some(row=>row.flag)) issues.push('Source row has a missing value or same-date conflict.');
       }
       return {date:day,present,review:present&&issues.length>0,
         detail:[state.dateLabels[dayIndex],definition.name,present?'Reading saved':'No saved reading',
@@ -169,13 +179,13 @@ window.FloodAvailability = (() => {
     const traces=[{
       type:'heatmap',x:state.dates,y:definitions.map(row=>row.name),
       z:state.cells.map((row,index)=>row.map(cell=>cell.present?index+1:0)),
-      zmin:0,zmax:6,colorscale:[[0,'#26312c'],...definitions.map((row,index)=>[(index+1)/6,row.color])],
+      zmin:0,zmax:definitions.length,colorscale:[[0,'#26312c'],...definitions.map((row,index)=>[(index+1)/definitions.length,row.color])],
       customdata:details,hovertemplate:hover,showscale:false,xgap:state.year==='all'?0:1,ygap:7,hoverongaps:false,
     },{
       type:'scatter',mode:'markers',...review,marker:{color:'#fff6d4',size:3},hovertemplate:hover,showlegend:false,
     }];
     const next=width();select('availability-chart').style.width=next+'px';
-    const layout={width:next,autosize:false,height:420,paper_bgcolor:'transparent',plot_bgcolor:'transparent',
+    const layout={width:next,autosize:false,height:Math.max(420,definitions.length*48+120),paper_bgcolor:'transparent',plot_bgcolor:'transparent',
       margin:{l:window.innerWidth<700?146:176,r:22,t:42,b:58},showlegend:false,dragmode:false,hovermode:'closest',
       font:{family:'Inter, Segoe UI, sans-serif',size:10,color:'#b6c6ae'},
       hoverlabel:{bgcolor:'#111c17',bordercolor:'#697a5d',font:{size:11,color:'#eef0e5'}},

@@ -1,0 +1,603 @@
+{
+  "created_utc": "2026-11-03T09:40:28+00:00",
+  "output": "marala_sindh_rimstation_discharge.csv",
+  "bulletins_parsed": 579,
+  "listed_files_without_a_table": [
+    "IMG-20260209-web08042022.pdf"
+  ],
+  "index_listed_range": [
+    "2024-08-19",
+    "2026-11-03"
+  ],
+  "column_order": [
+    "tarbela_inflow",
+    "tarbela_outflow",
+    "kabul_nowshera",
+    "mangla_inflow",
+    "mangla_outflow",
+    "marala_us",
+    "marala_ds",
+    "kalabagh_us",
+    "kalabagh_ds",
+    "chashma_us",
+    "chashma_ds",
+    "cj_link",
+    "taunsa_us",
+    "taunsa_ds",
+    "tp_link",
+    "guddu_us",
+    "guddu_ds",
+    "sukkur_us",
+    "sukkur_ds",
+    "kotri_us",
+    "kotri_ds"
+  ],
+  "column_order_check": "Header images inspected for bulletins listed 2024-08-19, 2024-10-07, 2025-01-10, 2025-03-22, 2025-07-15, 2025-10-01, 2025-10-15, 2025-12-13, 2026-01-15, 2026-04-04, 2026-06-15, 2026-08-01, 2026-09-01 and 2026-11-03: identical 21-column order.",
+  "row_status_counts": {
+    "ok": 15890,
+    "invalid_printed_date": 1,
+    "blank_or_error_cells": 8
+  },
+  "values_per_row": {
+    "21": 15899
+  },
+  "rows_with_problems": [
+    {
+      "file": "IMG-20250628-web08042022.pdf",
+      "printed_date": "29/06/25",
+      "issue": "row dated after listed date"
+    },
+    {
+      "file": "IMG-20251213-web08042022.pdf",
+      "printed_date": "00/01/00",
+      "issue": "invalid_printed_date"
+    },
+    {
+      "file": "IMG-20260801-web08042022.pdf",
+      "printed_date": "29/07/26",
+      "issue": "marala_us not numeric: '#REF!'"
+    },
+    {
+      "file": "IMG-20260802-web08042022.pdf",
+      "printed_date": "29/07/26",
+      "issue": "marala_us not numeric: '#REF!'"
+    },
+    {
+      "file": "IMG-20260804-web08042022.pdf",
+      "printed_date": "29/07/26",
+      "issue": "marala_us not numeric: '#REF!'"
+    },
+    {
+      "file": "IMG-20260805-web08042022.pdf",
+      "printed_date": "29/07/26",
+      "issue": "marala_us not numeric: '#REF!'"
+    },
+    {
+      "file": "IMG-20260806-web08042022.pdf",
+      "printed_date": "29/07/26",
+      "issue": "marala_us not numeric: '#REF!'"
+    },
+    {
+      "file": "IMG-20260807-web08042022.pdf",
+      "printed_date": "29/07/26",
+      "issue": "marala_us not numeric: '#REF!'"
+    },
+    {
+      "file": "IMG-20260808-web08042022.pdf",
+      "printed_date": "29/07/26",
+      "issue": "marala_us not numeric: '#REF!'"
+    },
+    {
+      "file": "IMG-20260809-web08042022.pdf",
+      "printed_date": "29/07/26",
+      "issue": "marala_us not numeric: '#REF!'"
+    }
+  ],
+  "coverage": {
+    "first": "2024-07-19",
+    "last": "2026-11-03",
+    "dates": 735,
+    "missing_ranges": [
+      {
+        "from": "2024-08-20",
+        "to": "2024-09-04",
+        "days": 16
+      },
+      {
+        "from": "2024-10-27",
+        "to": "2024-11-30",
+        "days": 35
+      },
+      {
+        "from": "2025-03-31",
+        "to": "2025-03-31",
+        "days": 1
+      },
+      {
+        "from": "2026-02-09",
+        "to": "2026-03-31",
+        "days": 51
+      }
+    ],
+    "dates_with_blank_inflow": 0
+  },
+  "selection_policy": "Each date takes the Marala U/S and D/S pair printed by the most bulletins (ties: the latest-listed bulletin). Zero U/S values are unfilled rows and are ignored. value_revised marks dates whose printed values differ between bulletins; treat them with caution.",
+  "zero_inflow_placeholder_rows_ignored": 1,
+  "revised_dates": [
+    {
+      "date": "2024-09-30",
+      "printed_pairs": [
+        {
+          "inflow": 26128.0,
+          "outflow": 3500.0,
+          "bulletins": 2
+        },
+        {
+          "inflow": 15800.0,
+          "outflow": 3500.0,
+          "bulletins": 2
+        }
+      ]
+    },
+    {
+      "date": "2024-10-09",
+      "printed_pairs": [
+        {
+          "inflow": 16762.0,
+          "outflow": 3500.0,
+          "bulletins": 2
+        },
+        {
+          "inflow": 19762.0,
+          "outflow": 3500.0,
+          "bulletins": 1
+        }
+      ]
+    },
+    {
+      "date": "2025-06-12",
+      "printed_pairs": [
+        {
+          "inflow": 57358.0,
+          "outflow": 26608.0,
+          "bulletins": 28
+        },
+        {
+          "inflow": 57538.0,
+          "outflow": 26608.0,
+          "bulletins": 1
+        }
+      ]
+    },
+    {
+      "date": "2025-07-05",
+      "printed_pairs": [
+        {
+          "inflow": 75483.0,
+          "outflow": 48983.0,
+          "bulletins": 23
+        },
+        {
+          "inflow": 75483.0,
+          "outflow": 48963.0,
+          "bulletins": 5
+        }
+      ]
+    },
+    {
+      "date": "2025-08-06",
+      "printed_pairs": [
+        {
+          "inflow": 73730.0,
+          "outflow": 43630.0,
+          "bulletins": 19
+        },
+        {
+          "inflow": 73730.0,
+          "outflow": 44630.0,
+          "bulletins": 7
+        }
+      ]
+    },
+    {
+      "date": "2025-08-25",
+      "printed_pairs": [
+        {
+          "inflow": 127888.0,
+          "outflow": 109038.0,
+          "bulletins": 30
+        },
+        {
+          "inflow": 127888.0,
+          "outflow": 109938.0,
+          "bulletins": 1
+        }
+      ]
+    },
+    {
+      "date": "2026-01-20",
+      "printed_pairs": [
+        {
+          "inflow": 7597.0,
+          "outflow": 7597.0,
+          "bulletins": 18
+        },
+        {
+          "inflow": 7596.0,
+          "outflow": 7596.0,
+          "bulletins": 2
+        }
+      ]
+    },
+    {
+      "date": "2026-05-15",
+      "printed_pairs": [
+        {
+          "inflow": 22709.0,
+          "outflow": 8159.0,
+          "bulletins": 24
+        },
+        {
+          "inflow": 28716.0,
+          "outflow": 15266.0,
+          "bulletins": 2
+        }
+      ]
+    },
+    {
+      "date": "2026-05-26",
+      "printed_pairs": [
+        {
+          "inflow": 16150.0,
+          "outflow": 7000.0,
+          "bulletins": 15
+        },
+        {
+          "inflow": 22650.0,
+          "outflow": 7000.0,
+          "bulletins": 11
+        }
+      ]
+    },
+    {
+      "date": "2026-05-28",
+      "printed_pairs": [
+        {
+          "inflow": 16250.0,
+          "outflow": 7000.0,
+          "bulletins": 15
+        },
+        {
+          "inflow": 16150.0,
+          "outflow": 7000.0,
+          "bulletins": 9
+        }
+      ]
+    },
+    {
+      "date": "2026-05-29",
+      "printed_pairs": [
+        {
+          "inflow": 24237.0,
+          "outflow": 7000.0,
+          "bulletins": 15
+        },
+        {
+          "inflow": 16250.0,
+          "outflow": 7000.0,
+          "bulletins": 8
+        }
+      ]
+    },
+    {
+      "date": "2026-05-30",
+      "printed_pairs": [
+        {
+          "inflow": 22550.0,
+          "outflow": 7000.0,
+          "bulletins": 15
+        },
+        {
+          "inflow": 24237.0,
+          "outflow": 7000.0,
+          "bulletins": 7
+        }
+      ]
+    },
+    {
+      "date": "2026-07-02",
+      "printed_pairs": [
+        {
+          "inflow": 77765.0,
+          "outflow": 50292.0,
+          "bulletins": 27
+        },
+        {
+          "inflow": 77666.0,
+          "outflow": 50292.0,
+          "bulletins": 10
+        }
+      ]
+    },
+    {
+      "date": "2026-07-28",
+      "printed_pairs": [
+        {
+          "inflow": 83491.0,
+          "outflow": 71491.0,
+          "bulletins": 24
+        },
+        {
+          "inflow": 92901.0,
+          "outflow": 80901.0,
+          "bulletins": 8
+        }
+      ]
+    },
+    {
+      "date": "2026-07-30",
+      "printed_pairs": [
+        {
+          "inflow": 88196.0,
+          "outflow": 76196.0,
+          "bulletins": 31
+        },
+        {
+          "inflow": 88196.0,
+          "outflow": 76186.0,
+          "bulletins": 1
+        }
+      ]
+    }
+  ],
+  "inflow_check_counts": {
+    "match": 336,
+    "conflict": 6,
+    "no_overlap": 393
+  },
+  "agreement_with_existing_sources": {
+    "wapda_inflow": {
+      "dates": 103,
+      "first": "2024-07-19",
+      "last": "2024-12-19",
+      "agreeing": 102,
+      "agreeing_share": 0.99,
+      "median_abs_relative_difference": 0.0006,
+      "disagreeing": [
+        {
+          "date": "2024-09-30",
+          "sindh": 15800.0,
+          "reference": [
+            26100.0
+          ]
+        }
+      ]
+    },
+    "irsa_daily_mean_inflow": {
+      "dates": 8,
+      "first": "2026-10-16",
+      "last": "2026-10-23",
+      "agreeing": 0,
+      "agreeing_share": 0.0,
+      "median_abs_relative_difference": 0.1197,
+      "disagreeing": [
+        {
+          "date": "2026-10-16",
+          "sindh": 17847.0,
+          "reference": [
+            16297.0
+          ]
+        },
+        {
+          "date": "2026-10-17",
+          "sindh": 16026.0,
+          "reference": [
+            15311.0
+          ]
+        },
+        {
+          "date": "2026-10-18",
+          "sindh": 16026.0,
+          "reference": [
+            13295.0
+          ]
+        },
+        {
+          "date": "2026-10-19",
+          "sindh": 14447.0,
+          "reference": [
+            12278.0
+          ]
+        },
+        {
+          "date": "2026-10-20",
+          "sindh": 9284.0,
+          "reference": [
+            10084.0
+          ]
+        }
+      ]
+    },
+    "irsa_daily_mean_outflow": {
+      "dates": 8,
+      "first": "2026-10-16",
+      "last": "2026-10-23",
+      "agreeing": 0,
+      "agreeing_share": 0.0,
+      "median_abs_relative_difference": 0.2858,
+      "disagreeing": [
+        {
+          "date": "2026-10-16",
+          "sindh": 8747.0,
+          "reference": [
+            6927.0
+          ]
+        },
+        {
+          "date": "2026-10-17",
+          "sindh": 10326.0,
+          "reference": [
+            8414.0
+          ]
+        },
+        {
+          "date": "2026-10-18",
+          "sindh": 10326.0,
+          "reference": [
+            7595.0
+          ]
+        },
+        {
+          "date": "2026-10-19",
+          "sindh": 8747.0,
+          "reference": [
+            6578.0
+          ]
+        },
+        {
+          "date": "2026-10-20",
+          "sindh": 3584.0,
+          "reference": [
+            4384.0
+          ]
+        }
+      ]
+    },
+    "ffd_2024_0600_inflow": {
+      "dates": 72,
+      "first": "2024-07-19",
+      "last": "2024-10-15",
+      "agreeing": 70,
+      "agreeing_share": 0.972,
+      "median_abs_relative_difference": 0.0005,
+      "disagreeing": [
+        {
+          "date": "2024-09-30",
+          "sindh": 15800.0,
+          "reference": [
+            26100.0
+          ]
+        },
+        {
+          "date": "2024-10-15",
+          "sindh": 10674.0,
+          "reference": [
+            37500.0
+          ]
+        }
+      ]
+    },
+    "ffd_2024_0600_outflow": {
+      "dates": 72,
+      "first": "2024-07-19",
+      "last": "2024-10-15",
+      "agreeing": 71,
+      "agreeing_share": 0.986,
+      "median_abs_relative_difference": 0.0006,
+      "disagreeing": [
+        {
+          "date": "2024-10-15",
+          "sindh": 3500.0,
+          "reference": [
+            11500.0
+          ]
+        }
+      ]
+    },
+    "ffd_2025_0600_inflow": {
+      "dates": 117,
+      "first": "2025-06-15",
+      "last": "2025-10-15",
+      "agreeing": 113,
+      "agreeing_share": 0.966,
+      "median_abs_relative_difference": 0.0004,
+      "disagreeing": [
+        {
+          "date": "2025-06-17",
+          "sindh": 53734.0,
+          "reference": [
+            46100.0
+          ]
+        },
+        {
+          "date": "2025-07-04",
+          "sindh": 64777.0,
+          "reference": [
+            70700.0
+          ]
+        },
+        {
+          "date": "2025-09-10",
+          "sindh": 62923.0,
+          "reference": [
+            102000.0
+          ]
+        },
+        {
+          "date": "2025-09-20",
+          "sindh": 47149.0,
+          "reference": [
+            96300.0
+          ]
+        }
+      ]
+    },
+    "ffd_2025_0600_outflow": {
+      "dates": 117,
+      "first": "2025-06-15",
+      "last": "2025-10-15",
+      "agreeing": 113,
+      "agreeing_share": 0.966,
+      "median_abs_relative_difference": 0.0006,
+      "disagreeing": [
+        {
+          "date": "2025-06-17",
+          "sindh": 22834.0,
+          "reference": [
+            15300.0
+          ]
+        },
+        {
+          "date": "2025-09-10",
+          "sindh": 60423.0,
+          "reference": [
+            101000.0
+          ]
+        },
+        {
+          "date": "2025-09-19",
+          "sindh": 37399.0,
+          "reference": [
+            37800.0
+          ]
+        },
+        {
+          "date": "2025-09-20",
+          "sindh": 37799.0,
+          "reference": [
+            95300.0
+          ]
+        }
+      ]
+    },
+    "ffd_2026_0600_inflow": {
+      "dates": 122,
+      "first": "2026-06-16",
+      "last": "2026-10-15",
+      "agreeing": 122,
+      "agreeing_share": 1.0,
+      "median_abs_relative_difference": 0.0004,
+      "disagreeing": []
+    },
+    "ffd_2026_0600_outflow": {
+      "dates": 122,
+      "first": "2026-06-16",
+      "last": "2026-10-15",
+      "agreeing": 122,
+      "agreeing_share": 1.0,
+      "median_abs_relative_difference": 0.0003,
+      "disagreeing": []
+    }
+  },
+  "agreement_note": "WAPDA and FFD print to the nearest 100 cusecs; differences up to 100 cusecs or 0.5% (whichever is larger) count as agreement. IRSA values are daily means, a different measurement basis."
+}

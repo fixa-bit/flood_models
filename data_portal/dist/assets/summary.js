@@ -8,6 +8,10 @@ window.FloodSummary = (() => {
   let DAYS = 366;
   let END = START + DAYS * DAY;
   const PANEL_GAP=.065;
+  const BASE_CHART_HEIGHT=1480;
+  const CHART_MARGIN_TOP=82,CHART_MARGIN_BOTTOM=68;
+  const BASE_PANEL_SLOT=(BASE_CHART_HEIGHT-CHART_MARGIN_TOP-CHART_MARGIN_BOTTOM)/6;
+  const panelGap=count=>PANEL_GAP*6/count;
   const palette = {inflow:'#75d0ac', ffd:'#8db9df', rain:'#efb35e', conflict:'#ed9f83', muted:'#9eafa2'};
   const rainInfo={
     gee_era5land:{name:'ERA5-Land',color:'#f4c76b'},
@@ -32,9 +36,11 @@ window.FloodSummary = (() => {
 
   function configureYear(data) {
     current.data=data;
-    const years=['inflow','ffd','precipitation','irsa','peaks'].flatMap(key=>data[key].map(row=>Number(row.date.slice(0,4))));
-    years.push(...(data.rainfall_sources||[]).flatMap(source=>source.rows.map(row=>Number(row.date.slice(0,4)))));
-    const first=Math.min(...years),last=Math.max(...years);
+    const yearSet=new Set();
+    for(const key of ['inflow','ffd','precipitation','irsa','peaks'])for(const row of data[key])yearSet.add(Number(row.date.slice(0,4)));
+    for(const source of data.rainfall_sources||[])for(const row of source.rows)yearSet.add(Number(row.date.slice(0,4)));
+    for(const series of data.daily_inputs||[])for(const row of series.rows)yearSet.add(Number(row.date.slice(0,4)));
+    const years=[...yearSet],first=Math.min(...years),last=Math.max(...years);
     if(current.year<first||current.year>last) current.year=last;
     const field=select('summary-year');
     field.replaceChildren(...Array.from({length:last-first+1},(_,index)=>new Option(String(first+index),String(first+index))));
@@ -50,7 +56,7 @@ window.FloodSummary = (() => {
     select('summary-last-date').textContent=displayDate(END-DAY);
     select('summary-scroll').setAttribute('aria-label',`Scroll horizontally across the full ${current.year} chart`);
     select('summary-chart-viewport').setAttribute('aria-label',`Full ${current.year} chart. Scroll horizontally to browse January through December.`);
-    select('summary-chart').setAttribute('aria-label',`Six stacked Marala variable plots for ${current.year}, with separate y-axes and a shared date axis`);
+    select('summary-chart').setAttribute('aria-label',`Stacked Marala input and discharge plots for ${current.year}, with separate y-axes and one shared date axis`);
     document.querySelector('.summary-modes').setAttribute('aria-label',`Full ${current.year} display mode`);
   }
 
@@ -77,11 +83,19 @@ window.FloodSummary = (() => {
     } else if(index===1) {
       for(const row of data.ffd.get(day)||[]) add('FFD',row.outflow,row.flag?palette.conflict:palette.ffd,row.flag);
     } else if(index===2) {
-      for(const row of data.rainSources.get(day)||[]) add(row.name,row.value,row.color,row.hold,'mm/day',row.axis||'y3');
+      for(const row of data.rainSources.get(day)||[]) {
+        const flagged=Boolean(row.hold||row.flag==='quality_review_required'||row.flag==='negative_daily_mean_omitted'||row.flag==='missing_source_value'||row.status?.includes('exploratory'));
+        add(row.name,row.value,row.color,flagged,'mm/day','y3');
+      }
     } else if(index===3||index===4) {
       for(const row of data.irsa.get(day)||[]) add('IRSA',row[index===3?'inflow':'outflow'],index===3?palette.inflow:palette.ffd);
     } else {
-      for(const row of data.peaks.get(day)||[]) add('PMD',row.value,'#c6abd8');
+      if(index===5)for(const row of data.peaks.get(day)||[]) add('PMD',row.value,'#c6abd8');
+      else {
+        const feature=data.dailyInputs[index-6];
+        for(const row of feature?.byDate.get(day)||[])
+          add(feature.name,row.value,feature.color,false,feature.unit,axisName('y',index));
+      }
     }
     // Matching source readings share one point at their actual y-value.
     const grouped=new Map();
@@ -215,7 +229,7 @@ window.FloodSummary = (() => {
     const ffd=saved.ffd.get(day)||[];
     const field=axis==='y2'?'outflow':'inflow';
     const normal=ffd.filter(row=>!row.flag),conflicts=ffd.filter(row=>row.flag);
-    let title,values='',status='',explanation='',unit='Water flow is measured in cubic feet per second (cusecs).',warning=false;
+    let title,values='',status='',explanation='',sourceDetails='',unit='Water flow is measured in cubic feet per second (cusecs).',warning=false;
     if(axis==='y'||axis==='y2') {
       const incoming=axis==='y';
       title=incoming?'Water entering Marala':'Water leaving Marala';
@@ -266,6 +280,14 @@ window.FloodSummary = (() => {
       title=incoming?'Average water entering Marala':'Average water leaving Marala';
       if(row) values=reading('IRSA',row[incoming?'inflow':'outflow']);
       status='Daily average; the exact start and end hours are not stated.';
+    } else if(/^y(?:[7-9]|1[0-4])$/.test(axis)) {
+      const feature=saved.dailyInputs[Number(axis.slice(1))-7];
+      const rows=feature?.byDate.get(day)||[];
+      title=feature?.name||'Weather or snow feature';
+      for(const row of rows) if(row.value!==null&&row.value!==undefined) values+=reading(feature.name,row.value,feature.unit);
+      status=feature?'Saved daily feature value.':'No feature series is mapped to this graph.';
+      unit=feature?`${feature.name} is shown in ${feature.unit}.`:unit;
+      sourceDetails=feature?.source||'Source provider is not documented for this feature.';
     } else {
       title='Highest flow during a selected flood';
       for(const row of saved.peaks.get(day)||[]) values+=reading('PMD journal',row.value);
@@ -275,6 +297,7 @@ window.FloodSummary = (() => {
     return `<h3>${escape(longDate(day))} — ${title}</h3><dl>${values}</dl>`+
       `<p class="hover-status${warning?' warning':''}">${escape(status)}</p>`+
       (explanation?`<p class="hover-explanation">${escape(explanation)}</p>`:'')+
+      (sourceDetails?`<p class="hover-explanation"><strong>Data source:</strong> ${escape(sourceDetails)}</p>`:'')+
       `<p class="hover-unit">${escape(unit)}</p>`;
   }
 
@@ -332,18 +355,20 @@ window.FloodSummary = (() => {
     const ffd = inYear(data.ffd);
     const irsa = inYear(data.irsa);
     const peaks = inYear(data.peaks);
+    const primaryRain = inYear(data.precipitation);
+    const dailyInputs=(data.daily_inputs||[]).map(item=>({...item,yearRows:inYear(item.rows)}));
     const rainSources=(data.rainfall_sources||[]).map(source=>({
       id:source.id,info:rainInfo[source.id],rows:inYear(source.rows)
     })).filter(source=>source.info);
     const rain=rainSources.flatMap(source=>source.rows.filter(row=>row.value!==null&&Number.isFinite(Number(row.value))).map(row=>({date:row.date,value:Number(row.value),id:source.id,
-      name:source.info.name,color:source.info.color,hold:Boolean(source.info.hold),axis:source.info.axis||'y3'})));
+      name:source.info.name,color:source.info.color,hold:Boolean(source.info.hold),flag:row.flag,status:source.status,axis:source.info.axis||'y3'})));
     const flagged = inflow.filter(row => !row.eligible);
     const ffdNormal = ffd.filter(row => !row.flag);
     const ffdFlagged = ffd.filter(row => row.flag);
     const rows = [
       {title:'Inflow discharge', detail:'WAPDA + FFD · Marala station', unit:'Inflow (cusecs)', count:inflow.length+ffd.length,empty:`No inflow readings saved for ${current.year}.`},
       {title:'Outflow discharge', detail:'FFD · 06:00 Pakistan snapshot', unit:'Outflow (cusecs)', count:ffd.length,empty:`No outflow readings saved for ${current.year}.`},
-      {title:'Catchment precipitation', detail:data.gee_precipitation?.state==='ready'?'Earth Engine + retained comparisons · mm/day':'Retained comparisons · Earth Engine not loaded', unit:'Rainfall (mm/day)', count:rain.length,empty:`No precipitation readings saved for ${current.year}.`},
+      {title:'Catchment rainfall', detail:'CHIRPS Final · Google Earth Engine · NASA POWER candidate (mm/day)', unit:'Rainfall (mm/day)', count:rain.length,empty:`No rainfall readings saved for ${current.year}.`},
       {title:'Daily mean inflow', detail:'IRSA · separate measurement basis', unit:'Mean inflow (cusecs)', count:irsa.length, empty:`No ${current.year} records. Saved IRSA means cover 16–23 Oct 2026.`},
       {title:'Daily mean outflow', detail:'IRSA · separate measurement basis', unit:'Mean outflow (cusecs)', count:irsa.length, empty:`No ${current.year} records. Saved IRSA means cover 16–23 Oct 2026.`},
       {title:'Selected event peak discharge', detail:'PMD journal · event maxima', unit:'Peak (cusecs)', count:peaks.length, empty:`No ${current.year} records. Saved selected events cover 1970–2016.`},
@@ -356,22 +381,39 @@ window.FloodSummary = (() => {
       ffdConflict(ffdFlagged,'inflow',0),
       flowTrace(ffdNormal,'outflow','FFD 06:00 outflow',palette.ffd,1),
       ffdConflict(ffdFlagged,'outflow',1),
-      ...rainSources.map(source=>({
+      flowTrace(primaryRain,'value','CHIRPS Final catchment rainfall',palette.rain,2),
+      ...rainSources.filter(source=>source.id!=='chirps_final').map(source=>({
         type:'scatter',mode:source.info.check?'markers':'lines',name:source.info.name,
         x:source.rows.map(row=>row.date),y:source.rows.map(row=>row.value),xaxis:'x3',yaxis:'y3',
-        connectgaps:false,line:{color:source.info.color,width:source.id==='chirps_final'?1.8:1.3,
-          dash:source.id==='nasa_fresh'?'dot':'solid'},
+        connectgaps:false,line:{color:source.info.color,width:source.info.hold?1.2:1.5,
+          dash:source.info.hold?'dot':'solid'},
         marker:{color:source.info.color,size:source.info.check?7:3,symbol:source.info.check?'circle-open':'circle'},
+        opacity:source.info.hold ? 0.65 : 1,
       })),
       flowTrace(irsa,'inflow','IRSA daily mean inflow',palette.inflow,3),
       flowTrace(irsa,'outflow','IRSA daily mean outflow',palette.ffd,4),
       {type:'scatter',mode:'markers',name:'Selected PMD event maximum',x:peaks.map(row=>row.date),y:peaks.map(row=>row.value),xaxis:'x6',yaxis:'y6',
        marker:{color:'#c6abd8',size:8}},
     ];
+    const featureDates=Array.from({length:DAYS},(_,index)=>iso(START+index*DAY));
+    for(const [featureIndex,item] of dailyInputs.entries()) {
+      const rowIndex=rows.length;
+      const byDay=new Map(item.yearRows.map(row=>[row.date,row]));
+      const featureValues=featureDates.map(day=>byDay.get(day)?.value??null);
+      const snowFeature=['snow_depth','snow_water_equivalent','snowmelt','snow_cover'].includes(item.id);
+      const yearValues=item.yearRows.filter(row=>row.value!==null).length;
+      rows.push({title:item.name,detail:`${snowFeature?'Snow feature':'Weather feature'} · ${item.unit} · ${yearValues} values in ${current.year} · ${item.first_date} to ${item.last_date}`,
+        unit:`${item.name} (${item.unit})`,count:item.yearRows.filter(row=>row.value!==null).length,
+        empty:`No ${item.name.toLowerCase()} readings saved for ${current.year}.`});
+      traces.push({type:'scatter',mode:'lines+markers',name:item.name,x:featureDates,y:featureValues,
+        xaxis:axisName('x',rowIndex),yaxis:axisName('y',rowIndex),connectgaps:false,
+        line:{color:item.color,width:1.7},marker:{color:item.color,size:3.2,symbol:'circle-open',line:{color:item.color,width:.7}},
+        hoverinfo:'none'});
+    }
     // Keep Plotly hover events, but replace its multi-date box with a plain-
     // language card that looks up sources on the exact selected calendar date.
     traces.forEach(trace=>{trace.hoverinfo='none';});
-    return {rows,traces,inflow,ffd,rain};
+    return {rows,traces,inflow,ffd,rain,primaryRain};
   }
 
   function range() {
@@ -393,7 +435,7 @@ window.FloodSummary = (() => {
     if(current.mode==='scroll') return [];
     const result=[];
     rows.forEach((row,index)=>{
-      const top=1-index/rows.length,bottom=top-1/rows.length+PANEL_GAP;
+      const top=1-index/rows.length,bottom=top-1/rows.length+panelGap(rows.length);
       let heading=`<b>${row.title}</b> <span style="font-size:10px;color:#9eafa2">· ${row.detail}</span>`;
       if(window.innerWidth<700) heading=heading.replace('</b> <span','</b><br><span');
       result.push({xref:'paper',yref:'paper',x:0,y:top+.03,xanchor:'left',yanchor:'bottom',
@@ -583,32 +625,37 @@ window.FloodSummary = (() => {
       geeStatus.textContent=(gee?.message||'Earth Engine precipitation has not been collected.')+' '+(gee?.method||'');
     }
     select('summary-year').disabled=true;
-    const {rows,traces,inflow,ffd,rain}=tracks(data);
+    const {rows,traces,inflow,ffd,rain,primaryRain}=tracks(data);
     hideTooltip();
     current.hoverData={wapda:groupByDate(inflow),ffd:groupByDate(ffd),rainSources:groupByDate(rain),
-      irsa:groupByDate(inYear(data.irsa)),peaks:groupByDate(inYear(data.peaks))};
+      irsa:groupByDate(inYear(data.irsa)),peaks:groupByDate(inYear(data.peaks)),
+      dailyInputs:(data.daily_inputs||[]).map(item=>({...item,byDate:groupByDate(inYear(item.rows))}))};
     const number=value=>value.toLocaleString('en-US');
     const metrics=[
       ['WAPDA inflow',number(inflow.length),`${number(inflow.filter(row=>row.eligible).length)} eligible · ${inflow.filter(row=>!row.eligible).length} withheld`],
       ['FFD bulletins',number(ffd.length),`${new Set(ffd.map(row=>row.date)).size} printed dates · inflow + outflow`],
-      ['Rainfall source values',number(rain.length),data.gee_precipitation?.state==='ready'?'Earth Engine + retained comparisons':'Retained comparisons · Earth Engine pending'],
+      ['Rainfall source values',number(rain.length),data.gee_precipitation?.state==='ready'?'GEE QA passed + comparisons':data.gee_precipitation?.state==='exploratory'?'GEE QA warning + NASA candidate':'Retained comparisons · GEE pending'],
+      ['Weather and snow series',number((data.daily_inputs||[]).length),'Automatically found daily input CSVs'],
       ['Feature year',String(current.year),'01 January–31 December · saved readings only'],
     ];
     select('summary-metrics').innerHTML=metrics.map(([label,value,note])=>`<div class="metric"><div class="metric-label">${label}</div><div class="metric-value">${value}</div><div class="metric-foot">${note}</div></div>`).join('');
     const width=chartWidth();
     select('summary-chart').style.width=width+'px';
     const layout={
-      width,autosize:false,height:1480,paper_bgcolor:'transparent',plot_bgcolor:'transparent',
-      margin:{l:86,r:22,t:82,b:68},showlegend:false,hovermode:'closest',dragmode:false,
+      width,autosize:false,height:CHART_MARGIN_TOP+CHART_MARGIN_BOTTOM+rows.length*BASE_PANEL_SLOT,paper_bgcolor:'transparent',plot_bgcolor:'transparent',
+      margin:{l:86,r:22,t:CHART_MARGIN_TOP,b:CHART_MARGIN_BOTTOM},showlegend:false,hovermode:'closest',dragmode:false,
       font:{family:'Inter, Segoe UI, sans-serif',size:10,color:'#b6c6ae'},
       hoverlabel:{bgcolor:'#172318',bordercolor:'#65734b',font:{color:'#f3e4bd',size:11}},
       annotations:[],bargap:.08,uirevision:`marala-summary-${current.year}`,
     };
+    // Keep the outer element as tall as Plotly's full multi-panel canvas.
+    // Otherwise the fixed CSS height clips every row after the first few.
+    select('summary-chart').style.height=layout.height+'px';
     rows.forEach((row,index)=>{
       const top=1-index/rows.length;
-      const bottom=top-1/rows.length+PANEL_GAP;
+      const bottom=top-1/rows.length+panelGap(rows.length);
       layout[axisName('xaxis',index)]={type:'date',domain:[0,1],anchor:axisName('y',index),
-        matches:index===rows.length-1?undefined:'x6',range:range(),fixedrange:true,showticklabels:index===0||index===rows.length-1,side:index===0?'top':'bottom',
+        matches:index===0?undefined:'x',range:range(),fixedrange:true,showticklabels:index===0||index===rows.length-1,side:index===0?'top':'bottom',
         gridcolor:'rgba(190,211,178,.10)',zeroline:false,tickformat:'%d %b',tickfont:{size:10},tickmode:'array',tickvals:ticks(),
         title:index===rows.length-1?{text:`Date · ${current.year}`,font:{size:12}}:undefined};
       layout[axisName('yaxis',index)]={domain:[bottom,top],anchor:axisName('x',index),

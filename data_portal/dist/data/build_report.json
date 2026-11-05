@@ -1,19 +1,19 @@
 {
-  "snapshot_built_utc": "2026-11-02T05:39:14.125428+00:00",
-  "snapshot_sha256": "28d965cb5cc38a82ccf10e405a7b77c9ef2bef02172214d7205d106d9ab724da",
+  "snapshot_built_utc": "2026-11-05T10:29:52.740521+00:00",
+  "snapshot_sha256": "fd7bc1539f0bf32b71ef25ff72eb730414229caeb3dadccda84a6fae66efb1cb",
   "integrity_counts": {
     "match": 828
   },
-  "source_groups": 9,
-  "download_count": 65,
+  "source_groups": 17,
+  "download_count": 76,
   "asset_versions": {
-    "assets/style.css": "73594acaa314",
-    "assets/night.css": "efa8bfc75c02",
+    "assets/style.css": "4f63118c4737",
+    "assets/night.css": "672b4be2c5ed",
     "assets/rainfall.css": "5e03a12f323b",
     "assets/plotly.min.js": "3b6e15d45dbb",
-    "assets/availability.js": "4f2080422033",
-    "assets/summary.js": "f28a882a78aa",
+    "assets/availability.js": "34773d474a8e",
+    "assets/summary.js": "bd2f21856810",
     "assets/rainfall.js": "905d62ef7bbe",
-    "assets/app.js": "76b1f66cfc45"
+    "assets/app.js": "31278af787bd"
   }
 }
