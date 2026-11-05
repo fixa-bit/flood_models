@@ -1,0 +1,14 @@
+{
+  "source_target_values_unchanged": true,
+  "missing_targets_left_nan": true,
+  "test_years": [
+    2022,
+    2023,
+    2024
+  ],
+  "spatial_and_control_share_test_origins": true,
+  "same_noisy_forecast_after_area_aggregation": true,
+  "flood_threshold_cumecs": 2494.714185,
+  "source_sha256": "d21788d62afc9e54d8e2aa6e1f27dcc244ef3b6a1a734249650abd84ccdbe11f",
+  "daily_sha256": "ea3bc0fd1da809c65811306339d15e030587b9b96e93487bc21fbb78f66b0097"
+}

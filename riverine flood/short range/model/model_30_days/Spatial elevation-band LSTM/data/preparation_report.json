@@ -1,0 +1,19 @@
+{
+  "observed_source": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\data\\marala_daily.csv",
+  "observed_source_sha256": "d21788d62afc9e54d8e2aa6e1f27dcc244ef3b6a1a734249650abd84ccdbe11f",
+  "prepared_sha256": "ea3bc0fd1da809c65811306339d15e030587b9b96e93487bc21fbb78f66b0097",
+  "observed_targets_exactly_preserved": true,
+  "no_target_filling": true,
+  "extracted_first_date": "2015-01-01",
+  "extracted_last_date": "2024-12-31",
+  "extracted_daily_rows": 3653,
+  "band_count": 4,
+  "observed_targets": 3454,
+  "nan_targets": 13636,
+  "area_fractions": [
+    0.24504237932840592,
+    0.22418427517823308,
+    0.2835395315043776,
+    0.24723381398898345
+  ]
+}

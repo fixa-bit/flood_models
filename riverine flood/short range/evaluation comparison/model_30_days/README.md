@@ -7,6 +7,12 @@
 
 The past-discharge variant changed day-30 NSE from 0.784 to 0.788 and reduced high-flow RMSE by about 3%. It did not consistently improve shorter-lead scores. Day-30 climatology NSE remains slightly higher at 0.792. P05-P95 coverage changed from 74.5% to 76.8%, below the nominal 90%.
 
-The first two variants use one seed each; the residual and encoder-decoder ensembles use three each. All use a previously inspected benchmark and noisy future reanalysis. Operational 30-day flood forecast accuracy is unverified. HBV, spatial and basis-model families remain pending.
+The first two variants use one seed each; the residual and encoder-decoder ensembles use three each. All use a previously inspected benchmark and noisy future reanalysis. Operational 30-day flood forecast accuracy is unverified. HBV variants, the spatial elevation-band model, N-HiTS and N-BEATSx are trained.
 
 The latest variant uses three sequential seeds. Its day-30 RMSE is 297.6 cumecs versus climatology 359.4. High-flow RMSE is 826.1 versus climatology 973.6. Empirically adjusted P05-P95 coverage is 90.6%, while high-flow hit rate is only 33%. All earlier variants are preserved.
+
+The [spatial elevation-band LSTM](spatial_elevation_band_lstm/README.md) scored day-30 NSE 0.801 and RMSE 351.8 m³/s. Its matched catchment-mean control scored NSE 0.850 and RMSE 305.1 m³/s on the same 1,055 observed targets, so the spatial representation did not improve this split. The [current all-model flood/non-flood table](flood_nonflood_classification_metrics.md) and [PDF](flood_nonflood_classification_metrics.pdf) include both variants.
+
+The [30-day N-HiTS model](nhits/README.md) scored day-30 NSE 0.678 and RMSE 447.5 m³/s; it detected 10 of 51 flood days (recall 0.196). Its score is below the training-climatology baseline of 0.792 on this same split.
+
+The [N-BEATSx evaluation](nbeatsx/flood_nonflood_comparison.md) used the same 1,055 observed day-30 targets: NSE 0.564, RMSE 520.3 m3/s, flood precision 0.267 and recall 0.451. Its day-30 NSE is below training climatology (0.792). Full lead, seasonal, quantile and verification files are in [nbeatsx](nbeatsx/README.md).

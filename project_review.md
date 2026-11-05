@@ -1,0 +1,11 @@
+
+# Flood Risk and Disaster Management Work — Project Overview
+
+
+**Monitoring and decision support.** The disaster-management portal combines weather and river context with risk summaries, district-level GIS screening, monitoring locations and map-based exploration. It also supports citizen reports, activity history and incident tracking. Users can inspect risk factors and source context, review reports and follow events through a shared operational view. The national map is a prioritization aid; it does not claim to replace local warnings or provide a detailed hydraulic forecast for every district.
+
+**Research data and flood modelling.** The analysis workspace organizes river, rainfall and flood-related datasets with provenance, quality checks and visual summaries. Marala-focused work prepares historical discharge and catchment rainfall records for forecasting research and compares a range of statistical, machine-learning and physically informed approaches. A separate exposure pilot brings population, infrastructure and historical flood references together for Trimmu/Jhang. The simulation application supports scenario preparation, external-engine runs, georeferenced result review and comparison. Public-data screening runs and a Nowshera routing study demonstrate the workflow; available evidence remains exploratory. Calibration targets have not all been met, and surveyed channel geometry and independent flood-extent validation are still needed before results can be treated as validated inundation forecasts.
+
+**Alert and response workflow.** An event-driven alert workflow connects critical flood-risk events and priority citizen reports to a review and follow-up path. Alert context is organized around the affected location, severity and event details so responders can assess a signal, coordinate next steps and maintain a traceable record alongside related incidents and activity. This supports timely human review while keeping alert records connected to the wider monitoring process.
+
+**Overall contribution.** Together, the work provides a practical platform for monitoring, data stewardship, model experimentation and response coordination. It makes information easier to inspect and hand off, while preserving a clear distinction between operational signals, research estimates and independently validated evidence.

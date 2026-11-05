@@ -1,0 +1,8 @@
+{
+  "daily_table_byte_identical_to_source": true,
+  "all_saved_targets_equal_original_observations": true,
+  "physical_base_reproduces_calibrated_hbv_predictions": true,
+  "matched_issue_lead_pairs": 31932,
+  "lead30_observed_targets": 1055,
+  "discharge_values_filled_or_modified": false
+}

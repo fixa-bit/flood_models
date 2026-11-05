@@ -16,7 +16,7 @@ Training years ever used: [2016, 2017, 2018, 2019, 2020]. Validation/selection y
 
 LSTM uses median quantiles. Persistence deliberately uses the latest observed discharge available at issue time even when past-Q input is disabled for the LSTM. Climatology uses training month/day means, with training basin/global mean fallback. Gradient boosting uses the same normalized predictor/missingness channels and forecast prefix, summarized over configurable history windows; it is not given future observed discharge.
 
-The heterogeneous Ensemble combines ['LSTM', 'gradient_boosting'] with nonnegative normalized per-lead weights fitted on validation years [2021] only. No test observation is used for those weights. Saved weights: ensemble/runs/initial/weights.json. It is a point-forecast blend; quantile calibration below is for the LSTM, not a claimed probabilistic ensemble.
+The heterogeneous Ensemble combines ['LSTM', 'gradient_boosting'] with nonnegative normalized per-lead weights fitted on validation years [2021] only. No test observation is used for those weights. Saved weights: ../../model/model_10 days/ensemble/runs/initial/weights.json. It is a point-forecast blend; quantile calibration below is for the LSTM, not a claimed probabilistic ensemble.
 
 | lead_day | model | n | NSE | KGE | PBIAS_pct | RMSE_cumecs | MAE_cumecs |
 | --- | --- | --- | --- | --- | --- | --- | --- |

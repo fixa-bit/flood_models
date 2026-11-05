@@ -1,0 +1,326 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 842 650] /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /Contents 6 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+6 0 obj
+<< /Length 17068 >>
+stream
+0.07 0.18 0.32 rg 0 0 842 595 re f
+1 1 1 rg 20 20 802 610 re f
+0.07 0.18 0.32 rg BT /F2 17 Tf 1 0 0 1 48.0 603.0 Tm (30-DAY FLOOD FORECAST MODEL COMPARISON) Tj ET
+0.25 0.31 0.39 rg BT /F1 10 Tf 1 0 0 1 48.0 583.0 Tm (Lead-30 classification scores and discharge errors on matched observed targets) Tj ET
+0.94 0.96 0.98 rg 48 531 230 37 re f
+0.25 0.31 0.39 rg BT /F2 7.5 Tf 1 0 0 1 58.0 553.0 Tm (COMMON TEST DAYS) Tj ET
+0.07 0.18 0.32 rg BT /F2 10 Tf 1 0 0 1 58.0 539.0 Tm (1055) Tj ET
+0.94 0.96 0.98 rg 306 531 230 37 re f
+0.25 0.31 0.39 rg BT /F2 7.5 Tf 1 0 0 1 316.0 553.0 Tm (FLOOD DEFINITION) Tj ET
+0.07 0.18 0.32 rg BT /F2 10 Tf 1 0 0 1 316.0 539.0 Tm (Training Q95: 2494.71 m3/s m3/s) Tj ET
+0.94 0.96 0.98 rg 564 531 230 37 re f
+0.25 0.31 0.39 rg BT /F2 7.5 Tf 1 0 0 1 574.0 553.0 Tm (EVALUATION) Tj ET
+0.07 0.18 0.32 rg BT /F2 10 Tf 1 0 0 1 574.0 539.0 Tm (Lead day 30) Tj ET
+0.07 0.18 0.32 rg 58 482 726 31 re f
+1 1 1 rg BT /F2 8 Tf 1 0 0 1 65.0 493.0 Tm (Model) Tj ET
+1 1 1 rg BT /F2 8 Tf 1 0 0 1 239.0 493.0 Tm (Actual class) Tj ET
+1 1 1 rg BT /F2 8 Tf 1 0 0 1 319.0 493.0 Tm (n) Tj ET
+1 1 1 rg BT /F2 8 Tf 1 0 0 1 361.0 493.0 Tm (Accuracy) Tj ET
+1 1 1 rg BT /F2 8 Tf 1 0 0 1 427.0 493.0 Tm (Precision) Tj ET
+1 1 1 rg BT /F2 8 Tf 1 0 0 1 493.0 493.0 Tm (Recall) Tj ET
+1 1 1 rg BT /F2 8 Tf 1 0 0 1 559.0 493.0 Tm (F1) Tj ET
+1 1 1 rg BT /F2 8 Tf 1 0 0 1 611.0 493.0 Tm (RMSE \(m3/s\)) Tj ET
+1 1 1 rg BT /F2 8 Tf 1 0 0 1 701.0 493.0 Tm (MAE \(m3/s\)) Tj ET
+1.00 0.94 0.92 rg 58 465 726 17 re f
+0.82 0.86 0.90 RG 58 465 m 784 465 l S
+0 0 0 rg BT /F2 7.5 Tf 1 0 0 1 65.0 470.0 Tm (Weather-only LSTM) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 239.0 470.0 Tm (Flood) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 317.0 470.0 Tm (51) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 359.0 470.0 Tm (0.947) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 425.0 470.0 Tm (0.451) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 491.0 470.0 Tm (0.451) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 557.0 470.0 Tm (0.451) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 609.0 470.0 Tm (931.4) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 699.0 470.0 Tm (725.7) Tj ET
+0.92 0.96 0.99 rg 58 448 726 17 re f
+0.82 0.86 0.90 RG 58 448 m 784 448 l S
+0 0 0 rg BT /F2 7.5 Tf 1 0 0 1 65.0 453.0 Tm (Weather-only LSTM) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 239.0 453.0 Tm (Non-flood) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 317.0 453.0 Tm (1004) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 359.0 453.0 Tm (0.947) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 425.0 453.0 Tm (0.972) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 491.0 453.0 Tm (0.972) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 557.0 453.0 Tm (0.972) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 609.0 453.0 Tm (311.0) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 699.0 453.0 Tm (198.6) Tj ET
+1.00 0.94 0.92 rg 58 431 726 17 re f
+0.82 0.86 0.90 RG 58 431 m 784 431 l S
+0 0 0 rg BT /F2 7.5 Tf 1 0 0 1 65.0 436.0 Tm (Past-discharge LSTM) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 239.0 436.0 Tm (Flood) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 317.0 436.0 Tm (51) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 359.0 436.0 Tm (0.951) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 425.0 436.0 Tm (0.490) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 491.0 436.0 Tm (0.471) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 557.0 436.0 Tm (0.480) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 609.0 436.0 Tm (903.8) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 699.0 436.0 Tm (705.9) Tj ET
+0.92 0.96 0.99 rg 58 414 726 17 re f
+0.82 0.86 0.90 RG 58 414 m 784 414 l S
+0 0 0 rg BT /F2 7.5 Tf 1 0 0 1 65.0 419.0 Tm (Past-discharge LSTM) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 239.0 419.0 Tm (Non-flood) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 317.0 419.0 Tm (1004) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 359.0 419.0 Tm (0.951) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 425.0 419.0 Tm (0.973) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 491.0 419.0 Tm (0.975) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 557.0 419.0 Tm (0.974) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 609.0 419.0 Tm (311.2) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 699.0 419.0 Tm (190.3) Tj ET
+1.00 0.94 0.92 rg 58 397 726 17 re f
+0.82 0.86 0.90 RG 58 397 m 784 397 l S
+0 0 0 rg BT /F2 7.5 Tf 1 0 0 1 65.0 402.0 Tm (Climatology-residual ensemble) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 239.0 402.0 Tm (Flood) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 317.0 402.0 Tm (51) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 359.0 402.0 Tm (0.955) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 425.0 402.0 Tm (0.548) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 491.0 402.0 Tm (0.333) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 557.0 402.0 Tm (0.415) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 609.0 402.0 Tm (826.1) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 699.0 402.0 Tm (637.2) Tj ET
+0.92 0.96 0.99 rg 58 380 726 17 re f
+0.82 0.86 0.90 RG 58 380 m 784 380 l S
+0 0 0 rg BT /F2 7.5 Tf 1 0 0 1 65.0 385.0 Tm (Climatology-residual ensemble) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 239.0 385.0 Tm (Non-flood) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 317.0 385.0 Tm (1004) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 359.0 385.0 Tm (0.955) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 425.0 385.0 Tm (0.967) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 491.0 385.0 Tm (0.986) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 557.0 385.0 Tm (0.976) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 609.0 385.0 Tm (241.6) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 699.0 385.0 Tm (169.1) Tj ET
+1.00 0.94 0.92 rg 58 363 726 17 re f
+0.82 0.86 0.90 RG 58 363 m 784 363 l S
+0 0 0 rg BT /F2 7.5 Tf 1 0 0 1 65.0 368.0 Tm (Fine-tuned encoder-decoder) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 239.0 368.0 Tm (Flood) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 317.0 368.0 Tm (51) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 359.0 368.0 Tm (0.939) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 425.0 368.0 Tm (0.382) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 491.0 368.0 Tm (0.412) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 557.0 368.0 Tm (0.396) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 609.0 368.0 Tm (801.6) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 699.0 368.0 Tm (572.7) Tj ET
+0.92 0.96 0.99 rg 58 346 726 17 re f
+0.82 0.86 0.90 RG 58 346 m 784 346 l S
+0 0 0 rg BT /F2 7.5 Tf 1 0 0 1 65.0 351.0 Tm (Fine-tuned encoder-decoder) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 239.0 351.0 Tm (Non-flood) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 317.0 351.0 Tm (1004) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 359.0 351.0 Tm (0.939) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 425.0 351.0 Tm (0.970) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 491.0 351.0 Tm (0.966) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 557.0 351.0 Tm (0.968) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 609.0 351.0 Tm (256.9) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 699.0 351.0 Tm (176.2) Tj ET
+1.00 0.94 0.92 rg 58 329 726 17 re f
+0.82 0.86 0.90 RG 58 329 m 784 329 l S
+0 0 0 rg BT /F2 7.5 Tf 1 0 0 1 65.0 334.0 Tm (delta-HBV) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 239.0 334.0 Tm (Flood) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 317.0 334.0 Tm (51) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 359.0 334.0 Tm (0.955) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 425.0 334.0 Tm (0.543) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 491.0 334.0 Tm (0.490) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 557.0 334.0 Tm (0.515) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 609.0 334.0 Tm (1155.8) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 699.0 334.0 Tm (951.1) Tj ET
+0.92 0.96 0.99 rg 58 312 726 17 re f
+0.82 0.86 0.90 RG 58 312 m 784 312 l S
+0 0 0 rg BT /F2 7.5 Tf 1 0 0 1 65.0 317.0 Tm (delta-HBV) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 239.0 317.0 Tm (Non-flood) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 317.0 317.0 Tm (1004) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 359.0 317.0 Tm (0.955) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 425.0 317.0 Tm (0.974) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 491.0 317.0 Tm (0.979) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 557.0 317.0 Tm (0.977) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 609.0 317.0 Tm (424.5) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 699.0 317.0 Tm (270.1) Tj ET
+1.00 0.94 0.92 rg 58 295 726 17 re f
+0.82 0.86 0.90 RG 58 295 m 784 295 l S
+0 0 0 rg BT /F2 7.5 Tf 1 0 0 1 65.0 300.0 Tm (Calibrated physical HBV) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 239.0 300.0 Tm (Flood) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 317.0 300.0 Tm (51) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 359.0 300.0 Tm (0.951) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 425.0 300.0 Tm (0.485) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 491.0 300.0 Tm (0.314) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 557.0 300.0 Tm (0.381) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 609.0 300.0 Tm (943.4) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 699.0 300.0 Tm (766.3) Tj ET
+0.92 0.96 0.99 rg 58 278 726 17 re f
+0.82 0.86 0.90 RG 58 278 m 784 278 l S
+0 0 0 rg BT /F2 7.5 Tf 1 0 0 1 65.0 283.0 Tm (Calibrated physical HBV) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 239.0 283.0 Tm (Non-flood) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 317.0 283.0 Tm (1004) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 359.0 283.0 Tm (0.951) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 425.0 283.0 Tm (0.966) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 491.0 283.0 Tm (0.983) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 557.0 283.0 Tm (0.974) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 609.0 283.0 Tm (361.9) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 699.0 283.0 Tm (238.3) Tj ET
+1.00 0.94 0.92 rg 58 261 726 17 re f
+0.82 0.86 0.90 RG 58 261 m 784 261 l S
+0 0 0 rg BT /F2 7.5 Tf 1 0 0 1 65.0 266.0 Tm (HBV-LSTM residual) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 239.0 266.0 Tm (Flood) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 317.0 266.0 Tm (51) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 359.0 266.0 Tm (0.940) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 425.0 266.0 Tm (0.432) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 491.0 266.0 Tm (0.745) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 557.0 266.0 Tm (0.547) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 609.0 266.0 Tm (559.0) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 699.0 266.0 Tm (435.0) Tj ET
+0.92 0.96 0.99 rg 58 244 726 17 re f
+0.82 0.86 0.90 RG 58 244 m 784 244 l S
+0 0 0 rg BT /F2 7.5 Tf 1 0 0 1 65.0 249.0 Tm (HBV-LSTM residual) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 239.0 249.0 Tm (Non-flood) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 317.0 249.0 Tm (1004) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 359.0 249.0 Tm (0.940) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 425.0 249.0 Tm (0.987) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 491.0 249.0 Tm (0.950) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 557.0 249.0 Tm (0.968) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 609.0 249.0 Tm (375.4) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 699.0 249.0 Tm (229.8) Tj ET
+1.00 0.94 0.92 rg 58 227 726 17 re f
+0.82 0.86 0.90 RG 58 227 m 784 227 l S
+0 0 0 rg BT /F2 7.5 Tf 1 0 0 1 65.0 232.0 Tm (HBV-LightGBM residual) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 239.0 232.0 Tm (Flood) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 317.0 232.0 Tm (51) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 359.0 232.0 Tm (0.944) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 425.0 232.0 Tm (0.435) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 491.0 232.0 Tm (0.529) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 557.0 232.0 Tm (0.478) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 609.0 232.0 Tm (754.0) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 699.0 232.0 Tm (578.4) Tj ET
+0.92 0.96 0.99 rg 58 210 726 17 re f
+0.82 0.86 0.90 RG 58 210 m 784 210 l S
+0 0 0 rg BT /F2 7.5 Tf 1 0 0 1 65.0 215.0 Tm (HBV-LightGBM residual) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 239.0 215.0 Tm (Non-flood) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 317.0 215.0 Tm (1004) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 359.0 215.0 Tm (0.944) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 425.0 215.0 Tm (0.976) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 491.0 215.0 Tm (0.965) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 557.0 215.0 Tm (0.970) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 609.0 215.0 Tm (338.3) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 699.0 215.0 Tm (221.3) Tj ET
+1.00 0.94 0.92 rg 58 193 726 17 re f
+0.82 0.86 0.90 RG 58 193 m 784 193 l S
+0 0 0 rg BT /F2 7.5 Tf 1 0 0 1 65.0 198.0 Tm (Spatial elevation-band LSTM) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 239.0 198.0 Tm (Flood) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 317.0 198.0 Tm (51) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 359.0 198.0 Tm (0.941) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 425.0 198.0 Tm (0.392) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 491.0 198.0 Tm (0.392) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 557.0 198.0 Tm (0.392) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 609.0 198.0 Tm (854.2) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 699.0 198.0 Tm (611.4) Tj ET
+0.92 0.96 0.99 rg 58 176 726 17 re f
+0.82 0.86 0.90 RG 58 176 m 784 176 l S
+0 0 0 rg BT /F2 7.5 Tf 1 0 0 1 65.0 181.0 Tm (Spatial elevation-band LSTM) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 239.0 181.0 Tm (Non-flood) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 317.0 181.0 Tm (1004) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 359.0 181.0 Tm (0.941) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 425.0 181.0 Tm (0.969) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 491.0 181.0 Tm (0.969) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 557.0 181.0 Tm (0.969) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 609.0 181.0 Tm (304.9) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 699.0 181.0 Tm (200.5) Tj ET
+1.00 0.94 0.92 rg 58 159 726 17 re f
+0.82 0.86 0.90 RG 58 159 m 784 159 l S
+0 0 0 rg BT /F2 7.5 Tf 1 0 0 1 65.0 164.0 Tm (Catchment-mean control) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 239.0 164.0 Tm (Flood) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 317.0 164.0 Tm (51) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 359.0 164.0 Tm (0.951) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 425.0 164.0 Tm (0.491) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 491.0 164.0 Tm (0.529) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 557.0 164.0 Tm (0.509) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 609.0 164.0 Tm (728.2) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 699.0 164.0 Tm (530.6) Tj ET
+0.92 0.96 0.99 rg 58 142 726 17 re f
+0.82 0.86 0.90 RG 58 142 m 784 142 l S
+0 0 0 rg BT /F2 7.5 Tf 1 0 0 1 65.0 147.0 Tm (Catchment-mean control) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 239.0 147.0 Tm (Non-flood) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 317.0 147.0 Tm (1004) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 359.0 147.0 Tm (0.951) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 425.0 147.0 Tm (0.976) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 491.0 147.0 Tm (0.972) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 557.0 147.0 Tm (0.974) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 609.0 147.0 Tm (266.3) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 699.0 147.0 Tm (171.5) Tj ET
+1.00 0.94 0.92 rg 58 125 726 17 re f
+0.82 0.86 0.90 RG 58 125 m 784 125 l S
+0 0 0 rg BT /F2 7.5 Tf 1 0 0 1 65.0 130.0 Tm (N-HiTS) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 239.0 130.0 Tm (Flood) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 317.0 130.0 Tm (51) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 359.0 130.0 Tm (0.933) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 425.0 130.0 Tm (0.250) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 491.0 130.0 Tm (0.196) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 557.0 130.0 Tm (0.220) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 609.0 130.0 Tm (1292.7) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 699.0 130.0 Tm (1112.5) Tj ET
+0.92 0.96 0.99 rg 58 108 726 17 re f
+0.82 0.86 0.90 RG 58 108 m 784 108 l S
+0 0 0 rg BT /F2 7.5 Tf 1 0 0 1 65.0 113.0 Tm (N-HiTS) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 239.0 113.0 Tm (Non-flood) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 317.0 113.0 Tm (1004) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 359.0 113.0 Tm (0.933) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 425.0 113.0 Tm (0.960) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 491.0 113.0 Tm (0.970) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 557.0 113.0 Tm (0.965) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 609.0 113.0 Tm (354.3) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 699.0 113.0 Tm (219.5) Tj ET
+1.00 0.94 0.92 rg 58 91 726 17 re f
+0.82 0.86 0.90 RG 58 91 m 784 91 l S
+0 0 0 rg BT /F2 7.5 Tf 1 0 0 1 65.0 96.0 Tm (N-BEATSx) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 239.0 96.0 Tm (Flood) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 317.0 96.0 Tm (51) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 359.0 96.0 Tm (0.914) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 425.0 96.0 Tm (0.267) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 491.0 96.0 Tm (0.451) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 557.0 96.0 Tm (0.336) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 609.0 96.0 Tm (1163.9) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 699.0 96.0 Tm (893.0) Tj ET
+0.92 0.96 0.99 rg 58 74 726 17 re f
+0.82 0.86 0.90 RG 58 74 m 784 74 l S
+0 0 0 rg BT /F2 7.5 Tf 1 0 0 1 65.0 79.0 Tm (N-BEATSx) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 239.0 79.0 Tm (Non-flood) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 317.0 79.0 Tm (1004) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 359.0 79.0 Tm (0.914) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 425.0 79.0 Tm (0.971) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 491.0 79.0 Tm (0.937) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 557.0 79.0 Tm (0.954) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 609.0 79.0 Tm (464.4) Tj ET
+0 0 0 rg BT /F1 7.5 Tf 1 0 0 1 699.0 79.0 Tm (278.8) Tj ET
+0.96 0.97 0.98 rg 48 26 746 40 re f
+0 0 0 rg BT /F1 8 Tf 1 0 0 1 60.0 52.0 Tm (Accuracy uses both classes; precision, recall and F1 are class-specific. RMSE is flow error within the class shown.) Tj ET
+0 0 0 rg BT /F1 8 Tf 1 0 0 1 60.0 39.0 Tm (Retrospective observed test \(2022-2024\); reanalysis proxy inputs, not operational forecast skill. Flood threshold: training Q95.) Tj ET
+0.30 0.35 0.42 rg BT /F1 8 Tf 1 0 0 1 48.0 13.0 Tm (Flood recall is useful for missed high-flow days; only 51 of 1,055 common targets are floods.) Tj ET
+endstream
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000251 00000 n 
+0000000321 00000 n 
+0000000396 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+17516
+%%EOF

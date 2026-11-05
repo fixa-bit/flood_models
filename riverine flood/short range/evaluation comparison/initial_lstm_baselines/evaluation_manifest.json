@@ -27,7 +27,7 @@
     }
   },
   "checkpoint_paths": [
-    "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\lstm\\runs\\initial\\seed_42\\best.pt"
+    "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\model_10 days\\lstm\\runs\\initial\\seed_42\\best.pt"
   ],
   "training_years_ever_used": [
     2016,

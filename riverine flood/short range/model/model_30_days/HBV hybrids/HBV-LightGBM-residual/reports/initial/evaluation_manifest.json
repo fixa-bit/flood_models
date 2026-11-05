@@ -1,0 +1,24 @@
+{
+  "forecast_horizon_days": 30,
+  "training_years": [
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
+  ],
+  "validation_years": [
+    2021
+  ],
+  "test_years": [
+    2022,
+    2023,
+    2024
+  ],
+  "observed_test_targets_lead_30": 1055,
+  "observed_issue_lead_pairs": 31932,
+  "training_q95_flood_threshold_cumecs": 2494.7141847552,
+  "physical_base_calibration_kge": 0.8575390934198072,
+  "future_forcing": "ERA5-Land reanalysis weather as hindcast proxy; PET from training climatology",
+  "discharge_values_filled_or_modified": false
+}

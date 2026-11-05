@@ -1,0 +1,17 @@
+{
+  "flood_threshold_training_q95_cumecs": 2494.7141847552,
+  "test_years": [
+    2022,
+    2023,
+    2024
+  ],
+  "test_observed_targets_lead_30": 1055,
+  "test_unique_observed_dates": 1084,
+  "test_issue_lead_targets": 31932,
+  "validation_years": [
+    2021
+  ],
+  "validation_observed_targets_lead_30": 336,
+  "calibration_cutoff_year": 2020,
+  "future_forcing": "ERA5-Land reanalysis rainfall quantile-mapped to CHIRPS; temperature identity-mapped; training-only PET climatology"
+}

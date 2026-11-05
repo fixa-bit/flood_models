@@ -30,7 +30,15 @@ The newly collected [IRSA table](marala_irsa_daily_mean_discharge.csv) contains 
 
 The [2025-2026 calendar](marala_2025_2026_coverage.csv) has one row per day through **2026-10-23**. In 2025 it identifies 115 dates with unique, date-consistent FFD readings, two duplicate/date-conflict dates, and 248 missing dates. In 2026 it identifies 122 consecutive FFD readings from 16 June through 15 October and 174 missing point-reading dates through the check date. Eight of the latter have separate IRSA means. Blank values represent missing or unresolved records, not zero discharge. This is coverage of the collected sources, not proof that no other records exist.
 
-WAPDA's [river-flow](https://wapda.gov.pk/river-flow/) and [water-situation](https://wapda.gov.pk/water-situation/) pages still link the December 2024 files. Public search and media API checks did not establish a newer complete archive. [IRSA's daily-data page](http://pakirsa.gov.pk/DailyData.aspx) linked eight recent PDFs; 12 distributed historical PDF URL checks returned 404. This limited sample does not prove every other older PDF is unavailable. The [search report](marala_recent_source_search_report.json) records the checked URLs, responses, snapshot paths and checksums. **Complete daily coverage for 2025-2026 has not been verified.** A [request draft](marala_recent_records_request.md) is prepared for the owning agencies; it has not been sent.
+WAPDA's [river-flow](https://wapda.gov.pk/river-flow/) and [water-situation](https://wapda.gov.pk/water-situation/) pages still link the December 2024 files. Public search and media API checks did not establish a newer complete archive. [IRSA's daily-data page](http://pakirsa.gov.pk/DailyData.aspx) linked eight recent PDFs; 12 distributed historical PDF URL checks returned 404. This limited sample does not prove every other older PDF is unavailable. The [search report](marala_recent_source_search_report.json) records the checked URLs, responses, snapshot paths and checksums. **Complete daily coverage for 2025-2026 has not been verified.** A [request draft](marala_recent_records_request.md) is prepared for the owning agencies; it has not been sent. The coverage calendar predates the Sindh Irrigation collection below, which fills most of these dates.
+
+## Sindh Irrigation extension, 2024-12-20 to 2026-11-03
+
+[marala_sindh_rimstation_discharge.csv](marala_sindh_rimstation_discharge.csv) has one row per date: Marala inflow (U/S) and outflow (D/S) from the Sindh Irrigation rim-station bulletins. It covers 735 dates from 2024-07-19 to 2026-11-03. Of these, 632 fall after the WAPDA series ends: 364 days in 2025 (all except 31 March) and 256 days in 2026 (gap from 9 February to 31 March). They include the 27 August 2025 flood peak of 769,481 cusecs (21,789 m3/s), larger than any value in the WAPDA series.
+
+Inflow and outflow are given in cusecs as printed and in m3/s, using the conversion above. Each date uses the value printed by the most bulletins, with `bulletins_reporting` and `bulletins_printing_selected` giving the counts. `value_revised=1` marks the 15 dates printed with different values in different bulletins. `inflow_check_vs_wapda_ffd` is `match`, `conflict:<source>` (6 dates) or `no_overlap`. The source bulletin, URL and checksum are retained for every row. The [collection report](marala_sindh_rimstation_collection_report.json) lists the gaps, revisions, unreadable cells and agreement by source.
+
+These values agree with WAPDA inflow and FFD 06:00 PKT readings, within those sources' 100-cusec rounding, on 97-100% of shared dates. They differ from IRSA daily means by a median 12%. They can therefore extend the WAPDA target after 2024-12-19 on the same date-level basis. Withhold rows with `value_revised=1` or a `conflict` until resolved, and leave the gaps blank. By design this table is not merged into `marala_daily_inflow_clean.csv` or the all-source catalog: each source stays in its own file, so newly obtained observations can be added without unpicking earlier merges. Any combination of sources happens in the training data loader, not in stored files. Simulated discharge is kept separately in `simulated/` and is never written into observed tables.
 
 ## Reproduce
 
@@ -46,6 +54,10 @@ python check_marala_recent_sources.py --as-of 2026-10-23
 python build_marala_discharge_catalog.py
 python prepare_marala_daily_inflow.py --as-of 2026-10-23
 python validate_marala_discharge.py
+python -I collect_marala_sindh_rimstation.py download
+python -I collect_marala_sindh_rimstation.py extract
+python -I collect_marala_glofas_historical.py download   # needs an EWDS key in ~/.cdsapirc
+python -I collect_marala_glofas_historical.py extract
 ```
 
 Collectors access the live sources; the saved files and reports record this run's evidence. Before training a 15-day model, require consecutive calendar dates and eligible readings throughout each input window and every one of its 15 target days. Removing withheld rows and treating the remaining rows as consecutive would create false time intervals. Define chronological training, validation and test periods before fitting models or preprocessing.

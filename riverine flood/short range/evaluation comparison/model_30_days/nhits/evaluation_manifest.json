@@ -1,0 +1,39 @@
+{
+  "model": "NHiTS",
+  "checkpoints": [
+    "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\model_30_days\\N-HiTS\\runs\\initial\\seed_42\\best.pt"
+  ],
+  "training_years": [
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
+  ],
+  "validation_years": [
+    2021
+  ],
+  "test_years": [
+    2022,
+    2023,
+    2024
+  ],
+  "observed_test_days": 1084,
+  "observed_test_issue_lead_pairs": 31932,
+  "lead30_observed_targets": 1055,
+  "flood_threshold_cumecs": 2494.714185,
+  "forecast_mode": "reanalysis_with_noise",
+  "past_discharge_as_input": true,
+  "no_discharge_filling": true,
+  "run_details": [
+    {
+      "seed": 42,
+      "selected_epoch": 3,
+      "epochs_run": 10,
+      "training_seconds": 12.524536000000808,
+      "validation_pinball": 0.10889036191129726,
+      "training_samples": 1767,
+      "validation_samples": 336
+    }
+  ]
+}

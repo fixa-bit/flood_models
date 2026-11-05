@@ -4,13 +4,17 @@ The [combined Marala discharge catalog](../../../processed/marala/discharge/mara
 
 ```text
 discharge/
-|-- wapda/   # original WAPDA historical and daily-report workbooks
-|-- ffd/     # original FFD bulletin PDFs (2024-25) and HTML pages (2026)
-|-- pmd/     # other PMD publications
-`-- irsa/    # separate daily-mean reports and source-check evidence
+|-- wapda/                        # OBSERVED: original WAPDA historical and daily-report workbooks
+|-- ffd/                          # OBSERVED: original FFD bulletin PDFs (2024-25) and HTML pages (2026)
+|-- pmd/                          # OBSERVED: other PMD publications
+|-- irsa/                         # OBSERVED: separate daily-mean reports and source-check evidence
+|-- sindh_irrigation/             # OBSERVED: Sindh Irrigation rim-station bulletins, Jul 2024-Nov 2026
+|-- historical_search_1980_2016/  # search evidence for pre-2016 records; no training series
+`-- simulated/                    # SIMULATED model output only; never ground truth
+    `-- glofas_historical/        # GloFAS v5.0 reanalysis around Marala, 1980-2026
 ```
 
-FFD is part of PMD, but its bulletins are stored separately to preserve their source. The model's `processed/marala/discharge/` folder contains extracted tables; original publications remain here.
+Everything outside `simulated/` is observed or published by an agency. FFD is part of PMD, but its bulletins are stored separately to preserve their source. The model's `processed/marala/discharge/` folder contains extracted tables (simulated ones under `processed/marala/discharge/simulated/`); original publications remain here.
 
 **WAPDA:** The [River Flow page](https://wapda.gov.pk/river-flow/) links the downloaded [historical workbook](https://wapda.gov.pk/wp-content/uploads/2024/12/GRAPH-DG-16-for-MAIL-2.xls). Its Marala inflow column yielded [3,216 daily values](../../../processed/marala/discharge/marala_wapda_daily_inflow.csv), 1 March 2016 to 19 December 2024. The [extraction report](../../../processed/marala/discharge/marala_wapda_extraction_report.json) flags the zero on 23 January 2021 for review. The workbook gives dates but **does not state a time for each historical row**. A [WAPDA report for 19 December 2024](https://wapda.gov.pk/wp-content/uploads/2024/12/Daily-DataPress-Release-19-12-2024.xls) explicitly labels that day's Marala reading at 0600 hours, and its 5,800 cusecs matches the historical workbook. Only that WAPDA date is marked time-confirmed in the catalog; the other historical times remain blank.
 
@@ -23,3 +27,17 @@ The archive listing and the date printed in some 2024/2025 PDFs disagree. The ta
 **Prepared baseline:** The [daily WAPDA inflow table](../../../processed/marala/discharge/marala_daily_inflow_clean.csv) retains 3,216 dates and withholds seven unresolved values from modeling columns. The [preparation notes](../../../processed/marala/discharge/README.md) explain the review, the recent-source search and remaining gaps.
 
 **IRSA:** The [daily-data page](http://pakirsa.gov.pk/DailyData.aspx) supplied eight daily-mean Marala reports for 16-23 October 2026, saved under `irsa/`. Their [extracted table](../../../processed/marala/discharge/marala_irsa_daily_mean_discharge.csv) remains separate from 06:00 point readings. Full year-round 2025-2026 access was not verified; see the [search evidence](../../../processed/marala/discharge/marala_recent_source_search_report.json).
+
+**Sindh Irrigation (collected 2026-11-03):** The Sindh Irrigation Department's [Inflow Rim Station page](https://irrigation.sindh.gov.pk/Flows/Rimstation) lists a daily bulletin, "Inflow+Outflow (Rimstations + Main Indus River)", values in cusecs. Its public index (`api.hicsindh.pk/public/FlowBulletins/IndusRiver_Rimstation`) listed 580 PDFs dated 2024-08-19 to 2026-11-03. All 580 are saved unchanged in `sindh_irrigation/rimstation_bulletins/` (290 MB); `sindh_irrigation/source_receipt.json` holds the index response and each file's URL, size, SHA-256 and retrieval time. 579 are spreadsheet printouts with a rolling table of the previous 25-40 days. The 2026-02-09 file is a chart pack, not a table.
+
+The PDFs carry a text layer, so values are read exactly (no OCR). Column headers are images: header order was inspected on 14 bulletins from 2024-08-19 to 2026-11-03 and is identical, with Marala U/S (inflow) and D/S (outflow) the 6th and 7th of 21 value columns. The [extracted Marala table](../../../processed/marala/discharge/marala_sindh_rimstation_discharge.csv) covers 735 dates from 2024-07-19 to 2026-11-03. Missing dates: 2024-08-20 to 09-04, 2024-10-27 to 11-30, 2025-03-31, and 2026-02-09 to 03-31 (no table bulletins were listed for that period).
+
+The bulletins do not state an observation time. Their unrounded values agree within rounding with the other Marala readings: WAPDA inflow on 102 of 103 shared dates, and FFD 06:00 PKT inflow on 70 of 72 dates in 2024, 113 of 117 in 2025, and 122 of 122 in 2026. They differ from IRSA's daily means on all eight shared dates, by a median 12%. They are therefore treated as the same reading as the WAPDA/FFD series, not as daily means. Six dates disagree with WAPDA or FFD beyond rounding. Fifteen dates were printed with different values in different bulletins; each date uses the most frequently printed value. Both kinds of date are flagged per row; see the [collection report](../../../processed/marala/discharge/marala_sindh_rimstation_collection_report.json).
+
+## Simulated discharge (model output, not observations)
+
+**GloFAS historical (collected 2026-11-03):** `simulated/glofas_historical/version_5_0/` holds one GRIB2 file per year, 1980 to 2026 (2026 through August), from the Copernicus Emergency Management Service [GloFAS historical dataset](https://ewds.climate.copernicus.eu/datasets/cems-glofas-historical), under the CEMS-FLOODS licence. GloFAS is the LISFLOOD hydrological model forced with ERA5 (consolidated product). The variable is "average river discharge in the last 24 hours" in m3/s, for 32.55-32.80 N, 74.30-74.65 E (5 x 7 cells of 0.05 degrees). Each value is the mean over 00-24 UTC of its GRIB data date, which is 05:00-05:00 Pakistan time. `source_receipt.json` records every request, EWDS job ID, size and SHA-256, plus the station-cell check and the version choice.
+
+The station cell is 32.675 N, 74.475 E. Its upstream area is 29,160.5 km2 on both the v4.0 and v5.0 river networks: 1.3% above the 28,781 km2 delineated catchment and 1.5 km from the published station coordinate. The next cell upstream drains only 23,306 km2. GloFAS v5.0 has no calibration outlet within 170 km, so it is uncalibrated at Marala.
+
+Version 5.0 (published 2026-07-15) was kept after a test against observed inflow. Its NSE was 0.57 in 2020 (WAPDA) and 0.54 in 2025 (Sindh), against 0.30 for v4.0 in both years. Both versions underestimate flow by about 40% and flood peaks by far more: the 2025 peak was simulated at 8,566 m3/s against 21,789 m3/s observed. Use it only as a simulated proxy, for pretraining or as an input feature, never as a training target or ground truth. EWDS publishes GloFAS reforecasts only up to v4.0, so any later reforecast inputs will be from a different model version.

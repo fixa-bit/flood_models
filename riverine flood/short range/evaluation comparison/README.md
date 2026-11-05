@@ -15,4 +15,4 @@ No scores were recomputed by the folder reorganization; local CSVs are filtered 
 
 Models are now indexed in `model/model_10 days/` and `model/model_15 days/`; this comparison folder remains outside `model/`.
 
-The new `model_30_days/` comparison subfolder holds comparisons for the sequential 30-day experiments. Their data and model artifacts are under `model/model_30_days/`.
+The new `model_30_days/` comparison subfolder holds comparisons for the sequential 30-day experiments. Their data and model artifacts are under `model/model_30_days/`. Its flood/non-flood Markdown and PDF tables now include the elevation-band spatial model, its catchment-mean control, and N-HiTS.

@@ -7,3 +7,8 @@ rasterio>=1.4
 numpy>=2
 zstandard>=0.25
 matplotlib
+pandas
+xarray
+cfgrib
+eccodes
+ecmwf-datastores-client
