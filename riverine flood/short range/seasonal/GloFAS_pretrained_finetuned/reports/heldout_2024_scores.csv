@@ -1,0 +1,3 @@
+n,rmse,mae,nse,pbias_pct,climatology_rmse,rmse_skill_vs_climatology,flood_threshold_q,observed_flood_count,flood_hit_rate,flood_false_alarm_rate,horizon_days,best_finetune_epochs,validation_rmse,test_years,interpretation
+9,410.6410941390631,324.2283380838355,0.36619864359995313,-13.70616246619473,110.76311828132349,-2.707381125692848,1361.3795946547202,3,0.3333333333333333,0.0,90,40,520.2633402428214,[2024],exploratory; few independent held-out seasonal origins
+7,212.63867048087974,202.72411653428222,0.19269279588651078,-10.590046551674225,77.78739746944755,-1.733587668418879,1280.48386999488,2,0.0,0.2,180,40,257.23483009037625,[2024],exploratory; few independent held-out seasonal origins

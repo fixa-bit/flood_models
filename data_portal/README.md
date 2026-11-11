@@ -1,6 +1,6 @@
 # Flood Data Observatory
 
-A portal for source provenance, data quality and visual exploration of the four flood-model folders. The collected Marala riverine data is populated. Jassar, long-range forecasting, flash flooding, seasonal flooding and urban flooding show explicit collection states while their datasets are empty. The exposure/infrastructure module is separate from these model inputs.
+A portal for source provenance, data quality and visual exploration of the four flood-model folders, plus the accuracy, predictions and versions of every saved model. The collected Marala riverine data is populated. Short- and long-range Marala models are scored in **Models** and **Performance analyzer**. Jassar, flash flooding, seasonal flooding and urban flooding show explicit collection states while their datasets are empty. The exposure/infrastructure module is separate from these model inputs.
 
 **Local-only personal use. No login, account or authentication is required.** The server binds to this computer's loopback address. Future changes should stay local unless hosting is explicitly requested.
 
@@ -27,6 +27,12 @@ Overview, Summary, availability, sources, quality, and downloads use the same
 updated snapshot. The server terminal reports successful rebuilds or errors.
 Keep the server running for automatic refresh. `python serve.py --no-watch`
 disables monitoring, and `--watch-interval 10` changes the folder scan interval.
+
+The same server also watches saved model results: the prediction files and run
+folders named in `model_catalog.json`, the short-range `model` tree, and the
+catalog itself. A change there rescores the models only (seconds, not a full
+rebuild). Open Models and Performance analyzer pages reload the results and
+show a notice naming the new versions.
 
 The station selector is registered for Chenab Marala, Khanki, Qadirabad and
 Trimmu. Each has a matching `raw/<station>` workspace with `catchment`,
@@ -103,6 +109,8 @@ The bottom **Data availability across variables** chart covers **all collected y
 - Sources: all saved provider groups, exact source URLs and local checksum results.
 - Integrity & quality: freshly recomputed SHA-256 ledger, measurement uncertainties, seven withheld WAPDA dates, time certainty and recent coverage gaps.
 - Catchment: interactive boundary, upstream river network, clipped precipitation cells, weights and boundary checks.
+- Models: every saved model for the selected station, with short range and long range kept apart. Each model group has a leaderboard on one shared sample, skill against its baseline, a predicted-against-observed graph (every forecast at one lead, or one forecast across all leads), error and skill by lead, and version history. Long range adds the flood-peak model and the 2026–2040 projections. See [Models and Performance analyzer](#models-and-performance-analyzer).
+- Performance analyzer: compares a model with a baseline, another model or one of its own earlier versions on the issue dates both predict. Leads, year and season can be narrowed. It writes the findings in plain language, then shows the metric and skill by lead, a breakdown by year and season, predicted against observed, flood-day detection and accuracy across versions.
 
 - Data library: downloadable principal series, rainfall source samples, source-cell values, quality reports, original-source manifests and geospatial evidence. Raw CHIRPS Zarr chunks and GeoTIFFs remain in the local source folders and appear in the integrity ledger.
 
@@ -110,19 +118,57 @@ The bottom **Data availability across variables** chart covers **all collected y
 
 IRSA daily means and the PMD journal's selected event peaks have separate charts and measurement labels. FFD date conflicts are identified separately. WAPDA historical date labels are not turned into invented observation times. Annual maximum windows are exploratory and are not presented as official flood categories. The catchment is a checked research delineation, not agency-certified.
 
+## Models and Performance analyzer
+
+`build_models.py` reads the saved predictions of every model listed in [model_catalog.json](model_catalog.json), plus any model run it discovers, and scores them itself. Model folders are only read. `build_dashboard.py` runs it on every build, and it can also run on its own: `python build_models.py` (`--force` rescores even when nothing changed).
+
+**What is scored.** Each prediction file gives an issue date, a lead (or a 90/180-day horizon for seasonal means), the observed flow and the predicted median, with an interval when saved. For every model the builder computes NSE, KGE, RMSE, MAE, volume bias and interval coverage per lead and pooled. Where a flood threshold is documented, it also gives the flood hit rate and false-alarm ratio: observed flow above the 2016–2020 training Q95, 2,495 m³/s, as in the project's flood/non-flood reports.
+
+**Skill** is 1 − RMSE(model) / RMSE(baseline), computed only on the issue dates and leads both predict and whose observations agree. Positive means better than the baseline.
+
+**Groups.** Models are grouped by evaluation protocol, for example 10-day forecasts on 2022–2024 targets, or the TFT projection mode on 2024–2026 issues. A model's leaderboard is ranked on the cells every member predicts. Models and baselines define that shared sample. Reference, diagnostic and rejected rows join only if they cover all of it. Members covering less than half of the reference sample are listed separately and scored on their own sample.
+
+The scores reproduce the project reports. For example, the original LSTM at day 10 has NSE 0.857 and RMSE 295.7 m³/s (n = 1,075), and the projection-mode TFT has skill +0.14 against climatology. `tests/models_parity_test.cjs` checks that the browser analyzer gives the same numbers as the builder.
+
+**Versions.** A version is a distinct set of saved predictions. The builder records a new version, with its scores, when:
+- a new run folder appears (`reports/<run>/`; `initial` first, then dated folders), or
+- a prediction file is overwritten with different values.
+
+Each new version is also compared with the previous one on the cells both predict. It is marked improved or regressed when RMSE changes by more than 1 %, otherwise unchanged. Rebuilding identical content adds nothing.
+
+| Output | What it is | Git |
+|---|---|---|
+| `dist/data/models.json` | Everything the two views read | tracked |
+| `dist/data/model_versions.json` | Append-only version ledger; old versions keep their recorded scores after their source file is replaced | tracked |
+| `dist/data/models/<model>/<sha>.json` | Compact predictions of each version, kept so replaced versions can still be plotted | ignored, regenerated |
+
+**Adding a model or station.**
+- A new folder under `riverine flood/short range/model/model_<N> days/<model>/reports/<run>/` with `predictions.csv` (or `model_predictions.csv`, `predictions.csv.gz`, `rolling_predictions.csv.gz`) is found automatically. It needs the columns `issue_date`, `target_date`, `lead_day`, `observed_cumecs` and one prediction column. Quantile columns such as `q0.05`/`q0.95` are picked up too.
+- Its name comes from the folder's README heading, and its group from `<N>`.
+- A `basin_id` column naming another station (for example `khanki`) puts it under that station in its own group.
+- New `model` values in the long-range TFT or baseline files are added to their mode's group.
+- To give a model a curated name, description, baseline or group, add an entry to `model_catalog.json`.
+- Experiments without forecast predictions are listed under "Not scored here".
+
+**Limits.** Most short-range experiments used realised ERA5-Land weather with noise in place of archived forecasts, so their scores are retrospective. Consecutive daily issues overlap and are not independent samples. Climate-conditioned TFT scores are an upper bound because that mode is given the observed future weather. Projections are scenario statistics.
+
 ## Integrity and limitations
 
 The builder discovers checksum claims in source receipts, collection reports and FFD CSVs, deduplicates them by resolved path, hashes each local file, and reports matches, mismatches, missing files or conflicting claims. A checksum match proves consistency with a saved claim, not agency authenticity, measurement accuracy, or that the original live source has not changed. Untracked files are identified in the downloadable data snapshot.
 
-Plots are historical visualizations, not predictions or live flood warnings. Precipitation uses UTC daily intervals; discharge retains each source's own reading definition. The quality and source verification reports are displayed as recorded, with a separate fresh file-integrity check. No claims of new hydrological certification are made by the portal.
+Data plots are historical visualizations. The model views show saved hindcast predictions and scenario projections. Neither is a live forecast or flood warning. Precipitation uses UTC daily intervals; discharge retains each source's own reading definition. The quality and source verification reports are displayed as recorded, with a separate fresh file-integrity check. No claims of new hydrological certification are made by the portal.
 
 ## Tests and build
 
 ```powershell
 python -m unittest discover -s tests -v
 node --check dist/assets/app.js
+node --check dist/assets/models.js
 python build_dashboard.py
+node tests/models_parity_test.cjs
 ```
+
+`tests/test_models.py` covers the scores, matched skill, the shared-sample rule, versions from new run folders and overwritten files, discovery of new models and stations, and error isolation. The parity test needs a completed build.
 
 The static output is `dist/`, including the checked snapshot at `dist/data/portal.json` and its build manifest. `.openai/hosting.json` retains the private Site identity. Browser QA checks desktop/mobile layout, case and station changes, year filters, chart rendering, source search, integrity ledger, catchment grid controls and downloads.
 

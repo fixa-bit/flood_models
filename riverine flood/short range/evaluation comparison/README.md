@@ -10,6 +10,7 @@ Cross-model reports, shared evaluation code and archived original layout files a
 - `flood_nonflood_with_delta_hbv/`: updated consolidated comparison including delta-HBV.
 - `pretrained_multibasin_lstm/`, `spatially_distributed_model/`, `encoder_decoder_lstm/`, `global_pretrained_lstm/`, `hybrid_physics_ml/`, `hbv_residual_2026-10-30/`, `grrr_lstm/`: original cross-variant experiment reports.
 - `archive/`: original readmes, superseded shared experiment code and historical comparison copies.
+- `multi_horizon_CRE/`: rolling-origin 7–30-day shared-versus-lead-specific CRE comparison, with lead/fold scores, predictions and plots. Model code and fitted artifacts are under `model/multi_horizon_CRE/`.
 
 No scores were recomputed by the folder reorganization; local CSVs are filtered copies of the saved comparisons.
 

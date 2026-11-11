@@ -1,0 +1,11 @@
+{
+  "method": "split conformal (CQR), log1p space, asymmetric",
+  "alpha": 0.1,
+  "fit_split": "val (2022-2023 targets)",
+  "strata": "season(JJAS/other) x lead(1-30/31-180)",
+  "inputs": [
+    "model/tft/reports/predictions_climate_conditioned.csv.gz",
+    "model/tft/reports/predictions_forecast.csv.gz",
+    "model/tft/reports/predictions_projection.csv.gz"
+  ]
+}

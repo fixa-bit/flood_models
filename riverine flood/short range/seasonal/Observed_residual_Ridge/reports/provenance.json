@@ -1,0 +1,8 @@
+{
+  "input_file": "D:\\projects\\flood_model\\flood_model\\riverine flood\\short range\\model\\multi_horizon_CRE\\data\\marala_daily.csv",
+  "input_sha256": "d21788d62afc9e54d8e2aa6e1f27dcc244ef3b6a1a734249650abd84ccdbe11f",
+  "observed_target_source": "WAPDA",
+  "target_values_modified": false,
+  "target_interpolated": false,
+  "simulation_used_as_target": false
+}

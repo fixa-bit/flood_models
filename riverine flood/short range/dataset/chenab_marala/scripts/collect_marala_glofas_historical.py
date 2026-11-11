@@ -20,7 +20,7 @@ import re
 import threading
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 MODEL_DIR = Path(__file__).resolve().parents[1]
@@ -39,6 +39,7 @@ FIRST_YEAR = {"version_4_0": 1979, "version_5_0": 1980}
 LAST_YEAR = 2026
 CUSEC_M3_S = 0.028316846592
 LOCK = threading.Lock()
+CLAIMED: set[str] = set()
 
 
 def utc_now() -> str:
@@ -140,6 +141,21 @@ def build_request(api, version: str, year: int) -> dict | None:
     return {**base, "month": months, "day": days, "data_format": "grib2", "download_format": "unarchived", "area": AREA}
 
 
+def earlier_job(api, request: dict):
+    """An identical request already queued, running or finished on EWDS, e.g. from an interrupted run."""
+    recent = (datetime.now(timezone.utc) - timedelta(days=1)).strftime("%Y-%m-%dT%H:%M:%S")
+    with LOCK:  # two workers must not claim the same job
+        for status in ("running", "accepted", "successful"):
+            for job in api.get_jobs(limit=50, sortby="-created", status=status).json["jobs"]:
+                if job["jobID"] in CLAIMED or (status == "successful" and (job.get("finished") or "") < recent):
+                    continue  # finished results expire, so only reuse ones from the last day
+                remote = api.get_remote(job["jobID"])
+                if remote.request == request:
+                    CLAIMED.add(job["jobID"])
+                    return remote
+    return None
+
+
 def fetch_year(version: str, year: int) -> str:
     target = RAW_DIR / version / f"{year}.grib2"
     if target.exists():
@@ -150,17 +166,24 @@ def fetch_year(version: str, year: int) -> str:
         return f"{version} {year}: not available"
     part = target.with_suffix(".grib2.part")
     part.parent.mkdir(parents=True, exist_ok=True)
-    for attempt in range(120):  # EWDS rejects a request when the user's queue for this dataset is full
-        remote = api.submit(DATASET, request)
+    remote = earlier_job(api, request)
+    if remote is not None:
         try:
             remote.download(str(part))
-            break
-        except Exception as error:
-            if "queued requests" not in str(error) and remote.status != "rejected":
-                raise
-            time.sleep(90)
-    else:
-        raise RuntimeError(f"{version} {year}: still rejected after repeated queue-full retries")
+        except Exception:  # finished results expire after a few days; request again
+            remote = None
+    if remote is None:
+        for attempt in range(120):  # EWDS rejects a request when the user's queue for this dataset is full
+            remote = api.submit(DATASET, request)
+            try:
+                remote.download(str(part))
+                break
+            except Exception as error:
+                if "queued requests" not in str(error) and remote.status != "rejected":
+                    raise
+                time.sleep(90)
+        else:
+            raise RuntimeError(f"{version} {year}: still rejected after repeated queue-full retries")
     data = part.read_bytes()
     if not (data[:4] == b"GRIB" and data.rstrip()[-4:] == b"7777"):
         raise ValueError(f"{version} {year}: response is not a complete GRIB file")

@@ -5,7 +5,8 @@ import threading
 import time
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 
-from build_dashboard import DIST, MODEL, PROCESSED, build
+from build_dashboard import DIST, MODEL, PROCESSED, build, station_names
+from build_models import build_models, patch_manifest, watch_fingerprint
 
 
 IGNORED_SUFFIXES = {".pyc", ".tmp", ".log"}
@@ -31,28 +32,48 @@ def source_fingerprint():
 
 
 def watch_sources(stop_event, interval):
-    """Rebuild only after source files stop changing briefly."""
-    current = source_fingerprint()
-    candidate = None
-    candidate_since = 0.0
+    """Rebuild only after files stop changing briefly.
+
+    Dataset changes rebuild the whole snapshot (which also rescores the models).
+    Changes to saved model predictions, run folders or the model catalog rescore
+    the models only, which is much faster.
+    """
+    probes = {"data": source_fingerprint, "models": watch_fingerprint}
+    current = {name: probe() for name, probe in probes.items()}
+    candidate = dict.fromkeys(probes)
+    since = dict.fromkeys(probes, 0.0)
     retry_after = 0.0
     while not stop_event.wait(interval):
-        latest = source_fingerprint()
-        if latest == current:
-            candidate = None
-            continue
-        if latest != candidate:
-            candidate, candidate_since = latest, time.monotonic()
-            continue
         now = time.monotonic()
-        if now - candidate_since < max(2.0, interval * 2) or now < retry_after:
+        latest, ready = {}, []
+        for name, probe in probes.items():
+            latest[name] = probe()
+            if latest[name] == current[name]:
+                candidate[name] = None
+            elif latest[name] != candidate[name]:
+                candidate[name], since[name] = latest[name], now
+            elif now - since[name] >= max(2.0, interval * 2) and now >= retry_after:
+                ready.append(name)
+        if not ready:
             continue
         try:
-            print("Source data changed; rebuilding portal snapshot...", flush=True)
-            build()
-            current = candidate
-            print("Portal snapshot refreshed. Open pages will reload the new data automatically.", flush=True)
-            candidate = None
+            if "data" in ready:
+                print("Source data changed; rebuilding portal snapshot...", flush=True)
+                build()
+                refreshed = list(probes)
+                print("Portal snapshot refreshed. Open pages will reload the new data automatically.", flush=True)
+            else:
+                print("Model results changed; rescoring models...", flush=True)
+                summary = build_models(stations=station_names())
+                if not summary.get("reused"):
+                    patch_manifest(summary)
+                changes = summary.get("changes") or []
+                described = ", ".join(f"{change['name']} v{change['version']}" for change in changes[:5])
+                print(f"Models rescored{': new versions ' + described if described else ''}. Open pages will update automatically.", flush=True)
+                refreshed = ["models"]
+            for name in refreshed:
+                current[name] = latest[name]
+                candidate[name] = None
             retry_after = 0.0
         except Exception as error:
             print(f"Portal refresh failed; keeping the previous snapshot: {error}", flush=True)
@@ -85,7 +106,7 @@ def main():
     server = ThreadingHTTPServer(("127.0.0.1", args.port), handler)
     print(f"Flood Data Observatory: http://127.0.0.1:{args.port}", flush=True)
     if watcher:
-        print(f"Watching {MODEL / 'raw'} and {PROCESSED}; Ctrl+C stops the portal and watcher.", flush=True)
+        print(f"Watching {MODEL / 'raw'}, {PROCESSED} and saved model results; Ctrl+C stops the portal and watcher.", flush=True)
     try:
         server.serve_forever()
     except KeyboardInterrupt:

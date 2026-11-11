@@ -2,8 +2,10 @@
 
 Keep each model/module and its data in a separate subfolder.
 
-- [Data portal](data_portal/README.md): source provenance, freshly recomputed local integrity checks, quality review, discharge and precipitation plots, and a catchment explorer for the flood-model datasets. Run `python data_portal/serve.py` for a refreshed local view at `http://127.0.0.1:8787`.
+- [Data portal](data_portal/README.md): source provenance, freshly recomputed local integrity checks, quality review, discharge and precipitation plots, and a catchment explorer for the flood-model datasets. Its **Models** and **Performance analyzer** views score every saved short- and long-range model against baselines and track each model's versions. Run `python data_portal/serve.py` for a refreshed local view at `http://127.0.0.1:8787`.
 - [Preferred Marala rainfall](riverine%20flood/short%20range/dataset/chenab_marala/processed/marala/rainfall/chirps_v3_primary/README.md): CHIRPS v3 catchment precipitation from 1990 through the latest available 2026 Final and separate Preliminary dates.
+
+- [Long-range riverine projections](riverine%20flood/long%20range/README.md): climate-scenario (2026–2040) river-flow projection engine for Chenab to Trimmu; Phase 0 audit and design report.
 
 - `exposure_infrastructure/`: population, OSM roads/buildings/facilities/settlements, administrative boundaries, preparation scripts and GIS audits.
 
@@ -12,10 +14,13 @@ Keep each model/module and its data in a separate subfolder.
 From the project root, run:
 
 ```powershell
-python data_portal/serve.py
+npm run dev
 ```
 
 Open **http://127.0.0.1:8787** in your browser. Keep the terminal open while using the portal; press **Ctrl+C** to stop it. No login is required.
+This uses the installed Python runtime and does not require `npm install`.
+
+You can also start it directly with `python data_portal/serve.py`.
 
 On Windows, you can also double-click [data_portal/start_portal.cmd](data_portal/start_portal.cmd).
 

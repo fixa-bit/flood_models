@@ -1,0 +1,51 @@
+{
+  "source_separation": {
+    "pretraining": "GloFAS simulated discharge only, 1980-2015",
+    "fine_tuning": "WAPDA observed Marala discharge only",
+    "held_out_test": [
+      2024
+    ]
+  },
+  "results": [
+    {
+      "n": 9,
+      "rmse": 410.6410941390631,
+      "mae": 324.2283380838355,
+      "nse": 0.36619864359995313,
+      "pbias_pct": -13.70616246619473,
+      "climatology_rmse": 110.76311828132349,
+      "rmse_skill_vs_climatology": -2.707381125692848,
+      "flood_threshold_q": 1361.3795946547202,
+      "observed_flood_count": 3,
+      "flood_hit_rate": 0.3333333333333333,
+      "flood_false_alarm_rate": 0.0,
+      "horizon_days": 90,
+      "best_finetune_epochs": 40,
+      "validation_rmse": 520.2633402428214,
+      "test_years": [
+        2024
+      ],
+      "interpretation": "exploratory; few independent held-out seasonal origins"
+    },
+    {
+      "n": 7,
+      "rmse": 212.63867048087974,
+      "mae": 202.72411653428222,
+      "nse": 0.19269279588651078,
+      "pbias_pct": -10.590046551674225,
+      "climatology_rmse": 77.78739746944755,
+      "rmse_skill_vs_climatology": -1.733587668418879,
+      "flood_threshold_q": 1280.48386999488,
+      "observed_flood_count": 2,
+      "flood_hit_rate": 0.0,
+      "flood_false_alarm_rate": 0.2,
+      "horizon_days": 180,
+      "best_finetune_epochs": 40,
+      "validation_rmse": 257.23483009037625,
+      "test_years": [
+        2024
+      ],
+      "interpretation": "exploratory; few independent held-out seasonal origins"
+    }
+  ]
+}

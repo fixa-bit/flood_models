@@ -1,0 +1,18 @@
+{
+  "content": "SIMULATED seasonal discharge forecast reforecast, not observation",
+  "dataset": "cems-glofas-seasonal-reforecast",
+  "landing_page": "https://ewds.climate.copernicus.eu/datasets/cems-glofas-seasonal-reforecast",
+  "provider": "Copernicus Emergency Management Service / ECMWF",
+  "system_version": "version_4_0",
+  "hydrological_model": "lisflood",
+  "variable": "river_discharge_in_the_last_24_hours",
+  "station_cell": {"latitude": 32.675, "longitude": 74.475},
+  "issue_year": 2018,
+  "issue_month": 7,
+  "lead_days": [1, 30],
+  "file": "seasonal_reforecast_2018_07_leads1_30.zip",
+  "file_sha256": "3B3851B4127F38301B6DDF111DBEEC7625529D0FCDBBBDFC2778164FDD601E32",
+  "downloaded_utc": "2026-11-10",
+  "used_in_observed_residual_ridge_training": false,
+  "note": "The full 180-day request exceeded the EWDS request-size limit. This small sample is retained for provenance and is not used to claim seasonal forecast skill."
+}

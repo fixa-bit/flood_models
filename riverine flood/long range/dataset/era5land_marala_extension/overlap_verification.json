@@ -1,0 +1,62 @@
+{
+  "overlap_days": 366,
+  "variables": {
+    "precip_era5land_mm": {
+      "max_abs_diff": 4.784814429790664,
+      "mean_abs_diff": 0.1930160152550352,
+      "corr": 0.9968450937127912,
+      "tolerance": 0.05,
+      "pass": false
+    },
+    "temperature_c": {
+      "max_abs_diff": 0.0,
+      "mean_abs_diff": 0.0,
+      "corr": 1.0,
+      "tolerance": 0.05,
+      "pass": true
+    },
+    "dewpoint_c": {
+      "max_abs_diff": 0.0,
+      "mean_abs_diff": 0.0,
+      "corr": 1.0,
+      "tolerance": 0.05,
+      "pass": true
+    },
+    "pet_mm": {
+      "max_abs_diff": 0.02351716819488936,
+      "mean_abs_diff": 0.0019426204775789193,
+      "corr": 0.999996700193315,
+      "tolerance": 0.02,
+      "pass": false
+    },
+    "snowmelt_mm": {
+      "max_abs_diff": 0.0005628518180939013,
+      "mean_abs_diff": 4.531683114246649e-06,
+      "corr": 0.9999999995172266,
+      "tolerance": 0.02,
+      "pass": true
+    },
+    "snow_depth_m": {
+      "max_abs_diff": 0.0,
+      "mean_abs_diff": 0.0,
+      "corr": 1.0,
+      "tolerance": 0.002,
+      "pass": true
+    },
+    "swe_mm": {
+      "max_abs_diff": 0.0,
+      "mean_abs_diff": 0.0,
+      "corr": 1.0,
+      "tolerance": 1.0,
+      "pass": true
+    },
+    "ssrd_wm2": {
+      "max_abs_diff": 0.005735315475078551,
+      "mean_abs_diff": 0.0002676835955464134,
+      "corr": 0.9999999999295125,
+      "tolerance": 0.5,
+      "pass": true
+    }
+  },
+  "all_pass": false
+}

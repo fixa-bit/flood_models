@@ -36,6 +36,7 @@ async function loadData({automatic=false}={}){
     const response=await fetch(`data/portal.json?checked=${Date.now()}`,{cache:'no-store'});
     if(!response.ok)throw Error(`Data snapshot returned ${response.status}`);
     const d=await response.json();if(d.schema_version!==1)throw Error('Unsupported snapshot version');state.data=d;
+    if(window.FloodModels?.builtUtc())await window.FloodModels.refresh().catch(error=>console.warn('Model results not refreshed:',error.message));
     $('#snapshot-time').textContent=new Date(d.built_utc).toLocaleString('en-GB',{timeZone:'Asia/Karachi',day:'2-digit',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'})+' PKT';
     const oldStation=$('#station').value||'marala';$('#station').innerHTML=(d.stations||[]).map(s=>`<option value="${esc(s.id)}">${esc(s.name)}</option>`).join('');$('#station').value=(d.stations||[]).some(s=>s.id===oldStation)?oldStation:'marala';
     const dailyInputs=d.marala.daily_inputs||[];
@@ -52,13 +53,28 @@ function renderCases(){const icons={riverine:'≋',flash:'ϟ',seasonal:'◷',urb
 async function render(){
   if(!state.data)return;
   const c=state.data.cases.find(c=>c.id===state.case);$('#case-breadcrumb').textContent=c.label;
-  const view=location.hash.slice(1)||'overview';state.view=['overview','summary','rainfall','sources','quality','catchment','library'].includes(view)?view:'overview';
+  const [hashView,hashRange]=location.hash.slice(1).split('/');
+  const view=hashView||'overview';state.view=['overview','summary','rainfall','sources','quality','catchment','library','models','analyzer'].includes(view)?view:'overview';
+  if(['models','analyzer'].includes(state.view)&&['short','long'].includes(hashRange))$('#horizon').value=hashRange;
   $$('[data-view]').forEach(a=>a.classList.toggle('active',a.dataset.view===state.view));
   const titles={overview:['Flood data observatory','Trace the sources. Inspect the gaps. Explore the records.'],sources:['Sources & provenance','Every collected source, its purpose and its saved evidence.'],quality:['Integrity & quality','See what passed, what is uncertain, and what needs review.'],catchment:['Catchment explorer','The upstream area behind Marala’s precipitation and inflow.'],library:['Data library','Explore and download the records behind the charts.']};
   titles.summary=['Summary','Explore feature values and data availability with independent year selectors.'];
   titles.rainfall=['Rainfall sources','Explore every collected catchment rainfall series and its source coverage.'];
+  titles.models=['Models','Accuracy, predictions and versions of every model, by station and forecast range.'];
+  titles.analyzer=['Performance analyzer','How a model performs, and how it compares with a baseline or its earlier versions.'];
   $('#page-title').textContent=titles[state.view][0];$('#page-subtitle').textContent=titles[state.view][1];
-  $('#filters').hidden=state.view==='summary'||state.view==='rainfall';
+  $('#filters').hidden=['summary','rainfall','models','analyzer'].includes(state.view);
+  if(['models','analyzer'].includes(state.view)){
+    $('#station').disabled=state.case!=='riverine';
+    $('#populated').hidden=false;$('#empty-state').hidden=true;
+    $$('.view').forEach(v=>v.hidden=v.id!==`${state.view}-view`);
+    const stationId=$('#station').value,stationEntry=(state.data.stations||[]).find(s=>s.id===stationId);
+    await window.FloodModels.render(state.view,{station:stationId,stationName:stationEntry?.name,caseId:state.case,caseLabel:c.label,horizon:$('#horizon').value,
+      setRange:range=>{$('#horizon').value=range;history.replaceState(null,'',`#${state.view}/${range}`);render().catch(showRenderError);},
+      setStation:id=>{$('#station').value=id;render().catch(showRenderError);},
+      setCase:id=>{state.case=id;renderCases();render().catch(showRenderError);}});
+    return;
+  }
   $('#station').disabled=state.case!=='riverine';const station=(state.data.stations||[]).find(s=>s.id===$('#station').value);const populated=state.case==='riverine'&&Boolean(station)&&$('#horizon').value==='short';
   if(populated&&station.id!=='marala'){$('#populated').hidden=true;$('#empty-state').hidden=false;renderStationWorkspace(station);return;}
   $('#populated').hidden=!populated;$('#empty-state').hidden=populated;
@@ -76,6 +92,12 @@ function renderEmpty(c){
   const isJassar=state.case==='riverine'&&$('#station').value==='jassar';
   const label=isJassar?'Ravi · Jassar':c.label;
   const long=$('#horizon').value==='long';
+  if(long&&state.case==='riverine'){
+    $('#empty-state').innerHTML=`<section class="empty-panel"><div class="empty-symbol" aria-hidden="true">◫</div><div class="eyebrow">LONG RANGE · RESULTS ARE IN MODELS</div><h2>${esc(label)} · long range</h2><p>Long-range results are ready in Models: the 180-day Temporal Fusion Transformer, seasonal outlooks, the flood-peak model and the 2026–2040 climate projections. Their inputs, the ERA5-Land extension and the NEX-GDDP-CMIP6 files, stay in <code>riverine flood/long range/dataset</code> and are not charted in these data views.</p><div class="empty-steps"><span>Daily 180-day forecasts</span><span>Flood peaks</span><span>2026–2040 projections</span></div><button class="button" id="open-long-models">Open long-range models →</button> <button class="button secondary" id="back-marala">Explore short-range Marala data →</button></section>`;
+    $('#open-long-models').onclick=()=>{location.hash='#models/long';};
+    $('#back-marala').onclick=()=>{state.case='riverine';$('#station').value='marala';$('#horizon').value='short';renderCases();render();};
+    return;
+  }
   $('#empty-state').innerHTML=`<section class="empty-panel"><div class="empty-symbol" aria-hidden="true">${isJassar?'≋':'◫'}</div><div class="eyebrow">COLLECTION STATUS · NOT STARTED</div><h2>${esc(label)}${long?' · long range':''}</h2><p>No collected dataset is available for this model selection. Its workspace folders are ready; source coverage, integrity checks and plots will appear after data is collected and this portal snapshot is rebuilt.</p><div class="empty-steps"><span>1 · Collect source data</span><span>2 · Check and prepare</span><span>3 · Refresh the portal</span></div><p>Charts are shown only for datasets present in the project.</p><button class="button" id="back-marala">Explore collected Marala data →</button></section>`;
   $('#back-marala').onclick=()=>{state.case='riverine';$('#station').value='marala';$('#horizon').value='short';renderCases();render();};
 }
@@ -235,7 +257,7 @@ function showRenderError(error){console.error(error);toast(`Could not render thi
 window.addEventListener('hashchange',()=>render().catch(showRenderError));
 window.addEventListener('resize',()=>$$('.js-plotly-plot').filter(el=>el.offsetParent).forEach(el=>Plotly.Plots.resize(el)));
 $('#reload').onclick=async()=>{await loadData();toast('Reloaded the latest saved data snapshot.');};
-$('#station').onchange=()=>render().catch(showRenderError);$('#horizon').onchange=()=>render().catch(showRenderError);$('#year').onchange=applyYear;
+$('#station').onchange=()=>render().catch(showRenderError);$('#horizon').onchange=()=>{if(['models','analyzer'].includes(state.view))history.replaceState(null,'',`#${state.view}/${$('#horizon').value}`);render().catch(showRenderError);};$('#year').onchange=applyYear;
 for(const id of ['#from-date','#to-date'])$(id).onchange=()=>{if($('#from-date').value>$('#to-date').value){toast('Choose a start date before the end date.');return;}$('#year').value='custom';render().catch(showRenderError);};
 $('#reset-dates').onclick=()=>{$('#year').value='all';applyYear();};$('#show-ffd').onchange=()=>renderOverview().catch(showRenderError);$('#event').onchange=()=>renderEvent().catch(showRenderError);
 $('#source-search').oninput=renderSources;$('#integrity-search').oninput=()=>{state.ledgerPage=0;renderLedger();};$('#file-search').oninput=renderLibrary;$('#show-grid').onchange=()=>renderCatchment().catch(showRenderError);
@@ -248,6 +270,14 @@ setInterval(async()=>{
     const response=await fetch(`data/build_report.json?check=${Date.now()}`,{cache:'no-store'});
     if(!response.ok)return;
     const manifest=await response.json();
-    if(manifest.snapshot_built_utc&&manifest.snapshot_built_utc!==state.data.built_utc)await loadData({automatic:true});
+    if(manifest.snapshot_built_utc&&manifest.snapshot_built_utc!==state.data.built_utc){await loadData({automatic:true});return;}
+    const modelsBuilt=manifest.models?.built_utc,loadedModels=window.FloodModels?.builtUtc();
+    if(modelsBuilt&&loadedModels&&modelsBuilt!==loadedModels&&modelsBuilt!==state.modelsNotified){
+      state.modelsNotified=modelsBuilt;
+      await window.FloodModels.refresh();
+      if(['models','analyzer'].includes(state.view))await render();
+      const changes=manifest.models.changes||[];
+      toast(changes.length?`Model results updated: ${changes.slice(0,3).map(change=>`${change.name} v${change.version}`).join(', ')}${changes.length>3?` and ${changes.length-3} more`:''}.`:'Model results updated.');
+    }
   }catch(error){console.debug('Automatic snapshot check skipped:',error.message);}
 },12000);

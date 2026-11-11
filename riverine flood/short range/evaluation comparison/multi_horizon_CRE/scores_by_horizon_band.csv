@@ -1,0 +1,7 @@
+horizon_band,strategy,lead_days,macro_mean_lead_rmse_cumecs,leads_beating_climatology
+7-13 days,shared_CRE,7-13,390.41545821479343,0
+7-13 days,separate_CRE,7-13,369.541141525005,4
+14-20 days,shared_CRE,14-20,390.8819562092576,0
+14-20 days,separate_CRE,14-20,372.9620909995816,0
+21-30 days,shared_CRE,21-30,396.3500415358744,0
+21-30 days,separate_CRE,21-30,377.8991774483799,0

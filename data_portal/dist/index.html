@@ -8,7 +8,8 @@
   <link rel="stylesheet" href="assets/style.css?v=4f63118c4737">
   <link rel="stylesheet" href="assets/night.css?v=672b4be2c5ed">
   <link rel="stylesheet" href="assets/rainfall.css?v=5e03a12f323b">
-  <script src="assets/plotly.min.js?v=3b6e15d45dbb" defer></script><script src="assets/availability.js?v=34773d474a8e" defer></script><script src="assets/summary.js?v=bd2f21856810" defer></script><script src="assets/rainfall.js?v=905d62ef7bbe" defer></script><script src="assets/app.js?v=31278af787bd" defer></script>
+  <link rel="stylesheet" href="assets/models.css?v=e3f924290ef4">
+  <script src="assets/plotly.min.js?v=3b6e15d45dbb" defer></script><script src="assets/availability.js?v=34773d474a8e" defer></script><script src="assets/summary.js?v=bd2f21856810" defer></script><script src="assets/rainfall.js?v=905d62ef7bbe" defer></script><script src="assets/models.js?v=992b5a2dbf14" defer></script><script src="assets/app.js?v=43857e28f380" defer></script>
 </head>
 <body>
 <a href="#main" class="skip">Skip to content</a>
@@ -26,6 +27,11 @@
     <a href="#library" data-view="library"><span aria-hidden="true">▤</span> Data library</a>
     <a href="#rainfall" data-view="rainfall"><span aria-hidden="true">◉</span> Rainfall sources</a>
   </nav>
+  <div class="workspace-label section-label">MODELS</div>
+  <nav class="section-nav" aria-label="Model sections">
+    <a href="#models" data-view="models"><span aria-hidden="true">★</span> Models</a>
+    <a href="#analyzer" data-view="analyzer"><span aria-hidden="true">⇄</span> Performance analyzer</a>
+  </nav>
   <div class="sidebar-bottom"><span class="live-dot"></span> Research data workspace<p>Receipts checked locally.<br>Uncertainty stays visible.</p><a href="data/build_report.json" target="_blank" rel="noopener">Snapshot manifest ↗</a></div>
 </aside>
 <div class="page">
@@ -34,7 +40,7 @@
     <div class="heading-row"><div><div class="eyebrow" id="eyebrow">YOUR DATA, IN VIEW</div><h1 id="page-title">Flood data observatory</h1><p class="subtitle" id="page-subtitle">Trace the sources. Inspect the gaps. Explore the records.</p></div><div class="snapshot"><span class="live-dot"></span><span>Snapshot checked<br><strong id="snapshot-time">Loading…</strong></span></div></div>
     <div id="load-error" role="alert" class="notice error" hidden></div>
     <div class="filters" id="filters">
-      <label>Forecast range<select id="horizon"><option value="short">Short range · 15-day target</option><option value="long">Long range</option></select></label>
+      <label>Forecast range<select id="horizon"><option value="short">Short range · 1–30 days</option><option value="long">Long range · seasonal to 2040</option></select></label>
       <label>Year<select id="year"><option value="2024">2024</option></select></label>
       <label>From<input id="from-date" type="date" value="2024-01-01"></label>
       <label>To<input id="to-date" type="date" value="2024-12-31"></label>
@@ -108,6 +114,8 @@
         <div class="two-column"><div class="card"><div class="card-heading"><div><h2>Boundary checks</h2><p>Consistency and sensitivity checks, not field certification</p></div></div><div id="catchment-checks" class="verification-list"></div></div><div class="card"><div class="card-heading"><div><h2>How precipitation is weighted</h2><p>Each cell contributes only its area inside the catchment</p></div></div><div id="weights-chart" class="plot"></div><p class="card-note">Weights sum to one. Cells can contribute even when their centers lie outside the boundary. Any missing required value leaves that day's catchment mean blank.</p></div></div>
         <div class="notice"><span class="notice-icon">i</span><div><strong>Research delineation; not an agency-certified boundary.</strong><p>Derived using Global Watersheds / MERIT hydrography, with station-location and area consistency checks against JICA/PMD evidence. It does not encode changing reservoir operations or canal diversions.</p></div><a href="downloads/marala_upstream_catchment.geojson" download>Download GeoJSON ↓</a></div>
       </section>
+      <section id="models-view" class="view models-view" hidden aria-label="Models"></section>
+      <section id="analyzer-view" class="view models-view" hidden aria-label="Performance analyzer"></section>
       <section id="library-view" class="view" hidden><div class="section-heading"><div><h2>Data library</h2><p>Processed datasets, review reports and geospatial evidence. Files retain their source definitions.</p></div><input type="search" id="file-search" class="text-input" placeholder="Search files" aria-label="Search files"></div><div id="library-categories" class="segmented"></div><div class="card"><div class="table-scroll"><table><thead><tr><th>File</th><th>Dataset</th><th>Size</th><th>Open / download</th></tr></thead><tbody id="file-rows"></tbody></table></div></div></section>
     </div>
     <footer><span>Flood Data Observatory <span class="footer-separator">/</span> Source evidence stays with the data.</span><span>Snapshot, not a live flood-warning service.</span></footer>

@@ -1,0 +1,58 @@
+{
+  "created_utc": "2026-11-10T04:56:06+00:00",
+  "content": "SIMULATED discharge at the GloFAS station cell; not observations",
+  "output": "marala_glofas_historical_daily.csv",
+  "station_cell": {
+    "latitude": 32.675,
+    "longitude": 74.475
+  },
+  "coverage": {
+    "glofas_v5_0_m3_s": {
+      "first": "1980-01-01",
+      "last": "2026-08-31",
+      "days": 17045
+    }
+  },
+  "time_convention": "Each value is the mean discharge over the 24 h from period_start_utc to period_end_utc (00 UTC to 00 UTC = 05:00 to 05:00 Pakistan time). date_utc_day_averaged is the UTC day averaged.",
+  "comparison_with_observed_inflow": {
+    "glofas_v5_0_m3_s": {
+      "24h_mean_ending_00UTC_on_observation_date": {
+        "all_days": {
+          "n_days": 3761,
+          "nse": 0.445,
+          "kge": 0.514,
+          "pearson_r": 0.79,
+          "bias_pct": -41.6,
+          "variability_ratio": 0.865
+        },
+        "jun_sep": {
+          "n_days": 1299,
+          "nse": -0.109,
+          "kge": 0.513,
+          "pearson_r": 0.686,
+          "bias_pct": -36.8,
+          "variability_ratio": 1.056
+        }
+      },
+      "24h_mean_of_observation_date_UTC": {
+        "all_days": {
+          "n_days": 3760,
+          "nse": 0.442,
+          "kge": 0.514,
+          "pearson_r": 0.788,
+          "bias_pct": -41.6,
+          "variability_ratio": 0.865
+        },
+        "jun_sep": {
+          "n_days": 1298,
+          "nse": -0.107,
+          "kge": 0.513,
+          "pearson_r": 0.686,
+          "bias_pct": -36.8,
+          "variability_ratio": 1.055
+        }
+      }
+    }
+  },
+  "comparison_note": "Observed: eligible WAPDA rows of marala_daily_inflow_clean.csv (2016-03 to 2024-12) plus unflagged Sindh Irrigation rows after that (2024-12 to 2026-11); reading time ~06:00 PKT. Scores describe agreement only; GloFAS is not calibrated at Marala (no GloFAS v5 calibration outlet within 170 km)."
+}

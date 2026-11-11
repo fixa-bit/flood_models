@@ -1,0 +1,3 @@
+.venv/
+model/tft/runs_smoke/
+model/tft/reports_smoke/

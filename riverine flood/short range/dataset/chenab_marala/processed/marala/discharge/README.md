@@ -40,6 +40,19 @@ Inflow and outflow are given in cusecs as printed and in m3/s, using the convers
 
 These values agree with WAPDA inflow and FFD 06:00 PKT readings, within those sources' 100-cusec rounding, on 97-100% of shared dates. They differ from IRSA daily means by a median 12%. They can therefore extend the WAPDA target after 2024-12-19 on the same date-level basis. Withhold rows with `value_revised=1` or a `conflict` until resolved, and leave the gaps blank. By design this table is not merged into `marala_daily_inflow_clean.csv` or the all-source catalog: each source stays in its own file, so newly obtained observations can be added without unpicking earlier merges. Any combination of sources happens in the training data loader, not in stored files. Simulated discharge is kept separately in `simulated/` and is never written into observed tables.
 
+## Simulated discharge (GloFAS v5.0), 1980-01-01 to 2026-08-31
+
+**This is model output, not observation.** [simulated/marala_glofas_historical_daily.csv](simulated/marala_glofas_historical_daily.csv) gives GloFAS v5.0 reanalysis discharge (m3/s) at the station cell (32.675 N, 74.475 E): 17,045 consecutive days with no gaps. `glofas_v5_0_m3_s` is the mean over 24 hours from `period_start_utc` to `period_end_utc` (00-00 UTC, 05:00-05:00 Pakistan time); `date_utc_day_averaged` is that UTC day. The observed ~06:00 PKT reading on a date lies closest to the end of the previous UTC day's period. The raw GRIB files, request receipts and the station-cell check are described in the [raw discharge README](../../../raw/marala/discharge/README.md).
+
+The [comparison report](simulated/marala_glofas_historical_report.json) compares it with observed inflow (eligible WAPDA rows 2016-2024, then unflagged Sindh Irrigation rows to 2026). Over 3,761 shared days, pairing each observation with the 24-hour period ending at 00 UTC that day:
+
+| Days | NSE | KGE | r | Bias |
+|---|---:|---:|---:|---:|
+| All months | 0.45 | 0.51 | 0.79 | -42% |
+| June-September | -0.11 | 0.51 | 0.69 | -37% |
+
+GloFAS is uncalibrated at Marala. It captures the timing of the seasonal cycle but underestimates volume and flood peaks: the 2025 peak was 8,566 m3/s simulated against 21,789 m3/s observed. Use it only to pretrain a model or as an input feature. Never use it as a training target or to fill gaps in observed discharge, and never write it into observed tables.
+
 ## Reproduce
 
 Install the dependencies from `../../../scripts/requirements.txt`, then run the following from the model's `scripts/` directory:

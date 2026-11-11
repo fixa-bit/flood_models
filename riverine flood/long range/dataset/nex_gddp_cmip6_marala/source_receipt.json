@@ -1,0 +1,325 @@
+{
+  "files": {
+    "ACCESS-CM2_historical.csv": {
+      "model": "ACCESS-CM2",
+      "experiment": "historical",
+      "years": [
+        1985,
+        2014
+      ],
+      "days": 10957,
+      "versions": [
+        "1.1"
+      ],
+      "sha256": "2f3b1a81639f105ab3bad74f12746949bc2e497e3439087a109f04ef7f0a5d8b"
+    },
+    "ACCESS-CM2_ssp245.csv": {
+      "model": "ACCESS-CM2",
+      "experiment": "ssp245",
+      "years": [
+        2024,
+        2040
+      ],
+      "days": 6210,
+      "versions": [
+        "1.1"
+      ],
+      "sha256": "0525202ba3e3e87eba92c180c219fa2cc6b95ce3579d0a31934c90d256fb486c"
+    },
+    "ACCESS-CM2_ssp585.csv": {
+      "model": "ACCESS-CM2",
+      "experiment": "ssp585",
+      "years": [
+        2024,
+        2040
+      ],
+      "days": 6210,
+      "versions": [
+        "1.1"
+      ],
+      "sha256": "e6f12914e0f3207bf7c804c70536698bbe6f2ca5ca5e8e1573cd81cb8fb7a3a4"
+    },
+    "CNRM-CM6-1_historical.csv": {
+      "model": "CNRM-CM6-1",
+      "experiment": "historical",
+      "years": [
+        1985,
+        2014
+      ],
+      "days": 10957,
+      "versions": [
+        ""
+      ],
+      "sha256": "591a5c9afd6826eca872286de8cda9dc3f902e3362c4906b8e997d740d5168cd"
+    },
+    "CNRM-CM6-1_ssp245.csv": {
+      "model": "CNRM-CM6-1",
+      "experiment": "ssp245",
+      "years": [
+        2024,
+        2040
+      ],
+      "days": 6210,
+      "versions": [
+        ""
+      ],
+      "sha256": "bdf0678ff05498ba45b8fe0faccdcab4ec3e06c0d16e8a1e59142d185c3fdd74"
+    },
+    "CNRM-CM6-1_ssp585.csv": {
+      "model": "CNRM-CM6-1",
+      "experiment": "ssp585",
+      "years": [
+        2024,
+        2040
+      ],
+      "days": 6210,
+      "versions": [
+        ""
+      ],
+      "sha256": "0b26852cb5c704ba9ad6605cf7d1f71e28a6cdf63cc22e2dd2637c8ef4f2a6be"
+    },
+    "EC-Earth3_historical.csv": {
+      "model": "EC-Earth3",
+      "experiment": "historical",
+      "years": [
+        1985,
+        2014
+      ],
+      "days": 10957,
+      "versions": [
+        "1.1"
+      ],
+      "sha256": "cbed660fff172ac2b9df7016c0e6036711126b07068683c5cce83909d714286f"
+    },
+    "EC-Earth3_ssp245.csv": {
+      "model": "EC-Earth3",
+      "experiment": "ssp245",
+      "years": [
+        2024,
+        2040
+      ],
+      "days": 6210,
+      "versions": [
+        "1.1"
+      ],
+      "sha256": "3a9be77226b2a8d1b4b058d9af5d761eff158ef05bdcf84cd69e081f88c072e4"
+    },
+    "EC-Earth3_ssp585.csv": {
+      "model": "EC-Earth3",
+      "experiment": "ssp585",
+      "years": [
+        2024,
+        2040
+      ],
+      "days": 6210,
+      "versions": [
+        "1.1"
+      ],
+      "sha256": "b00607fb4315429714edc439aa07e9d6d9cbe23c71d6529d585d9a6098984ba4"
+    },
+    "GFDL-ESM4_historical.csv": {
+      "model": "GFDL-ESM4",
+      "experiment": "historical",
+      "years": [
+        1985,
+        2014
+      ],
+      "days": 10957,
+      "versions": [
+        "1.1"
+      ],
+      "sha256": "b26b929bc68ad30e7c31263eac9997407cda4ad16af66537701e79b1be94d21f"
+    },
+    "GFDL-ESM4_ssp245.csv": {
+      "model": "GFDL-ESM4",
+      "experiment": "ssp245",
+      "years": [
+        2024,
+        2040
+      ],
+      "days": 6210,
+      "versions": [
+        "1.1"
+      ],
+      "sha256": "f2ed0a7ccf751cededc7b8317be86a381b3d6931aec1e94626237832d6b4168b"
+    },
+    "GFDL-ESM4_ssp585.csv": {
+      "model": "GFDL-ESM4",
+      "experiment": "ssp585",
+      "years": [
+        2024,
+        2040
+      ],
+      "days": 6210,
+      "versions": [
+        "1.1"
+      ],
+      "sha256": "0c10e052c0b2aa047a9bb8ff7123e15470c50b1b31d10fc9f4ce8ff62d1ffe84"
+    },
+    "MIROC6_historical.csv": {
+      "model": "MIROC6",
+      "experiment": "historical",
+      "years": [
+        1985,
+        2014
+      ],
+      "days": 10957,
+      "versions": [
+        "1.1"
+      ],
+      "sha256": "40bb6c8ff766784665170f8bc898c5e144bf0f1cdb7005ac55df05d2af08d007"
+    },
+    "MIROC6_ssp245.csv": {
+      "model": "MIROC6",
+      "experiment": "ssp245",
+      "years": [
+        2024,
+        2040
+      ],
+      "days": 6210,
+      "versions": [
+        "1.1"
+      ],
+      "sha256": "3d645b008fa283b301d90c3016dd71b9dc5d37ecd8f2de81ee1a1f36570821f4"
+    },
+    "MIROC6_ssp585.csv": {
+      "model": "MIROC6",
+      "experiment": "ssp585",
+      "years": [
+        2024,
+        2040
+      ],
+      "days": 6210,
+      "versions": [
+        "1.1"
+      ],
+      "sha256": "e53e75961651c89b613fb9db985bde45d298c8ed7b6a8b4930bddd4f792914d3"
+    },
+    "MPI-ESM1-2-HR_historical.csv": {
+      "model": "MPI-ESM1-2-HR",
+      "experiment": "historical",
+      "years": [
+        1985,
+        2014
+      ],
+      "days": 10957,
+      "versions": [
+        "1.1"
+      ],
+      "sha256": "bfcf4bc84ea7046b25160b0479ff90b5c500b66369f01f9daa43784066963123"
+    },
+    "MPI-ESM1-2-HR_ssp245.csv": {
+      "model": "MPI-ESM1-2-HR",
+      "experiment": "ssp245",
+      "years": [
+        2024,
+        2040
+      ],
+      "days": 6210,
+      "versions": [
+        "1.1"
+      ],
+      "sha256": "856001bf54ab6183152ca9236a2ca92006e422236c3a054a31f61dd4288078cb"
+    },
+    "MPI-ESM1-2-HR_ssp585.csv": {
+      "model": "MPI-ESM1-2-HR",
+      "experiment": "ssp585",
+      "years": [
+        2024,
+        2040
+      ],
+      "days": 6210,
+      "versions": [
+        "1.1"
+      ],
+      "sha256": "848fa41525e321c4a3968c8b7e035a467cc34a083440289923aded3a42ab0b16"
+    },
+    "MRI-ESM2-0_historical.csv": {
+      "model": "MRI-ESM2-0",
+      "experiment": "historical",
+      "years": [
+        1985,
+        2014
+      ],
+      "days": 10957,
+      "versions": [
+        "1.1"
+      ],
+      "sha256": "a52786625d23ec83c2ee933930a9403f2eac94c72d413955a5a5dc89a7a234e8"
+    },
+    "MRI-ESM2-0_ssp245.csv": {
+      "model": "MRI-ESM2-0",
+      "experiment": "ssp245",
+      "years": [
+        2024,
+        2040
+      ],
+      "days": 6210,
+      "versions": [
+        "1.1"
+      ],
+      "sha256": "15628da8b91eea87778ffa1a4d5a33e297b58c1385306390b036bd13dea4f51e"
+    },
+    "MRI-ESM2-0_ssp585.csv": {
+      "model": "MRI-ESM2-0",
+      "experiment": "ssp585",
+      "years": [
+        2024,
+        2040
+      ],
+      "days": 6210,
+      "versions": [
+        "1.1"
+      ],
+      "sha256": "f25e989d8eb8447d26bcf0c7d80b618d565b5cdea2212bbee90fe75ebb649226"
+    },
+    "NorESM2-MM_historical.csv": {
+      "model": "NorESM2-MM",
+      "experiment": "historical",
+      "years": [
+        1985,
+        2014
+      ],
+      "days": 10957,
+      "versions": [
+        "1.1"
+      ],
+      "sha256": "e71cc0c2fb16170c45e84d26e30d526c4dc86327c632c42a2d30efbc85624088"
+    },
+    "NorESM2-MM_ssp245.csv": {
+      "model": "NorESM2-MM",
+      "experiment": "ssp245",
+      "years": [
+        2024,
+        2040
+      ],
+      "days": 6210,
+      "versions": [
+        "1.1"
+      ],
+      "sha256": "066bb504c8aaec35c8280f6d14540a1a617a8124745b60a2c02cab4bd5013bcd"
+    },
+    "NorESM2-MM_ssp585.csv": {
+      "model": "NorESM2-MM",
+      "experiment": "ssp585",
+      "years": [
+        2024,
+        2040
+      ],
+      "days": 6210,
+      "versions": [
+        "1.1"
+      ],
+      "sha256": "1e3e671b26566ec19e56fdd0c5a39f1730d9bde9f4a3cbad69e9753e351ca72f"
+    }
+  },
+  "collection": "NASA/GDDP-CMIP6",
+  "catchment": "short range/dataset/chenab_marala/processed/marala/catchment/marala_upstream_catchment.geojson",
+  "catchment_sha256": "49efd115f5d3ce2d1241fb35adaaf48bf6c8d0705768ac93dc88fbd4f11ab651",
+  "reducer": "Reducer.mean() at 27830 m",
+  "conversions": {
+    "pr_mm": "kg m-2 s-1 * 86400",
+    "tas_c": "K - 273.15"
+  },
+  "retrieved_at_utc": "2026-11-11T07:18:38.412987+00:00"
+}

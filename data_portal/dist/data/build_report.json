@@ -1,6 +1,6 @@
 {
-  "snapshot_built_utc": "2026-11-05T10:29:52.740521+00:00",
-  "snapshot_sha256": "fd7bc1539f0bf32b71ef25ff72eb730414229caeb3dadccda84a6fae66efb1cb",
+  "snapshot_built_utc": "2026-11-11T11:17:57.551578+00:00",
+  "snapshot_sha256": "5428968762c2964806acc2379cde5f8d6d54662e882f0eb0c3a516956e1c9d04",
   "integrity_counts": {
     "match": 828
   },
@@ -10,10 +10,453 @@
     "assets/style.css": "4f63118c4737",
     "assets/night.css": "672b4be2c5ed",
     "assets/rainfall.css": "5e03a12f323b",
+    "assets/models.css": "e3f924290ef4",
     "assets/plotly.min.js": "3b6e15d45dbb",
     "assets/availability.js": "34773d474a8e",
     "assets/summary.js": "bd2f21856810",
     "assets/rainfall.js": "905d62ef7bbe",
-    "assets/app.js": "31278af787bd"
+    "assets/models.js": "992b5a2dbf14",
+    "assets/app.js": "43857e28f380"
+  },
+  "models": {
+    "built_utc": "2026-11-11T11:09:58Z",
+    "sha256": "94e32ed5dbec71a8cb3c9a68d25bba3b983440e8409f578a18b5835f8dce85bb",
+    "models": 70,
+    "versions": 70,
+    "changes": [
+      {
+        "model": "sr10.lstm",
+        "name": "Original LSTM",
+        "version": 1,
+        "run": "initial"
+      },
+      {
+        "model": "sr10.gradient_boosting",
+        "name": "Gradient boosting",
+        "version": 1,
+        "run": "initial"
+      },
+      {
+        "model": "sr10.ensemble",
+        "name": "LSTM + boosting ensemble",
+        "version": 1,
+        "run": "initial"
+      },
+      {
+        "model": "sr10.global_finetuned",
+        "name": "Global LSTM fine-tuned",
+        "version": 1,
+        "run": "initial"
+      },
+      {
+        "model": "sr10.global_zero_shot",
+        "name": "Global LSTM zero-shot",
+        "version": 1,
+        "run": "2026-10-30 run"
+      },
+      {
+        "model": "sr10.elevation_band",
+        "name": "Elevation-band LSTM",
+        "version": 1,
+        "run": "initial"
+      },
+      {
+        "model": "sr10.catchment_mean",
+        "name": "Catchment-mean LSTM control",
+        "version": 1,
+        "run": "initial"
+      },
+      {
+        "model": "sr10.snow_bucket_lstm",
+        "name": "Snow-bucket + LSTM",
+        "version": 1,
+        "run": "initial"
+      },
+      {
+        "model": "sr10.multibasin_finetuned",
+        "name": "8-basin LSTM fine-tuned",
+        "version": 1,
+        "run": "initial"
+      },
+      {
+        "model": "sr10.two_input_scratch",
+        "name": "2-input LSTM scratch",
+        "version": 1,
+        "run": "initial"
+      },
+      {
+        "model": "sr10.multibasin_donor",
+        "name": "8-basin donor LSTM, no adaptation",
+        "version": 1,
+        "run": "initial"
+      },
+      {
+        "model": "sr10.nhits",
+        "name": "N-HiTS",
+        "version": 1,
+        "run": "initial"
+      },
+      {
+        "model": "sr10.nbeatsx",
+        "name": "N-BEATSx",
+        "version": 1,
+        "run": "initial"
+      },
+      {
+        "model": "sr10.delta_hbv",
+        "name": "delta-HBV",
+        "version": 1,
+        "run": "initial"
+      },
+      {
+        "model": "sr10.matched_pastq_lstm",
+        "name": "Past-discharge + weather LSTM",
+        "version": 1,
+        "run": "initial"
+      },
+      {
+        "model": "sr10.climatology",
+        "name": "Climatology",
+        "version": 1,
+        "run": "initial"
+      },
+      {
+        "model": "sr10.persistence",
+        "name": "Persistence",
+        "version": 1,
+        "run": "initial"
+      },
+      {
+        "model": "sr10r.hbv",
+        "name": "Calibrated physical HBV",
+        "version": 1,
+        "run": "2026-10-30"
+      },
+      {
+        "model": "sr10r.hbv_lightgbm",
+        "name": "HBV + LightGBM residual",
+        "version": 1,
+        "run": "2026-10-30"
+      },
+      {
+        "model": "sr10r.hbv_lstm",
+        "name": "HBV + LSTM residual",
+        "version": 1,
+        "run": "2026-10-30"
+      },
+      {
+        "model": "sr10r.persistence",
+        "name": "Persistence (rolling folds)",
+        "version": 1,
+        "run": "2026-10-30 run"
+      },
+      {
+        "model": "sr15.seq2seq_finetuned",
+        "name": "15-day seq2seq fine-tuned",
+        "version": 1,
+        "run": "initial"
+      },
+      {
+        "model": "sr15.seq2seq_scratch",
+        "name": "15-day seq2seq scratch",
+        "version": 1,
+        "run": "initial"
+      },
+      {
+        "model": "sr15.climatology",
+        "name": "Climatology (15-day)",
+        "version": 1,
+        "run": "2026-10-30 run"
+      },
+      {
+        "model": "sr15.persistence",
+        "name": "Persistence (15-day)",
+        "version": 1,
+        "run": "2026-10-30 run"
+      },
+      {
+        "model": "sr15o.discharge_history_lstm",
+        "name": "Discharge-history LSTM",
+        "version": 1,
+        "run": "2026-10-30 run"
+      },
+      {
+        "model": "sr15o.grrr_lstm",
+        "name": "GRRR-input LSTM",
+        "version": 1,
+        "run": "2026-10-30 run"
+      },
+      {
+        "model": "sr15o.grrr_weighted_fills",
+        "name": "GRRR LSTM with weighted fills",
+        "version": 1,
+        "run": "2026-10-30 run"
+      },
+      {
+        "model": "sr15o.persistence",
+        "name": "Persistence (observed-history)",
+        "version": 1,
+        "run": "2026-10-30 run"
+      },
+      {
+        "model": "sr30.weather_lstm",
+        "name": "Weather-only LSTM",
+        "version": 1,
+        "run": "initial"
+      },
+      {
+        "model": "sr30.pastq_lstm",
+        "name": "Past-discharge LSTM",
+        "version": 1,
+        "run": "initial"
+      },
+      {
+        "model": "sr30.cre_ensemble",
+        "name": "Climatology-residual ensemble",
+        "version": 1,
+        "run": "initial"
+      },
+      {
+        "model": "sr30.seq2seq_finetuned",
+        "name": "Fine-tuned encoder-decoder",
+        "version": 1,
+        "run": "initial"
+      },
+      {
+        "model": "sr30.delta_hbv",
+        "name": "delta-HBV (30-day)",
+        "version": 1,
+        "run": "initial"
+      },
+      {
+        "model": "sr30.calibrated_hbv",
+        "name": "Calibrated physical HBV (30-day)",
+        "version": 1,
+        "run": "initial"
+      },
+      {
+        "model": "sr30.hbv_lstm",
+        "name": "HBV-LSTM residual (30-day)",
+        "version": 1,
+        "run": "initial"
+      },
+      {
+        "model": "sr30.hbv_lightgbm",
+        "name": "HBV-LightGBM residual (30-day)",
+        "version": 1,
+        "run": "initial"
+      },
+      {
+        "model": "sr30.elevation_band",
+        "name": "Spatial elevation-band LSTM",
+        "version": 1,
+        "run": "initial"
+      },
+      {
+        "model": "sr30.catchment_mean",
+        "name": "Catchment-mean control (30-day)",
+        "version": 1,
+        "run": "initial"
+      },
+      {
+        "model": "sr30.nhits",
+        "name": "N-HiTS (30-day)",
+        "version": 1,
+        "run": "initial"
+      },
+      {
+        "model": "sr30.nbeatsx",
+        "name": "N-BEATSx (30-day)",
+        "version": 1,
+        "run": "initial"
+      },
+      {
+        "model": "sr30.climatology",
+        "name": "Climatology (30-day)",
+        "version": 1,
+        "run": "2026-11-02 run"
+      },
+      {
+        "model": "sr30.persistence",
+        "name": "Persistence (30-day)",
+        "version": 1,
+        "run": "2026-11-02 run"
+      },
+      {
+        "model": "sr30.smooth_climatology",
+        "name": "Smoothed climatology (30-day)",
+        "version": 1,
+        "run": "2026-11-02 run"
+      },
+      {
+        "model": "cre.shared",
+        "name": "Shared Ridge CRE",
+        "version": 1,
+        "run": "2026-11-10 run"
+      },
+      {
+        "model": "cre.separate",
+        "name": "Separate Ridge CRE",
+        "version": 1,
+        "run": "2026-11-10 run"
+      },
+      {
+        "model": "cre.climatology",
+        "name": "Training-only climatology (CRE)",
+        "version": 1,
+        "run": "2026-11-10 run"
+      },
+      {
+        "model": "lr.projection.tft_finetuned",
+        "name": "TFT fine-tuned",
+        "version": 1,
+        "run": "2026-11-11 run"
+      },
+      {
+        "model": "lr.projection.tft_scratch",
+        "name": "TFT observed only",
+        "version": 1,
+        "run": "2026-11-11 run"
+      },
+      {
+        "model": "lr.projection.tft_pretrained_only",
+        "name": "TFT GloFAS only",
+        "version": 1,
+        "run": "2026-11-11 run"
+      },
+      {
+        "model": "lr.climate.tft_finetuned",
+        "name": "TFT fine-tuned",
+        "version": 1,
+        "run": "2026-11-11 run"
+      },
+      {
+        "model": "lr.climate.tft_scratch",
+        "name": "TFT observed only",
+        "version": 1,
+        "run": "2026-11-11 run"
+      },
+      {
+        "model": "lr.climate.tft_pretrained_only",
+        "name": "TFT GloFAS only",
+        "version": 1,
+        "run": "2026-11-11 run"
+      },
+      {
+        "model": "lr.forecast.tft_finetuned",
+        "name": "TFT fine-tuned",
+        "version": 1,
+        "run": "2026-11-11 run"
+      },
+      {
+        "model": "lr.forecast.tft_scratch",
+        "name": "TFT observed only",
+        "version": 1,
+        "run": "2026-11-11 run"
+      },
+      {
+        "model": "lr.forecast.tft_pretrained_only",
+        "name": "TFT GloFAS only",
+        "version": 1,
+        "run": "2026-11-11 run"
+      },
+      {
+        "model": "lr.climatology",
+        "name": "Climatology",
+        "version": 1,
+        "run": "2026-11-11 run"
+      },
+      {
+        "model": "lr.persistence",
+        "name": "Damped anomaly persistence",
+        "version": 1,
+        "run": "2026-11-11 run"
+      },
+      {
+        "model": "lr.glofas",
+        "name": "GloFAS v5 raw",
+        "version": 1,
+        "run": "2026-11-11 run"
+      },
+      {
+        "model": "seasonal.ridge",
+        "name": "Observed-residual Ridge",
+        "version": 1,
+        "run": "2026-11-10 run"
+      },
+      {
+        "model": "seasonal.glofas_mlp",
+        "name": "GloFAS-pretrained MLP",
+        "version": 1,
+        "run": "2026-11-10 run"
+      },
+      {
+        "model": "seasonal.month_climatology",
+        "name": "Month-of-issue climatology",
+        "version": 1,
+        "run": "2026-11-10 run"
+      },
+      {
+        "model": "seasonal.tft_projection",
+        "name": "TFT projection mode (seasonal mean)",
+        "version": 1,
+        "run": "2026-11-11 run"
+      },
+      {
+        "model": "seasonal.tft_climate",
+        "name": "TFT climate-conditioned (seasonal mean)",
+        "version": 1,
+        "run": "2026-11-11 run"
+      },
+      {
+        "model": "seasonal.tft_forecast",
+        "name": "TFT forecast mode (seasonal mean)",
+        "version": 1,
+        "run": "2026-11-11 run"
+      },
+      {
+        "model": "seasonal.doy_climatology",
+        "name": "Day-of-year climatology 2016-2023",
+        "version": 1,
+        "run": "2026-11-11 run"
+      },
+      {
+        "model": "seasonal.persistence",
+        "name": "Damped persistence (seasonal mean)",
+        "version": 1,
+        "run": "2026-11-11 run"
+      },
+      {
+        "model": "seasonal.glofas",
+        "name": "GloFAS v5 raw (seasonal mean)",
+        "version": 1,
+        "run": "2026-11-11 run"
+      },
+      {
+        "model": "seasonal.ridge_rolling",
+        "name": "Observed-residual Ridge (rolling)",
+        "version": 1,
+        "run": "2026-11-10 run"
+      },
+      {
+        "model": "seasonal.rolling_climatology",
+        "name": "Month-of-issue climatology (rolling)",
+        "version": 1,
+        "run": "2026-11-10 run"
+      },
+      {
+        "model": "product.peaks",
+        "name": "Annual flood-peak model",
+        "version": 1,
+        "run": null
+      },
+      {
+        "model": "product.projections",
+        "name": "Climate projections 2026-2040",
+        "version": 1,
+        "run": null
+      }
+    ],
+    "warnings": 0
   }
 }

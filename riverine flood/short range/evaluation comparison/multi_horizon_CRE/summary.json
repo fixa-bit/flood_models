@@ -1,0 +1,141 @@
+{
+  "validation_method": "Expanding-window, target-year walk-forward; training only precedes each evaluation year.",
+  "validation_years": [
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "data": {
+    "selected_target_source": "WAPDA only",
+    "training_and_validation_target_years": "2016-2024",
+    "q_days_by_year": {
+      "2016": 306,
+      "2017": 365,
+      "2018": 365,
+      "2019": 365,
+      "2020": 366,
+      "2021": 364,
+      "2022": 365,
+      "2023": 365,
+      "2024": 354
+    }
+  },
+  "leads": [
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+  ],
+  "shared_macro_mean_lead_rmse_cumecs": 393.0242631802959,
+  "separate_macro_mean_lead_rmse_cumecs": 374.0214334231627,
+  "shared_wins_at_lead_count": 0,
+  "lead_count": 24,
+  "folds": [
+    {
+      "evaluation_year": 2019,
+      "training_years": [
+        2016,
+        2017,
+        2018
+      ],
+      "train_samples": 24864,
+      "evaluation_pairs": 8760,
+      "q95_cumecs": 2494.7141847552
+    },
+    {
+      "evaluation_year": 2020,
+      "training_years": [
+        2016,
+        2017,
+        2018,
+        2019
+      ],
+      "train_samples": 33624,
+      "evaluation_pairs": 8784,
+      "q95_cumecs": 2520.199346688
+    },
+    {
+      "evaluation_year": 2021,
+      "training_years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020
+      ],
+      "train_samples": 42408,
+      "evaluation_pairs": 8736,
+      "q95_cumecs": 2494.7141847552
+    },
+    {
+      "evaluation_year": 2022,
+      "training_years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021
+      ],
+      "train_samples": 51144,
+      "evaluation_pairs": 8760,
+      "q95_cumecs": 2487.6349731072
+    },
+    {
+      "evaluation_year": 2023,
+      "training_years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "train_samples": 59904,
+      "evaluation_pairs": 8760,
+      "q95_cumecs": 2492.5904212608
+    },
+    {
+      "evaluation_year": 2024,
+      "training_years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023
+      ],
+      "train_samples": 68664,
+      "evaluation_pairs": 8496,
+      "q95_cumecs": 2503.2092387328003
+    }
+  ],
+  "long_range_training_status": "Not trained: nine observed WAPDA target years are inadequate for reliable 1-6 month seasonal validation; requires archived seasonal ensemble reforecasts and additional independent years/basins.",
+  "note": "Development POC only. Historical years have been used in prior project model comparisons and are not a fresh independent test set. Future weather covariates are realized ERA5-Land at each target date with lead-growing synthetic noise, not archived issue-time forecasts; operational skill is not established."
+}

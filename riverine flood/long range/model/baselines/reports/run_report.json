@@ -1,0 +1,73 @@
+{
+  "fit_years": [
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023
+  ],
+  "persistence_fit_issues": 2761,
+  "test_split": {
+    "issues": [
+      "2024-01-01",
+      "2026-12-31"
+    ],
+    "targets": [
+      "2024-01-01",
+      "2026-12-31"
+    ]
+  },
+  "data_provenance": {
+    "precip": {
+      "path": "short range/dataset/chenab_marala/raw/marala/rainfall/google_earth_engine/marala_daily_precipitation_1980_2024.csv",
+      "sha256": "3d34949c7b4901a3447e4793c4ea704d9f949426f6694880946a23bc1ebe1824"
+    },
+    "temperature": {
+      "path": "short range/dataset/chenab_marala/raw/marala/temperature/google_earth_engine/marala_daily_temperature_1980_2024.csv",
+      "sha256": "1688af545544151217223181084e8e7c54c5f9ad361c6adc7f4aa18468c0e534"
+    },
+    "pet": {
+      "path": "short range/dataset/chenab_marala/raw/marala/potential_evaporation_sum/marala_daily_pet_1980_2024.csv",
+      "sha256": "89e16336bdd87eb80827a45abd01b64e12cb6ce5af9f4989cdabfbd3f2b0a6bd"
+    },
+    "dewpoint_temperature": {
+      "path": "short range/dataset/chenab_marala/raw/marala/dewpoint_temperature",
+      "sha256": null
+    },
+    "snowmelt_sum": {
+      "path": "short range/dataset/chenab_marala/raw/marala/snowmelt_sum",
+      "sha256": null
+    },
+    "snow_depth": {
+      "path": "short range/dataset/chenab_marala/raw/marala/snow_depth",
+      "sha256": null
+    },
+    "snow_depth_water_equivalent": {
+      "path": "short range/dataset/chenab_marala/raw/marala/snow_depth_water_equivalent",
+      "sha256": null
+    },
+    "surface_solar_radiation_downwards_sum": {
+      "path": "short range/dataset/chenab_marala/raw/marala/surface_solar_radiation_downwards_sum",
+      "sha256": null
+    },
+    "era5land_extension": {
+      "path": "long range/dataset/era5land_marala_extension/marala_era5land_daily_2024-01-01_2026-11-02.csv",
+      "sha256": "e550b34921beee2230d3ae4a882afdf5ab57d12a32a33e903eb2e3c681da8c78"
+    },
+    "wapda": {
+      "path": "short range/dataset/chenab_marala/processed/marala/discharge/marala_daily_inflow_clean.csv",
+      "sha256": "55798de2db806b52d1dc68381d169f8d2bf380da852b68ee5d305cc9e82b1c18"
+    },
+    "sindh_rim": {
+      "path": "short range/dataset/chenab_marala/processed/marala/discharge/marala_sindh_rimstation_discharge.csv",
+      "sha256": "648759eacc819e5743ec16b74a93636121ef626df877c0e10cb282c9a6bd83f4"
+    },
+    "glofas_v5": {
+      "path": "short range/dataset/chenab_marala/processed/marala/discharge/simulated/marala_glofas_historical_daily.csv",
+      "sha256": "ac420438a8f565da3d4ca6fcd810bc0d94508c180a7e27d6a645d47ef35ffbdf"
+    }
+  }
+}

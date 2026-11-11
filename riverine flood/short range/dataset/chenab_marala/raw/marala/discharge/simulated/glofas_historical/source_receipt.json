@@ -2894,6 +2894,1059 @@
       "retrieved_utc": "2026-11-05T08:56:29+00:00",
       "bytes": 122640,
       "sha256": "6f88f23393ab1897aafd7dd1439297a4e528a8b456d6dcf032b5c78181af05c8"
+    },
+    "version_5_0/2012.grib2": {
+      "request": {
+        "system_version": [
+          "version_5_0"
+        ],
+        "hydrological_model": [
+          "lisflood"
+        ],
+        "product_type": [
+          "consolidated"
+        ],
+        "timespan": [
+          "time_mean"
+        ],
+        "variable": [
+          "average_river_discharge_in_the_last_24_hours"
+        ],
+        "year": [
+          "2012"
+        ],
+        "month": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+        ],
+        "data_format": "grib2",
+        "download_format": "unarchived",
+        "area": [
+          32.8,
+          74.3,
+          32.55,
+          74.65
+        ]
+      },
+      "request_id": "df966723-5956-4732-be24-b8a35c0b9e0f",
+      "retrieved_utc": "2026-11-10T04:31:24+00:00",
+      "bytes": 122976,
+      "sha256": "16801d594c2e1edca6f3e0505e5d241bb94fac8c61a974a69f8843900046375a"
+    },
+    "version_5_0/2011.grib2": {
+      "request": {
+        "system_version": [
+          "version_5_0"
+        ],
+        "hydrological_model": [
+          "lisflood"
+        ],
+        "product_type": [
+          "consolidated"
+        ],
+        "timespan": [
+          "time_mean"
+        ],
+        "variable": [
+          "average_river_discharge_in_the_last_24_hours"
+        ],
+        "year": [
+          "2011"
+        ],
+        "month": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+        ],
+        "data_format": "grib2",
+        "download_format": "unarchived",
+        "area": [
+          32.8,
+          74.3,
+          32.55,
+          74.65
+        ]
+      },
+      "request_id": "cb005347-4a3d-4a06-80a5-87344d9d8f24",
+      "retrieved_utc": "2026-11-10T04:33:04+00:00",
+      "bytes": 122640,
+      "sha256": "dd4fce5224af2bebcc3916874afcffd52808ff7354e48fd1a8f5d109f43b705f"
+    },
+    "version_5_0/2013.grib2": {
+      "request": {
+        "system_version": [
+          "version_5_0"
+        ],
+        "hydrological_model": [
+          "lisflood"
+        ],
+        "product_type": [
+          "consolidated"
+        ],
+        "timespan": [
+          "time_mean"
+        ],
+        "variable": [
+          "average_river_discharge_in_the_last_24_hours"
+        ],
+        "year": [
+          "2013"
+        ],
+        "month": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+        ],
+        "data_format": "grib2",
+        "download_format": "unarchived",
+        "area": [
+          32.8,
+          74.3,
+          32.55,
+          74.65
+        ]
+      },
+      "request_id": "fb638151-660d-4bc9-8b96-c03ab3d0019e",
+      "retrieved_utc": "2026-11-10T04:35:29+00:00",
+      "bytes": 122640,
+      "sha256": "43efe57f35b88337e5d319c89d3c4c230eb8fc45b26685461eae2383a3c863b3"
+    },
+    "version_5_0/2014.grib2": {
+      "request": {
+        "system_version": [
+          "version_5_0"
+        ],
+        "hydrological_model": [
+          "lisflood"
+        ],
+        "product_type": [
+          "consolidated"
+        ],
+        "timespan": [
+          "time_mean"
+        ],
+        "variable": [
+          "average_river_discharge_in_the_last_24_hours"
+        ],
+        "year": [
+          "2014"
+        ],
+        "month": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+        ],
+        "data_format": "grib2",
+        "download_format": "unarchived",
+        "area": [
+          32.8,
+          74.3,
+          32.55,
+          74.65
+        ]
+      },
+      "request_id": "8434d65c-627b-4280-9af8-76fcc34c2799",
+      "retrieved_utc": "2026-11-10T04:37:05+00:00",
+      "bytes": 122640,
+      "sha256": "5f1ae8fc0d3844b0ad6b2185cdf7534cbc93ea41db37929ba4eec50ea691d3f0"
+    },
+    "version_5_0/2015.grib2": {
+      "request": {
+        "system_version": [
+          "version_5_0"
+        ],
+        "hydrological_model": [
+          "lisflood"
+        ],
+        "product_type": [
+          "consolidated"
+        ],
+        "timespan": [
+          "time_mean"
+        ],
+        "variable": [
+          "average_river_discharge_in_the_last_24_hours"
+        ],
+        "year": [
+          "2015"
+        ],
+        "month": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+        ],
+        "data_format": "grib2",
+        "download_format": "unarchived",
+        "area": [
+          32.8,
+          74.3,
+          32.55,
+          74.65
+        ]
+      },
+      "request_id": "498e7b2d-8d81-44c5-a479-740d5ce6e343",
+      "retrieved_utc": "2026-11-10T04:39:31+00:00",
+      "bytes": 122640,
+      "sha256": "418a0ffbf0a0b3240f8a421ad369931fc8ff4f5303147b93f8f89ea9c0a5a938"
+    },
+    "version_5_0/2016.grib2": {
+      "request": {
+        "system_version": [
+          "version_5_0"
+        ],
+        "hydrological_model": [
+          "lisflood"
+        ],
+        "product_type": [
+          "consolidated"
+        ],
+        "timespan": [
+          "time_mean"
+        ],
+        "variable": [
+          "average_river_discharge_in_the_last_24_hours"
+        ],
+        "year": [
+          "2016"
+        ],
+        "month": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+        ],
+        "data_format": "grib2",
+        "download_format": "unarchived",
+        "area": [
+          32.8,
+          74.3,
+          32.55,
+          74.65
+        ]
+      },
+      "request_id": "d84f696a-1e3b-48aa-b3aa-2fe8e4a6a8d2",
+      "retrieved_utc": "2026-11-10T04:42:16+00:00",
+      "bytes": 122976,
+      "sha256": "40c5d4351475bdf24261fe4b3ef48f842f8efffdba2820170a6e9db1c7c6fd9a"
+    },
+    "version_5_0/2017.grib2": {
+      "request": {
+        "system_version": [
+          "version_5_0"
+        ],
+        "hydrological_model": [
+          "lisflood"
+        ],
+        "product_type": [
+          "consolidated"
+        ],
+        "timespan": [
+          "time_mean"
+        ],
+        "variable": [
+          "average_river_discharge_in_the_last_24_hours"
+        ],
+        "year": [
+          "2017"
+        ],
+        "month": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+        ],
+        "data_format": "grib2",
+        "download_format": "unarchived",
+        "area": [
+          32.8,
+          74.3,
+          32.55,
+          74.65
+        ]
+      },
+      "request_id": "1f13dfa8-2bf1-43c3-bc55-f960917c521c",
+      "retrieved_utc": "2026-11-10T04:42:30+00:00",
+      "bytes": 122640,
+      "sha256": "5cd7688322c2bd598e62d4b018dbdfaad6698742233146823a461da768295dbd"
+    },
+    "version_5_0/2018.grib2": {
+      "request": {
+        "system_version": [
+          "version_5_0"
+        ],
+        "hydrological_model": [
+          "lisflood"
+        ],
+        "product_type": [
+          "consolidated"
+        ],
+        "timespan": [
+          "time_mean"
+        ],
+        "variable": [
+          "average_river_discharge_in_the_last_24_hours"
+        ],
+        "year": [
+          "2018"
+        ],
+        "month": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+        ],
+        "data_format": "grib2",
+        "download_format": "unarchived",
+        "area": [
+          32.8,
+          74.3,
+          32.55,
+          74.65
+        ]
+      },
+      "request_id": "e8b2cc90-2204-4591-82b1-4f6292ddd8b0",
+      "retrieved_utc": "2026-11-10T04:45:18+00:00",
+      "bytes": 122640,
+      "sha256": "5adabe9fa0e1ff39c9ba06b9fcedf65cb1366c8c5f5560a4775d5c380f49adf4"
+    },
+    "version_5_0/2019.grib2": {
+      "request": {
+        "system_version": [
+          "version_5_0"
+        ],
+        "hydrological_model": [
+          "lisflood"
+        ],
+        "product_type": [
+          "consolidated"
+        ],
+        "timespan": [
+          "time_mean"
+        ],
+        "variable": [
+          "average_river_discharge_in_the_last_24_hours"
+        ],
+        "year": [
+          "2019"
+        ],
+        "month": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+        ],
+        "data_format": "grib2",
+        "download_format": "unarchived",
+        "area": [
+          32.8,
+          74.3,
+          32.55,
+          74.65
+        ]
+      },
+      "request_id": "d903ef5e-e741-4dce-a84b-e901fae2aae6",
+      "retrieved_utc": "2026-11-10T04:46:36+00:00",
+      "bytes": 122640,
+      "sha256": "d9cfd30df3ed667d091d419f2cd48e46a83c8228a2e9bb64ccf76aac66e1ac56"
+    },
+    "version_5_0/2021.grib2": {
+      "request": {
+        "system_version": [
+          "version_5_0"
+        ],
+        "hydrological_model": [
+          "lisflood"
+        ],
+        "product_type": [
+          "consolidated"
+        ],
+        "timespan": [
+          "time_mean"
+        ],
+        "variable": [
+          "average_river_discharge_in_the_last_24_hours"
+        ],
+        "year": [
+          "2021"
+        ],
+        "month": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+        ],
+        "data_format": "grib2",
+        "download_format": "unarchived",
+        "area": [
+          32.8,
+          74.3,
+          32.55,
+          74.65
+        ]
+      },
+      "request_id": "7a190601-c665-447d-abc1-594bf12d460e",
+      "retrieved_utc": "2026-11-10T04:48:25+00:00",
+      "bytes": 122640,
+      "sha256": "a779bc7e7c903f9ebf3ece51278cdac82b6aa015f39556f5c95ac51ba2db17a8"
+    },
+    "version_5_0/2022.grib2": {
+      "request": {
+        "system_version": [
+          "version_5_0"
+        ],
+        "hydrological_model": [
+          "lisflood"
+        ],
+        "product_type": [
+          "consolidated"
+        ],
+        "timespan": [
+          "time_mean"
+        ],
+        "variable": [
+          "average_river_discharge_in_the_last_24_hours"
+        ],
+        "year": [
+          "2022"
+        ],
+        "month": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+        ],
+        "data_format": "grib2",
+        "download_format": "unarchived",
+        "area": [
+          32.8,
+          74.3,
+          32.55,
+          74.65
+        ]
+      },
+      "request_id": "28323edc-2242-45a8-b486-94ae55c6aa06",
+      "retrieved_utc": "2026-11-10T04:50:40+00:00",
+      "bytes": 122640,
+      "sha256": "c87bdec073bb373b9b95577eb0791f30e642a86599b7387398e1ed8753ea81f8"
+    },
+    "version_5_0/2023.grib2": {
+      "request": {
+        "system_version": [
+          "version_5_0"
+        ],
+        "hydrological_model": [
+          "lisflood"
+        ],
+        "product_type": [
+          "consolidated"
+        ],
+        "timespan": [
+          "time_mean"
+        ],
+        "variable": [
+          "average_river_discharge_in_the_last_24_hours"
+        ],
+        "year": [
+          "2023"
+        ],
+        "month": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+        ],
+        "data_format": "grib2",
+        "download_format": "unarchived",
+        "area": [
+          32.8,
+          74.3,
+          32.55,
+          74.65
+        ]
+      },
+      "request_id": "a7441bcf-76dc-4156-8e9f-c1c49537bfb9",
+      "retrieved_utc": "2026-11-10T04:52:29+00:00",
+      "bytes": 122640,
+      "sha256": "8873665bd0a70f5fb06de7397b78a0c681baf6909ba2114d8f115a33adbcac5c"
+    },
+    "version_5_0/2024.grib2": {
+      "request": {
+        "system_version": [
+          "version_5_0"
+        ],
+        "hydrological_model": [
+          "lisflood"
+        ],
+        "product_type": [
+          "consolidated"
+        ],
+        "timespan": [
+          "time_mean"
+        ],
+        "variable": [
+          "average_river_discharge_in_the_last_24_hours"
+        ],
+        "year": [
+          "2024"
+        ],
+        "month": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12"
+        ],
+        "day": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31"
+        ],
+        "data_format": "grib2",
+        "download_format": "unarchived",
+        "area": [
+          32.8,
+          74.3,
+          32.55,
+          74.65
+        ]
+      },
+      "request_id": "b4aa8bdf-0003-4b94-99db-44a0b279ace9",
+      "retrieved_utc": "2026-11-10T04:54:53+00:00",
+      "bytes": 122976,
+      "sha256": "b9f27ad214f13b5d8116af59d7320a66f50b587c2a2dd379d2047c5ad00c975d"
     }
   },
   "version_choice": {

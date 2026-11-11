@@ -16,6 +16,8 @@ from collections import Counter, defaultdict
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
+from build_models import build_models
+
 PORTAL = Path(__file__).resolve().parent
 WORKSPACE = PORTAL.parent
 DIST = PORTAL / "dist"
@@ -242,6 +244,21 @@ def load_daily_inputs():
                         "path": str(folder.relative_to(WORKSPACE).as_posix()),
                         "note": "Raw daily input values; no interpolation. Conflicting same-date values are withheld from the chart."})
     return results
+
+
+def station_names():
+    """Station ids and labels, as load_station_workspaces names them, without reading any data."""
+    names = {spec["id"]: spec["name"] for spec in STATION_REGISTRY}
+    raw = MODEL / "raw"
+    if raw.is_dir():
+        registered = {spec["root"].resolve() for spec in STATION_REGISTRY}
+        for root in sorted(raw.iterdir()):
+            if not root.is_dir() or root.resolve() in registered:
+                continue
+            station_id = re.sub(r"[^a-z0-9]+", "_", root.name.lower()).strip("_")
+            if station_id:
+                names.setdefault(station_id, f"Chenab · {root.name.replace('_', ' ').title()}")
+    return names
 
 
 def load_station_workspaces(daily_inputs):
@@ -683,10 +700,16 @@ def build():
     temporary_path = path.with_suffix(".json.tmp")
     temporary_path.write_text(json.dumps(result, separators=(",", ":"), allow_nan=False), encoding="utf-8")
     temporary_path.replace(path)
+    manifest_path = DIST / "data/build_report.json"
+    try:
+        models_summary = build_models(dist=DIST, stations={station["id"]: station["name"] for station in station_workspaces})
+        models_entry = {key: models_summary.get(key) for key in ("built_utc", "sha256", "models", "versions", "changes", "warnings")}
+    except Exception as error:  # scoring problems must not block the data snapshot
+        print(f"Model scoring failed; previous model results are kept: {error}", flush=True)
+        models_entry = (read_json(manifest_path, {}) or {}).get("models")
     manifest = {"snapshot_built_utc": result["built_utc"], "snapshot_sha256": hash_file(path),
                 "integrity_counts": integrity["counts"], "source_groups": len(sources), "download_count": len(downloadable),
-                "asset_versions": asset_versions}
-    manifest_path = DIST / "data/build_report.json"
+                "asset_versions": asset_versions, "models": models_entry}
     manifest_tmp = manifest_path.with_suffix(".json.tmp")
     manifest_tmp.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
     manifest_tmp.replace(manifest_path)
