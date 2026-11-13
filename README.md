@@ -7,6 +7,8 @@ Keep each model/module and its data in a separate subfolder.
 
 - [Long-range riverine projections](riverine%20flood/long%20range/README.md): climate-scenario (2026–2040) river-flow projection engine for Chenab to Trimmu; Phase 0 audit and design report.
 
+- [Flash flood](flash%20flood/README.md): first Pakistan flash-flood model, giving the next-24-hour chance of a reported flood onset per 20 km cell, trained on news-derived Groundsource events with IMERG rainfall, and scored for Pakistan and the Chenab districts.
+
 - `exposure_infrastructure/`: population, OSM roads/buildings/facilities/settlements, administrative boundaries, preparation scripts and GIS audits.
 
 ## Start the local data portal

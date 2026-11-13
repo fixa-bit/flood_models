@@ -1,0 +1,18 @@
+{
+  "title": "Groundsource: A Dataset of Flood Events from News",
+  "creators": "Mayo, Zlydenko, Bootbool, Fronman, Gilon, Hassidim et al. (Google Research)",
+  "published": "2026-02-15",
+  "doi": "10.5281/zenodo.18647054",
+  "record": "https://zenodo.org/records/18647054",
+  "download_url": "https://zenodo.org/api/records/18647054/files/groundsource_2026.parquet/content",
+  "license": "CC-BY-4.0",
+  "file": "groundsource_2026.parquet",
+  "bytes": 667122400,
+  "md5": "cd1b5de6508f7aad8e1d1d0dd4cecea6",
+  "md5_published": "cd1b5de6508f7aad8e1d1d0dd4cecea6",
+  "md5_matches": true,
+  "sha256": "77c266ba5a5176d983edca989a81ff73f21c556fd98c82e2131c2f8d172546ce",
+  "downloaded_utc": "2026-11-12T11:35:50+00:00",
+  "contents": "2,646,302 news-derived flood events worldwide, 2000-01-01 to 2026-02-03: uuid, area_km2, geometry (WKB, WGS84), start_date, end_date. No flood type or country field.",
+  "kept_unchanged": true
+}

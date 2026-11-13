@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+# 667 MB global original; re-download from Zenodo (checksums in source_receipt.json)
+short range/dataset/raw/groundsource/groundsource_2026.parquet
+# Monthly Earth Engine grids; re-extract with scripts/extract_daily_gee.py (checksums in each source_receipt.json)
+short range/dataset/raw/gee/imerg_v07/*.npz
+short range/dataset/raw/gee/era5land_daily/*.npz
+# Trained boosters and full test predictions; rebuilt by model/train.py
+short range/model/runs/

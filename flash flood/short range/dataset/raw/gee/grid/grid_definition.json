@@ -1,0 +1,13 @@
+{
+  "crs": "EPSG:6933",
+  "cell_m": 20000,
+  "x0": 5860000.0,
+  "y1": 4420000.0,
+  "width": 79,
+  "height": 75,
+  "min_pakistan_fraction": 0.1,
+  "cells": 2306,
+  "created_utc": "2026-11-13T05:02:22+00:00",
+  "boundary": "USDOS/LSIB_SIMPLE/2017 country_na=Pakistan (includes AJK and Gilgit-Baltistan)",
+  "chenab_area": "FAO/GAUL/2025/level2 districts: Sialkot, Gujrat, Gujranwala, Mandi Bahauddin, Hafizabad, Chiniot, Jhang; a cell counts when >=25% of it lies in them"
+}

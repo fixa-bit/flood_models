@@ -1,0 +1,35 @@
+{
+  "created_utc": "2026-11-13T05:02:22+00:00",
+  "grid_definition": "grid/grid_definition.json",
+  "cells_csv_sha256": "241b0188468d896e30d4276e348bada0c506415dc11bdf4854ded14059c79c7d",
+  "static_npz_sha256": "e8c4d542507d03d8894277baabfe6b586f82eb560b1d36b7ca196e96f104ed9a",
+  "bands": [
+    "bare_fraction",
+    "built_fraction",
+    "chenab_fraction",
+    "cropland_fraction",
+    "elev_max_m",
+    "elev_mean_m",
+    "elev_min_m",
+    "elev_std_m",
+    "pakistan_fraction",
+    "population_per_km2",
+    "slope_mean_deg",
+    "snow_ice_fraction",
+    "steep_fraction",
+    "tree_fraction",
+    "upstream_area_max_km2"
+  ],
+  "sources": {
+    "boundary": "USDOS/LSIB_SIMPLE/2017 (saved as grid/pakistan_lsib.geojson)",
+    "chenab_districts": "FAO/GAUL/2025/level2 (saved as grid/chenab_districts.geojson)",
+    "provinces": "FAO/GAUL/2025/level1 (cell mode; AJK and Gilgit-Baltistan are not GAUL Pakistan provinces and stay blank)",
+    "elevation": "MERIT/DEM/v1_0_3, mean to 1 km, then mean/max/min/std over 20 km",
+    "slope": "ee.Terrain.slope of MERIT DEM; mean and fraction steeper than 15 degrees",
+    "upstream_area": "MERIT/Hydro/v1_0_1 upa (km2), maximum in cell",
+    "built_up": "JRC/GHSL/P2023A/GHS_BUILT_S 2020 built surface fraction",
+    "land_cover": "MODIS/061/MCD12Q1 2020 IGBP class fractions (cropland 12+14, barren 16, snow and ice 15, forest 1-5)",
+    "population": "JRC/GHSL/P2023A/GHS_POP 2020, mean people per km2 over the cell (negative no-data values masked)"
+  },
+  "method": "Cell fractions from exact polygon intersection (shapely, EPSG:6933). Other bands via Earth Engine reduceResolution and computePixels on the same grid. No interpolation or filling."
+}
